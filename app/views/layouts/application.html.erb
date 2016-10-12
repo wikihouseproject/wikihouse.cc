@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>WikiHouse</title>
+    <%= csrf_meta_tags %>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+     -->
+
+  </head>
+
+  <body>
+    <%#= render "application/header" %>
+
+    <header>
+      <div class="container">
+        <%= link_to root_path do %><%= image_tag "wikihouse-logo.svg", id: 'logo' %><% end %>
+        <%= link_to "WikiHouse", root_path %>
+        <%= link_to "About", about_path %>
+        <%= link_to "Library", things_path %>
+        <%= link_to "R&D", community_path %>
+        Partners
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <div id="media-links">
+      <div class="container">
+        media links
+      <div></div>
+    </div>
+
+    <div class="partners-logos">
+      <div class="container">
+        partners logos
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        WikiHouse Foundation
+        UK Registered non-profit
+        About Us
+        Contact Us
+        Terms of Use
+        CC_BY_SA
+      </div>
+    </footer>
+  </body>
+</html>

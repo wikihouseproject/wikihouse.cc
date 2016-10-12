@@ -1,0 +1,120 @@
+@import "normalize";
+
+@import "bourbon";
+
+@import "grid-settings";
+$visual-grid: true;
+
+@import "neat";
+@import "unslider";
+@import "unslider-dots";
+
+@import "leaflet";
+
+* {
+  box-sizing: border-box;
+}
+
+#logo {
+  width: 100px;
+}
+
+#slider {
+  @include fill-parent;
+  background: #F0F0F0;
+  height: 400px;
+}
+
+#community-map {
+  background: #E0F3F8;
+  height: 600px;
+}
+
+#media-links {
+  height: 300px;
+  background: #F2F2F2;
+}
+
+h1,h2,h3,h4 {
+  font-weight: normal;
+}
+
+#slider li {
+    background: url(http://www.ypu.manchester.ac.uk/system/post/cover_image/127/Photo_-_Joseph_O_Connor.JPG);
+    background-size: cover;
+  }
+  .slide-container {
+    display: flex;
+    align-items: center;
+
+    height: 460px;
+    padding: 0 125px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono';
+}
+
+footer {
+  background: #333333;
+  color: #FFF;
+}
+
+header {
+  @include fill-parent;
+  text-transform: uppercase;
+  background: #FFF;
+}
+
+header a {
+  color: #000;
+}
+
+.hero {
+  height: 500px;
+  color: #FFF;
+  background: lightblue;
+}
+
+.flex {
+  display: flex;
+}
+
+.half {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.stats {
+  background: #6699CC;
+  color: #FFF;
+}
+
+.propose {
+  color: #FFF;
+  background: #333333;
+}
+
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+
+.demo-list-icon {
+  width: 300px;
+}
+
+.container {
+  @include outer-container;
+  margin: 0 auto;
+}

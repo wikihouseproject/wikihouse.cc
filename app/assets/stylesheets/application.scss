@@ -23,6 +23,7 @@ $visual-grid: true;
   @include fill-parent;
   background: #F0F0F0;
   height: 400px;
+  width: 100%;
 }
 
 #community-map {
@@ -40,22 +41,18 @@ h1,h2,h3,h4 {
 }
 
 #slider li {
-    background: url(http://www.ypu.manchester.ac.uk/system/post/cover_image/127/Photo_-_Joseph_O_Connor.JPG);
-    background-size: cover;
-  }
-  .slide-container {
-    display: flex;
-    align-items: center;
+  background-size: cover;
+}
 
-    height: 460px;
-    padding: 0 125px;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&1+0,0+100 */
-    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+.slide-container {
+  display: flex;
+  align-items: center;
+}
 
-  }
+.supporter {
+  padding: 1em;
+  display: inline-block;
+}
 
 body {
   margin: 0;
@@ -66,6 +63,7 @@ body {
 footer {
   background: #333333;
   color: #FFF;
+  height: 300px;
 }
 
 header {
@@ -99,6 +97,11 @@ a {
 .stats {
   background: #6699CC;
   color: #FFF;
+}
+
+#preview {
+  height: 500px;
+  background: #FFF;
 }
 
 .propose {

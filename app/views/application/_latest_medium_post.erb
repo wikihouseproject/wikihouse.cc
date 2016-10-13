@@ -1,8 +1,9 @@
 <% x = File.open("data/PresidentObama.xml") { |f| Nokogiri::XML(f) } %>
 <% x2 = Nokogiri::XML(x.at_xpath('//item//description')) %>
 
-<%= link_to x2.at_xpath('//a').attr('href') do %>
-<h1><%= x.at_xpath('//item//title').text %></h1>
-<%= image_tag x2.at_xpath('//img').attr('src'), style: 'max-width: 100%' %>
-<%#= x2 %>
-<% end %>
+<div style="height: 100%; background: url(<%= x2.at_xpath('//img').attr('src') %>); background-size: cover;">
+  <%= link_to x2.at_xpath('//a').attr('href') do %>
+  <h1><%= x.at_xpath('//item//title').text %></h1>
+  <%#= x2 %>
+  <% end %>
+</div>

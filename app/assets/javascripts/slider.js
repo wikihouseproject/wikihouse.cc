@@ -5,4 +5,4 @@ document.addEventListener("turbolinks:load", function() {
       animation: 'fade'
     })
   }
-});
+})

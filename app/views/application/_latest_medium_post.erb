@@ -1,4 +1,4 @@
-<% x = File.open("data/PresidentObama.xml") { |f| Nokogiri::XML(f) } %>
+<% x = File.open("data/alastairparvin.xml") { |f| Nokogiri::XML(f) } %>
 <% x2 = Nokogiri::XML(x.at_xpath('//item//description')) %>
 
 <div style="height: 100%; background: url(<%= x2.at_xpath('//img').attr('src') %>); background-size: cover;">

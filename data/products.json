@@ -1,0 +1,45 @@
+[{
+"color": "#000000",
+"name": "Stucture",
+"icon": "chair"
+},{
+"color": "#656565",
+"name": "Fit out",
+"icon": "chair"
+},{
+"color": "#02AC30",
+"name": "Envelope",
+"icon": "chair"
+},{
+"color": "#FFE903",
+"name": "Lighting",
+"icon": "chair"
+},{
+"color": "#003BFF",
+"name": "Water",
+"icon": "chair"
+},{
+"color": "#A140FF",
+"name": "Data",
+"icon": "chair"
+},{
+"color": "#F80052",
+"name": "Thermal",
+"icon": "chair"
+},{
+"color": "#FF5C01",
+"name": "Power",
+"icon": "chair"
+},{
+"color": "#4C789B",
+"name": "Waste",
+"icon": "chair"
+},{
+"color": "#66D1FF",
+"name": "Air",
+"icon": "chair"
+},{
+"color": "#A09E84",
+"name": "Site",
+"icon": "chair"
+}]

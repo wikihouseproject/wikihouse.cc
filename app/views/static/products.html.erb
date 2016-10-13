@@ -1,0 +1,12 @@
+<% content_for :header do %>
+  <div class="container"><h1>Library / Products</h1></div>
+<% end %>
+
+<div class="container">
+  <% JSON.parse(open('data/products.json').read).each do |item| %>
+    <div class="product" style="background-color: <%= item['color'] %>">
+      <img src="<%= item['icon'] %>" />
+      <%= item['name'] %>
+    </div>
+  <% end %>
+</div>

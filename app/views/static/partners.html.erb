@@ -1,3 +1,4 @@
+<% content_for :header do %>
 <div class="container">
   <h1>We work for you</h1>
   <div class="flex">
@@ -9,18 +10,28 @@
       <p style="text-align: right"><strong>Alastair Parvin</strong>, Co-founder</p>
     </div>
     <div class="half">
-      <label for="name">Name to appear on donation</label>
-      <input type="text" placeholder="Name" name="name" id="name" />
-      <h3>Amount</h3>
-      <% %w(2 5 10 20 50 100 200 500).each do |amount| %>
-        £<%= amount %>
-      <% end %>
+      <form>
+          <label for="name">Name to appear on donation</label>
+          <input type="text" placeholder="Name" name="name" id="name" class="green" />
+          <p>I do not want my name to be listed</p>
 
-      <h3>Other Amount</h3>
+          <h3>Amount</h3>
+          <% %w(2 5 10 20 50 100 200 500).each do |amount| %>
+            £<%= amount %>
+          <% end %>
 
+          <h3>Other Amount</h3>
+          <input type="text" placeholder="Name" name="name" id="name" class="green" />
+          One off
+          Monthly
+
+          <p>2000 of these would fund our core team for a year</p>
+      </form>
     </div>
   </div>
 </div>
+<div class="donate-button">Donate</div>
+<% end %>
 
 <div class="container">
   <h2>Supporters</h2>

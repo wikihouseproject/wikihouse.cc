@@ -1,63 +1,41 @@
-<div class="container">
-  <h1>About WikiHouse Foundation</h1>
+<% content_for :header do %>
+<div class="about-description">
+  <div class="container">
+    <h1>About WikiHouse Foundation</h1>
 
-  <p>WikiHouse is an open source project to reinvent the way we make homes.</p>
-  <p>It is being deveoped by architects, designers, engineers, inventors, manufacturers and builders, collaborating to develop the best, simplest, most sustainable, high-performance building technologies, which anyone can use and improve.</p>
-  <p>Our aim is for these technologies to become new industry standards; the bricks and mortar of the digital age.</p>
+    <p>WikiHouse is an open source project to reinvent the way we make homes.</p>
+    <p>It is being deveoped by architects, designers, engineers, inventors, manufacturers and builders, collaborating to develop the best, simplest, most sustainable, high-performance building technologies, which anyone can use and improve.</p>
+    <p>Our aim is for these technologies to become new industry standards; the bricks and mortar of the digital age.</p>
+  </div>
 </div>
+<% end %>
 
-
-<div class="container">
+<div class="container top">
   <h4>Design Principles</h4>
-
-  <%#= render "application/bullets" %>
-
-  <h5>Share global, manufacture local</h5>
-  ‘It is easier to ship recipes than cakes and biscuits’ – John Maynard Keynes
-
-  <h5>Design to lower thresholds</h5>
-  Design to lower barriers of time, cost, skill, energy and resources at every stage. Elvis Costello wrote all his songs to be played on the cheapest transistor radio.
-
-  <h5>Open standards</h5>
-  Where possible, work to existing standards or seek to establish intuitive new ones.
-
-  <h5>Human friendly</h5>
-  Seek to preserve and maximise the safety, security, health and wellbeing (physical and mental) of all participants at every stage of a product’s life.
-
-  <h5>Modular</h5>
-  Design hardware and software that is robust, interoperable, product-agnostic and flexible, so elements can be independently altered, substituted or upgraded.
-
-  <h5>The new ‘normal’</h5>
-  Avoid design which would be considered ‘alternative’, ‘boutique’ or only for the rich or poor. Instead, design for the new normal: products most people would consider desirable and affordable. As beautiful as Apple, as open as Linux.
-
-  <h5>Whole life design</h5>
-  ‘A home is not something you finish’ – Stewart Brand Design for the entire life-cycle of the product, from manufacturing to assembly, use, maintenance, adaptation, disassembly and re-use.
-
-  <h5>If you can’t mend it, you don’t own it.</h5>
-  Try to avoid ‘black box’ products. Try to make it easy for the user to learn how it works.
-
-  <h5>Be lazy like a fox</h5>
-  Don’t keep reinventing the wheel. Take something that already works, copy, adapt, give credit and re-share. (Thanks Linus Torvalds via Eric S Raymond)
-
-  <h5>Share and make shareable</h5>
-  Publish your work under an open source sharealike licence, documented and codified so as to make it as easy as possible for others to understand, modify, improve, distribute and use it, including commercially.
-
-  <h5>Open materials</h5>
-  Design for cheap, abundant, standardised, sustainable, and, ideally, circular materials.
-
-  <h5>Start somewhere</h5>
-  No one can solve everyone’s problems. Design something that works where you are, then share so others can adapt it for their own economy, climate and culture. Let solutions adapt like Darwin’s finches.
-
-  <h5>Include, keep including</h5>
-  Look for ways in which age, race, gender or disability might be barriers, and try to design them out. Try to design products, processes and documents that are accessible, intuitive and non-discriminatory.
-
-  <h5>Mistake proof</h5>
-  Make it impossible to get wrong, or not matter if you do. (The Japanese call this 'Poka-Yoke')
-
-  <h5>Superpower the users</h5>
-  ‘Give power to the fine tuners’ – Cedric Price
-  Afford as much power as possible to the end users, from procurement to privacy to electricity. Democracy is a design diagram.
+  <% JSON.parse(open('data/about.json').read).each do |item| %>
+    <div class="about-point">
+      <div class="icon"><%= image_tag "about-icons/#{item['icon']}.svg" %></div>
+      <div class="description">
+        <h5><%= item['title'] %></h5>
+        <p><%= item['description'] %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
+
+<div class="our-mission">
+<div class="container">
+Our Mission
+<ol>
+  <li>To put the design solutions for building low-cost, low-energy, high-performance homes into the hands of every citizen and business on earth.</li>
+  <li>To use digitisation to make it easier for existing industries to design, invest-in, manufacture and assemble better, more sustainable, more affordable homes for more people.</li>
+  <li>To grow a new, distributed housing industry, comprising many citizens, communities and small businesses developing homes and neighbourhoods for themselves, reducing our dependence on top-down, debt-heavy mass housing systems.</li>
+</ol>
+</div>
+</div>
+<div class="accordion-title"><div class="container">FAQ</div></div>
+<div class="accordion-title"><div class="container">About WikiHouse Foundation</div></div>
+<div class="accordion-title"><div class="container">Licenses & terms of use</div></div>
 
 <div class="container">
   <h2>Team</h2>

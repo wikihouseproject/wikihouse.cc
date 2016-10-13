@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  %w(about community partners).each do |page|
+  %w(about community partners products).each do |page|
     get page, to: "static##{page}", as: page
   end
 

@@ -1,0 +1,52 @@
+footer {
+  overflow: hidden;
+  font-size: 0.9em;
+  background: #333333;
+  color: #FFF;
+  height: 300px;
+
+  ul#footer-list {
+    &, li {
+      margin: 0;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      line-height: 1.6;
+    }
+  }
+
+  ul {
+    margin-top: 1em;
+  }
+
+  ul#social-icons {
+    float: right;
+    &, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  .fa-stack-1x {
+    color: #333333;
+  }
+
+}
+
+
+#media-links {
+  height: 300px;
+  overflow: hidden;
+  background: #F2F2F2;
+}
+
+#partners-logos {
+  height: 300px;
+  background: #FFF;
+}

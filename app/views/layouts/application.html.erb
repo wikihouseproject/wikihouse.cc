@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <title>WikiHouse</title>
+    <title><%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %></title>
     <%= csrf_meta_tags %>
 
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
@@ -20,21 +20,28 @@
   </head>
 
   <body>
+    <% if flash.any? %>
+      <div class="container">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: "flash flash-#{name}" %>
+        <% end %>
+      </div>
+    <% end %>
+    <header id="main-header">
     <%#= render "application/header" %>
     <!--  data-turbolinks-permanent -->
-    <header id="main-header">
       <div class="container">
         <%= link_to root_path do %><%= image_tag "wikihouse-logo.svg", id: 'logo' %><% end %>
         <ul id="main-menu">
           <li><%= link_to "WikiHouse", root_path, 'data-tg-refresh': 'page' %></li>
           <li><%= link_to "About", about_path, 'data-tg-refresh': 'page' %></li>
-          <li><%= link_to "Library", things_path, 'data-tg-refresh': 'page' %></li>
+          <li><%= link_to "Library", library_path, 'data-tg-refresh': 'page' %></li>
           <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page' %></li>
           <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page' %></li>
         </ul>
       </div>
-      <%= yield(:header) %>
     </header>
+    <header id="sub-header" class="drop-shadow"><%= yield(:header) %></header>
 
     <%= yield %>
 

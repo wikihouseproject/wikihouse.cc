@@ -1,11 +1,11 @@
 <% content_for :header do %>
-  <div class="container"><h1>Library / Products</h1></div>
+  <div class="container"><h1><%= link_to "Library", library_path %> / Products</h1></div>
 <% end %>
 
 <div class="container">
-  <% JSON.parse(open('data/products.json').read).each do |item| %>
+  <% JSON.parse(open('data/products.json').read).each_with_index do |item, index| %>
     <div class="product" style="background-color: <%= item['color'] %>">
-      <img src="<%= item['icon'] %>" />
+      <%= image_tag "icons/Asset #{index + 7}.svg", class: 'products-icon' %>
       <%= item['name'] %>
     </div>
   <% end %>

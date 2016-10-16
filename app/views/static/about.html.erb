@@ -1,23 +1,26 @@
 <% content_for :header do %>
-<div class="about-description">
-  <div class="container">
-    <h1>About WikiHouse Foundation</h1>
+  <div class="about-description">
+    <div class="container">
+      <%= title "About" %>
 
-    <p>WikiHouse is an open source project to reinvent the way we make homes.</p>
-    <p>It is being deveoped by architects, designers, engineers, inventors, manufacturers and builders, collaborating to develop the best, simplest, most sustainable, high-performance building technologies, which anyone can use and improve.</p>
-    <p>Our aim is for these technologies to become new industry standards; the bricks and mortar of the digital age.</p>
+      <p>WikiHouse is an open source project to reinvent the way we make homes.</p>
+      <p>It is being deveoped by architects, designers, engineers, inventors, manufacturers and builders, collaborating to develop the best, simplest, most sustainable, high-performance building technologies, which anyone can use and improve.</p>
+      <p>Our aim is for these technologies to become new industry standards; the bricks and mortar of the digital age.</p>
+    </div>
   </div>
-</div>
 <% end %>
 
 <div class="container top">
   <h4>Design Principles</h4>
   <% JSON.parse(open('data/about.json').read).each do |item| %>
     <div class="about-point">
-      <div class="icon"><%= image_tag "about-icons/#{item['icon']}.svg" %></div>
-      <div class="description">
-        <h5><%= item['title'] %></h5>
-        <p><%= item['description'] %></p>
+      <div class="inner">
+        <!-- <div class="icon"><%= image_tag "about-icons/#{item['icon']}.svg" %></div> -->
+        <div class="icon"><%= image_tag "slides/Asset 1.svg", class: 'svg' %></div>
+        <div class="description">
+          <h5><%= item['title'] %></h5>
+          <p><%= item['description'] %></p>
+        </div>
       </div>
     </div>
   <% end %>

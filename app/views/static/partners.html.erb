@@ -1,36 +1,41 @@
+<% title "Partners" %>
 <% content_for :header do %>
-<div class="container">
-  <h1>We work for you</h1>
-  <div class="flex">
-    <div class="half">
-      <p>WikiHouse Foundation is not backed by venture capital. It’s a small non-profit with a huge mission: to put the knowledge and tools to build low-cost, sustainable homes into commons where they are freely accessible to anyone, and owned by everyone.</p>
-      <p>We need your support to achieve that.</p>
-      <p>Please help us to keep working for the common good by making a one-off donation, or making a small monthly stipend.</p>
+  <div class="container">
+    <h1>We work for you</h1>
+    <div class="flex">
+      <div class="half">
+        <div class="container">
+          <p>WikiHouse Foundation is not backed by venture capital. It’s a small non-profit with a huge mission: to put the knowledge and tools to build low-cost, sustainable homes into commons where they are freely accessible to anyone, and owned by everyone.</p>
+          <p>We need your support to achieve that.</p>
+          <p>Please help us to keep working for the common good by making a one-off donation, or making a small monthly stipend.</p>
 
-      <p style="text-align: right"><strong>Alastair Parvin</strong>, Co-founder</p>
-    </div>
-    <div class="half">
-      <form>
-          <label for="name">Name to appear on donation</label>
-          <input type="text" placeholder="Name" name="name" id="name" class="green" />
-          <p>I do not want my name to be listed</p>
+          <p style="text-align: right"><strong>Alastair Parvin</strong>, Co-founder</p>
+        </div>
+      </div>
+      <div class="half">
+        <div class="container">
+          <form>
+            <label for="name">Name to appear on donation</label>
+            <input type="text" placeholder="Name" name="name" id="name" class="green" />
+            <p>I do not want my name to be listed</p>
 
-          <h3>Amount</h3>
-          <% %w(2 5 10 20 50 100 200 500).each do |amount| %>
-            £<%= amount %>
-          <% end %>
+            <h3>Amount</h3>
+            <% %w(2 5 10 20 50 100 200 500).each do |amount| %>
+              £<%= amount %>
+            <% end %>
 
-          <h3>Other Amount</h3>
-          <input type="text" placeholder="Name" name="name" id="name" class="green" />
-          One off
-          Monthly
+            <h3>Other Amount</h3>
+            <input type="text" placeholder="Name" name="name" id="name" class="green" />
+            One off
+            Monthly
 
-          <p>2000 of these would fund our core team for a year</p>
-      </form>
+            <p>2000 of these would fund our core team for a year</p>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<div class="donate-button">Donate</div>
+  <div class="donate-button">Donate</div>
 <% end %>
 
 <div class="container">

@@ -1,0 +1,87 @@
+#sub-header {
+  background: white;
+  overflow: hidden;
+  position: relative;
+}
+
+header.drop-shadow {
+  box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
+}
+
+header#main-header {
+  height: 50px;
+  // transition: height 0.1s;
+  z-index: 2000;
+  // padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+
+  // box-shadow: 0px 10px 20px 1px rgba(255,255,255,1);
+
+  &.scrolled {
+    box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
+  }
+
+  @include fill-parent;
+
+  #logo {
+    margin: 7px 0 0 0;
+    max-height: 32px;
+    height: 100%;
+  }
+
+  .ink {
+    display: block; position: absolute;
+    background: black;
+    border-radius: 100%;
+    transform: scale(0);
+  }
+  /*animation effect*/
+  .ink.animate {animation: ripple 0.65s linear;}
+  @keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {opacity: 0; transform: scale(2.5);}
+  }
+
+  .container {
+    position: relative;
+  }
+
+  li {
+    text-transform: uppercase;
+  }
+  a {
+    color: #000;
+  }
+  ul {
+    font-family: 'Roboto Mono';
+    margin: 0 auto;
+    li {
+      list-style-type: none;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        cursor: pointer; /*since the links are dummy without href values*/
+        /*prevent text selection*/
+        user-select: none;
+        /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
+        position: relative;
+      }
+    }
+  }
+
+  #main-menu {
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+
+}

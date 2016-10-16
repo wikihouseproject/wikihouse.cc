@@ -1,0 +1,36 @@
+.replaced-svg circle {
+  fill: black;
+}
+
+.our-mission {
+  background: #FFF;
+}
+
+.accordion-title {
+  border-bottom: 1px solid black;
+  padding: 20px 0;
+}
+.inner {
+  display: flex;
+}
+
+.about-point {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  // display: flex;
+  margin-bottom: 2em;
+  h5 {
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .icon {
+    width: 100px;
+    margin-right: 10px;
+  }
+  .description {
+    flex: 1;
+    float: left;
+  }
+}

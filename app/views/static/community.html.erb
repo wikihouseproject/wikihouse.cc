@@ -1,18 +1,25 @@
 <% content_for :header do %>
 <div class="container">
-  <h1>R&D Community</h1>
+  <%= title "R&D Community" %>
   <p>WikiHouse technologies are being developed by an open community of architects, designers, engineers and builders around the world. Anyone is invited to participate, either by improving, spreading or adapting existing technologies, or developing new technologies using the WikiHouse design principles.</p>
 </div>
 <% end %>
 
   <div class="flex">
     <div class="half" style="background: #C5FF5B">
-      <h3>Wren v4.3</h3>
-      <p>The latest version of the WREN structural chassis system has been released in the library. It is simpler to build, with a new end wall system.</p>
+      <div class="container">
+        <h3>Wren v4.3</h3>
+        <p>The latest version of the WREN structural chassis system has been released in the library. It is simpler to build, with a new end wall system.</p>
+        <%= image_tag "parts_1.svg" %>
+        <%= link_to "View WREN v4.3 in the library", "#" %>
+      </div>
     </div>
     <div class="half" style="background: #2D2D2D; color: #FFF">
-      <h3>Connect</h3>
-      <p>The WikiHouse R&D community currently meets in Slack. Anyone may request access to the group, but this is not a forum, please only join this group if you are intending to actively adapt or develop WikiHouse technologies.</p>
+      <div class="container">
+        <h3>Connect</h3>
+        <p>The WikiHouse R&D community currently meets in Slack. Anyone may request access to the group, but this is not a forum, please only join this group if you are intending to actively adapt or develop WikiHouse technologies.</p>
+        <%= link_to "Join SLACK group", "https://slack.wikihouse.cc" %>
+      </div>
     </div>
   </div>
 
@@ -22,16 +29,23 @@
 
 <div class="flex">
   <div class="half" style="background: #5B8E8E">
-    <h3>Open Challenges</h3>
-    <ol>
-    <% 4.times do %>
-      <li>Hello world</li>
-    <% end %>
-    </ol>
-    <p>Hello world</p>
+    <div class="container">
+      <h3>Open Challenges</h3>
+      <ol>
+        <% 4.times do %>
+        <li>
+          <h4>Structural development of WREN</h4>
+          <p>A description of the activity. Who might be required to do it, and perhaps a link to how and where to start.</p>
+        </li>
+        <% end %>
+      </ol>
+      <p>Hello world</p>
+    </div>
   </div>
   <div class="half">
-    <%= render "application/latest_medium_post" %>
+    <div class="container">
+      <%= render "application/latest_medium_post" %>
+    </div>
   </div>
 </div>
 

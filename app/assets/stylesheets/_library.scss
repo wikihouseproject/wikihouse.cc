@@ -1,0 +1,27 @@
+.types {
+  overflow: hidden;
+}
+
+.types .type {
+  background: #2D2D2D;
+  border-bottom: 1px solid white;
+  overflow: hidden;
+  * {
+    color: #FFF;
+  }
+}
+
+.product {
+  width: 25%;
+  float: left;
+  height: 200px;
+  text-align: center;
+  font-family: 'Roboto Mono';
+  text-transform: uppercase;
+  img {
+    display: block;
+  }
+  &,* {
+    color: #FFF;
+  }
+}

@@ -7,14 +7,28 @@
 
 <%= render "application/slider" %>
 
-<div id="preview"></div>
+<div id="preview" style="text-align: center">
+  <%= image_tag "house.svg", style: 'height: 100%;' %>
+</div>
 
 <div class="flex">
   <div class="half propose">
-    <h4>Propose a pilot project</h4>
-    The first WikiHouse technologies are in BETA stage and are being used in pilot projects. If you'd like your project to be one of them, please tell us about it here.
+    <div class="container">
+      <h3>Propose a pilot project</h3>
+      <p>The first WikiHouse technologies are in BETA stage and are being used in pilot projects. If you'd like your project to be one of them, please tell us about it here.</p>
+      <%= image_tag "righthouse.svg" %>
+      <%= link_to "Propose a pilot", "#" %>
+    </div>
   </div>
   <div class="half stats">
-    30 active teams
+    <div class="container">
+      <div class="info"><span class="count">30</span> active teams</div>
+      <div class="info"><span class="count">804</span> downloads in the last month</div>
+      <div class="info"><span class="count">45</span> commits in the last month</div>
+      <div class="info"><span class="count">3000</span> files</div>
+      <div class="info"><span class="count">3</span> open challenges</div>
+
+      <%= link_to "Something", "#" %>
+    </div>
   </div>
 </div>

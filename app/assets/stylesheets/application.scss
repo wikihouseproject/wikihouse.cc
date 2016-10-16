@@ -12,246 +12,53 @@
 
 @import "leaflet";
 
+@import "about";
+@import "community";
+@import "donate";
+@import "footer";
+@import "grid-settings";
+@import "header";
+@import "landing";
+@import "library";
+@import "products";
+@import "propose";
+@import "prospectus";
+
 * {
   box-sizing: border-box;
 }
-.fa-stack-1x {
-  color: #333333;
-}
-input.green {
-  background: #E1FF9C;
-  border: none;
-  padding: 10px;
-  display: block;
+
+.half .container {
   width: 100%;
+  max-width: 600px;
 }
-
-.donate-button {
-  background: #C5FF5B;
-  padding: 20px;
-  text-align: center;
-  color: #000;
+.flex .half .container {
+  float: right;
 }
-
-.product {
-  width: 25%;
+.flex .half:nth-child(2) .container {
   float: left;
-  height: 200px;
-  text-align: center;
-  font-family: 'Roboto Mono';
-  text-transform: uppercase;
-  img {
-    display: block;
-  }
-  &,* {
-    color: #FFF;
-  }
+}
+
+body {
+  margin: 0;
+  padding: 50px 0 0 0;
+  font-family: 'Roboto';
+  background: #F0F0F0;
 }
 
 h1 {
   font-family: 'Roboto Mono'
+}
+h1,h2,h3,h4 {
+  font-weight: normal;
 }
 
 form {
   margin-bottom: 2em;
 }
 
-.types {
-  overflow: hidden;
-}
-
-.types .type {
-  background: #2D2D2D;
-  border-bottom: 1px solid white;
-  overflow: hidden;
-  * {
-    color: #FFF;
-  }
-}
-
-.our-mission {
-  background: #FFF;
-}
-
-footer {
-  overflow: hidden;
-  font-size: 0.9em;
-  ul#footer-list {
-    &, li {
-      margin: 0;
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      line-height: 1.6;
-    }
-  }
-  ul {
-    margin-top: 1em;
-  }
-  ul#social-icons {
-    float: right;
-    &, li {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      display: inline-block;
-      float: right;
-    }
-  }
-}
-
-.accordion-title {
-  border-bottom: 1px solid black;
-  padding: 20px 0;
-}
-
-.about-point {
-  width: 50%;
-  float: left;
-  overflow: hidden;
-  display: flex;
-  margin-bottom: 10px;
-  h5 {
-    font-size: 1.1em;
-    margin: 0;
-  }
-  .icon {
-    width: 100px;
-    margin-right: 10px;
-  }
-  .description {
-    flex: 1;
-    float: left;
-  }
-}
-
-#logo {
-  margin: 20px 0 0 0;
-  max-height: 100px;
-  height: 100%;
-}
-
-#slider {
-  @include fill-parent;
-  background: #F0F0F0;
-  height: 400px;
-  width: 100%;
-}
-
-#community-map {
-  background: #E0F3F8;
-  height: 600px;
-}
-
-#media-links {
-  height: 300px;
-  overflow: hidden;
-  background: #F2F2F2;
-}
-
-h1,h2,h3,h4 {
-  font-weight: normal;
-}
-
-#slider li {
-  background-size: cover;
-}
-
-.slide-container {
-  display: flex;
-  align-items: center;
-}
-
-header .container {
-  position: relative;
-}
-
-#main-menu {
-  position: absolute;
-  top: 6px;
-  right: 0;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
-  overflow: hidden;
-}
-header ul {
-  font-family: 'Roboto Mono';
-  margin: 0 auto;
-  li {
-    list-style-type: none;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    a {
-      display: block;
-      padding: 10px 15px;
-      text-decoration: none;
-      cursor: pointer; /*since the links are dummy without href values*/
-      /*prevent text selection*/
-      user-select: none;
-      /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
-      position: relative;
-    }
-  }
-}
-.ink {
-  display: block; position: absolute;
-  background: black;
-  border-radius: 100%;
-  transform: scale(0);
-}
-/*animation effect*/
-.ink.animate {animation: ripple 0.65s linear;}
-@keyframes ripple {
-  /*scale the element to 250% to safely cover the entire link and fade it out*/
-  100% {opacity: 0; transform: scale(2.5);}
-}
-
-.supporter {
-  padding: 1em;
-  display: inline-block;
-}
-
-body {
-  margin: 0;
-  padding: 100px 0 0 0;
-  font-family: 'Roboto';
-  background: #F0F0F0;
-}
-
-footer {
-  background: #333333;
-  color: #FFF;
-  height: 300px;
-}
-
-header {
-  height: 120px;
-  // transition: height 0.1s;
-  z-index: 2000;
-  padding-bottom: 20px;
-  @include fill-parent;
-  li { text-transform: uppercase; }
-  background: #FFF;
-  a {
-    color: #000;
-  }
-}
-
-.hero {
-  height: 500px;
-  color: #FFF;
-  background: image-url('slide1.jpg') bottom center;
-  background-size: cover
+a {
+  text-decoration: none;
 }
 
 .flex {
@@ -260,20 +67,6 @@ header {
 
 .half {
   flex: 1;
-}
-
-a {
-  text-decoration: none;
-}
-
-.stats {
-  background: #6699CC;
-  color: #FFF;
-}
-
-#preview {
-  height: 500px;
-  background: #FFF;
 }
 
 .propose {

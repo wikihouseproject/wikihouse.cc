@@ -1,0 +1,35 @@
+<% content_for :header do %>
+  <div class="container"><%= title "Library" %></div>
+<% end %>
+
+<div class="types">
+
+  <%= link_to things_path do %>
+  <div class="type">
+    <div class="container">
+    <h2>Types</h2>
+    <p>Ready-designed standard building types, combining a number of products into a whole building design which can be adapted to fit different users and sites.</p>
+    </div>
+  </div>
+  <% end %>
+
+  <%= link_to products_path do %>
+  <div class="type">
+    <div class="container">
+      <h2>Products</h2>
+      <p>Open products and systems that can make up a sub components of an overall building.</p>
+    </div>
+  </div>
+  <% end %>
+
+  <%= link_to tools_path do %>
+  <div class="type">
+    <div class="container">
+    <h2>Tools</h2>
+    <p>Open source tools for the manufacture or assembly of homes.</p>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+

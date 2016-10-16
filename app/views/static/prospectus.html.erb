@@ -1,0 +1,53 @@
+<%
+vals = [["Pre", "Manual Distributed"], ["1st", "Mechanised Centralised"], ["2nd", "Electrical Centralised"], ["3rd", "Digital Centralised"], ["4th", "Digital Decentralised"]]
+%>
+<div class="container">
+  <div class="flex">
+  <% vals.each_with_index do |val, index| %>
+    <div class="part">
+      <%= image_tag "prospectus/Asset #{index+20}.svg" %>
+      <h3><%= val[0] %></h3>
+      <p><%= val[1] %></p>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+<div class="flex">
+<div class="half next-industrial">
+<h2>The next industrial revolution in housing</h2>
+<p>Along with our partners WikiHouse Foundation are developing the first smart, distributed supply chain for homes. Join us.</p>
+<%= link_to "Download our PDF prospectus", "#" %>
+</div>
+<div class="half digital-infrastructure"><h2>Digital infrastructure for resilient cities</h2></div>
+</div>
+<div id="join-us">
+<div class="container">
+  <h2>Join Us</h2>
+  <table>
+    <thead>
+      <tr><td></td><th>Supporter</th><th>Partner</th><th>Core Partner</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>Use of WikiHouse supporter / partner badge</th><td>●</td><td>●</td><td>●</td></tr>
+      <tr><th>Visible on all website & communications</th><td>●</td><td>●</td><td>●</td></tr>
+      <tr><th>Membership of online consortium group</th><td>●</td><td>●</td><td>●</td></tr>
+      <tr><th>First private BETA access to the platform</th><td>●</td><td>●</td><td>●</td></tr>
+      <tr><th>Invitation to annual seminar / launch event</th><td>●</td><td>●</td><td>●</td></tr>
+      <tr><th>First opportunity to certify as a provider in the supply chain</th><td>●</td><td>●</td><td>●</td></tr>
+      <tr><th></th><td></td><td></td><td></td></tr>
+      <tr><th>Support developing your pilot project, product or service</th><td></td><td>●</td><td>●</td></tr>
+      <tr><th>Keynote talk from founder / workshops with the team (as agreed)</th><td></td><td>●</td><td>●</td></tr>
+      <tr><th>First opportunity to list your product in the supply chain (as appropriate)</th><td></td><td>●</td><td>●</td></tr>
+      <tr><th></th><td></td><td></td><td></td></tr>
+      <tr><th>Headline recognition as a core partner in the WikiHouse project</th><td></td><td></td><td>●</td></tr>
+      <tr><th>Set/host an R&D working group, major pilot project or open challenge</th><td></td><td></td><td>●</td></tr>
+      <tr><th>Seat on the steering group</th><td></td><td></td><td>●</td></tr>
+      <tr><th>Test and launch a system-wide product or service in the supply chain</th><td></td><td></td><td>●</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td></td><th>£5k+</th><th>£15k+</th><th>£50k+</th></tr>
+    </tfoot>
+  </table>
+</div>
+</div>

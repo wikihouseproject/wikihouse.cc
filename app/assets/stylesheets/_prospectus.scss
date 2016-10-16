@@ -1,0 +1,39 @@
+#join-us {
+  h2 {
+    font-family: "Roboto Mono";
+  }
+  background: #2D2D2D;
+  color: #FFF;
+  table {
+    line-height: 1.5em;
+    th {
+      font-weight: normal;
+    }
+    tbody {
+      th {
+        text-align: right;
+      }
+      td {
+        text-align: center;
+      }
+    }
+  }
+}
+.next-industrial {
+  background: #FFF;
+  color: #000;
+}
+.digital-infrastructure {
+  h2 {
+    color: #FFF;
+  }
+}
+.part {
+  flex: 1;
+  // width: 20%;
+  // display: inline-block;
+  // float: left;
+  img {
+    width: 100px;
+  }
+}

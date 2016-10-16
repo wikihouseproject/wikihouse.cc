@@ -1,0 +1,48 @@
+.hero {
+  height: 500px;
+  color: #FFF;
+  background: image-url('slide1.jpg') bottom center;
+  background-size: cover;
+  h2 {
+    font-family: "Roboto Mono";
+  }
+}
+
+.stats {
+  background: #6699CC;
+  color: #FFF;
+  font-family: "Roboto Mono";
+  .count {
+    font-size: 4em;
+  }
+}
+
+.propose {
+  h3 {
+    font-family: "Roboto Mono";
+    font-size: 2em;
+  }
+}
+
+#slider {
+  @include fill-parent;
+  background: #F0F0F0;
+  height: 400px;
+  width: 100%;
+  h2 {
+    font-family: "Roboto Mono";
+  }
+  li {
+    background-size: cover;
+  }
+}
+
+.slide-container {
+  display: flex;
+  align-items: center;
+}
+
+#preview {
+  height: 500px;
+  background: #FFF;
+}

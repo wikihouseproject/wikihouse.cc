@@ -25,6 +25,10 @@
 @import "prospectus";
 @import "side_nav";
 
+h2, h3 {
+  font-family: "Roboto Mono"
+}
+
 * {
   box-sizing: border-box;
 }
@@ -33,7 +37,7 @@
   width: 100%;
   height: 100%;
   max-width: 600px;
-  padding: 20px 0;
+  padding: 20px;
 }
 .flex .half .container {
   float: right;

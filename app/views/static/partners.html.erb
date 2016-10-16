@@ -17,15 +17,21 @@
           <form>
             <label for="name">Name to appear on donation</label>
             <input type="text" placeholder="Name" name="name" id="name" class="green" />
-            <p>I do not want my name to be listed</p>
+            <p><label><%= check_box_tag "list_name" %>I do not want my name to be listed</label></p>
 
             <h3>Amount</h3>
-            <% %w(2 5 10 20 50 100 200 500).each do |amount| %>
+            <% %w(2 5 10 20 50 100 200 500).each_with_index do |amount, index| %>
+              <label class="amount">
+              <%= radio_button_tag "amount", amount, (index == 0) %>
               £<%= amount %>
+              </label>
             <% end %>
 
-            <h3>Other Amount</h3>
+
+            <label>
+            <h3><%= radio_button_tag "amount", 'other' %>Other Amount</h3>
             <input type="text" placeholder="Name" name="name" id="name" class="green" />
+            </label>
             One off
             Monthly
 

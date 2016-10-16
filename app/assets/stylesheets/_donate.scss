@@ -21,3 +21,12 @@ input.green {
   padding: 1em;
   display: inline-block;
 }
+
+label.amount {
+  display: inline-block;
+  width: 24%;
+  padding: 10px;
+  &.selected {
+    background: yellow;
+  }
+}

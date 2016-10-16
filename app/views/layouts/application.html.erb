@@ -19,7 +19,7 @@
 
   </head>
 
-  <body>
+  <body class="c-<%= controller_name %> a-<%= action_name %>">
     <% if flash.any? %>
       <div class="container">
         <% flash.each do |name, msg| %>
@@ -38,14 +38,22 @@
           <li><%= link_to "Library", library_path, 'data-tg-refresh': 'page' %></li>
           <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page' %></li>
           <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page' %></li>
+          <li><%= link_to fa_icon("bars"), '#', id: 'toggleMenu' %></li>
         </ul>
       </div>
     </header>
-    <header id="sub-header" class="drop-shadow"><%= yield(:header) %></header>
+
+    <% if content_for?(:header) %><header id="sub-header" class="drop-shadow"><%= yield(:header) %></header><% end %>
 
     <%= yield %>
 
     <%= render "footer" %>
+
+    <ul id="side-nav">
+      <li><%= link_to "About WikiHouse Foundation", about_wikihouse_foundation_path %></li>
+      <li><%= link_to "Propose", propose_path %></li>
+      <li><%= link_to "Prospectus", prospectus_path %></li>
+    </ul>
 
   </body>
 </html>

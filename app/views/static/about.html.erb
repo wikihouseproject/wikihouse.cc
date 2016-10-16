@@ -12,11 +12,11 @@
 
 <div class="container top">
   <h4>Design Principles</h4>
-  <% JSON.parse(open('data/about.json').read).each do |item| %>
+  <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
     <div class="about-point">
       <div class="inner">
         <!-- <div class="icon"><%= image_tag "about-icons/#{item['icon']}.svg" %></div> -->
-        <div class="icon"><%= image_tag "slides/Asset 1.svg", class: 'svg' %></div>
+        <div class="icon"><%= image_tag "points/Asset #{index+1}.svg", class: 'svg' %></div>
         <div class="description">
           <h5><%= item['title'] %></h5>
           <p><%= item['description'] %></p>

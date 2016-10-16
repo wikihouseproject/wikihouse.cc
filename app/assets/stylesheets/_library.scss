@@ -1,5 +1,17 @@
+.header-preview {
+  img {
+    max-height: 400px;
+    padding: 40px 0;
+  }
+}
+
 .types {
   overflow: hidden;
+  img {
+    width: 60px;
+    float: left;
+    margin: 10px 60px 30px 20px;
+  }
 }
 
 .types .type {

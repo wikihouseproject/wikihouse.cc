@@ -36,4 +36,9 @@ document.addEventListener("turbolinks:load", function() {
       $('header#main-header').removeClass('drop-shadow')
     }
   })
+
+  $('#toggleMenu').click(function(event) {
+    event.preventDefault();
+    $('#side-nav').fadeIn('fast')
+  })
 })

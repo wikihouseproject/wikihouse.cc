@@ -23,6 +23,7 @@
 @import "products";
 @import "propose";
 @import "prospectus";
+@import "side_nav";
 
 * {
   box-sizing: border-box;
@@ -30,7 +31,9 @@
 
 .half .container {
   width: 100%;
+  height: 100%;
   max-width: 600px;
+  padding: 20px 0;
 }
 .flex .half .container {
   float: right;

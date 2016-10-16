@@ -9,10 +9,13 @@ input.green {
 .donate-button {
   background: #C5FF5B;
   padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
   text-align: center;
   color: #000;
 }
-
 
 .supporter {
   padding: 1em;

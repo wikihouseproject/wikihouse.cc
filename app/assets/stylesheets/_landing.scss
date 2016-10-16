@@ -3,6 +3,7 @@
   color: #FFF;
   background: image-url('slide1.jpg') bottom center;
   background-size: cover;
+  overflow: hidden;
   h2 {
     font-family: "Roboto Mono";
   }
@@ -27,7 +28,7 @@
 #slider {
   @include fill-parent;
   background: #F0F0F0;
-  height: 400px;
+  height: 500px;
   width: 100%;
   h2 {
     font-family: "Roboto Mono";
@@ -35,14 +36,23 @@
   li {
     background-size: cover;
   }
-}
+  img {
+    height: 100%;
+  }
 
-.slide-container {
-  display: flex;
-  align-items: center;
+  .slide-container {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    img {
+      height: 600px;
+      margin-right: 20px;
+    }
+  }
 }
 
 #preview {
   height: 500px;
   background: #FFF;
+  padding: 40px 0;
 }

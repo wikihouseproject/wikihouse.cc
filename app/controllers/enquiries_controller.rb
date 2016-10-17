@@ -3,7 +3,7 @@ class EnquiriesController < ApplicationController
   before_action :set_filenames
 
   def index
-    redirect_to enquiry_path('becoming-a-partner')
+    redirect_to enquiry_path(@filenames[0].gsub("_","-"))
   end
 
   def show

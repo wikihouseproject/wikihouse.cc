@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require unslider-min
-//= require leaflet
 //= require_tree .

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :things, path: 'types'
+  resources :enquiries
 
   root to: 'static#landing'
 end

@@ -1,0 +1,9 @@
+I am interested in...
+
+<ul>
+  <% @filenames.each do |filename| %>
+    <li>
+      <%= link_to_unless_current filename.humanize, enquiry_path(filename.gsub('_','-')) %>
+    </li>
+  <% end %>
+</ul>

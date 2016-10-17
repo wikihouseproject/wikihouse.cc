@@ -25,6 +25,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.5'
 gem 'bourbon'
 gem 'neat'
+gem 'simple_form'
 
 group :production do
   gem 'rails_12factor'

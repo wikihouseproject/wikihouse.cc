@@ -43,9 +43,20 @@
 }
 
 .propose {
+  a {
+    color: #FFF;
+    display: block;
+    font-family: "Roboto Mono";
+    margin-top: 2em;
+  }
   h3 {
     font-family: "Roboto Mono";
     font-size: 2em;
+  }
+  .container {
+    .inside {
+      @include span-columns(8);
+    }
   }
 }
 

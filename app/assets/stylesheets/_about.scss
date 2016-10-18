@@ -20,10 +20,11 @@
 }
 
 .about-point {
-  width: 49%;
-  display: inline-block;
-  vertical-align: top;
-  overflow: hidden;
+  @include span-columns(5);
+  // width: 49%;
+  // display: inline-block;
+  // vertical-align: top;
+  // overflow: hidden;
   // display: flex;
   margin-bottom: 2em;
   h5 {

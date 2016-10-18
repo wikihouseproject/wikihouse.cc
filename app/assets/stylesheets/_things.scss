@@ -1,0 +1,18 @@
+.type-details {
+  background: #FFF;
+}
+
+.left-info {
+  @include span-columns(6);
+}
+.right-info {
+  @include span-columns(4);
+}
+.terms {
+  h1 {
+    font-size: 1.2em;
+  }
+  h2,h3,h4 {
+    font-size: 1em;
+  }
+}

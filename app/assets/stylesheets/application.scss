@@ -25,6 +25,7 @@ $visual-grid: true;
 @import "propose";
 @import "prospectus";
 @import "side_nav";
+@import "things";
 
 * {
   box-sizing: border-box;
@@ -79,18 +80,22 @@ a {
 .half {
   flex: 1;
   .container {
-    width: 100%;
-    height: 100%;
+    padding: $gutter;
     max-width: $max-width/2;
-    padding: 40px 0;
+    // width: 100%;
+    height: 100%;
+    // max-width: $max-width/2;
+    // @include span-columns(8);
   }
 }
 .flex {
   display: flex;
 }
-.flex .half .container {
+.flex .half:nth-child(1) .container {
   float: right;
+  padding-left: 0;
 }
 .flex .half:nth-child(2) .container {
   float: left;
+  padding-right: 0;
 }

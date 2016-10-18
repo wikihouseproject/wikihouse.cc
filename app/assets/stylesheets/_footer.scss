@@ -4,6 +4,7 @@ footer {
   background: #333333;
   color: #FFF;
   height: 300px;
+  padding: 20px 0;
 
   ul#footer-list {
     &, li {
@@ -21,7 +22,6 @@ footer {
   }
 
   ul#social-icons {
-    float: right;
     &, li {
       list-style: none;
       margin: 0;
@@ -29,7 +29,6 @@ footer {
     }
     li {
       display: inline-block;
-      float: right;
     }
   }
 
@@ -37,6 +36,14 @@ footer {
     color: #333333;
   }
 
+}
+
+.footer-nav {
+  @include span-columns(5);
+}
+.social-icons-holder {
+  @include span-columns(5);
+  text-align: right;
 }
 
 

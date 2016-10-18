@@ -1,3 +1,6 @@
+.top-description {
+  @include span-columns(7);
+}
 .replaced-svg circle {
   fill: black;
 }

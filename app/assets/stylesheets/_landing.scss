@@ -1,11 +1,35 @@
 .hero {
   height: 500px;
   color: #FFF;
-  background: image-url('slide1.jpg') bottom center;
-  background-size: cover;
   overflow: hidden;
+  position: relative;
+
+  .fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    @include linear-gradient(
+      to top,
+      rgba(#000, 0) 0%,
+      rgba(#000, 0.4) 90%
+    );
+  }
+
   h2 {
     font-family: "Roboto Mono";
+    font-size: 2em;
+    line-height: 1.3;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  video.loop {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }
 

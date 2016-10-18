@@ -1,17 +1,26 @@
 <% content_for :header do %>
   <div class="about-description">
     <div class="container">
-      <%= title "About WikiHouse Foundation" %>
-      <p>WikiHouse Foundation is a non-profit open technology foundation, based in the UK. Our purpose is to allow companies, organisations and governments to work together to develop new open technologies, standards and common infrastrucutres for housing and sustainable development.</p>
+      <div class="top-description">
+        <%= title "About WikiHouse Foundation" %>
+        <p>WikiHouse Foundation is a non-profit open technology foundation, based in the UK. Our purpose is to allow companies, organisations and governments to work together to develop new open technologies, standards and common infrastrucutres for housing and sustainable development.</p>
 
-      <p>WikiHouse Foundation was formed in 2014. In 2016, we formed WikiHouse Infrastructures, a wholly-owed subsidiary tasked with the development of digital supply chain infrastructures.</p>
+        <p>WikiHouse Foundation was formed in 2014. In 2016, we formed WikiHouse Infrastructures, a wholly-owed subsidiary tasked with the development of digital supply chain infrastructures.</p>
+      </div>
     </div>
   </div>
 <% end %>
 
 <div class="container" style="text-align: center"><%= image_tag "clock.svg", style: 'width: 60%; margin: 20px auto;' %></div>
 
+<div class="team">
 <div class="container">
   <h2>Team</h2>
+  <% team_members = ["Alastair Parvin", "Harry Knight", "Clayton", "Nikee", "John"] %>
+  <% team_members.each do |team_member| %>
+    <%= team_member %>
+  <% end %>
 
 </div>
+</div>
+

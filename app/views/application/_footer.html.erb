@@ -12,20 +12,27 @@
 
 <footer>
   <div class="container">
-    <ul id="footer-list">
-      <li>WikiHouse Foundation</li>
-      <li>UK Registered non-profit</li>
-      <li>About Us</li>
-      <li>Contact Us</li>
-      <li>Terms of Use</li>
-      <li>CC_BY_SA</li>
-    </ul>
+
+    <div class="footer-nav">
+      <ul id="footer-list">
+        <li><strong>WikiHouse Foundation</strong></li>
+        <li>UK Registered non-profit</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+        <li>Terms of Use</li>
+        <li>CC_BY_SA</li>
+      </ul>
+    </div>
+
+    <div class="social-icons-holder">
+      <ul id="social-icons">
+        <li><%= fa_stacked_icon "twitter", base: "circle", class: "fa-2x" %></li>
+        <li><%= fa_stacked_icon "facebook", base: "circle", class: "fa-2x" %></li>
+        <li><%= fa_stacked_icon "youtube", base: "circle", class: "fa-2x" %></li>
+        <li><%= fa_stacked_icon "slack", base: "circle", class: "fa-2x" %></li>
+      </ul>
+    </div>
+
   </div>
 
-  <ul id="social-icons">
-    <li><%= fa_stacked_icon "twitter", base: "circle", class: "fa-2x" %></li>
-    <li><%= fa_stacked_icon "facebook", base: "circle", class: "fa-2x" %></li>
-    <li><%= fa_stacked_icon "youtube", base: "circle", class: "fa-2x" %></li>
-    <li><%= fa_stacked_icon "slack", base: "circle", class: "fa-2x" %></li>
-  </ul>
 </footer>

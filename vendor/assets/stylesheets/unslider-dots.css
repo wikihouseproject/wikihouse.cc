@@ -14,20 +14,21 @@
 .unslider-nav ol {
   list-style: none;
   text-align: center;
+  margin-bottom: 10px;
 }
 .unslider-nav ol li {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
   margin: 0 4px;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   text-indent: -999em;
-  border: 2px solid #fff;
+  border: 1px solid #000;
   cursor: pointer;
 }
 .unslider-nav ol li.unslider-active {
-  background: #fff;
+  background: #000;
   cursor: default;
 }

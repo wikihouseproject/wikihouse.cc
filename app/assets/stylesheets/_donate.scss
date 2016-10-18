@@ -1,3 +1,10 @@
+.we-work-for-you {
+  @include outer-container();
+  .description, .form {
+    @include span-columns(5);
+  }
+}
+
 input.green {
   background: #E1FF9C;
   border: none;

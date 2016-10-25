@@ -30,6 +30,10 @@ footer {
     li {
       display: inline-block;
       a {
+        transition: all 0.5s;
+        color: #ddd;
+      }
+      a:hover {
         color: #FFF;
       }
     }

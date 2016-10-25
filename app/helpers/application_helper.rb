@@ -26,4 +26,12 @@ module ApplicationHelper
     markdown.render(text).html_safe
   end
 
+  def social_icon icon_name, url
+    content_tag :li, class: 'social-icon' do
+      link_to url, title: icon_name, rel: 'me' do
+        fa_stacked_icon icon_name, base: 'circle', class: 'fa-2x'
+      end
+    end
+  end
+
 end

@@ -1,3 +1,22 @@
 .team {
   background: #FFF;
 }
+.team-member {
+  @include span-columns(4);
+  span {
+    display: block;
+  }
+  .name {
+    font-weight: bold;
+  }
+  .role {
+    color: #717171;
+  }
+  .photo {
+    $size: 130px;
+    width: $size;
+    height: $size;
+    border-radius: $size/2;
+    background: #F0F0F0;
+  }
+}

@@ -8,12 +8,26 @@
   }
   table {
     line-height: 1.5em;
+    thead th {
+      text-transform: uppercase;
+      padding-bottom: 2em;
+    }
     th {
       font-weight: normal;
     }
+    td {
+      vertical-align: top;
+    }
     tbody {
+      tr:last-child {
+        th {
+          font-weight: bold;
+          padding-bottom: 1em;
+        }
+      }
       th {
         text-align: right;
+        width: 50%;
       }
       td {
         text-align: center;

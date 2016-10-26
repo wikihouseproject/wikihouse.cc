@@ -7,6 +7,28 @@
 
 .our-mission {
   background: #FFF;
+  h4 {
+    font-family: 'Roboto Mono';
+  }
+
+  ol {
+    counter-reset:li;
+    margin-left: 0;
+    padding-left: 0;
+    list-style:none;
+
+    @include span-columns(7);
+  }
+  ol > li:before {
+    content:counter(li);
+    counter-increment:li;
+    color: #8E8E8E;
+    padding-right: 1em;
+    font-weight: bold;
+  }
+  ol > li {
+    margin-bottom: 1em;
+  }
 }
 
 .accordion-title {
@@ -19,6 +41,8 @@
   display: flex;
 }
 
+
+
 .about-point {
   @include span-columns(5);
   // width: 49%;
@@ -26,7 +50,8 @@
   // vertical-align: top;
   // overflow: hidden;
   // display: flex;
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
+  margin: 0;
   h5 {
     font-size: 1.1em;
     margin: 0;

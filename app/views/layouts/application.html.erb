@@ -45,7 +45,7 @@
 
     <% if content_for?(:header) %><header id="sub-header" class="drop-shadow"><%= yield(:header) %></header><% end %>
 
-    <%= yield %>
+    <div id="main" role="main"><%= yield %></div>
 
     <%= render "footer" %>
 
@@ -55,6 +55,13 @@
       <li><%= link_to "Propose", propose_path %></li>
       <li><%= link_to "Prospectus", prospectus_path %></li>
     </ul>
+
+    <script type="text/javascript">
+      new Pjax({
+        elements: "a", // default is "a[href], form[action]"
+        selectors: ["#sub-header", "#main"]
+      })
+    </script>
 
   </body>
 </html>

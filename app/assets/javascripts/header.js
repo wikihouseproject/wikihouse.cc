@@ -16,7 +16,8 @@
 //   })
 // })
 
-document.addEventListener("turbolinks:load", function() {
+// document.addEventListener("turbolinks:load", function() {
+$(document).ready(function() {
   var subHeadHeight = $('header#sub-header').height()
   $(window).scroll(function() {
     // if ($(window).scrollTop() > 0) {
@@ -40,5 +41,10 @@ document.addEventListener("turbolinks:load", function() {
   $('#toggleMenu').click(function(event) {
     event.preventDefault();
     $('#side-nav').fadeIn('fast')
+  })
+
+  $('#main-menu a').click(function(event) {
+    $('#main-menu a').removeClass('active')
+    $(this).addClass('active')
   })
 })

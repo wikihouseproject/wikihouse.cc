@@ -1,0 +1,52 @@
+.js-Pjax { position: relative } /* parent element where switch will be made */
+
+.js-Pjax-child { width: 100% }
+
+/* position for the elements that will be removed */
+.js-Pjax-remove {
+  position: absolute;
+  left: 50%;
+  /* transform: translateX(-50%) */
+  /* transform can't be used since we already use generic translate for the remove effect (eg animate.css) */
+  /* margin-left: -width/2; // made with js */
+  /* you can totally drop the margin-left thing from switchesOptions if you use custom animations */
+}
+
+/* CSS animations */
+.Animated {
+  // animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+.Animated--reverse { animation-direction: reverse }
+
+.Animate--fast { animation-duration: .5s }
+.Animate--noDelay { animation-delay: 0s !important;  }
+
+.Animate--slideInUp { animation-name: Animation-slideInUp }
+@keyframes Animation-slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Animate--slideInDown { animation-name: Animation-slideInDown }
+@keyframes Animation-slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

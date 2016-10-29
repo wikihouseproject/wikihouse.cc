@@ -34,10 +34,10 @@
         <%= link_to root_path do %><%= image_tag "wikihouse-logo.svg", id: 'logo' %><% end %>
         <ul id="main-menu">
           <!-- <li><%= link_to "WikiHouse", root_path, 'data-tg-refresh': 'page' %></li> -->
-          <li><%= link_to "About", about_path, 'data-tg-refresh': 'page' %></li>
-          <li><%= link_to "Library", library_path, 'data-tg-refresh': 'page' %></li>
-          <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page' %></li>
-          <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page' %></li>
+          <li><%= link_to "About", about_path, 'data-tg-refresh': 'page', class: ('active' if request.path == about_path) %></li>
+          <li><%= link_to "Library", library_path, 'data-tg-refresh': 'page', class: ('active' if request.path == library_path) %></li>
+          <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page', class: ('active' if request.path == community_path) %></li>
+          <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page', class: ('active' if request.path == partners_path) %></li>
           <li><%= link_to fa_icon("bars"), '#', id: 'toggleMenu' %></li>
         </ul>
       </div>
@@ -45,7 +45,7 @@
 
     <% if content_for?(:header) %><header id="sub-header" class="drop-shadow"><%= yield(:header) %></header><% end %>
 
-    <div id="main" role="main"><%= yield %></div>
+    <div id="main" role="main" class="Animated Animate--slideInUp"><%= yield %></div>
 
     <%= render "footer" %>
 
@@ -59,7 +59,43 @@
     <script type="text/javascript">
       new Pjax({
         elements: "a", // default is "a[href], form[action]"
-        selectors: ["#sub-header", "#main"]
+        selectors: ["title", "meta[name=csrf-token]", "#sub-header", "#main"],
+        switches: {
+          "#main": Pjax.sideBySide,//require("pjax/lib/switches.js").sideBySide
+          "#sub-header": Pjax.sideBySide
+        },
+        switchesOptions: {
+          "#main": {
+            classNames: {
+              remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
+              add: "Animated",
+              backward: "Animate--slideInDown",
+              forward: "Animate--slideInUp"
+            },
+            callbacks: {
+              removeElement: function(el) {
+                el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
+              }
+            }
+          },
+
+          "#sub-header": {
+            classNames: {
+              remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
+              add: "Animated",
+              backward: "Animate--slideInDown",
+              forward: "Animate--slideInUp"
+            },
+            callbacks: {
+              removeElement: function(el) {
+                el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
+              }
+            }
+          }
+
+
+        }
+
       })
     </script>
 

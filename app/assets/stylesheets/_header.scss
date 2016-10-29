@@ -1,6 +1,6 @@
 #sub-header {
   background: white;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   padding: 1em 0 2em 0;
 }
@@ -25,7 +25,7 @@ header#main-header {
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   background: #FFF;
 
   // box-shadow: 0px 10px 20px 1px rgba(255,255,255,1);
@@ -45,7 +45,7 @@ header#main-header {
   .ink {
     display: block;
     position: absolute;
-    background: #CCC;
+    background: rgba(0,0,0,0.1);
     border-radius: 100%;
     transform: scale(0);
     z-index: 10000;
@@ -54,7 +54,7 @@ header#main-header {
   .ink.animate {animation: ripple 0.5s linear;}
   @keyframes ripple {
     /*scale the element to 250% to safely cover the entire link and fade it out*/
-    100% {opacity: 0; transform: scale(1.5);}
+    100% {opacity: 0; transform: scale(2);}
   }
 
   .container {
@@ -73,7 +73,7 @@ header#main-header {
     li {
       list-style-type: none;
       position: relative;
-      overflow: hidden;
+      // overflow: hidden;
       display: inline-block;
       a {
         display: block;
@@ -84,8 +84,14 @@ header#main-header {
         user-select: none;
         /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
         position: relative;
+        border-bottom: 2px solid #FFF;
+        transition: all 0.3s;
         &:hover {
           color: #444;
+          border-color: #CCC;
+        }
+        &.active {
+          border-color: #000;
         }
       }
     }

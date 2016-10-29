@@ -43,8 +43,10 @@ $(document).ready(function() {
     $('#side-nav').fadeIn('fast')
   })
 
-  $('#main-menu a').click(function(event) {
-    $('#main-menu a').removeClass('active')
-    $(this).addClass('active')
-  })
 })
+
+$(document).on('pjax:success', function() {
+  $('#main-menu a').removeClass('active')
+  $('#main-menu a[href="' + window.location.pathname + '"]').addClass('active')
+  // $(this).addClass('active')
+});

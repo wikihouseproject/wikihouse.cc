@@ -15,7 +15,7 @@
 /* CSS animations */
 .Animated {
   // animation-fill-mode: both;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
 }
 
 .Animated--reverse { animation-direction: reverse }
@@ -27,10 +27,10 @@
 @keyframes Animation-slideInUp {
   0% {
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(600px);
   }
 
-  50% {
+  70% {
     opacity: 0.01;
   }
   100% {

@@ -68,7 +68,7 @@ header#main-header {
     color: #000;
   }
   ul {
-    font-family: 'Roboto Mono';
+    font-family: $mono;
     margin: 0 auto;
     li {
       list-style-type: none;
@@ -84,6 +84,9 @@ header#main-header {
         user-select: none;
         /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
         position: relative;
+        &:hover {
+          color: #444;
+        }
       }
     }
   }

@@ -1,3 +1,6 @@
+$roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
+
 @import "normalize";
 
 @import "bourbon";
@@ -35,13 +38,13 @@ $visual-grid: true;
 body {
   margin: 0;
   padding: 50px 0 0 0;
-  font-family: 'Roboto';
+  font-family: $roboto;
   background: #F0F0F0;
   line-height: 1.4;
 }
 
 h1, h2, h3 {
-  font-family: "Roboto Mono"
+  font-family: $mono;
 }
 h1,h2,h3,h4 {
   font-weight: normal;

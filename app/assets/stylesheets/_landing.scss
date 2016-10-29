@@ -19,7 +19,7 @@
   }
 
   h2 {
-    font-family: "Roboto Mono";
+    font-family: $mono;
     font-size: 2em;
     line-height: 1.3;
   }
@@ -36,7 +36,7 @@
 .stats {
   background: #6699CC;
   color: #FFF;
-  font-family: "Roboto Mono";
+  font-family: $mono;
   .count {
     font-size: 4em;
   }
@@ -46,11 +46,11 @@
   a {
     color: #FFF;
     display: block;
-    font-family: "Roboto Mono";
+    font-family: $mono;
     margin-top: 2em;
   }
   h3 {
-    font-family: "Roboto Mono";
+    font-family: $mono;
     font-size: 2em;
   }
   .container {
@@ -65,8 +65,10 @@
   background: #F0F0F0;
   height: 500px;
   width: 100%;
+
+
   h2 {
-    font-family: "Roboto Mono";
+    font-family: $mono;
   }
   li {
     background-size: cover;

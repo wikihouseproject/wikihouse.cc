@@ -2,8 +2,11 @@
 <% x2 = Nokogiri::XML(x.at_xpath('//item//description')) %>
 
 <div style="height: 100%; background: url(<%= x2.at_xpath('//img').attr('src') %>); background-size: cover;">
-  <%= link_to x2.at_xpath('//a').attr('href') do %>
-  <h1><%= x.at_xpath('//item//title').text %></h1>
-  <%#= x2 %>
-  <% end %>
+  <div class="fade"></div>
+  <div class="container">
+    <%= link_to x2.at_xpath('//a').attr('href') do %>
+    <h1><%= x.at_xpath('//item//title').text %></h1>
+    <%#= x2 %>
+    <% end %>
+  </div>
 </div>

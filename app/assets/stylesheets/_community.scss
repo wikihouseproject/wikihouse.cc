@@ -4,20 +4,43 @@
 }
 
 .connect {
+  position: relative;
   background: #2D2D2D;
+  padding-bottom: 3em;
   &, a {
     color: #FFF;
   }
   a {
+    padding-bottom: 1.5em;
+    display: block;
+    position: absolute;
+    bottom: 0;
     font-family: $mono;
     text-transform: uppercase;
   }
 }
 
 .wren {
+  position: relative;
   background: #C5FF5B;
+  padding-bottom: 3em;
   a {
+    padding-bottom: 1.5em;
+    display: block;
+    position: absolute;
+    bottom: 0;
     font-family: $mono;
     color: #000;
   }
+}
+
+.open-challenges {
+  background: #5B8E8E;
+  &, h4 {
+    color: #000;
+  }
+}
+
+.news {
+  position: relative;
 }

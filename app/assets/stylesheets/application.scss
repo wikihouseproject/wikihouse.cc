@@ -1,6 +1,6 @@
 $roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-$headerHeight: 44px;
+$headerHeight: 75px;
 
 @import "normalize";
 
@@ -48,8 +48,11 @@ body {
 h1, h2, h3 {
   font-family: $mono;
 }
-h1,h2,h3,h4 {
+h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
+}
+h3,h4,h5,h6 {
+  color: #AAA;
 }
 
 form {

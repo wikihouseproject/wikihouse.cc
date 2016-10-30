@@ -12,7 +12,7 @@ header {
   }
 }
 
-header.drop-shadow {
+.drop-shadow {
   box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
 }
 
@@ -37,9 +37,9 @@ header#main-header {
   @include fill-parent;
 
   #logo {
-    margin: 7px 0 0 -5px;
-    max-height: 33px;
-    height: 100%;
+    margin: 10px 0 0 -20px;
+    height: 45px;
+    text-align: left;
   }
 
   .ink {
@@ -67,6 +67,10 @@ header#main-header {
   a {
     color: #000;
   }
+  a#toggleMenu {
+    border: none !important;
+    // font-size: 1.2em;
+  }
   ul {
     font-family: $mono;
     margin: 0 auto;
@@ -76,8 +80,9 @@ header#main-header {
       // overflow: hidden;
       display: inline-block;
       a {
+        line-height: $headerHeight - 2;
         display: block;
-        padding: 10px 15px;
+        padding: 0 20px;
         text-decoration: none;
         cursor: pointer; /*since the links are dummy without href values*/
         /*prevent text selection*/
@@ -85,13 +90,17 @@ header#main-header {
         /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
         position: relative;
         border-bottom: 2px solid #FFF;
-        transition: all 0.3s;
+        transition: all 0.4s;
+        font-weight: bold;
         &:hover {
-          color: #444;
+          color: #AAA;
           border-color: #CCC;
         }
         &.active {
           border-color: #000;
+          &:hover {
+            color: #000;
+          }
         }
       }
     }

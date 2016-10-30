@@ -1,20 +1,20 @@
-!function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.Pjax=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
-var clone = _dereq_('./lib/clone.js')
-var executeScripts = _dereq_('./lib/execute-scripts.js')
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Pjax = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var clone = require('./lib/clone.js')
+var executeScripts = require('./lib/execute-scripts.js')
 
-var forEachEls = _dereq_("./lib/foreach-els.js")
+var forEachEls = require("./lib/foreach-els.js")
 
-var newUid = _dereq_("./lib/uniqueid.js")
+var newUid = require("./lib/uniqueid.js")
 
-var on = _dereq_("./lib/events/on.js")
+var on = require("./lib/events/on.js")
 // var off = require("./lib/events/on.js")
-var trigger = _dereq_("./lib/events/trigger.js")
+var trigger = require("./lib/events/trigger.js")
 
 
 var Pjax = function(options) {
     this.firstrun = true
 
-    var parseOptions = _dereq_("./lib/proto/parse-options.js");
+    var parseOptions = require("./lib/proto/parse-options.js");
     parseOptions.apply(this,[options])
     this.log("Pjax options", this.options)
 
@@ -44,24 +44,24 @@ var Pjax = function(options) {
   }
 
 Pjax.prototype = {
-  log: _dereq_("./lib/proto/log.js"),
+  log: require("./lib/proto/log.js"),
 
-  getElements: _dereq_("./lib/proto/get-elements.js"),
+  getElements: require("./lib/proto/get-elements.js"),
 
-  parseDOM: _dereq_("./lib/proto/parse-dom.js"),
+  parseDOM: require("./lib/proto/parse-dom.js"),
 
-  refresh: _dereq_("./lib/proto/refresh.js"),
+  refresh: require("./lib/proto/refresh.js"),
 
-  reload: _dereq_("./lib/reload.js"),
+  reload: require("./lib/reload.js"),
 
-  attachLink: _dereq_("./lib/proto/attach-link.js"),
+  attachLink: require("./lib/proto/attach-link.js"),
 
   forEachSelectors: function(cb, context, DOMcontext) {
-    return _dereq_("./lib/foreach-selectors.js").bind(this)(this.options.selectors, cb, context, DOMcontext)
+    return require("./lib/foreach-selectors.js").bind(this)(this.options.selectors, cb, context, DOMcontext)
   },
 
   switchSelectors: function(selectors, fromEl, toEl, options) {
-    return _dereq_("./lib/switches-selectors.js").bind(this)(this.options.switches, this.options.switchesOptions, selectors, fromEl, toEl, options)
+    return require("./lib/switches-selectors.js").bind(this)(this.options.switches, this.options.switchesOptions, selectors, fromEl, toEl, options)
   },
 
   // too much problem with the code below
@@ -144,7 +144,7 @@ Pjax.prototype = {
     // }
   },
 
-  doRequest: _dereq_("./lib/request.js"),
+  doRequest: require("./lib/request.js"),
 
   loadUrl: function(href, options) {
     this.log("load href", href, options)
@@ -224,7 +224,7 @@ Pjax.prototype = {
   }
 }
 
-Pjax.isSupported = _dereq_("./lib/is-supported.js");
+Pjax.isSupported = require("./lib/is-supported.js");
 
 //arguably could do `if( require("./lib/is-supported.js")()) {` but that might be a little to simple
 if (Pjax.isSupported()) {
@@ -242,7 +242,7 @@ else {
   module.exports = stupidPjax
 }
 
-},{"./lib/clone.js":2,"./lib/events/on.js":4,"./lib/events/trigger.js":5,"./lib/execute-scripts.js":6,"./lib/foreach-els.js":7,"./lib/foreach-selectors.js":8,"./lib/is-supported.js":9,"./lib/proto/attach-link.js":11,"./lib/proto/get-elements.js":12,"./lib/proto/log.js":13,"./lib/proto/parse-dom.js":14,"./lib/proto/parse-options.js":16,"./lib/proto/refresh.js":17,"./lib/reload.js":18,"./lib/request.js":19,"./lib/switches-selectors.js":20,"./lib/uniqueid.js":22}],2:[function(_dereq_,module,exports){
+},{"./lib/clone.js":2,"./lib/events/on.js":4,"./lib/events/trigger.js":5,"./lib/execute-scripts.js":6,"./lib/foreach-els.js":7,"./lib/foreach-selectors.js":8,"./lib/is-supported.js":9,"./lib/proto/attach-link.js":11,"./lib/proto/get-elements.js":12,"./lib/proto/log.js":13,"./lib/proto/parse-dom.js":14,"./lib/proto/parse-options.js":16,"./lib/proto/refresh.js":17,"./lib/reload.js":18,"./lib/request.js":19,"./lib/switches-selectors.js":20,"./lib/uniqueid.js":22}],2:[function(require,module,exports){
 module.exports = function(obj) {
   if (null === obj || "object" != typeof obj) {
     return obj
@@ -256,7 +256,7 @@ module.exports = function(obj) {
   return copy
 }
 
-},{}],3:[function(_dereq_,module,exports){
+},{}],3:[function(require,module,exports){
 module.exports = function(el) {
   // console.log("going to execute script", el)
 
@@ -287,8 +287,8 @@ module.exports = function(el) {
   return true
 }
 
-},{}],4:[function(_dereq_,module,exports){
-var forEachEls = _dereq_("../foreach-els")
+},{}],4:[function(require,module,exports){
+var forEachEls = require("../foreach-els")
 
 module.exports = function(els, events, listener, useCapture) {
   events = (typeof events === "string" ? events.split(" ") : events)
@@ -300,8 +300,8 @@ module.exports = function(els, events, listener, useCapture) {
   })
 }
 
-},{"../foreach-els":7}],5:[function(_dereq_,module,exports){
-var forEachEls = _dereq_("../foreach-els")
+},{"../foreach-els":7}],5:[function(require,module,exports){
+var forEachEls = require("../foreach-els")
 
 module.exports = function(els, events, opts) {
   events = (typeof events === "string" ? events.split(" ") : events)
@@ -333,9 +333,9 @@ module.exports = function(els, events, opts) {
   })
 }
 
-},{"../foreach-els":7}],6:[function(_dereq_,module,exports){
-var forEachEls = _dereq_("./foreach-els")
-var evalScript = _dereq_("./eval-script")
+},{"../foreach-els":7}],6:[function(require,module,exports){
+var forEachEls = require("./foreach-els")
+var evalScript = require("./eval-script")
 // Finds and executes scripts (used for newly added elements)
 // Needed since innerHTML does not run scripts
 module.exports = function(el) {
@@ -350,7 +350,7 @@ module.exports = function(el) {
   })
 }
 
-},{"./eval-script":3,"./foreach-els":7}],7:[function(_dereq_,module,exports){
+},{"./eval-script":3,"./foreach-els":7}],7:[function(require,module,exports){
 /* global HTMLCollection: true */
 
 module.exports = function(els, fn, context) {
@@ -361,8 +361,8 @@ module.exports = function(els, fn, context) {
   return fn.call(context, els)
 }
 
-},{}],8:[function(_dereq_,module,exports){
-var forEachEls = _dereq_("./foreach-els")
+},{}],8:[function(require,module,exports){
+var forEachEls = require("./foreach-els")
 
 module.exports = function(selectors, cb, context, DOMcontext) {
   DOMcontext = DOMcontext || document
@@ -371,7 +371,7 @@ module.exports = function(selectors, cb, context, DOMcontext) {
   })
 }
 
-},{"./foreach-els":7}],9:[function(_dereq_,module,exports){
+},{"./foreach-els":7}],9:[function(require,module,exports){
 module.exports = function() {
   // Borrowed wholesale from https://github.com/defunkt/jquery-pjax
   return window.history &&
@@ -381,7 +381,7 @@ module.exports = function() {
     !navigator.userAgent.match(/((iPod|iPhone|iPad).+\bOS\s+[1-4]\D|WebApps\/.+CFNetwork)/)
 }
 
-},{}],10:[function(_dereq_,module,exports){
+},{}],10:[function(require,module,exports){
 if (!Function.prototype.bind) {
   Function.prototype.bind = function(oThis) {
     if (typeof this !== "function") {
@@ -403,11 +403,11 @@ if (!Function.prototype.bind) {
   }
 }
 
-},{}],11:[function(_dereq_,module,exports){
-_dereq_("../polyfills/Function.prototype.bind")
+},{}],11:[function(require,module,exports){
+require("../polyfills/Function.prototype.bind")
 
-var on = _dereq_("../events/on")
-var clone = _dereq_("../clone")
+var on = require("../events/on")
+var clone = require("../clone")
 
 var attrClick = "data-pjax-click-state"
 var attrKey = "data-pjax-keyup-state"
@@ -494,12 +494,12 @@ module.exports = function(el) {
   }.bind(this))
 }
 
-},{"../clone":2,"../events/on":4,"../polyfills/Function.prototype.bind":10}],12:[function(_dereq_,module,exports){
+},{"../clone":2,"../events/on":4,"../polyfills/Function.prototype.bind":10}],12:[function(require,module,exports){
 module.exports = function(el) {
   return el.querySelectorAll(this.options.elements)
 }
 
-},{}],13:[function(_dereq_,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports = function() {
   if (this.options.debug && console) {
     if (typeof console.log === "function") {
@@ -512,16 +512,16 @@ module.exports = function() {
   }
 }
 
-},{}],14:[function(_dereq_,module,exports){
-var forEachEls = _dereq_("../foreach-els")
+},{}],14:[function(require,module,exports){
+var forEachEls = require("../foreach-els")
 
-var parseElement = _dereq_("./parse-element")
+var parseElement = require("./parse-element")
 
 module.exports = function(el) {
   forEachEls(this.getElements(el), parseElement, this)
 }
 
-},{"../foreach-els":7,"./parse-element":15}],15:[function(_dereq_,module,exports){
+},{"../foreach-els":7,"./parse-element":15}],15:[function(require,module,exports){
 module.exports = function(el) {
   switch (el.tagName.toLowerCase()) {
   case "a":
@@ -540,7 +540,7 @@ module.exports = function(el) {
   }
 }
 
-},{}],16:[function(_dereq_,module,exports){
+},{}],16:[function(require,module,exports){
 /* global _gaq: true, ga: true */
 
 module.exports = function(options){
@@ -579,17 +579,17 @@ module.exports = function(options){
     options.analytics = function() {}
   }
 }
-},{}],17:[function(_dereq_,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports = function(el) {
   this.parseDOM(el || document)
 }
 
-},{}],18:[function(_dereq_,module,exports){
+},{}],18:[function(require,module,exports){
 module.exports = function() {
   window.location.reload()
 }
 
-},{}],19:[function(_dereq_,module,exports){
+},{}],19:[function(require,module,exports){
 module.exports = function(location, callback) {
   var request = new XMLHttpRequest()
 
@@ -615,10 +615,10 @@ module.exports = function(location, callback) {
   return request
 }
 
-},{}],20:[function(_dereq_,module,exports){
-var forEachEls = _dereq_("./foreach-els")
+},{}],20:[function(require,module,exports){
+var forEachEls = require("./foreach-els")
 
-var defaultSwitches = _dereq_("./switches")
+var defaultSwitches = require("./switches")
 
 module.exports = function(switches, switchesOptions, selectors, fromEl, toEl, options) {
   selectors.forEach(function(selector) {
@@ -652,8 +652,8 @@ module.exports = function(switches, switchesOptions, selectors, fromEl, toEl, op
   }, this)
 }
 
-},{"./foreach-els":7,"./switches":21}],21:[function(_dereq_,module,exports){
-var on = _dereq_("./events/on.js")
+},{"./foreach-els":7,"./switches":21}],21:[function(require,module,exports){
+var on = require("./events/on.js")
 // var off = require("./lib/events/on.js")
 // var trigger = require("./lib/events/trigger.js")
 
@@ -769,7 +769,7 @@ module.exports = {
   }
 }
 
-},{"./events/on.js":4}],22:[function(_dereq_,module,exports){
+},{"./events/on.js":4}],22:[function(require,module,exports){
 module.exports = (function() {
   var counter = 0
   return function() {
@@ -779,6 +779,5 @@ module.exports = (function() {
   }
 })()
 
-},{}]},{},[1])
-(1)
+},{}]},{},[1])(1)
 });

@@ -44,6 +44,9 @@ $visual-grid: true;
 body {
   margin: 0;
   padding: $shortHeaderHeight 0 0 0;
+  &.large {
+    padding-top: $largeHeaderHeight;
+  }
   font-family: $roboto;
   background: #F0F0F0;
   line-height: 1.4;

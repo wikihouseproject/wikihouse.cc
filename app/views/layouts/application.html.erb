@@ -31,7 +31,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="c-<%= controller_name %> a-<%= action_name %>">
+  <body class="c-<%= controller_name %> a-<%= action_name %> <%= 'large' if request.path == root_path %>"">
     <% if flash.any? %>
       <div class="container">
         <% flash.each do |name, msg| %>

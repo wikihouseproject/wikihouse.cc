@@ -12,23 +12,22 @@
 <% end %>
 
 <div id="about-diagram">
-<div class="container">
-  <%= image_tag "clock.svg", style: 'width: 60%; margin: 20px auto;' %>
-</div>
+  <div class="container">
+    <%= image_tag "clock.svg", style: 'width: 60%; margin: 20px auto;' %>
+  </div>
 </div>
 
 <div class="team">
-<div class="container">
-  <h2>Team</h2>
-  <% team_members = ["Alastair Parvin", "Harry Knight", "Clayton", "Nikee", "John"] %>
-  <% team_members.each do |team_member| %>
-    <div class="team-member">
-      <div class="photo"></div>
-      <span class="name"><%= team_member %></span>
-      <span class="role">role</span>
-      <p>A description of that person</p>
-    </div>
-  <% end %>
+  <div class="container">
+    <h2>Team</h2>
+    <% team_members = ["Alastair Parvin", "Harry Knight", "Clayton", "Nikee", "John"] %>
+    <% team_members.each do |team_member| %>
+      <div class="team-member">
+        <div class="photo"></div>
+        <span class="name"><%= team_member %></span>
+        <span class="role">role</span>
+        <p>A description of that person</p>
+      </div>
+    <% end %>
+  </div>
 </div>
-</div>
-

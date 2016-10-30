@@ -12,6 +12,7 @@
   </div>
 <% end %>
 
+<div id="about-points">
 <div class="container top">
   <h4>Design Principles</h4>
   <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
@@ -26,6 +27,7 @@
       </div>
     </div>
   <% end %>
+</div>
 </div>
 
 <div class="our-mission">

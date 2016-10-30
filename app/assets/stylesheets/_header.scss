@@ -3,6 +3,13 @@
   // overflow: hidden;
   position: relative;
   padding: 1em 0 2em 0;
+  transition: all 10s;
+
+  // transform: scaleY(0);
+  // transform: scaleY(1);
+  // transform-origin: top;
+  max-height: 100%;
+  transition: all 0.26s ease;
 }
 
 

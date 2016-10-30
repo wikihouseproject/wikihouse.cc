@@ -1,3 +1,13 @@
+<style type="text/css">
+  /* inline styles so that they load instantly */
+  .hero {
+    background-image: url(<%= asset_path('video-preview.jpg') %>);
+    background-size: cover;
+    background-color: #232323;
+    background-position: bottom center;
+  }
+</style>
+
 <div class="hero">
   <video src="/videos/timelapse.webm" class="loop" loop autoplay></video>
   <div class="fade">

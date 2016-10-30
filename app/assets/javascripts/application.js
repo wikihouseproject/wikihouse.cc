@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require pjax
 //= require unslider-min
+//= require typed
 //= require_tree .

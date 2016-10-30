@@ -1,8 +1,12 @@
-.team {
+.team-container {
   background: #FFF;
 }
+.team {
+  @include outer-container();
+}
 .team-member {
-  @include span-columns(4);
+  @include span-columns(5);
+
   span {
     display: block;
   }

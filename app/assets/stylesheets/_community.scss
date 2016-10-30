@@ -2,3 +2,22 @@
   background: #E0F3F8;
   height: 600px;
 }
+
+.connect {
+  background: #2D2D2D;
+  &, a {
+    color: #FFF;
+  }
+  a {
+    font-family: $mono;
+    text-transform: uppercase;
+  }
+}
+
+.wren {
+  background: #C5FF5B;
+  a {
+    font-family: $mono;
+    color: #000;
+  }
+}

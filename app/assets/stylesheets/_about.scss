@@ -5,12 +5,16 @@
   fill: black;
 }
 #about-points {
+  @include outer-container;
+
   h4,h5 {
     color: #000;
   }
   h5 {
     font-weight: bold;
   }
+
+
 }
 
 .our-mission {
@@ -49,10 +53,12 @@
   display: flex;
 }
 
-
-
 .about-point {
   @include span-columns(5);
+  &:nth-child(even) {
+    // @include omega();
+    clear: both;
+  }
   // width: 49%;
   // display: inline-block;
   // vertical-align: top;

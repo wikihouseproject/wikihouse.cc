@@ -8,11 +8,14 @@
   height: 100%;
   z-index: 5000;
   display: none;
+  padding-top: 2em;
   &, li {
     list-style: none;
   }
   a {
     font-family: $mono;
+    font-size: 1.5em;
+    font-weight: bold;
     display: block;
     color: #f0f0f0;
     padding: 20px;

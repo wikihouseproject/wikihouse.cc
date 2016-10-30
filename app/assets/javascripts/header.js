@@ -18,6 +18,11 @@
 
 // document.addEventListener("turbolinks:load", function() {
 $(document).ready(function() {
+
+  $('#side-nav').click(function() {
+    $('#side-nav').hide()
+  })
+
   var subHeadHeight = $('header#sub-header').height() + $('header#main-header').height()
 
   var origHeight = $('header#main-header').height();

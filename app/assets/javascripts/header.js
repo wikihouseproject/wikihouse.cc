@@ -18,7 +18,7 @@
 
 // document.addEventListener("turbolinks:load", function() {
 $(document).ready(function() {
-  var subHeadHeight = $('header#sub-header').height()
+  var subHeadHeight = $('header#sub-header').height() + $('header#main-header').height()
   $(window).scroll(function() {
     // if ($(window).scrollTop() > 0) {
     //   $('header#main-header').addClass('drop-shadow')
@@ -36,6 +36,8 @@ $(document).ready(function() {
       $('header#sub-header').addClass('drop-shadow')
       $('header#main-header').removeClass('drop-shadow')
     }
+
+    $('header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
   })
 
   $('#toggleMenu').click(function(event) {
@@ -48,5 +50,4 @@ $(document).ready(function() {
 $(document).on('pjax:success', function() {
   $('#main-menu a').removeClass('active')
   $('#main-menu a[href="' + window.location.pathname + '"]').addClass('active')
-  // $(this).addClass('active')
 });

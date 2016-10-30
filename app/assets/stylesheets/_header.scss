@@ -17,7 +17,7 @@ header.drop-shadow {
 }
 
 header#main-header {
-  height: 50px;
+  height: $headerHeight;
   // transition: height 0.1s;
   z-index: 2000;
   // padding-bottom: 20px;

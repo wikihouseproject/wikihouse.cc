@@ -24,6 +24,12 @@ header {
 }
 
 header#main-header {
+  &.large {
+    height: $headerHeight + 70;
+    #logo {
+      height: 115px;
+    }
+  }
   height: $headerHeight;
   // transition: height 0.1s;
   z-index: 2000;
@@ -45,8 +51,8 @@ header#main-header {
 
   #logo {
     margin: 10px 0 0 -20px;
-    // height: 45px;
-    height: 115px;
+    height: 45px;
+    max-height: 100%;
     text-align: left;
   }
 

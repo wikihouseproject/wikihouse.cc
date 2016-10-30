@@ -1,6 +1,6 @@
 $roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-$headerHeight: 75px;
+$headerHeight: 145px;
 
 @import "normalize";
 
@@ -45,6 +45,7 @@ body {
   font-family: $roboto;
   background: #F0F0F0;
   line-height: 1.4;
+  min-width: 320px;
 }
 
 h1, h2, h3 {
@@ -77,6 +78,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  line-height: 1.6;
+}
+
 .propose {
   color: #FFF;
   background: #333333;
@@ -98,6 +103,11 @@ a {
 
 .half {
   flex: 1;
+  position: relative;
+  padding-bottom: 3em;
+  a {
+    color: #FFF;
+  }
   .container {
     padding: $gutter;
     max-width: $max-width/2;

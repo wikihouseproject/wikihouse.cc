@@ -15,4 +15,5 @@
 //= require pjax
 //= require unslider-min
 //= require typed
+//= require countUp
 //= require_tree .

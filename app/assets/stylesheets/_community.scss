@@ -3,35 +3,24 @@
   height: 600px;
 }
 
-.connect {
-  position: relative;
-  background: #2D2D2D;
-  padding-bottom: 3em;
-  &, a {
-    color: #FFF;
-  }
-  a {
+a.bottom-link {
     padding-bottom: 1.5em;
     display: block;
     position: absolute;
     bottom: 0;
     font-family: $mono;
     text-transform: uppercase;
+}
+
+.connect {
+  background: #2D2D2D;
+  &, a {
+    color: #FFF;
   }
 }
 
 .wren {
-  position: relative;
   background: #C5FF5B;
-  padding-bottom: 3em;
-  a {
-    padding-bottom: 1.5em;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    font-family: $mono;
-    color: #000;
-  }
 }
 
 .open-challenges {

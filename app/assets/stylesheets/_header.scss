@@ -4,6 +4,7 @@
   position: relative;
   padding: 1em 0 2em 0;
   transition: all 10s;
+  z-index: 50;
 
   // transform: scaleY(0);
   // transform: scaleY(1);
@@ -12,7 +13,6 @@
   transition: all 0.26s ease;
 }
 
-
 header {
   a {
     color: #000;
@@ -20,7 +20,7 @@ header {
 }
 
 .drop-shadow {
-  box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.3);
 }
 
 header#main-header {
@@ -45,7 +45,8 @@ header#main-header {
 
   #logo {
     margin: 10px 0 0 -20px;
-    height: 45px;
+    // height: 45px;
+    height: 115px;
     text-align: left;
   }
 
@@ -87,7 +88,8 @@ header#main-header {
       // overflow: hidden;
       display: inline-block;
       a {
-        line-height: $headerHeight - 2;
+        // line-height: $headerHeight - 2;
+        line-height: 73px;
         display: block;
         padding: 0 20px;
         text-decoration: none;

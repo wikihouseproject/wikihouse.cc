@@ -19,6 +19,9 @@
 // document.addEventListener("turbolinks:load", function() {
 $(document).ready(function() {
   var subHeadHeight = $('header#sub-header').height() + $('header#main-header').height()
+
+  var origHeight = $('header#main-header').height();
+  var origLogoHeight = $('#logo').height();
   $(window).scroll(function() {
     // if ($(window).scrollTop() > 0) {
     //   $('header#main-header').addClass('drop-shadow')
@@ -36,6 +39,9 @@ $(document).ready(function() {
       $('header#sub-header').addClass('drop-shadow')
       $('header#main-header').removeClass('drop-shadow')
     }
+
+    $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) );
+    $('#logo').height( parseInt(Math.max(origLogoHeight-scrollPos, 50)) );
 
     $('header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
   })

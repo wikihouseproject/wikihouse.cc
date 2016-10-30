@@ -39,7 +39,7 @@
         <% end %>
       </div>
     <% end %>
-    <header id="main-header">
+    <header id="main-header" class="<%= 'large' if request.path == root_path %>">
     <%#= render "application/header" %>
     <!--  data-turbolinks-permanent -->
       <div class="container">

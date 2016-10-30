@@ -1,6 +1,8 @@
 $roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-$headerHeight: 75px;
+
+$shortHeaderHeight: 75px;
+$largeHeaderHeight: 145px;
 
 @import "normalize";
 
@@ -41,7 +43,7 @@ $visual-grid: true;
 
 body {
   margin: 0;
-  padding: $headerHeight 0 0 0;
+  padding: $shortHeaderHeight 0 0 0;
   font-family: $roboto;
   background: #F0F0F0;
   line-height: 1.4;
@@ -101,13 +103,16 @@ p {
   // padding: 0 10px;
 }
 
-.half {
-  flex: 1;
+.half, #join-us {
   position: relative;
   padding-bottom: 3em;
   a {
     color: #FFF;
   }
+}
+
+.half {
+  flex: 1;
   .container {
     padding: $gutter;
     max-width: $max-width/2;

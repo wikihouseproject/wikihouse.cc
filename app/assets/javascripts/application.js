@@ -16,4 +16,5 @@
 //= require unslider-min
 //= require typed
 //= require countUp
+//= require jquery-scrollspy
 //= require_tree .

@@ -23,10 +23,12 @@ $(document).ready(function() {
     $('#side-nav').hide()
   })
 
-  var subHeadHeight = $('header#sub-header').height() + $('header#main-header').height()
+  var subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
+
 
   var origHeight = $('header#main-header').height();
   var origLogoHeight = $('#logo').height();
+
   $(window).scroll(function() {
     // if ($(window).scrollTop() > 0) {
     //   $('header#main-header').addClass('drop-shadow')
@@ -37,24 +39,22 @@ $(document).ready(function() {
     // $('header#main-header').css('height', newHeight )
 
     var scrollPos = $(window).scrollTop()
-    if ( scrollPos - subHeadHeight > 0 ) {
-      $('header#sub-header').removeClass('drop-shadow')
+    // console.log( $('#counts').offset().top - $(window).height(), scrollPos)
+
+    if ( scrollPos - subHeadHeight >= 0 ) {
       $('header#main-header').addClass('drop-shadow')
+      $('header#sub-header').removeClass('drop-shadow')
     } else {
-      $('header#sub-header').addClass('drop-shadow')
       $('header#main-header').removeClass('drop-shadow')
+      $('header#sub-header').addClass('drop-shadow')
     }
 
+    $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) );
     if ($('header#main-header').hasClass('large')) {
-      $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 145)) );
-      $('#logo').height( parseInt(Math.max(origLogoHeight-scrollPos, 115)) );
-    } else {
-      $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) );
       $('#logo').height( parseInt(Math.max(origLogoHeight-scrollPos, 50)) );
     }
-
-
     $('header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
+
   })
 
   $('#toggleMenu').click(function(event) {
@@ -62,11 +62,11 @@ $(document).ready(function() {
     $('#side-nav').fadeIn('fast')
   })
 
-  if (window.location.pathname === "/") {
-    $('header#main-header').addClass('large')
-  } else {
-    $('header#main-header').removeClass('large')
-  }
+  // if (window.location.pathname === "/") {
+  //   $('header#main-header').addClass('large')
+  // } else {
+  //   $('header#main-header').removeClass('large')
+  // }
 
 })
 

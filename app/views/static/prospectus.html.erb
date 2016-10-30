@@ -19,12 +19,13 @@ vals = [["Pre", "Manual Distributed"], ["1st", "Mechanised Centralised"], ["2nd"
     <div class="container">
       <h2>The next industrial revolution in housing</h2>
       <p>Along with our partners WikiHouse Foundation are developing the first smart, distributed supply chain for homes. Join us.</p>
-      <%= link_to "Download our PDF prospectus", "#" %>
+      <%= link_to "Download our PDF prospectus", "#", class: 'bottom-link' %>
     </div>
   </div>
 
   <div class="half digital-infrastructure">
-    <div class="container">
+    <div class="fade"></div>
+    <div class="container" style="z-index: 200; position: relative">
       <h2>Digital infrastructure for resilient cities</h2>
     </div>
   </div>
@@ -60,5 +61,6 @@ vals = [["Pre", "Manual Distributed"], ["1st", "Mechanised Centralised"], ["2nd"
       <tr><td></td><th>£5k+</th><th>£15k+</th><th>£50k+</th></tr>
     </tfoot>
   </table>
+  <%= link_to "Get in touch", enquiries_path, class: 'bottom-link' %>
 </div>
 </div>

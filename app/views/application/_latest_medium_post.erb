@@ -3,7 +3,7 @@
 
 <div style="height: 100%; background: url(<%= x2.at_xpath('//img').attr('src') %>); background-size: cover;">
   <div class="fade"></div>
-  <div class="container">
+  <div class="container" style="z-index: 200; position: relative">
     <%= link_to x2.at_xpath('//a').attr('href') do %>
     <h1><%= x.at_xpath('//item//title').text %></h1>
     <%#= x2 %>

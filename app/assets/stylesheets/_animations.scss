@@ -4,30 +4,46 @@
 
 /* position for the elements that will be removed */
 .js-Pjax-remove {
+  opacity: 0 !important;
   position: absolute;
-  left: 50%;
-  /* transform: translateX(-50%) */
+  left: 50% !important;
+  margin-left: -540px !important;
+  width: 1080px;
+  display: block;
+  // position: absolute;
+  // top: -50%;
+  // left: 50%;
+  // transform: translateX(-100vh)
   /* transform can't be used since we already use generic translate for the remove effect (eg animate.css) */
   /* margin-left: -width/2; // made with js */
   /* you can totally drop the margin-left thing from switchesOptions if you use custom animations */
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.delay {
+  animation-delay: 0.5s !important;
+}
+
 /* CSS animations */
 .Animated {
   // animation-fill-mode: both;
+  // animation-delay: 1s !important;
   animation-duration: 0.6s;
 }
 
 .Animated--reverse { animation-direction: reverse }
 
-.Animate--fast { animation-duration: .5s }
+.Animate--fast { animation-duration: 0.5s }
 .Animate--noDelay { animation-delay: 0s !important;  }
 
 .Animate--slideInUp { animation-name: Animation-slideInUp }
 @keyframes Animation-slideInUp {
   0% {
     opacity: 0;
-    transform: translateY(500px);
+    transform: translateY(100vh);
   }
 
   50% {
@@ -48,5 +64,29 @@
 
   100% {
     transform: translateY(0);
+  }
+}
+
+
+
+
+.Animate--fadeIn { animation-name: Animation-fadeIn }
+@keyframes Animation-fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Animate--fadeOut { animation-name: Animation-fadeOut }
+@keyframes Animation-fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

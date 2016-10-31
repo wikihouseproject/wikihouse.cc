@@ -1,11 +1,20 @@
-<%= title "Enquiries" %>
+<% content_for :header do %>
+  <div class="container"><%= title "Enquiries" %>
 
-I am interested in...
+<div id="enquiries-header">
+    <span>I am interested in...</span>
+    <div id="enquiries-holder">
+      <ul id="enquiries-options">
+        <% @filenames.each do |filename| %>
+          <li><%= link_to_unless_current filename.humanize, enquiry_path(filename.gsub('_','-')) %></li>
+        <% end %>
+      </ul>
+    </div>
+</div>
 
-<ul>
-  <% @filenames.each do |filename| %>
-    <li>
-      <%= link_to_unless_current filename.humanize, enquiry_path(filename.gsub('_','-')) %>
-    </li>
-  <% end %>
-</ul>
+  </div>
+
+<% end %>
+
+
+

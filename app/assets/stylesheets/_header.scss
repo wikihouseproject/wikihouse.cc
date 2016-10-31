@@ -1,8 +1,10 @@
 #sub-header {
   background: white;
+  width: 100%;
   // overflow: hidden;
-  position: relative;
+  // position: absolute;
   padding: 1em 0 2em 0;
+  position: relative;
   transition: all 10s;
   z-index: 100;
 

@@ -1,0 +1,36 @@
+#enquiries-header {
+  line-height: 3;
+  margin-top: 1em;
+
+}
+ul#enquiries-options {
+  position: absolute;
+  margin: 0 0 0 1em;
+  padding: 0;
+  display: inline;
+  &, li {
+    list-style: none;
+  }
+  &:hover a {
+    display: block;
+  }
+  &:hover li {
+    background: #FFF;
+  }
+}
+
+ul#enquiries-options li a {
+  display: none;
+  color: #CCC;
+}
+ul#enquiries-options li {
+  background: #F0F0F0;
+  display: block;
+  color: #000;
+  padding: 0 1em;
+}
+ul#enquiries-options li:hover { background: #666; }
+
+#enquiries-holder {
+  display: inline;
+}

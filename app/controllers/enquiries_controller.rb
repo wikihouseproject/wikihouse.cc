@@ -14,6 +14,7 @@ class EnquiriesController < ApplicationController
 
     def set_filenames
       files = Dir.glob("app/views/enquiries/partials/*.html.erb").sort
+      files = files.insert(-1, files.delete_at(files.index('app/views/enquiries/partials/_something_else.html.erb')) )
       @filenames = files.map{|f| File.basename(f, ".html.erb")[1..-1] }
     end
 end

@@ -11,6 +11,9 @@
     <%= csrf_meta_tags %>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+    <script type="text/javascript">
+      window.pjax = null;
+    </script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -30,8 +33,8 @@
     <% if content_for?(:header) %><header id="sub-header" class="drop-shadow"><%= yield(:header) %></header><% end %>
 
     <!-- animated fadeInUp -->
-    <div id="main" role="main" class="Animated Animate--slideInUp"><%= yield %></div>
-
+    <div id="main" role="main"><%= yield %></div>
+    <!--  class="Animated Animate--slideInUp" -->
     <%= render "footer" %>
 
     <ul id="side-nav">
@@ -40,50 +43,6 @@
       <li><%= link_to "Propose", propose_path %></li>
       <li><%= link_to "Prospectus", prospectus_path %></li>
     </ul>
-
-    <script type="text/javascript">
-      new Pjax({
-        elements: "a", // default is "a[href], form[action]"
-        selectors: ["title", "meta[name=csrf-token]", "#sub-header", "#main"],
-        switches: {
-          "#main": Pjax.sideBySide,//require("pjax/lib/switches.js").sideBySide
-          "#sub-header": Pjax.sideBySide
-        },
-        switchesOptions: {
-          "#main": {
-            classNames: {
-              remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
-              add: "Animated",
-              backward: "Animate--slideInDown",
-              forward: "Animate--slideInUp"
-            },
-            callbacks: {
-              removeElement: function(el) {
-              alert("A")
-                el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
-              }
-            }
-          },
-
-          "#sub-header": {
-            classNames: {
-              remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
-              add: "Animated",
-              backward: "Animate--slideInDown",
-              forward: "Animate--slideInUp"
-            },
-            callbacks: {
-              removeElement: function(el) {
-                el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
-              }
-            }
-          }
-
-
-        }
-
-      })
-    </script>
 
   </body>
 </html>

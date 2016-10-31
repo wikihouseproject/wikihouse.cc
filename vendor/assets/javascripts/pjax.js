@@ -242,7 +242,54 @@ else {
   module.exports = stupidPjax
 }
 
-},{"./lib/clone.js":2,"./lib/events/on.js":4,"./lib/events/trigger.js":5,"./lib/execute-scripts.js":6,"./lib/foreach-els.js":7,"./lib/foreach-selectors.js":8,"./lib/is-supported.js":9,"./lib/proto/attach-link.js":11,"./lib/proto/get-elements.js":12,"./lib/proto/log.js":13,"./lib/proto/parse-dom.js":14,"./lib/proto/parse-options.js":16,"./lib/proto/refresh.js":17,"./lib/reload.js":18,"./lib/request.js":19,"./lib/switches-selectors.js":20,"./lib/uniqueid.js":22}],2:[function(_dereq_,module,exports){
+
+$(document).ready(function() {
+  if (window.pjax) { return }
+  window.pjax = new Pjax({
+    elements: "a", // default is "a[href], form[action]"
+    selectors: ["title", "meta[name=csrf-token]", "#sub-header", "#main"],
+    switches: {
+      "#main": _dereq_("pjax/lib/switches.js").sideBySide,
+      "#sub-header": _dereq_("pjax/lib/switches.js").sideBySide
+    },
+    switchesOptions: {
+      "#main": {
+        classNames: {
+          remove: "Animated hidden",
+          add: "Animated Animate--slideInUp",
+          backward: "",
+          forward: ""
+        },
+        callbacks: {
+          removeElement: function(el) {
+            $('header .js-Pjax-remove').remove();
+            // el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
+            // el.fadeOut()
+          }
+        }
+      },
+
+      "#sub-header": {
+        classNames: {
+          remove: "Animated hidden",
+          add: "Animated Animate--fadeIn",
+          backward: "",
+          forward: ""
+        },
+        callbacks: {
+          removeElement: function(el) {
+            $('#main .js-Pjax-remove').remove();
+            // el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
+            // el.style.position = "relative"
+            // el.fadeOut()
+          }
+        }
+      }
+    }
+  })
+});
+
+},{"./lib/clone.js":2,"./lib/events/on.js":4,"./lib/events/trigger.js":5,"./lib/execute-scripts.js":6,"./lib/foreach-els.js":7,"./lib/foreach-selectors.js":8,"./lib/is-supported.js":9,"./lib/proto/attach-link.js":11,"./lib/proto/get-elements.js":12,"./lib/proto/log.js":13,"./lib/proto/parse-dom.js":14,"./lib/proto/parse-options.js":16,"./lib/proto/refresh.js":17,"./lib/reload.js":18,"./lib/request.js":19,"./lib/switches-selectors.js":20,"./lib/uniqueid.js":22,"pjax/lib/switches.js":25}],2:[function(_dereq_,module,exports){
 module.exports = function(obj) {
   if (null === obj || "object" != typeof obj) {
     return obj
@@ -779,6 +826,12 @@ module.exports = (function() {
   }
 })()
 
-},{}]},{},[1])
+},{}],23:[function(_dereq_,module,exports){
+module.exports=_dereq_(4)
+},{"../foreach-els":24}],24:[function(_dereq_,module,exports){
+module.exports=_dereq_(7)
+},{}],25:[function(_dereq_,module,exports){
+module.exports=_dereq_(21)
+},{"./events/on.js":23}]},{},[1])
 (1)
 });

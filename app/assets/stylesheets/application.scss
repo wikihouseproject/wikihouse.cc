@@ -4,6 +4,14 @@ $mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monac
 $shortHeaderHeight: 75px;
 $largeHeaderHeight: 145px;
 
+@mixin vertical-center($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 @import "normalize";
 
 @import "bourbon";
@@ -36,6 +44,8 @@ $visual-grid: true;
 @import "prospectus";
 @import "side_nav";
 @import "things";
+
+
 
 * {
   box-sizing: border-box;

@@ -29,6 +29,8 @@ $(document).ready(function() {
   var origHeight = $('header#main-header').height();
   var origLogoHeight = $('#logo').height();
 
+  var doneCount = false;
+
   $(window).scroll(function() {
     // if ($(window).scrollTop() > 0) {
     //   $('header#main-header').addClass('drop-shadow')
@@ -47,6 +49,13 @@ $(document).ready(function() {
     } else {
       $('header#main-header').removeClass('drop-shadow')
       $('header#sub-header').addClass('drop-shadow')
+    }
+
+    if ($('#counts').length > 0) {
+      if (scrollPos > ($('#counts').offset().top - $(window).height()) && !doneCount) {
+        doneCount = true;
+        window.doCount();
+      }
     }
 
     $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) );

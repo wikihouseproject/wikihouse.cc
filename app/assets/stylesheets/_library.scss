@@ -10,17 +10,30 @@
   img {
     width: 60px;
     float: left;
-    margin: 10px 60px 30px 20px;
+    // margin: 10px 60px 30px 20px;
+    @include vertical-center();
   }
 }
 
 .types .type {
   background: #2D2D2D;
   border-bottom: 1px solid white;
-  overflow: hidden;
-  height: 180px;
+  // overflow: hidden;
+  // height: 180px;
+
+  .container{
+    display: flex;
+    padding: 2em 0;
+  }
   * {
     color: #FFF;
+  }
+  .img {
+    position: relative;
+    width: 130px;
+  }
+  .description {
+    flex: 1;
   }
 }
 

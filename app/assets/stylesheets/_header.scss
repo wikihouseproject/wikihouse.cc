@@ -19,13 +19,18 @@ header {
   }
 }
 
-.drop-shadow {
+@mixin drop-shadow {
   box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.3);
+}
+
+.drop-shadow {
+  @include drop-shadow();
 }
 
 header#main-header {
   &.large {
     height: $largeHeaderHeight;
+    @include drop-shadow();
     #logo {
       height: $largeHeaderHeight - 30;
     }

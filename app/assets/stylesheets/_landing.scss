@@ -17,6 +17,13 @@
     );
   }
 
+video {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
 .hero {
   height: 500px;
   color: #FFF;

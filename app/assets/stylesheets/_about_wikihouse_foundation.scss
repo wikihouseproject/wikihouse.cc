@@ -4,6 +4,10 @@
 .team {
   @include outer-container();
 }
+.team .team-member:nth-child(even) {
+  @include omega();
+}
+
 .team-member {
   @include span-columns(5);
 

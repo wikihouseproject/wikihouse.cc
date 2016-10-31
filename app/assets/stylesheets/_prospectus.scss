@@ -57,14 +57,6 @@
   }
 }
 
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .part {
   // text-align: center;
   flex: 1;
@@ -72,7 +64,7 @@
   // display: inline-block;
   // float: left;
   img {
-    @include vertical-align();
+    @include vertical-center();
     width: 75%;
     max-height: 180px;
   }

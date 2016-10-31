@@ -3,3 +3,17 @@
   max-width: 100%;
   margin: 10px auto;
 }
+.product {
+  padding: 40px;
+  width: 25%;
+  float: left;
+  text-align: center;
+  font-family: $mono;
+  text-transform: uppercase;
+  img {
+    display: block;
+  }
+  &,* {
+    color: #FFF;
+  }
+}

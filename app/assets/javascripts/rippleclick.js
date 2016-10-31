@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("ready", function() {
   var parent, ink, d, x, y;
   $("header li a").click(function(e){
     // e.preventDefault()

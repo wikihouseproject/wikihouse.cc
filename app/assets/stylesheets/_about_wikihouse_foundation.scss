@@ -3,10 +3,10 @@
 }
 .team {
   @include outer-container();
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 2em;
   h2 {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 }
 .team .team-member:nth-child(even) {

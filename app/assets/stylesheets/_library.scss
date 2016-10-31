@@ -44,22 +44,6 @@
   }
 }
 
-.product {
-  width: 25%;
-  float: left;
-  height: 200px;
-  text-align: center;
-  font-family: $mono;
-  text-transform: uppercase;
-  img {
-    display: block;
-  }
-  &,* {
-    color: #FFF;
-  }
-}
-
-
 .type-details {
   img {
     width: 100%;

@@ -1,5 +1,5 @@
-// document.addEventListener("turbolinks:load", function() {
-$(document).ready(function() {
+$(document).on("ready pjax:success", function() {
+// $(document).ready(function() {
   if ($('img.svg').length > 0) {
     $('img.svg').each(function(){
         var $img = jQuery(this);

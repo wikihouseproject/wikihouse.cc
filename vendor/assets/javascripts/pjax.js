@@ -246,7 +246,8 @@ else {
 $(document).ready(function() {
   if (window.pjax) { return }
   window.pjax = new Pjax({
-    elements: "header a[href]", // default is "a[href], form[action]"
+    // elements: "header a[href]", // default is "a[href], form[action]"
+    elements: "a[href]", // default is "a[href], form[action]"
     selectors: ["title", "meta[name=csrf-token]", "#sub-header", "#main"],
     switches: {
       "#main": _dereq_("pjax/lib/switches.js").sideBySide,

@@ -2,22 +2,45 @@
   <div class="fade"></div>
   <div class="container">
     <h2>A-Barn</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </div>
 </div>
 
 <div class="propose-a-pilot-project">
 <div class="container">
-
   <%= title "Propose a pilot project" %>
-
-  <p>Do you want to use WikiHouse to build your project? </p>
-
-  <p>The first WikiHouse technology is now in Beta, but there is not yet an established supply chain to provide it. </p>
-
-  <p>Over the next two years, we will be developing new web tools and growing a wider network of architects, manufacturers, builders, insurers and suppliers ready to help you realise your project. In the meantime, there are a number of pilots happening around the world, from tiny studios to homes to whole neighbourhoods. If you would like your project to be one of these pilots, please take 5 minutes to tell us about it.</p>
-
-  <p>We will try to connect you with the support you need to make it happen.</p>
-
 </div>
+
+<div class="flex">
+  <div class="half">
+    <div class="container">
+
+      <p>Do you want to use WikiHouse to build your project? </p>
+
+      <p>The first WikiHouse technology is now in Beta, but there is not yet an established supply chain to provide it. </p>
+
+      <p>Over the next two years, we will be developing new web tools and growing a wider network of architects, manufacturers, builders, insurers and suppliers ready to help you realise your project. In the meantime, there are a number of pilots happening around the world, from tiny studios to homes to whole neighbourhoods. If you would like your project to be one of these pilots, please take 5 minutes to tell us about it.</p>
+
+      <p>We will try to connect you with the support you need to make it happen.</p>
+
+    </div>
+  </div>
+  <div class="half">
+    <div class="container">
+
+      <div class="container">
+        <div id="enquiries-header">
+            <span>I am a...</span>
+            <div id="enquiries-holder">
+              <ul id="enquiries-options">
+                <% %w(Client).each do |kind| %>
+                  <li><%= link_to_unless_current kind, 'kind' %></li>
+                <% end %>
+              </ul>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>

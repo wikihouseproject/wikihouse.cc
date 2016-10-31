@@ -30,7 +30,9 @@
 
     <%= render "main_header" %>
 
-    <% if content_for?(:header) %><header id="sub-header" class="drop-shadow"><%= yield(:header) %></header><% end %>
+    <% if content_for?(:header) %>
+      <header id="sub-header" class="drop-shadow"><%= yield(:header) %></header>
+    <% end %>
 
     <!-- animated fadeInUp -->
     <div id="main" role="main"><%= yield %></div>

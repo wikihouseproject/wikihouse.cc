@@ -56,19 +56,22 @@ $visual-grid: true;
 body {
   margin: 0;
   padding: $shortHeaderHeight 0 0 0;
-  &.large {
-    padding-top: $largeHeaderHeight;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
   font-family: $roboto;
   background: #F0F0F0;
   line-height: 1.4;
   min-width: 320px;
+  &.large {
+    padding-top: $largeHeaderHeight;
+  }
 }
 
 h1, h2, h3 {
   font-family: $mono;
   margin-bottom: 0;
-  line-height: 1;
+  // line-height: 1;
 }
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
@@ -111,6 +114,12 @@ p {
 #main .container {
   overflow: hidden;
 }
+#main {
+  flex: 1;
+  form input {
+    padding: 5px;
+  }
+}
 
 .container {
   @include outer-container;
@@ -130,7 +139,7 @@ p {
     padding: $gutter;
     max-width: $max-width/2;
     position: relative;
-    padding-bottom: 5em;
+    padding-bottom: 80px;
     // width: 100%;
     height: 100%;
     // max-width: $max-width/2;
@@ -150,16 +159,9 @@ p {
   padding-right: 20px;
 }
 
-#main form input {
-  padding: 5px;
-}
-
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-#main {
-  flex: 1;
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }

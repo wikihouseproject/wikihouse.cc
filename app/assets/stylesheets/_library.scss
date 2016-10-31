@@ -20,6 +20,9 @@
   border-bottom: 1px solid white;
   // overflow: hidden;
   // height: 180px;
+  &:hover {
+    background: #333;
+  }
 
   .container{
     display: flex;

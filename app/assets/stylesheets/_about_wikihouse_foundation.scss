@@ -15,22 +15,28 @@
 
 .team-member {
   @include span-columns(5);
-
+  display: flex;
+  margin-bottom: 2em;
+  .description {
+    flex: 1;
+  }
   span {
     display: block;
   }
   .name {
     font-weight: bold;
+    padding-top: 0.5em;
   }
   .role {
     color: #717171;
   }
   .photo {
-    $size: 130px;
+    $size: 120px;
     width: $size;
     height: $size;
     border-radius: $size/2;
     background: #F0F0F0;
+    margin-right: 20px;
   }
 }
 #about-diagram {

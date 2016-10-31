@@ -4,5 +4,13 @@
   overflow: hidden;
 }
 .big-slider {
-  height: 500px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  height: 600px;
+  color: #FFF;
+  .container {
+    position: relative;
+    z-index: 200;
+  }
 }

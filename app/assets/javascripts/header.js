@@ -66,7 +66,7 @@ $(document).ready(function() {
 
   })
 
-  $('#toggleMenu').click(function(event) {
+  $('#toggle-menu').click(function(event) {
     event.preventDefault();
     $('#side-nav').fadeIn('fast')
   })

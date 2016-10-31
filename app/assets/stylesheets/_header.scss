@@ -39,7 +39,7 @@ header#main-header {
   }
   height: $shortHeaderHeight;
   // transition: height 0.1s;
-  z-index: 2000;
+  z-index: 200;
   // padding-bottom: 20px;
   position: fixed;
   top: 0;
@@ -88,8 +88,10 @@ header#main-header {
   a {
     color: #000;
   }
-  a#toggleMenu {
+  a#toggle-menu {
     border: none !important;
+    position: relative;
+    z-index: 800;
     // font-size: 1.2em;
   }
   ul {

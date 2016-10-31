@@ -1,27 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <%= render "favicon" %>
 
     <title><%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %></title>
     <%= csrf_meta_tags %>
@@ -29,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body class="c-<%= controller_name %> a-<%= action_name %> <%= 'large' if request.path == root_path %>"">
@@ -39,21 +24,8 @@
         <% end %>
       </div>
     <% end %>
-    <header id="main-header" class="<%= 'large' if request.path == root_path %>">
-    <%#= render "application/header" %>
-    <!--  data-turbolinks-permanent -->
-      <div class="container">
-        <%= link_to root_path do %><%= image_tag "wikihouse-logo.svg", id: 'logo' %><% end %>
-        <ul id="main-menu">
-          <!-- <li><%= link_to "WikiHouse", root_path, 'data-tg-refresh': 'page' %></li> -->
-          <li><%= link_to "About", about_path, 'data-tg-refresh': 'page', class: ('active' if request.path == about_path) %></li>
-          <li><%= link_to "Library", library_path, 'data-tg-refresh': 'page', class: ('active' if request.path == library_path) %></li>
-          <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page', class: ('active' if request.path == community_path) %></li>
-          <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page', class: ('active' if request.path == partners_path) %></li>
-          <li><%= link_to fa_icon("bars"), '#', id: 'toggleMenu' %></li>
-        </ul>
-      </div>
-    </header>
+
+    <%= render "main_header" %>
 
     <% if content_for?(:header) %><header id="sub-header" class="drop-shadow"><%= yield(:header) %></header><% end %>
 

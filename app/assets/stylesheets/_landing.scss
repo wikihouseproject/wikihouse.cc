@@ -67,6 +67,7 @@
     color: #FFF;
   }
   .container {
+    @include span-columns(8);
     .inside {
       @include span-columns(8);
     }
@@ -76,7 +77,7 @@
 #slider {
   @include fill-parent;
   background: #F0F0F0;
-  height: 500px;
+  height: 520px;
   width: 100%;
 
   .container {
@@ -97,10 +98,16 @@
   .slide-container {
     display: flex;
     align-items: center;
-    height: 500px;
+    height: 520px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 52%;
     img {
       height: 600px;
       margin-right: 20px;
+    }
+    .description {
+      margin-left: 50%;
     }
   }
 }
@@ -168,4 +175,8 @@
     right: auto;
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);
+}
+
+.unslider-nav {
+  margin-bottom: 20px;
 }

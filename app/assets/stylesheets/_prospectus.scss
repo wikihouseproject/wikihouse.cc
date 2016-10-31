@@ -38,12 +38,14 @@
 .next-industrial {
   background: #FFF;
   color: #000;
+  min-height: 500px;
   a.bottom-link {
     color: #000;
     text-transform: none;
   }
 }
 .digital-infrastructure {
+  position: relative;
   h2 {
     color: #FFF;
   }

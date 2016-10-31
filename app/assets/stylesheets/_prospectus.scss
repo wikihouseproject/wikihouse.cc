@@ -1,3 +1,9 @@
+#revolutions {
+  .img {
+    height: 200px;
+  }
+  padding: 5em 0;
+}
 #join-us {
   background: #2D2D2D;
   color: #FFF;
@@ -50,12 +56,33 @@
     color: #FFF;
   }
 }
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .part {
+  // text-align: center;
   flex: 1;
   // width: 20%;
   // display: inline-block;
   // float: left;
   img {
-    width: 100px;
+    @include vertical-align();
+    width: 75%;
+    max-height: 180px;
+  }
+  &, h3 {
+    color: #5B5B5B;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  p {
+    line-height: 1.2;
   }
 }

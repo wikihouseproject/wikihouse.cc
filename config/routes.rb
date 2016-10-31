@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :things, path: 'types'
   resources :enquiries
+  resources :donations
 
   root to: 'static#landing'
 end

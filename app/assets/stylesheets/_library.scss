@@ -23,7 +23,7 @@
 
   .container{
     display: flex;
-    padding: 2em 0;
+    padding: 2em 20px;
   }
   * {
     color: #FFF;
@@ -34,6 +34,10 @@
   }
   .description {
     flex: 1;
+  }
+  a {
+    display: block;
+    overflow: hidden;
   }
 }
 
@@ -50,4 +54,40 @@
   &,* {
     color: #FFF;
   }
+}
+
+
+.type-details {
+  img {
+    width: 100%;
+  }
+  a {
+    // font-weight: bold;
+    color: #666;
+    &:hover {
+      color: #000;
+    }
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+  }
+.download {
+  background: #C5FF5B;
+  color: #000;
+  &:hover {
+    background: lighten(#C5FF5B, 5%)
+  }
+}
+
+.button {
+  padding: 10px 20px;
+  display: inline-block;
+  clear: both;
+  line-height: 2em;
+
+}
+
 }

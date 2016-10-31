@@ -5,6 +5,8 @@ footer {
   color: #FFF;
   height: 300px;
   padding: 20px 0;
+  position: relative;
+  z-index: 500;
 
   ul#footer-list {
     &, li {

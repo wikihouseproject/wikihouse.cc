@@ -120,9 +120,22 @@ video {
 }
 
 #preview {
-  height: 500px;
+  font-size: 0;
   background: #FFF;
-  padding: 40px 0;
+  // padding: 40px 0;
+  overflow: hidden;
+  // .container {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  // }
+  a {
+    position: absolute;
+    color: #000;
+    font-size: 18px !important;
+  }
+  position: relative;
 }
 
 .coming-soon {

@@ -246,7 +246,7 @@ else {
 $(document).ready(function() {
   if (window.pjax) { return }
   window.pjax = new Pjax({
-    elements: "a", // default is "a[href], form[action]"
+    elements: "header a[href]", // default is "a[href], form[action]"
     selectors: ["title", "meta[name=csrf-token]", "#sub-header", "#main"],
     switches: {
       "#main": _dereq_("pjax/lib/switches.js").sideBySide,
@@ -262,9 +262,10 @@ $(document).ready(function() {
         },
         callbacks: {
           removeElement: function(el) {
-            $('header .js-Pjax-remove').remove();
+            // $('header .js-Pjax-remove').remove();
             // el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
             // el.fadeOut()
+            setTimeout(function() { $('header .js-Pjax-remove').remove(); }, 1000)
           }
         }
       },
@@ -278,10 +279,7 @@ $(document).ready(function() {
         },
         callbacks: {
           removeElement: function(el) {
-            $('#main .js-Pjax-remove').remove();
-            // el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"
-            // el.style.position = "relative"
-            // el.fadeOut()
+            setTimeout(function() { $('#main .js-Pjax-remove').remove(); }, 1000)
           }
         }
       }

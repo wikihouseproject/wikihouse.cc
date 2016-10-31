@@ -1,17 +1,37 @@
-<%= f.input :name, autofocus: true %>
-<%= f.input :organisation %>
+<div class="flex">
+<div class="half">
+  <div class="container">
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+<div class="half">
+  <div class="container">
+    <%= f.input :name, autofocus: true %>
+    <%= f.input :organisation %>
 
-Service(s) you’re interested in providing:*
+    Service(s) you’re interested in providing: *
+    <p><i>Check all that apply</i></p>
 
-<% services = [
-  'Architectural design',
-  'CNC fabrication',
-  'Building / contracting services',
-  'Project management',
-  'Delivery of parts', 'Engineering', 'Insurance', 'Lending', 'Products', 'Other'] %>
+    <% services = [
+      'Architectural design',
+      'CNC fabrication',
+      'Building / contracting services',
+      'Project management',
+      'Delivery of parts', 'Engineering', 'Insurance', 'Lending', 'Products', 'Other'] %>
 
-<% services.each do |service| %>
-<% check_box_tag :services, service.parameterize %>
-<% end %>
+    <% services.each do |service| %>
+    <label>
+      <%= check_box_tag :services, service.parameterize %>
+      <%= service %>
+    </label>
 
-Message received, thankyou. One of the team will get in contact with you as soon as possible.
+    <% end %>
+
+    <!-- Message received, thankyou. One of the team will get in contact with you as soon as possible. -->
+  </div>
+</div>
+</div>
+
+

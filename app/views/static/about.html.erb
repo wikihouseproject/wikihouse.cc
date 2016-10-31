@@ -13,7 +13,7 @@
 <% end %>
 
 <div id="about-points">
-<!-- <div class="container top"> -->
+<div class="container top">
   <h4 class="mono">Design Principles</h4>
   <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
     <div class="about-point">
@@ -27,7 +27,7 @@
       </div>
     </div>
   <% end %>
-<!-- </div> -->
+</div>
 </div>
 
 <div class="our-mission">
@@ -40,6 +40,27 @@
     </ol>
   </div>
 </div>
-<div class="accordion-title"><div class="container">FAQ</div></div>
-<div class="accordion-title"><div class="container">About WikiHouse Foundation</div></div>
-<div class="accordion-title"><div class="container">Licenses & terms of use</div></div>
+
+
+<div class="togglebox">
+  <input id="toggle1" type="radio" name="toggle" />
+  <label for="toggle1"><div class="container">About WikiHouse Foundation</div></label>
+  <section id="content1">
+    <div class="container"><p>Content for the first accordion</p></div>
+  </section>
+
+  <input id="toggle2" type="radio" name="toggle" />
+  <label for="toggle2"><div class="container">FAQ</div></label>
+  <section id="content2">
+    <div class="container">
+      <p>How do you solve a problem like Maria?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+  <input id="toggle3" type="radio" name="toggle" />
+  <label for="toggle3"><div class="container">Label 3</div></label>
+  <section id="content3">
+    <div class="container"><p>Licenses & terms of use</p></div>
+  </section>
+</div>

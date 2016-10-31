@@ -46,11 +46,6 @@
   }
 }
 
-.accordion-title {
-  font-family: $mono;
-  border-bottom: 1px solid black;
-  padding: 20px 0;
-}
 
 .inner {
   display: flex;
@@ -69,6 +64,8 @@
   // display: flex;
   // margin-bottom: 2em;
   margin: 0 0 2em 0;
+  padding-right: 10px;
+  padding-left: 10px;
   h5 {
     font-size: 1.1em;
     margin: 0;
@@ -83,5 +80,54 @@
   .description {
     flex: 1;
     float: left;
+  }
+}
+
+
+
+.togglebox {
+  // Visually hide radio buttons
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+
+    &:focus + label {
+      color: black;
+      // background-color: wheat;
+    }
+  }
+
+  // Style label/entry for accordion
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    // .accordion-title {
+    font-family: $mono;
+    border-top: 1px solid rgba(#757475,0.2);
+    padding: 20px;
+// }
+
+  }
+  label:last-child {
+    border: none;
+  }
+
+  // Style accordion content
+  section {
+    height: 0;
+    transition: .3s all;
+    overflow: hidden;
+    background: #FFF;
+  }
+
+  // Open content when clicking label
+  #toggle1:checked ~ #content1,
+  #toggle2:checked ~ #content2,
+  #toggle3:checked ~ #content3,
+  #toggle4:checked ~ #content4 {
+    // set height for transition duration to work
+    // (also can set to auto without transition)
+    height: 200px;
   }
 }

@@ -10,34 +10,66 @@
   <div class="container">
     <div class="left-info">
       <%= title "Microhouse" %>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <hr/>
-      <h5>Images</h5>
+
+      <p>MicroHouse is a high-performance, one-bed house type, designed using the WikiHouse building system. It uses WikiHouse products WREN and SPARROW. It has been designed primarily for use in the UK, but could also be adapted for other countries and regions. The home can be largely self-assembled, and costs around £37,000 GBP to produce.</p>
+      <p>These files are also intended as starter files for architects, designers, engineers and others interested in getting to know the WikiHouse WREN system.</p>
+      <%= image_tag "https://github.com/wikihouseproject/Microhouse/raw/master/microhouse_0.5_isoFull.jpg" %>
+      <p>_Project Engine: contains specification, costing/quantity information, and overall dimensions of the Microhouse design</p>
+      <p>_AssemblyManual: Detailed guide on how to put the whole thing together</p>
+      <p>_othercomponents_v0.5.dxf: Additional CNC cutting files for other components, such as fit-out furniture using SPARROW and cladding panels.</p>
+      <p>_WRENchassis_v0.5.dxf: Complete CNC cutting files for the building's structural chassis</p>
+      <p>_microhouse_0.5.skp: Sketchup 3D Model of the complete design including cladding, fitout and services</p>
+      <p>_microhouse_0.5_chassis.skp: Sketchup 3D Model of the Wikihouse structural chassis</p>
+      <%= image_tag "https://github.com/wikihouseproject/Microhouse/raw/master/microhouse_0.5_iso.jpg" %>
+
+      <iframe width="100%" height="480" src="https://sketchfab.com/models/ac3263022fca412c934ea9dd7c5b5521/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
 
     </div>
     <div class="right-info">
+      <br/>
+      <%= link_to fa_icon("download", text: "Download Archive").html_safe, "https://github.com/wikihouseproject/Microhouse/archive/master.zip", class: 'download button' %>
+      <%= link_to fa_icon("github", text: "Fork GitHub Repo").html_safe, "https://github.com/wikihouseproject", class: 'button' %>
       <h5>Hosts</h5>
       <ul>
-        <li>Clayton Prest</li>
+        <li><%= link_to "claytonprest", "https://github.com/claytonprest" %></li>
       </ul>
       <hr/>
       <h5>Contributors</h5>
       <ul>
-        <li>Clayton Prest</li>
-        <li>Alastair Parvin</li>
+        <li><%= link_to "claytonprest", "https://github.com/claytonprest" %></li>
+        <li><%= link_to "Alastairparvin", "https://github.com/Alastairparvin" %></li>
       </ul>
 
-      <p><strong>Forks:</strong> 2</p>
-      <p><strong>Latest Update:</strong> 10/10/2012</p>
+      <p><strong>Forks:</strong> <%= link_to "3", "https://github.com/wikihouseproject/Microhouse/network" %></p>
+      <p><strong>Latest Update:</strong> <%= link_to "26 days ago", "https://github.com/wikihouseproject/Microhouse/commits/master" %></p>
       <hr/>
-      <p><strong>Status in your location:</strong> Ready to prototype</p>
-      <hr/>
+      <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
+      <!-- <hr/> -->
       <h5>Files</h5>
+      <%
+      files = [
+'MicroHouse Pilot Engine.xlsx',
+'MicroHouse_AssemblyManual_v1_sm.pdf',
+'MicroHouse_othercomponents_v0.5.dxf',
+'Microhouse_WRENchassis_v0.5.dxf',
+'README.md',
+'microhouse_0.5.skp',
+'microhouse_0.5_chassis.skp',
+'microhouse_0.5_iso.jpg',
+'microhouse_0.5_iso.pdf',
+'microhouse_0.5_isoFull.jpg',
+'microhouse_0.5_isoFull.pdf'
+]
+%>
+      <ul>
+      <% files.each do |file| %>
+        <li><%= link_to file, "https://github.com/wikihouseproject/Microhouse/blob/master/#{file}" %></li>
+      <% end %>
+      </ul>
       <hr/>
       <h5>License</h5>
-      <p>This work is licensed under a <strong>Creative Commons Attribution Sharealike 3.0 Unported License</strong></p>
-      <hr/>
-      <h5>Downloads</h5>
+      <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Sharealike 3.0 Unported License</a></p>
+
     </div>
   </div>
 </div>

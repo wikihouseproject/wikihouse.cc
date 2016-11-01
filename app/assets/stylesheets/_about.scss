@@ -86,6 +86,9 @@
 
 
 .togglebox {
+  & > a {
+    color: #000;
+  }
   // Visually hide radio buttons
   input[type="radio"] {
     position: absolute;

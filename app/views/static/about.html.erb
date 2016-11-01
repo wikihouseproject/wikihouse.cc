@@ -44,7 +44,9 @@
 
 <div class="togglebox">
   <input id="toggle1" type="radio" name="toggle" />
-  <label for="toggle1"><div class="container">About WikiHouse Foundation</div></label>
+  <%= link_to about_wikihouse_foundation_path do %>
+    <label for="toggle1"><div class="container">About WikiHouse Foundation</div></label>
+  <% end %>
   <section id="content1">
     <div class="container"><p>Content for the first accordion</p></div>
   </section>

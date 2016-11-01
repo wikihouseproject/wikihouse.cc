@@ -38,22 +38,25 @@
 <div class="flex drop-shadow">
   <div class="half propose">
     <div class="container">
-      <div class="inside">
-        <h3>Propose a pilot project.</h3>
-        <p>The first WikiHouse technologies are in BETA stage and are being used in pilot projects. If you'd like your project to be one of them, please tell us about it here.</p>
-        <%= image_tag "righthouse.svg", style: 'width: 80%; margin-left: 40px;' %>
-        <%= link_to "Propose a pilot", propose_path, class: 'bottom-link' %>
+      <div class="top">
+        <div class="inside">
+          <h3>Propose a pilot project.</h3>
+          <p>The first WikiHouse technologies are in BETA stage and are being used in pilot projects. If you'd like your project to be one of them, please tell us about it here.</p>
+          <%= image_tag "righthouse.svg", style: 'width: 80%; margin-left: 40px;' %>
+        </div>
       </div>
+      <%= link_to "Propose a pilot", propose_path, class: 'bottom-link' %>
     </div>
   </div>
   <div class="half stats" id="counts">
     <div class="container">
-      <div class="info"><span class="count" id="c1">30</span> active teams</div>
-      <div class="info"><span class="count" id="c2">804</span> downloads in the last month</div>
-      <div class="info"><span class="count" id="c3">45</span> commits in the last month</div>
-      <div class="info"><span class="count" id="c4">3000</span> files</div>
-      <div class="info"><span class="count" id="c5">3</span> open challenges</div>
-
+      <div class="top">
+        <div class="info"><span class="count" id="c1">30</span> active teams</div>
+        <div class="info"><span class="count" id="c2">804</span> downloads in the last month</div>
+        <div class="info"><span class="count" id="c3">45</span> commits in the last month</div>
+        <div class="info"><span class="count" id="c4">3000</span> files</div>
+        <div class="info"><span class="count" id="c5">3</span> open challenges</div>
+      </div>
       <%= link_to ("Visit our #{fa_icon('github')} Github Page").html_safe, library_path, class: 'bottom-link' %>
     </div>
   </div>

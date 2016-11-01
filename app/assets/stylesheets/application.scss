@@ -161,9 +161,14 @@ p {
     .container {
       padding: $gutter;
       position: relative;
-      padding-bottom: 80px;
+      padding-bottom: 3em;
       height: 100%;
       overflow: auto;
+      display: flex;
+      flex-direction: column;
+      .top {
+        flex: 1;
+      }
     }
   }
 

@@ -31,13 +31,15 @@
       <%= link_to fa_icon("github", text: "Fork GitHub Repo").html_safe, "https://github.com/wikihouseproject", class: 'button' %>
       <h5>Hosts</h5>
       <ul>
-        <li><%= link_to "claytonprest", "https://github.com/claytonprest" %></li>
+        <li>
+          <%= github_user "claytonprest" %>
+        </li>
       </ul>
       <hr/>
       <h5>Contributors</h5>
       <ul>
-        <li><%= link_to "claytonprest", "https://github.com/claytonprest" %></li>
-        <li><%= link_to "Alastairparvin", "https://github.com/Alastairparvin" %></li>
+        <li><%= github_user "claytonprest" %></li>
+        <li><%= github_user "Alastairparvin" %></li>
       </ul>
 
       <p><strong>Forks:</strong> <%= link_to "3", "https://github.com/wikihouseproject/Microhouse/network" %></p>

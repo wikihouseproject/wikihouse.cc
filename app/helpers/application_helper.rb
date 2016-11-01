@@ -1,5 +1,11 @@
 module ApplicationHelper
 
+  def github_user username
+    link_to "https://github.com/#{username}", class: 'github-user' do
+      image_tag("https://avatars1.githubusercontent.com/#{username}?v=3&s=80") + content_tag(:span, username)
+    end
+  end
+
   def title(page_title, options={})
     content_for(:title, page_title.to_s)
     return content_tag(:h1, page_title, options.merge(itemprop: "name"))

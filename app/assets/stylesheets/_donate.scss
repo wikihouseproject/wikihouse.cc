@@ -2,14 +2,14 @@
   background: #FFF;
 }
 
-.we-work-for-you {
-  @include outer-container();
-  .description, .form {
-    @include span-columns(5);
-  }
-}
+// .we-work-for-you {
+//   @include outer-container();
+//   .description, .form {
+//     @include span-columns(5);
+//   }
+// }
 
-input.green {
+.form input {
   background: #E1FF9C;
   border: none;
   padding: 10px;

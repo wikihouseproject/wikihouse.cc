@@ -1,3 +1,7 @@
+$break-small: 320px;
+$break-medium: 600px;
+$break-large: 1200px;
+
 $roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
 
@@ -133,30 +137,36 @@ p {
   }
 }
 
-.half {
-  flex: 1;
-  .container {
-    padding: $gutter;
-    max-width: $max-width/2;
-    position: relative;
-    padding-bottom: 80px;
-    // width: 100%;
-    height: 100%;
-    // max-width: $max-width/2;
-    // @include span-columns(8);
-    overflow: auto;
-  }
-}
 .flex {
   display: flex;
-}
-.flex .half:nth-child(1) .container {
-  float: right;
-  padding-left: 20px;
-}
-.flex .half:nth-child(2) .container {
-  float: left;
-  padding-right: 20px;
+  flex-direction: column;
+
+  @media screen and (min-width: $break-medium) {
+    flex-direction: row;
+    .half:nth-child(1) .container {
+      float: right;
+      padding-left: 20px;
+    }
+    .half:nth-child(2) .container {
+      float: left;
+      padding-right: 20px;
+    }
+    .container {
+      max-width: $max-width/2;
+    }
+  }
+
+  .half {
+    flex: 1;
+    .container {
+      padding: $gutter;
+      position: relative;
+      padding-bottom: 80px;
+      height: 100%;
+      overflow: auto;
+    }
+  }
+
 }
 
 hr {

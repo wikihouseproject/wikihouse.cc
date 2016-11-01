@@ -1,21 +1,26 @@
 <div id="partners-holder">
 <div class="container">
   <h1>We work for you</h1>
-  <div class="we-work-for-you">
-    <div class="description">
+  <div class="we-work-for-you flex">
+    <div class="description half">
       <p>WikiHouse Foundation is not backed by venture capital. It’s a small non-profit with a huge mission: to put the knowledge and tools to build low-cost, sustainable homes into commons where they are freely accessible to anyone, and owned by everyone.</p>
       <p>We need your support to achieve that.</p>
       <p>Please help us to keep working for the common good by making a one-off donation, or making a small monthly stipend.</p>
 
       <p style="text-align: right"><strong>Alastair Parvin</strong>, Co-founder</p>
     </div>
-    <div class="form">
-      <form>
-        <label for="name">Name to appear on donation</label>
+    <div class="form half">
+      <%= simple_form_for Donation.new do |f| %>
+        <%= f.input :display_name %>
+        <!-- <label for="name">Name to appear on donation</label>
         <input type="text" placeholder="Name" name="name" id="name" class="green" />
-        <p><label><%= check_box_tag "list_name" %>I do not want my name to be listed</label></p>
+         -->
+         <%= f.input :is_public, label: 'I do not want my name to be listed' %>
+        <!-- <p><label><%= check_box_tag "list_name" %>I do not want my name to be listed</label></p> -->
 
         <h3>Amount</h3>
+        <%= f.input :amount_in_cents %>
+        <!--
         <% %w(2 5 10 20 50 100 200 500).each_with_index do |amount, index| %>
           <label class="amount">
           <%= radio_button_tag "amount", amount, (index == 0) %>
@@ -23,16 +28,17 @@
           </label>
         <% end %>
 
-
         <label>
         <h3><%= radio_button_tag "amount", 'other' %>Other Amount</h3>
         <input type="text" placeholder="Name" name="name" id="name" class="green" />
         </label>
-        One off
-        Monthly
+        -->
 
-        <p>2000 of these would fund our core team for a year</p>
-      </form>
+        <%= f.input :frequency, collection: %w(one_off weekly monthly) %>
+
+        <!-- <p>2000 of these would fund our core team for a year</p> -->
+        <%= f.submit %>
+      <% end %>
     </div>
   </div>
 </div>

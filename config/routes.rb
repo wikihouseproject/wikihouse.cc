@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :enquiries
   resources :donations
   resources :proposals
+  resources :donations
 
   root to: 'static#landing'
 end

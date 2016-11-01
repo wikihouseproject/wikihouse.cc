@@ -1,7 +1,9 @@
+<div id="enquiries-container">
 <div class="container">
   <%= render "header" %>
   <%= title params[:id].gsub('-','_').humanize %>
   <%= simple_form_for Enquiry.new do |f| %>
     <%= render "enquiries/partials/#{params[:id].gsub('-','_')}.html.erb", f: f %>
   <% end %>
+</div>
 </div>

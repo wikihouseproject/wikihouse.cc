@@ -6,6 +6,21 @@ module ApplicationHelper
     end
   end
 
+  def file_icon filename
+    extension = filename.split(".").last.upcase
+    case extension
+    when "SKP"
+      image_tag("house-icon.svg")
+    when "MD"
+      image_tag("document-icon.svg")
+    when "XLS"
+    when "XLSX"
+      image_tag("spreadsheet-icon.svg")
+    else
+      content_tag(:span, extension)
+    end
+  end
+
   def title(page_title, options={})
     content_for(:title, page_title.to_s)
     return content_tag(:h1, page_title, options.merge(itemprop: "name"))

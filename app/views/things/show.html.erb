@@ -48,26 +48,36 @@
       <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
       <!-- <hr/> -->
       <h5>Files</h5>
-      <%
-      files = [
-'MicroHouse Pilot Engine.xlsx',
-'MicroHouse_AssemblyManual_v1_sm.pdf',
-'MicroHouse_othercomponents_v0.5.dxf',
-'Microhouse_WRENchassis_v0.5.dxf',
-'README.md',
-'microhouse_0.5.skp',
-'microhouse_0.5_chassis.skp',
-'microhouse_0.5_iso.jpg',
-'microhouse_0.5_iso.pdf',
-'microhouse_0.5_isoFull.jpg',
-'microhouse_0.5_isoFull.pdf'
-]
-%>
-      <ul>
-      <% files.each do |file| %>
-        <li><%= link_to file, "https://github.com/wikihouseproject/Microhouse/blob/master/#{file}" %></li>
-      <% end %>
+      <% files = [
+        'MicroHouse Pilot Engine.xlsx',
+        'MicroHouse_AssemblyManual_v1_sm.pdf',
+        'MicroHouse_othercomponents_v0.5.dxf',
+        'Microhouse_WRENchassis_v0.5.dxf',
+        'README.md',
+        'microhouse_0.5.skp',
+        'microhouse_0.5_chassis.skp',
+        'microhouse_0.5_iso.jpg',
+        'microhouse_0.5_iso.pdf',
+        'microhouse_0.5_isoFull.jpg',
+        'microhouse_0.5_isoFull.pdf'
+      ]
+      %>
+
+      <ul id="files-list">
+        <% files.each do |file| %>
+          <li>
+            <div class="file">
+              <%= file_icon(file) %>
+            </div>
+            <div class="file-details">
+              <span style="font-weight: bold"><%= link_to file, "https://github.com/wikihouseproject/Microhouse/blob/master/#{file}" %></span>
+              <span class="file-type">Sketchup</span>
+              <span class="file-date">10/10/2010</span>
+            </div>
+          </li>
+        <% end %>
       </ul>
+
       <hr/>
       <h5>License</h5>
       <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Sharealike 3.0 Unported License</a></p>

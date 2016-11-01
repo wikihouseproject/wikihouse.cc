@@ -61,6 +61,8 @@
     list-style: none;
     line-height: 1.5;
   }
+}
+
 .download {
   background: #C5FF5B;
   color: #000;
@@ -74,7 +76,38 @@
   display: inline-block;
   clear: both;
   line-height: 2em;
-
 }
 
+#files-list li {
+  $height: 62px;
+  $width: $height/6 * 5;
+
+  display: flex;
+  margin-bottom: 10px;
+  .file {
+    width: $width;
+    height: $height;
+    background: url(image-path('blackfile.svg'));
+    background-size: cover;
+    margin-right: 10px;
+    text-align: center;
+    img {
+      @include vertical-center();
+      width: 25px;
+    }
+    span {
+      line-height: $height;
+      color: #FFF;
+    }
+  }
+  .file-details {
+    flex: 1;
+    font-size: 0.9em;
+    span {
+      display: block;
+    }
+    .file-date, .file-type {
+      color: #999;
+    }
+  }
 }

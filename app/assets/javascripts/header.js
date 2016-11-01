@@ -20,6 +20,7 @@
 $(document).ready(function() {
 
   $('#side-nav').click(function() {
+    $('#toggle-menu').removeClass('open')
     $('#side-nav').hide()
   })
 
@@ -66,8 +67,9 @@ $(document).ready(function() {
 
   })
 
-  $('#toggle-menu').click(function(event) {
+  $('#toggler').click(function(event) {
     event.preventDefault();
+    $('#toggle-menu').toggleClass('open');
     $('#side-nav').fadeIn('fast')
   })
 

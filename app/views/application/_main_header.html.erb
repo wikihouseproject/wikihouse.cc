@@ -9,7 +9,17 @@
       <li><%= link_to "Library", library_path, 'data-tg-refresh': 'page', class: ('active' if request.path == library_path) %></li>
       <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page', class: ('active' if request.path == community_path) %></li>
       <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page', class: ('active' if request.path == partners_path) %></li>
-      <li><%= link_to fa_icon("bars"), '#', id: 'toggle-menu' %></li>
+      <!-- <li><%= link_to fa_icon("bars"), '#', id: 'toggle-menu' %></li> -->
+      <li>
+        <a href="#" id="toggler">
+          <span id="toggle-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </a>
+      </li>
     </ul>
   </div>
 </header>

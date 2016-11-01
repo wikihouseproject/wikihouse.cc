@@ -1,3 +1,7 @@
+#partners-holder {
+  background: #FFF;
+}
+
 .we-work-for-you {
   @include outer-container();
   .description, .form {
@@ -16,8 +20,8 @@ input.green {
 .donate-button {
   background: #C5FF5B;
   padding: 20px;
-  position: absolute;
-  bottom: 0;
+  // position: absolute;
+  // bottom: 0;
   width: 100%;
   left: 0;
   text-align: center;

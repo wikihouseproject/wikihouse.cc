@@ -81,44 +81,6 @@ video {
   }
 }
 
-#slider {
-  @include fill-parent;
-  background: #F0F0F0;
-  height: 520px;
-  width: 100%;
-
-  .container {
-    height: 100%;
-  }
-
-  h2 {
-    font-family: $mono;
-  }
-  li {
-    background-size: cover;
-    background-color: #F0F0F0;
-  }
-  img {
-    height: 100%;
-  }
-
-  .slide-container {
-    display: flex;
-    align-items: center;
-    height: 520px;
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: 52%;
-    img {
-      height: 600px;
-      margin-right: 20px;
-    }
-    .description {
-      margin-left: 50%;
-    }
-  }
-}
-
 #preview {
   font-size: 0;
   background: #FFF;

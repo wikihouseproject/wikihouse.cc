@@ -1,0 +1,50 @@
+#slider {
+  @include fill-parent;
+  background: #F0F0F0;
+  height: 400px;
+  width: 100%;
+  .container {
+    height: 100%;
+  }
+  h2 {
+    font-family: $mono;
+  }
+  li {
+    background-size: cover;
+    background-color: #F0F0F0;
+  }
+  img {
+    height: 100%;
+  }
+  .slide-container {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center 30px;
+    background-size: auto 110px;
+    img {
+      height: 600px;
+      margin-right: 20px;
+    }
+    .description {
+      margin-top: 70px;
+      // margin-left: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $break-medium) {
+  #slider {
+    height: 520px;
+    .slide-container {
+      height: 520px;
+      background-position: center left;
+      background-size: 52%;
+      .description {
+        margin-top: 0;
+        margin-left: 50%;
+      }
+    }
+  }
+}

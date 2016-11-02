@@ -10,7 +10,12 @@
     text-decoration: none;
   }
   a {
+    font-family: $mono;
     color: #000;
+    display: block;
+    &:hover {
+      color: #555;
+    }
   }
 }
 a.big-type-link {

@@ -1,3 +1,26 @@
+#types-links {
+
+  line-height: 4em;
+  &, li {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  a {
+    color: #000;
+  }
+}
+a.big-type-link {
+  color: #000 !important;
+}
+
+.type-description {
+  background: #FFF;
+}
+
 .type-details {
   background: #FFF;
 }

@@ -130,6 +130,7 @@ p {
 
 .container {
   @include outer-container;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -156,7 +157,7 @@ p {
     }
     .container {
       max-width: $max-width/2;
-      width: 100%;
+
     }
   }
 

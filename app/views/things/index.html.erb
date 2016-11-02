@@ -2,6 +2,25 @@
   <div class="container"><h1><%= link_to "Library", library_path %> / Types</h1></div>
 <% end %>
 
+<%= link_to 'types/microhouse', class: 'big-type-link' do %>
+<div class="flex">
+  <div class="half">
+    <div class="container">
+      <%= image_tag "microhouse.svg" %>
+    </div>
+  </div>
+  <div class="half type-description">
+    <div class="container">
+      <h2>Microhouse</h2>
+      <p>MicroHouse is a high-performance, one-bed house type, designed using the WikiHouse building system. It uses WikiHouse products WREN and SPARROW. It has been designed primarily for use in the UK, but could also be adapted for other countries and regions. The home can be largely self-assembled, and costs around £37,000 GBP to produce.</p>
+    </div>
+  </div>
+</div>
+<% end %>
+
 <div class="container">
-  <%= link_to "MicroHouse", 'types/microhouse' %>
+<ul id="types-links">
+  <li><%= link_to "Submit a new item to this repository", "#" %></li>
+  <li><%= link_to "Propose a new project", "#" %></li>
+</ul>
 </div>

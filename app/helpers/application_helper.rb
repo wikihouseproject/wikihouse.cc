@@ -6,19 +6,33 @@ module ApplicationHelper
     end
   end
 
-  def file_icon filename
+  def file_info filename
+    info = {
+      'icon': nil,
+      'type': nil
+    }
     extension = filename.split(".").last.upcase
     case extension
     when "SKP"
-      image_tag("house-icon.svg")
+      info['icon'] = image_tag("house-icon.svg")
+      info['type'] = 'SketchUp File'
     when "MD"
-      image_tag("document-icon.svg")
+      info['icon'] = image_tag("document-icon.svg")
+      info['type'] = 'Markdown Document'
     when "XLS"
     when "XLSX"
-      image_tag("spreadsheet-icon.svg")
-    else
-      content_tag(:span, extension)
+      info['icon'] = image_tag("spreadsheet-icon.svg")
+      info['type'] = 'Excel Spreadsheet'
+    when "JPG"
+      info['type'] = 'Image'
+    when "PDF"
+      info['type'] = 'Document'
+    when "DXF"
+      info['type'] = 'AutoCAD DXF'
     end
+
+    info['icon'] = content_tag(:span, extension)
+    return info
   end
 
   def title(page_title, options={})

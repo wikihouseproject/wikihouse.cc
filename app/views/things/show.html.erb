@@ -66,14 +66,7 @@
       <ul id="files-list">
         <% files.each do |file| %>
           <li>
-            <div class="file">
-              <%= file_icon(file) %>
-            </div>
-            <div class="file-details">
-              <span style="font-weight: bold"><%= link_to file, "https://github.com/wikihouseproject/Microhouse/blob/master/#{file}" %></span>
-              <span class="file-type">Sketchup</span>
-              <span class="file-date">10/10/2010</span>
-            </div>
+            <%= render "application/file", file: file %>
           </li>
         <% end %>
       </ul>

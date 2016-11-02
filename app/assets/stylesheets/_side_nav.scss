@@ -9,6 +9,7 @@
   z-index: 5000;
   display: none;
   padding-top: 2em;
+  text-align: center;
   &, li {
     list-style: none;
   }
@@ -16,8 +17,9 @@
     font-family: $mono;
     font-size: 1.5em;
     font-weight: bold;
-    display: block;
-    color: #f0f0f0;
+    display: inline-block;
+    clear: both;
+    color: #dadada;
     padding: 20px;
     text-align: center;
   }

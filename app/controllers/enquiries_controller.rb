@@ -10,7 +10,18 @@ class EnquiriesController < ApplicationController
     redirect_to enquiries_path unless @filenames.include?(params[:id].gsub("-","_"))
   end
 
+  def create
+    @enquiry = Enquiry.new(enquiry_params)
+    unless @enquiry.save
+      redirect_to :back
+    end
+  end
+
   private
+
+    def enquiry_params
+      params.require(:enquiry).permit!
+    end
 
     def set_filenames
       files = Dir.glob("app/views/enquiries/partials/*.html.erb").sort

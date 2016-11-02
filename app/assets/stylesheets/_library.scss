@@ -7,7 +7,11 @@
 
 .types {
   overflow: hidden;
+  .img {
+    position: relative;
+  }
   img {
+    position: absolute !important;
     width: 60px;
     float: left;
     // margin: 10px 60px 30px 20px;
@@ -32,7 +36,7 @@
     color: #FFF;
   }
   .img {
-    position: relative;
+    // position: relative;
     width: 130px;
   }
   .description {

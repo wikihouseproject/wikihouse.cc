@@ -19,6 +19,9 @@ footer {
     }
     a {
       color: #FFF;
+      &:hover {
+        color: #EEE;
+      }
     }
   }
 

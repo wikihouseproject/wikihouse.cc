@@ -17,32 +17,36 @@
 // })
 
 // document.addEventListener("turbolinks:load", function() {
+
+var subHeadHeight;
+var origHeight;
+var origLogoHeight;
+var doneCount;
+
+$(document).on("ready pjax:success", function() {
+
+  subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
+  origHeight = $('header#main-header').height();
+  origLogoHeight = $('#logo').height();
+  doneCount = false;
+
+});
+
 $(document).ready(function() {
 
   $('#side-nav').click(function() {
     $('#toggle-menu').removeClass('open')
     $('#side-nav').hide()
-  })
-
-  var subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
-
-
-  var origHeight = $('header#main-header').height();
-  var origLogoHeight = $('#logo').height();
-
-  var doneCount = false;
+  });
+  $('#toggler').click(function(event) {
+    event.preventDefault();
+    $('#toggle-menu').toggleClass('open');
+    $('#side-nav').fadeIn('fast')
+  });
 
   $(window).scroll(function() {
-    // if ($(window).scrollTop() > 0) {
-    //   $('header#main-header').addClass('drop-shadow')
-    // } else {
-    //   $('header#main-header').removeClass('scrolled')
-    // }
-    // var newHeight = Math.max(headerHeight - $(window).scrollTop(), 50)
-    // $('header#main-header').css('height', newHeight )
 
-    var scrollPos = $(window).scrollTop()
-    // console.log( $('#counts').offset().top - $(window).height(), scrollPos)
+    var scrollPos = $(window).scrollTop();
 
     if ( scrollPos - subHeadHeight >= 0 ) {
       $('header#main-header').addClass('drop-shadow')
@@ -65,25 +69,13 @@ $(document).ready(function() {
     }
     $('header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
 
-  })
+  });
 
-  $('#toggler').click(function(event) {
-    event.preventDefault();
-    $('#toggle-menu').toggleClass('open');
-    $('#side-nav').fadeIn('fast')
-  })
+});
 
-  // if (window.location.pathname === "/") {
-  //   $('header#main-header').addClass('large')
-  // } else {
-  //   $('header#main-header').removeClass('large')
-  // }
-
-})
-
-$(document).on('pjax:send', function(e) {
-  console.log(e.target.URL)
-})
+// $(document).on('pjax:send', function(e) {
+//   console.log(e.target.URL)
+// })
 
 $(document).on('pjax:success', function() {
   $('#main-menu a').removeClass('active')

@@ -5,50 +5,14 @@
   },
 
   {
-    "title": "Design to lower thresholds",
-    "description": "Design to lower barriers of time, cost, skill, energy and resources at every stage. Elvis Costello wrote all his songs to be played on the cheapest transistor radio.",
-    "icon": "fox"
-  },
-
-  {
-    "title": "Open standards",
-    "description": "Where possible, work to existing standards or seek to establish intuitive new ones.",
-    "icon": "fox"
-  },
-
-  {
-    "title": "Human friendly",
-    "description": "Seek to preserve and maximise the safety, security, health and wellbeing (physical and mental) of all participants at every stage of a product’s life.",
-    "icon": "fox"
-  },
-
-  {
-    "title": "Modular",
-    "description": "Design hardware and software that is robust, interoperable, product-agnostic and flexible, so elements can be independently altered, substituted or upgraded.",
-    "icon": "fox"
-  },
-
-  {
-    "title": "The new ‘normal’",
-    "description": "Avoid design which would be considered ‘alternative’, ‘boutique’ or only for the rich or poor. Instead, design for the new normal: products most people would consider desirable and affordable. As beautiful as Apple, as open as Linux.",
-    "icon": "fox"
-  },
-
-  {
-    "title": "Whole life design",
-    "description": "‘A home is not something you finish’ – Stewart Brand Design for the entire life-cycle of the product, from manufacturing to assembly, use, maintenance, adaptation, disassembly and re-use.",
-    "icon": "fox"
-  },
-
-  {
-    "title": "If you can’t mend it, you don’t own it.",
-    "description": "Try to avoid ‘black box’ products. Try to make it easy for the user to learn how it works.",
-    "icon": "fox"
-  },
-
-  {
     "title": "Be lazy like a fox",
     "description": "Don’t keep reinventing the wheel. Take something that already works, copy, adapt, give credit and re-share. (Thanks Linus Torvalds via Eric S Raymond)",
+    "icon": "fox"
+  },
+
+  {
+    "title": "Design to lower thresholds",
+    "description": "Design to lower barriers of time, cost, skill, energy and resources at every stage. Elvis Costello wrote all his songs to be played on the cheapest transistor radio.",
     "icon": "fox"
   },
 
@@ -59,11 +23,22 @@
   },
 
   {
+    "title": "Open standards",
+    "description": "Where possible, work to existing standards or seek to establish intuitive new ones.",
+    "icon": "fox"
+  },
+
+  {
     "title": "Open materials",
     "description": "Design for cheap, abundant, standardised, sustainable, and, ideally, circular materials.",
     "icon": "fox"
   },
 
+  {
+    "title": "Human friendly",
+    "description": "Seek to preserve and maximise the safety, security, health and wellbeing (physical and mental) of all participants at every stage of a product’s life.",
+    "icon": "fox"
+  },
   {
     "title": "Start somewhere",
     "description": "No one can solve everyone’s problems. Design something that works where you are, then share so others can adapt it for their own economy, climate and culture. Let solutions adapt like Darwin’s finches.",
@@ -71,11 +46,21 @@
   },
 
   {
+    "title": "Modular",
+    "description": "Design hardware and software that is robust, interoperable, product-agnostic and flexible, so elements can be independently altered, substituted or upgraded.",
+    "icon": "fox"
+  },
+  {
     "title": "Include, keep including",
     "description": "Look for ways in which age, race, gender or disability might be barriers, and try to design them out. Try to design products, processes and documents that are accessible, intuitive and non-discriminatory.",
     "icon": "fox"
   },
 
+  {
+    "title": "The new ‘normal’",
+    "description": "Avoid design which would be considered ‘alternative’, ‘boutique’ or only for the rich or poor. Instead, design for the new normal: products most people would consider desirable and affordable. As beautiful as Apple, as open as Linux.",
+    "icon": "fox"
+  },
   {
     "title": "Mistake proof",
     "description": "Make it impossible to get wrong, or not matter if you do. (The Japanese call this 'Poka-Yoke')",
@@ -83,8 +68,21 @@
   },
 
   {
+    "title": "Whole life design",
+    "description": "‘A home is not something you finish’ – Stewart Brand Design for the entire life-cycle of the product, from manufacturing to assembly, use, maintenance, adaptation, disassembly and re-use.",
+    "icon": "fox"
+  },
+  {
     "title": "Superpower the users",
     "description": "‘Give power to the fine tuners’ – Cedric Price. Afford as much power as possible to the end users, from procurement to privacy to electricity. Democracy is a design diagram.",
     "icon": "fox"
+  },
+
+  {
+    "title": "If you can’t mend it, you don’t own it.",
+    "description": "Try to avoid ‘black box’ products. Try to make it easy for the user to learn how it works.",
+    "icon": "fox"
   }
+
+
 ]

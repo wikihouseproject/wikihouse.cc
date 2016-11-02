@@ -135,6 +135,9 @@ p {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  h3 {
+    margin-top: 0;
+  }
 }
 
 .half, #join-us {
@@ -202,4 +205,10 @@ hr {
 
 form {
   width: 100%;
+}
+
+
+p {
+  font-weight: 400;
+  line-height: 1.7;
 }

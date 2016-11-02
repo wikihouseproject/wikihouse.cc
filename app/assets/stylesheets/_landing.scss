@@ -10,10 +10,12 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+    background-color: transparent !important;
     @include linear-gradient(
-      to top,
-      rgba(#000, 0) 0%,
-      rgba(#000, 0.3) 90%
+      to bottom,
+      rgba(#000, 0.15) 0%,
+      rgba(#000, 0.08) 30%,
+      rgba(0,0,0, 0) 100%
     );
   }
 
@@ -37,7 +39,7 @@ video {
 
   .typed, .typed-cursor {
     font-family: $mono;
-    font-size: 2.45em;
+    font-size: 2.2em;
     line-height: 1.5;
     margin-top: 1.5em;
     // display: block;

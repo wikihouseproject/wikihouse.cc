@@ -1,0 +1,20 @@
+#partners-logos {
+  background: #FFF;
+  padding: 80px 0 50px;
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    width: 19%;
+    height: 100px;
+    display: inline-block;
+    margin-bottom: 30px !important;
+    img {
+      width: 100%;
+      max-height: 80%;
+    }
+  }
+}

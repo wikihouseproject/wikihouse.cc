@@ -31,7 +31,7 @@ module ApplicationHelper
       info['type'] = 'AutoCAD DXF'
     end
 
-    info['icon'] = content_tag(:span, extension)
+    info['icon'] ||= content_tag(:span, extension)
     return info
   end
 

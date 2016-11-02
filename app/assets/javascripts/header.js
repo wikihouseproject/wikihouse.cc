@@ -66,9 +66,12 @@ $(document).ready(function() {
       }
     }
 
-    $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, origHeight)) );
+
     if ($('header#main-header').hasClass('large')) {
       $('#logo').height( parseInt(Math.max(origLogoHeight-scrollPos, 50)) );
+      $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) ); // fix this
+    } else {
+      $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, origHeight)) );
     }
     $('header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
 

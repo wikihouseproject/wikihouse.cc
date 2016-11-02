@@ -26,9 +26,9 @@
 
     </div>
     <div class="right-info">
-      <br/>
+      <!-- <br/>
       <%= link_to fa_icon("download", text: "Download archive").html_safe, "https://github.com/wikihouseproject/Microhouse/archive/master.zip", class: 'download button' %>
-      <%= link_to fa_icon("github", text: "Fork on github").html_safe, "https://github.com/wikihouseproject", class: 'button' %>
+      <%= link_to fa_icon("github", text: "Fork on github").html_safe, "https://github.com/wikihouseproject", class: 'button' %> -->
       <h5>Hosts</h5>
       <ul>
         <li>
@@ -37,11 +37,10 @@
       </ul>
       <hr/>
       <h5>Contributors</h5>
-      <ul>
-        <li><%= github_user "claytonprest" %></li>
-        <li><%= github_user "Alastairparvin" %></li>
+      <ul id="contributors">
+        <li><%= link_to "claytonprest", "https://www.github.com/claytonprest" %></li>
+        <li><%= link_to "Alastairparvin", "https://www.github.com/Alastairparvin" %></li>
       </ul>
-
       <p><strong>Forks:</strong> <%= link_to "3", "https://github.com/wikihouseproject/Microhouse/network" %></p>
       <p><strong>Latest Update:</strong> <%= link_to "28 days ago", "https://github.com/wikihouseproject/Microhouse/commits/master" %></p>
       <hr/>
@@ -69,6 +68,13 @@
             <%= render "application/file", file: file %>
           </li>
         <% end %>
+      </ul>
+
+      <ul id="action-buttons">
+        <li id="download-icon"><%= image_tag "icons/download.svg" %></li>
+        <li id="fork-icon"><%= image_tag "icons/fork.svg" %></li>
+        <li id="exclamation-icon"><%= image_tag "icons/exclamation.svg" %></li>
+        <li id="fork-text">Fork on github</li>
       </ul>
 
       <hr/>

@@ -181,17 +181,19 @@ p {
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid #5B5B5B;
 }
 
 .github-user {
+  span {
+    vertical-align: top;
+  }
   img {
-    width: 20px;
-    height: 20px;
+    width: 66px;
+    height: 66px;
+    border-radius: 66px;
     display: inline-block;
     margin-right: 10px;
-    border-radius: 1px;
   }
 }
 

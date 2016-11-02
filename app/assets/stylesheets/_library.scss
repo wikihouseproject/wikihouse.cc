@@ -136,3 +136,30 @@
     font-weight: bold;
   }
 }
+
+#action-buttons {
+  padding: 0;
+  margin: 4em 0 0 0;
+  overflow: hidden;
+  display: flex;
+  li {
+    display: block;
+    margin-right: 5px;
+  }
+  #download-icon {
+    width: 40px;
+  }
+  #fork-icon {
+    width: 50px;
+  }
+  #exclamation-icon {
+    width: 35px;
+  }
+  #fork-text {
+    flex: 1;
+    text-align: right;
+  }
+  li img {
+    height: 26px;
+  }
+}

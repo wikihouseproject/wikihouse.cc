@@ -5,7 +5,16 @@
 }
 .product {
   padding: 40px;
-  width: 25%;
+  width: 100%;
+  @media screen and (min-width: $break-small) {
+    width: 50%;
+  }
+  @media screen and (min-width: $break-medium) {
+    width: 33%;
+  }
+  @media screen and (min-width: $break-large) {
+    width: 25%;
+  }
   float: left;
   text-align: center;
   font-family: $mono;

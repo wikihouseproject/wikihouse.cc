@@ -39,12 +39,19 @@
     <!--  class="Animated Animate--slideInUp" -->
     <%= render "footer" %>
 
-    <ul id="side-nav">
-      <li><%= link_to "Enquiries", enquiries_path %></li>
+
+    <div id="side-nav">
+    <div class="container">
+      <ul>
+      <li><%= link_to "Propose a pilot", propose_path %></li>
       <li><%= link_to "About WikiHouse Foundation", about_wikihouse_foundation_path %></li>
-      <li><%= link_to "Propose a Pilot", propose_path %></li>
-      <li><%= link_to "Prospectus", prospectus_path %></li>
+      <li><%= link_to "Contact Us", enquiries_path %></li>
+      <li><%= link_to "Donate", donate_path %></li>
+      <!-- <li><%#= link_to "Prospectus", prospectus_path %></li> -->
     </ul>
+    </div>
+    </div>
+
 
   </body>
 </html>

@@ -1,27 +1,29 @@
 #side-nav {
   display: block;
-  background: rgba(0,0,0,0.8);
+  background: #333333;
   position: fixed;
-  top: -20px;
+  // top: -20px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 5000;
   display: none;
   padding-top: 2em;
-  text-align: center;
-  &, li {
+
+  ul, li {
+    padding: 0;
+    margin: 0;
     list-style: none;
   }
   a {
-    font-family: $mono;
+    // font-family: $mono;
     font-size: 1.5em;
     font-weight: bold;
     display: inline-block;
     clear: both;
     color: #dadada;
-    padding: 20px;
-    text-align: center;
+    padding: 5px;
   }
   a:hover {
     color: #fff;

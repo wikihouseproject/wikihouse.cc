@@ -1,6 +1,9 @@
 <%= f.input :name, label: "Your Name", autofocus: true %>
 <%= f.input :organisation, label: "Event Name" %>
-<%= f.input :date_of_event, as: :date %>
+
+<%= f.input :date_of_event, as: :date, label: 'from' %>
+<%= f.input :date_of_event, as: :date, label: 'to' %>
+
 <%= f.input :requested_speaker %>
 <%= f.input :about_event, as: :text %>
 <%= f.input :expenses, as: :boolean, label: "Expenses included?" %>

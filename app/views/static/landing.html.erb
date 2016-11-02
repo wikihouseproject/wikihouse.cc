@@ -3,21 +3,15 @@
 <style type="text/css">
   /* inline styles so that they load instantly */
   .hero {
-    background-image: url(<%= asset_path('video-preview.jpg') %>);
+    background-image: url(<%= asset_path('sky.jpg') %>);
     background-size: cover;
     background-color: #232323;
-    background-position: bottom center;
+    background-position: center -10%;
+    background-attachment: fixed;
   }
 </style>
 
 <div class="hero">
-
-  <video class="loop" loop autoplay>
-    <source src="https://static.wikihouse.cc/wikihouse-build-vp9.webm" type="video/webm; codecs=vp9">
-    <source src="https://static.wikihouse.cc/wikihouse-build.webm" type="video/webm">
-    <source src="https://static.wikihouse.cc/wikihouse-build.mp4" type="video/mp4">
-  </video>
-
   <div class="fade">
     <div class="container">
       <span class="typed"></span>

@@ -23,17 +23,20 @@ var origHeight;
 var origLogoHeight;
 var doneCount;
 
-$(document).on("ready pjax:success", function() {
-
+var setVars = function() {
+  console.log('resize')
+  $('header#main-header').css('height', 'auto')
   subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
   origHeight = $('header#main-header').height();
   origLogoHeight = $('#logo').height();
   doneCount = false;
+}
 
-});
+$(document).on("ready pjax:success", setVars);
+$(window).resize(setVars);
+
 
 $(document).ready(function() {
-
   $('#side-nav').click(function() {
     $('#toggle-menu').removeClass('open')
     $('#side-nav').hide()
@@ -63,7 +66,7 @@ $(document).ready(function() {
       }
     }
 
-    $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) );
+    $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, origHeight)) );
     if ($('header#main-header').hasClass('large')) {
       $('#logo').height( parseInt(Math.max(origLogoHeight-scrollPos, 50)) );
     }

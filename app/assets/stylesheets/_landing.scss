@@ -149,7 +149,7 @@ video {
 .unslider-arrow {
     position: absolute;
     left: 20px;
-    z-index: 2;
+    z-index: 100;
     cursor: pointer;
 }
 .unslider-arrow.prev {

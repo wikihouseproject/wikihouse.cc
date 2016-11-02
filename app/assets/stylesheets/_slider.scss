@@ -3,6 +3,10 @@
   background: #F0F0F0;
   height: 400px;
   width: 100%;
+  padding: 20px;
+  .unslider-arrow {
+    z-index: 100 !important;
+  }
   .container {
     height: 100%;
   }

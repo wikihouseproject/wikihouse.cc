@@ -10,8 +10,17 @@
   text-align: center;
   font-family: $mono;
   text-transform: uppercase;
+  position: relative;
+  .count {
+    position: absolute;
+    top: 1.3em;
+    right: 1.3em;
+    font-size: 1.1em;
+  }
   img {
     display: block;
+    max-width: 135px;
+    max-height: 120px;
   }
   &,* {
     color: #FFF;

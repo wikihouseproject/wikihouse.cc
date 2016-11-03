@@ -66,13 +66,15 @@ $(document).ready(function() {
 
   $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('#side-nav').click(function() {
-    $('#toggle-menu').removeClass('open')
-    $('#side-nav').hide()
+    $('body').removeClass('open-menu')
+    // $('#toggle-menu').removeClass('open')
+    // $('#side-nav').hide()
   });
-  $('#toggler').click(function(event) {
+  $('#main-toggler').click(function(event) {
     event.preventDefault();
-    $('#toggle-menu').toggleClass('open');
-    $('#side-nav').fadeIn('fast')
+    $('body').toggleClass('open-menu');
+    // $('#toggle-menu').toggleClass('open');
+    // $('#side-nav').fadeIn('fast')
   });
 
   $(window).scroll(function() {

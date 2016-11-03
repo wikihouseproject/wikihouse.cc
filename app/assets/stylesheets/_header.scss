@@ -1,3 +1,27 @@
+body.open-menu {
+  #logo-link {
+    display: none !important;
+  }
+  #main-header {
+    background: transparent;
+  }
+  #main-menu {
+    display: none !important;
+  }
+  header#main-header .toggle-menu span {
+    background: #FFF !important;
+  }
+  header {
+    box-shadow: none !important;
+  }
+}
+
+#main-menu {
+  @media screen and (max-width: $break-medium) {
+    display: none !important;
+  }
+}
+
 #sub-header {
   background: white;
   width: 100%;
@@ -33,10 +57,11 @@ header#main-header {
   @media screen and (min-width: $break-medium) {
     // min-height: $shortHeaderHeight;
   }
+  overflow: hidden;
 
   // height: $shortHeaderHeight;
   // transition: height 0.1s;
-  z-index: 2000;
+  z-index: 1500;
   // padding-bottom: 20px;
   position: fixed;
   top: 0;
@@ -48,6 +73,7 @@ header#main-header {
 
     #logo-link {
       display: inline-block;
+      min-height: $shortHeaderHeight;
     }
 
   &.large {
@@ -68,7 +94,10 @@ header#main-header {
 
 
   #logo {
-    margin: 10px 0 0 -20px;
+    margin: 10px 0 0 0;
+    @media screen and (min-width: $break-xlarge) {
+      margin-left: -20px;
+    }
     height: $shortHeaderHeight - 30;
     text-align: left;
   }
@@ -103,7 +132,8 @@ header#main-header {
   ul#main-menu {
     // position: relative;
     font-family: $mono;
-    margin: 0 auto;
+    // margin: 0 40px 0 0;
+    margin: 0;
     padding: 0;
     font-size: 0;
     // line-height: $shortHeaderHeight;

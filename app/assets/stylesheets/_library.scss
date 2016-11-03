@@ -12,10 +12,17 @@
   }
   img {
     position: absolute !important;
-    width: 60px;
+
+    width: 100px;
     float: left;
     // margin: 10px 60px 30px 20px;
     @include vertical-center();
+  }
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -30,14 +37,16 @@
 
   .container{
     display: flex;
-    padding: 2em 20px;
+    // padding: 2em 20px;
+    padding: 50px 20px;
   }
   * {
     color: #FFF;
   }
   .img {
     // position: relative;
-    width: 130px;
+    width: 200px;
+
   }
   .description {
     flex: 1;

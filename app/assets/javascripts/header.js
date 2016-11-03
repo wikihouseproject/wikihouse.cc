@@ -23,28 +23,46 @@ var origHeight;
 var origLogoHeight;
 var doneCount;
 
+var uniformHeights = function(selector, pjax) {
+// needs fixing!!
+  if (pjax) {
+    selector = ".js-Pjax-add" + selector
+  }
+  var el = $(selector);
+  if (el.length < 1) return;
+  // console.log(el)
+  var tallest = 0;
+  el.css('height', 'auto');
+  el.each(function() {
+    // console.log($(this).height())
+    if ($(this).height() > tallest) {
+      tallest = $(this).height();
+    }
+  });
+  el.css('height', tallest);
+}
+
 var setVars = function() {
   $('header#main-header').css('height', 'auto')
   subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
   origHeight = $('header#main-header').height();
   origLogoHeight = $('#logo').height();
   doneCount = false;
-
-  var tallest = 0;
-  $('.big-type-link').css('height', 'auto');
-  $('.big-type-link').each(function() {
-    if ($(this).height() > tallest) {
-      tallest = $(this).height();
-    }
-  });
-  $('.big-type-link').css('height', tallest);
 }
 
 $(document).on("ready pjax:success", setVars);
 $(window).resize(setVars);
-$(window).load(setVars);
+// $(window).load(setVars);
+
+$(document).on("pjax:success", function() {
+  uniformHeights('.big-type-link', true);
+  uniformHeights('.type-row', true);
+});
 
 $(document).ready(function() {
+
+  uniformHeights('.big-type-link', false);
+  uniformHeights('.type-row', false);
 
   $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('#side-nav').click(function() {

@@ -29,6 +29,7 @@ gem 'neat'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'dotenv-rails'
+gem 'reform-rails'
 
 group :production do
   gem 'rails_12factor'

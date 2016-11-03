@@ -28,47 +28,45 @@
   </div>
   <div class="half">
     <div class="container">
-      <%= simple_form_for Proposal.new do |f| %>
-        <p>My role in the project will be*</p>
+      <%#= simple_form_for ProposalForm.new(Proposal.new) do |f| %>
+        <%#= f.input :name %>
+      <%# end %>
 
-        <select>
-          <option>Client</option>
-          <option>Architect</option>
-          <option>Builder</option>
-          <option>Project manager</option>
-          <option>Other</option>
-        </select>
-        <br/><br/><hr/><br/>
-        <%= f.input :name %>
+      <p>(NOT YET FUNCTIONAL)</p>
+
+      <%= simple_form_for ProposalForm.new(Proposal.new) do |f| %>
+        <%= f.input :role,
+          label: "My role in the project will be",
+          collection: [
+          "Client","Architect","Builder","Project manager","Other"
+          ] %>
+
+        <%= f.input :name, label: "Full name" %>
         <%= f.input :organisation %>
         <%= f.input :email_address %>
         <%= f.input :country, as: :string %>
-        <label>Outline description of your project</label>
-        <%= f.input :description, as: :text, label: false %>
+        <%= f.input :description, as: :text, label: "Outline description of your project" %>
         <%= f.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'] %>
         <%= f.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'] %>
         <%= f.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"] %>
-        <!--
-        <p>Will your project be part financed by a mortgage?* (Yes, no, don’t know yet)</p>
-
-        <p>What services will you be looking for, and what would you plan to do for yourself? Don’t worry if these are just guesses for now. (Looking for support, I will find someone, I will do it myself, not applicable)
-        </p>
-
-        <label>Project management</label>
-        <label>Outline design</label>
-        <label>Planning application</label>
-        <label>Detail design</label>
-        <label>Engineering / checking</label>
-        <label>CNC manufacturing</label>
-        <label>Site and foundations work</label>
-        <label>Assembly</label>
-        <label>Services and electrics</label>
-        <label>R&D, developing new solutions</label>
-
-        <p>Is there anything else you’d like to add about the project?</p>
-         -->
-
-      <!-- Message received, thankyou. We’ll get back in touch with you as soon as we can, and see if we can connect you with providers in our network to make your project a reality.  Please be aware many pilots may not be possible at this stage. -->
+        <%= f.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"] %>
+        <%= f.input :services_required,
+          label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
+          collection: [
+          "Project management",
+          "Outline design",
+          "Planning application",
+          "Detail design",
+          "Engineering / checking",
+          "CNC manufacturing",
+          "Site and foundations work",
+          "Assembly",
+          "Services and electrics",
+          "R&D, developing new solutions"
+          ], as: :check_boxes %>
+        <!-- <p> (Looking for support, I will find someone, I will do it myself, not applicable) -->
+        <%= f.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text %>
+        <%= f.submit "Submit", disabled: 'true' %>
       <% end %>
     </div>
   </div>

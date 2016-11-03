@@ -74,8 +74,8 @@
 }
 
 .download {
-  background: #C5FF5B;
-  color: #000;
+  background: #000;
+  color: #FFF !important;
   &:hover {
     background: lighten(#C5FF5B, 5%)
   }

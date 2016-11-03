@@ -22,7 +22,7 @@
   <!-- <div class="container"> -->
     <h2>Team</h2>
     <% team_members = ["Alastair Parvin", "Harry Knight", "Clayton Prest", "Nikee Virdee", "John"] %>
-    <% team_members.each do |team_member| %>
+    <% 6.times.map{ Faker::Name.name }.collect.each do |team_member| %>
       <div class="team-member">
         <div class="photo"></div>
         <div class="description">

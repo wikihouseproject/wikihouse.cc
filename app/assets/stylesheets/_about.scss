@@ -1,5 +1,14 @@
 .top-description {
-  @include span-columns(7);
+  h1 {
+    font-weight: 400;
+    margin-top: 1em;
+    font-size: 2.3em;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.4;
+  }
+  @include span-columns(6);
 }
 .replaced-svg circle {
   fill: black;

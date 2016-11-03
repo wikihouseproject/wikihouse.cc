@@ -147,6 +147,14 @@
   #toggle4:checked ~ #content4 {
     // set height for transition duration to work
     // (also can set to auto without transition)
-    height: 200px;
+    height: auto;
+  }
+}
+
+#faq {
+  h2 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1em;
   }
 }

@@ -58,9 +58,8 @@
     <span>FAQ</span>
   </div></label>
   <section id="content2">
-    <div class="container">
-      <p style="font-weight: bold">How do you solve a problem like Maria?</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="container" id="faq">
+      <%= markdown( File.open('app/faq.md').read ) %>
     </div>
   </section>
 

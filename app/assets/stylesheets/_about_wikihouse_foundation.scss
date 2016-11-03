@@ -14,8 +14,11 @@
 }
 
 .team-member {
-  @include span-columns(5);
-  display: flex;
+  @media screen and (min-width: $break-medium) {
+    @include span-columns(5);
+  }
+
+  display: flex !important;
   margin-bottom: 2em;
   .description {
     flex: 1;

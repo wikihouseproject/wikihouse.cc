@@ -6,6 +6,9 @@
   background: #333333;
   color: #FFF;
   flex: 1;
+  p {
+    -webkit-font-smoothing: antialiased;
+  }
 
 }
 ul#enquiries-options {

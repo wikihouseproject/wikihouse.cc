@@ -78,7 +78,7 @@ body {
 }
 
 * {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h1, h2, h3 {
@@ -87,7 +87,7 @@ h1, h2, h3 {
   // line-height: 1;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-weight: 300;
+  font-weight: normal;
 }
 h3,h4,h5,h6 {
   color: #AAA;
@@ -218,10 +218,9 @@ form {
 }
 
 p {
-  font-weight: 300;
   line-height: 1.7;
 }
 
 .input label {
-  font-weight: 300;
+  font-weight: normal;
 }

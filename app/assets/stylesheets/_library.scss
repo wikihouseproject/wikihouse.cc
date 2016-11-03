@@ -55,6 +55,9 @@
     display: block;
     overflow: hidden;
   }
+  p {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .type-details {

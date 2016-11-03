@@ -20,12 +20,21 @@ a.bottom-link {
 
 .connect {
   background: #2D2D2D;
+  p {
+    -webkit-font-smoothing: antialiased;
+  }
   &, a {
     color: #FFF;
   }
 }
 
 .wren {
+  img {
+    max-width: 95%;
+  }
+  h2 {
+    font-weight: 400;
+  }
   background: #C5FF5B;
   a.bottom-link {
     color: #000;

@@ -2,6 +2,9 @@
   background: #333;
   color: white;
   overflow: hidden;
+  p {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 .big-slider {
   position: relative;

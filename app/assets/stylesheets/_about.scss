@@ -10,8 +10,16 @@
     font-size: 1.2em;
     line-height: 1.4;
   }
-  @include span-columns(6);
+  width: 100%;
+  @media screen and (min-width: $break-small) {
+    @include span-columns(8);
+  }
+  @media screen and (min-width: $break-medium) {
+    @include span-columns(6);
+  }
+
 }
+
 .replaced-svg circle {
   fill: black;
 }
@@ -55,7 +63,7 @@
     counter-increment:li;
     color: #8E8E8E;
     padding-right: .7em;
-    font-weight: 300;
+    font-weight: normal;
   }
   ol > li {
     margin-bottom: 1em;

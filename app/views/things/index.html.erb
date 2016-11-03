@@ -18,9 +18,27 @@
 </div>
 <% end %>
 
+
+<%= link_to '#', class: 'big-type-link new-type' do %>
+<div class="flex">
+  <div class="half">
+    <div class="container">
+      <span class="plus">+</span>
+    </div>
+  </div>
+  <div class="half type-description">
+    <div class="container">
+      <span>Submit a new type to this library</span>
+    </div>
+  </div>
+</div>
+<% end %>
+
 <div class="container">
 <ul id="types-links">
-  <li><%= link_to "Submit a new item to this repository", "#", style: "background: url(#{asset_path('icons/plus.png')}) center right no-repeat;" %></li>
-  <li><%= link_to "Propose a new project", "#", style: "background: url(#{asset_path('icons/rightarrow.png')}) center right no-repeat;" %></li>
+  <!-- <li><%= link_to "Submit a new item to this repository", "#", style: "background: url(#{asset_path('icons/plus.png')}) center right no-repeat;" %></li> -->
+  <!-- <li><%= link_to "Can't see the type you need? To commission a new design, get in touch <strong>here</strong>".html_safe, "#", style: "background: url(#{asset_path('icons/rightarrow.png')})
+  center right no-repeat;" %></li> -->
+  <li><%= link_to "Can't see the type you need? To commission a new design, get in touch <strong>here</strong>".html_safe, "#" %></li>
 </ul>
 </div>

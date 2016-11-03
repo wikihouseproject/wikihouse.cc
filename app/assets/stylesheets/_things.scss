@@ -1,5 +1,4 @@
 #types-links {
-
   line-height: 4em;
   &, li {
     text-align: left;
@@ -20,6 +19,30 @@
 }
 a.big-type-link {
   color: #000 !important;
+  margin-bottom: 2px;
+  .flex {
+    height: 100%;
+  }
+}
+.new-type {
+  .half:first-child {
+    text-align: center;
+  }
+  .plus {
+    font-family: $mono;
+    color: #FFF;
+    font-size: 150px;
+    font-weight: 300;
+    @include vertical-center();
+  }
+  span {
+    @include vertical-center();
+    font-family: $mono;
+    color: #C2C2C2;
+  }
+  .container {
+    padding-bottom: 20px !important;
+  }
 }
 
 .type-description {

@@ -11,23 +11,15 @@
     <%= f.input :name, autofocus: true %>
     <%= f.input :organisation %>
 
-    Service(s) you’re interested in providing: *
-    <p><i>Check all that apply</i></p>
-
-    <% services = [
+    <%= f.input :organisation,
+      label: "Service(s) you’re interested in providing: *<p><i>Check all that apply</i></p>".html_safe,
+      collection: [
       'Architectural design',
       'CNC fabrication',
       'Building / contracting services',
       'Project management',
-      'Delivery of parts', 'Engineering', 'Insurance', 'Lending', 'Technologies', 'Other'] %>
-
-    <% services.each do |service| %>
-    <label>
-      <%= check_box_tag :services, service.parameterize %>
-      <%= service %>
-    </label>
-
-    <% end %>
+      'Delivery of parts', 'Engineering', 'Insurance', 'Lending', 'Technologies', 'Other'],
+      as: :check_boxes %>
 
     <!-- Message received, thankyou. One of the team will get in contact with you as soon as possible. -->
   </div>

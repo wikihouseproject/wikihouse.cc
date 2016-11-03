@@ -35,7 +35,18 @@ var setVars = function() {
 $(document).on("ready pjax:success", setVars);
 $(window).resize(setVars);
 
+$(window).load(function() {
+  var tallest = 0;
+  $('.big-type-link').each(function() {
+    if ($(this).height() > tallest) {
+      tallest = $(this).height();
+    }
+  });
+  $('.big-type-link').css('height', tallest);
+})
+
 $(document).ready(function() {
+
   $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('#side-nav').click(function() {
     $('#toggle-menu').removeClass('open')

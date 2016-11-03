@@ -14,38 +14,3 @@
     z-index: 200;
   }
 }
-
-textarea {
-  padding: 5px;
-}
-
-.input.text {
-  label {
-    display: block;
-    width: 100%;
-  }
-  textarea {
-    width: 100%;
-  }
-}
-
-.input.check_boxes {
-  > label {
-    display: block;
-    width: 100%;
-  }
-  span.checkbox {
-    &, * {
-      vertical-align: top;
-    }
-    padding: 1em;
-    display: inline-block;
-    width: 50%;
-    input {
-      margin-top: 5px;
-    }
-    label {
-      padding-left: 10px;
-    }
-  }
-}

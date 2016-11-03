@@ -31,10 +31,10 @@ $splitHeight: $height/5;
 #toggle-menu span {
   display: block;
   position: absolute;
-  height: $splitHeight;
+  height: 2px;
   width: 100%;
   background: #000;
-  border-radius: $splitHeight;
+  // border-radius: $splitHeight;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);

@@ -21,8 +21,8 @@
         <!-- <div class="icon"><%= image_tag "about-icons/#{item['icon']}.svg" %></div> -->
         <div class="icon"><%= image_tag "points/Asset #{index+1}.svg", class: 'svg' %></div>
         <div class="description">
-          <p style="font-weight: bold; margin-bottom: 0"><%= item['title'] %></p>
-          <p style="-webkit-font-smoothing: antialiased"><%= item['description'] %></p>
+          <p style="font-weight: bold; margin-bottom: 1em"><%= item['title'] %></p>
+          <p style=""><%= item['description'] %></p>
         </div>
       </div>
     </div>
@@ -43,24 +43,25 @@
 
 
 <div class="togglebox">
-  <input id="toggle1" type="radio" name="toggle" />
-  <%= link_to about_wikihouse_foundation_path do %>
-    <label for="toggle1"><div class="container">
-    <span style="background: url(<%= asset_path('icons/rightarrow.png') %>) center right no-repeat; display: block">About WikiHouse Foundation</span>
-    </div></label>
-  <% end %>
-  <section id="content1">
-    <div class="container"><p>Content for the first accordion</p></div>
-  </section>
 
-  <input id="toggle2" type="radio" name="toggle" />
-  <label for="toggle2"><div class="container">
+  <input id="toggle1" type="radio" name="toggle" />
+    <label for="toggle1"><div class="container">
     <span>FAQ</span>
-  </div></label>
-  <section id="content2">
+    </div></label>
+  <section id="content1">
     <div class="container" id="faq">
       <%= markdown( File.open('app/faq.md').read ) %>
     </div>
+  </section>
+
+  <input id="toggle2" type="radio" name="toggle" />
+  <%= link_to about_wikihouse_foundation_path do %>
+  <label for="toggle2"><div class="container">
+    <span>About WikiHouse Foundation</span>
+  </div></label>
+  <% end %>
+  <section id="content2">
+    <div class="container"></div>
   </section>
 
   <input id="toggle3" type="radio" name="toggle" />

@@ -15,12 +15,13 @@
 }
 #about-points {
   @include outer-container;
-
+  font-size: 0.9em;
+  h4 {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
   h4,h5 {
     color: #000;
-  }
-  h5 {
-    font-weight: bold;
   }
 }
 
@@ -31,15 +32,19 @@
 
 .our-mission {
   background: #FFF;
+  padding-bottom: 30px;
   h4 {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
     font-family: $mono;
   }
-
   ol {
     counter-reset:li;
     margin-left: 0;
     padding-left: 0;
     list-style:none;
+    font-size: 1.2em;
+    line-height: 1.4;
 
     @include span-columns(7);
   }
@@ -47,8 +52,8 @@
     content:counter(li);
     counter-increment:li;
     color: #8E8E8E;
-    padding-right: 1em;
-    font-weight: bold;
+    padding-right: .7em;
+    font-weight: 300;
   }
   ol > li {
     margin-bottom: 1em;
@@ -135,9 +140,12 @@
     border-top: 1px solid #8E8E8E;
     padding: 20px;
 // }
+  span {
+    background: image_url('icons/rightarrow.png') center right no-repeat; display: block;
+  }
 
   }
-  label:last-child {
+  label[for='toggle1'] {
     border: none;
   }
 

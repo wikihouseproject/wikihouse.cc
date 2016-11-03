@@ -35,8 +35,8 @@ var setVars = function() {
 $(document).on("ready pjax:success", setVars);
 $(window).resize(setVars);
 
-
 $(document).ready(function() {
+  $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('#side-nav').click(function() {
     $('#toggle-menu').removeClass('open')
     $('#side-nav').hide()

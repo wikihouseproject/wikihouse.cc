@@ -3,10 +3,11 @@
 <style type="text/css">
   /* inline styles so that they load instantly */
   .hero {
-    background-image: url(<%= asset_path('sky.jpg') %>);
+    background-image: url(<%= asset_path('hero.jpg') %>);
     background-size: cover;
     background-color: #232323;
-    background-position: center -10%;
+    background-position: 20% 25px;
+    background-repeat: no-repeat;
     background-attachment: fixed;
   }
 </style>
@@ -14,9 +15,8 @@
 <div class="hero">
   <div class="fade">
     <div class="container">
-      <span class="typed"></span>
-      <!-- <span class="typed">The future of homes.<br/>By everyone, for<br/>everyone.</span> -->
-      <!-- <p>Simple, sustainable, open building technologies.</p> -->
+      <span class="typed">The future of homes.<br/>By everyone, for<br/>everyone.</span>
+      <p>Simple, sustainable, open building technologies.</p>
     </div>
   </div>
 </div>

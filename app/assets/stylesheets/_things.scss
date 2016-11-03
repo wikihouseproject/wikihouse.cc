@@ -34,6 +34,7 @@ a.big-type-link {
   @include span-columns(6);
 }
 .right-info {
+  padding-top: 20px;
   @include span-columns(4);
 }
 .terms {

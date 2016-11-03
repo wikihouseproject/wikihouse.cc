@@ -45,14 +45,18 @@
 <div class="togglebox">
   <input id="toggle1" type="radio" name="toggle" />
   <%= link_to about_wikihouse_foundation_path do %>
-    <label for="toggle1"><div class="container">About WikiHouse Foundation</div></label>
+    <label for="toggle1"><div class="container">
+    <span style="background: url(<%= asset_path('icons/rightarrow.png') %>) center right no-repeat; display: block">About WikiHouse Foundation</span>
+    </div></label>
   <% end %>
   <section id="content1">
     <div class="container"><p>Content for the first accordion</p></div>
   </section>
 
   <input id="toggle2" type="radio" name="toggle" />
-  <label for="toggle2"><div class="container">FAQ</div></label>
+  <label for="toggle2"><div class="container">
+    <span>FAQ</span>
+  </div></label>
   <section id="content2">
     <div class="container">
       <p style="font-weight: bold">How do you solve a problem like Maria?</p>
@@ -61,7 +65,9 @@
   </section>
 
   <input id="toggle3" type="radio" name="toggle" />
-  <label for="toggle3"><div class="container">Licenses & terms of use</div></label>
+  <label for="toggle3"><div class="container">
+    <span>Licenses & terms of use</span>
+  </div></label>
   <section id="content3">
     <div class="container">
       <p>

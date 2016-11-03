@@ -24,26 +24,25 @@ var origLogoHeight;
 var doneCount;
 
 var setVars = function() {
-  console.log('resize')
   $('header#main-header').css('height', 'auto')
   subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
   origHeight = $('header#main-header').height();
   origLogoHeight = $('#logo').height();
   doneCount = false;
-}
 
-$(document).on("ready pjax:success", setVars);
-$(window).resize(setVars);
-
-$(window).load(function() {
   var tallest = 0;
+  $('.big-type-link').css('height', 'auto');
   $('.big-type-link').each(function() {
     if ($(this).height() > tallest) {
       tallest = $(this).height();
     }
   });
   $('.big-type-link').css('height', tallest);
-})
+}
+
+$(document).on("ready pjax:success", setVars);
+$(window).resize(setVars);
+$(window).load(setVars);
 
 $(document).ready(function() {
 

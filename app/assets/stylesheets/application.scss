@@ -71,7 +71,7 @@ body {
   background: #F0F0F0;
   line-height: 1.4;
   min-width: 320px;
-  font-size: 16px;
+  font-size: 15px;
   &.large {
     padding-top: $largeHeaderHeight;
   }
@@ -121,7 +121,7 @@ p {
 }
 
 .top {
-  padding-top: 2em !important;
+  padding-top: 10px !important;
 }
 
 #main .container {
@@ -175,9 +175,10 @@ p {
   .half {
     flex: 1;
     .container {
-      padding: $gutter;
+      // padding: $gutter;
+      padding: 37px;
       position: relative;
-      padding-bottom: 3em;
+      // padding-bottom: 3em;
       height: 100%;
       overflow: auto;
       display: flex;

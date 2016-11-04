@@ -5,8 +5,9 @@
   <div class="fade"></div>
   <div class="container" style="z-index: 200; position: relative">
     <%= link_to x2.at_xpath('//a').attr('href') do %>
-    <h1><%= x.at_xpath('//item//title').text %></h1>
-    <%#= x2 %>
+    <div class="top">
+      <h2><%= x.at_xpath('//item//title').text %></h2>
+    </div>
     <% end %>
   </div>
 </div>

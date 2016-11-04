@@ -16,7 +16,13 @@
   }
 
   li {
-    width: 19%;
+    width: 100%;
+    @media screen and (min-width: $break-small) {
+      width: 45%;
+    }
+    @media screen and (min-width: $break-medium) {
+      width: 18%;
+    }
     height: 100px;
     display: inline-block;
     margin-bottom: 30px !important;

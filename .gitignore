@@ -18,3 +18,4 @@
 *.webm
 public/videos/*
 .env
+donators.json

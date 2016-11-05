@@ -1,6 +1,7 @@
-$(document).on("ready pjax:success", function() {
+// $(document).on("ready pjax:success", function() {
+$(document).on("ready", function() {
   var parent, ink, d, x, y;
-  $("a").click(function(e){
+  $("header li a").click(function(e){
     // e.preventDefault()
     parent = $(this).parent();
     //create .ink element if it doesn't exist

@@ -56,7 +56,7 @@
 <div class="container">
   <h2>Supporters</h2>
 
-  <% 100.times do %>
-  <div class="supporter"><%= Faker::Name.name %></div>
+  <% @names.each do |name| %>
+    <div class="supporter"><%= name %></div>
   <% end %>
 </div>

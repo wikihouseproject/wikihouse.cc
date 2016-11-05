@@ -19,3 +19,4 @@
 public/videos/*
 .env
 donators.json
+donations.rb

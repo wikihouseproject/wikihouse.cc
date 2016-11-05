@@ -57,11 +57,18 @@ a.big-type-link {
 }
 
 .left-info {
-  @include span-columns(6);
+  @media screen and (min-width: $break-large) {
+    @include span-columns(6);
+  }
+  h1 {
+    margin: 40px 0;
+  }
 }
 .right-info {
-  padding-top: 20px;
-  @include span-columns(4);
+  padding-top: 40px;
+  @media screen and (min-width: $break-large) {
+    @include span-columns(4);
+  }
 }
 .terms {
   h1 {

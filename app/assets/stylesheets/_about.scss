@@ -182,5 +182,23 @@
     font-family: Roboto;
     font-weight: bold;
     font-size: 1em;
+    &:before {
+      content: "Q";
+    }
+  }
+  h2,p {
+    position: relative;
+    padding-left: 40px;
+  }
+  h2:before, p:before {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.4em;
+    font-family: $mono;
+    font-weight: 500;
+  }
+  p:before {
+    content: "A";
   }
 }

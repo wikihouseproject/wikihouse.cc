@@ -57,11 +57,14 @@ a.big-type-link {
 }
 
 .left-info {
+    font-size: 1.2em;
+    line-height: 1.4;
   @media screen and (min-width: $break-large) {
     @include span-columns(6);
   }
   h1 {
     margin: 40px 0;
+    font-size: 2em;
   }
 }
 .right-info {

@@ -1,10 +1,13 @@
 .download-buttons {
   overflow: hidden;
+  margin-bottom: 80px;
   .button {
     display: block;
     width: 50%;
     float: left;
     clear: none;
+    line-height: 2.3em;
+    font-size: 1.15em;
   }
 }
 .header-preview {
@@ -85,13 +88,13 @@
 
 .type-details {
   h1 {
-    font-weight: 500;
+    font-weight: 400;
   }
 
   h5 {
     color: #000;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 0.9em;
+    font-weight: 800;
   }
   img {
     width: 100%;

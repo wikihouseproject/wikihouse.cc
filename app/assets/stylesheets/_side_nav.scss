@@ -4,7 +4,7 @@ body.open-menu #side-nav {
 
 #side-nav {
   display: none;
-  background: #333333;
+  background: #2D2D2D;
   position: fixed;
   // top: -20px;
   top: 0;
@@ -26,16 +26,17 @@ body.open-menu #side-nav {
   }
   a {
     // font-family: $mono;
-    font-size: 1.5em;
-    // font-weight: 300;
+    font-size: 2.6em;
+    line-height: 1.2;
+    font-weight: 300;
     display: block;
     clear: both;
-    color: #dadada;
     padding: 5px;
     position: relative;
     z-index: 5000;
+    color: #FFF;
   }
   a:hover {
-    color: #fff;
+    color: #dadada;
   }
 }

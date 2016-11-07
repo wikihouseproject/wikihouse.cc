@@ -13,6 +13,15 @@ $(document).on("ready", function() {
     //incase of quick double clicks stop the previous animation
     ink.removeClass("animate");
 
+    // setTimeout(function() { $('.ink.animate').remove() }, 500);
+
+    // ink.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
+    //   function() {
+    //     alert('gone')
+    //     $(this).remove();
+    //   }
+    // );
+
     //set size of .ink
     if(!ink.height() && !ink.width())
     {
@@ -28,6 +37,8 @@ $(document).on("ready", function() {
 
     //set the position and add class .animate
     ink.css({top: y+'px', left: x+'px'}).addClass("animate");
+
+
   })
 
 })

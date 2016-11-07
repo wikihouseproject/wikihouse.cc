@@ -67,7 +67,7 @@ $(document).on("pjax:success", function() {
 });
 
 $(document).on('pjax:success ready', function() {
-  setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
+  // setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
   setVars();
   $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('header').removeClass('drop-shadow')
@@ -75,6 +75,7 @@ $(document).on('pjax:success ready', function() {
 })
 
 $(document).ready(function() {
+
 
   uniformHeights('.big-type-link', false);
   uniformHeights('.type-row', false);
@@ -85,6 +86,7 @@ $(document).ready(function() {
     // $('#side-nav').hide()
   });
   $('#main-toggler').click(function(event) {
+    $('.ink').remove();
     event.preventDefault();
     $('body').toggleClass('open-menu');
     // $('#toggle-menu').toggleClass('open');

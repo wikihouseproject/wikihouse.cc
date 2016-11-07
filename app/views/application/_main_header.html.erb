@@ -1,7 +1,4 @@
 <header id="main-header" class="<%= 'large' if request.path == root_path %>">
-
-  <%#= render "application/header" %>
-  <!--  data-turbolinks-permanent -->
   <div class="container">
     <%= link_to root_path, id: 'logo-link' do %><%= image_tag "wikihouse-logo.svg", id: 'logo' %><% end %>
 
@@ -25,7 +22,6 @@
     </ul>
 
   </div>
-
 </header>
 
 <%# if content_for?(:header) %>

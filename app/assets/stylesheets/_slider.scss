@@ -17,21 +17,28 @@
   height: 100%;
 }
 
-#slider {
+.slider {
   @include fill-parent;
   background: #F0F0F0;
   height: 400px;
   width: 100%;
   padding: 20px;
+  ul, li {
+    height: 100%;
+  }
   .container {
     height: 100%;
+  }
+  .slide-content {
+    @include vertical-center();
   }
   h2 {
     font-family: $mono;
   }
   li {
+    position: relative;
     background-size: cover;
-    background-color: #F0F0F0;
+    // background-color: #F0F0F0;
   }
   img {
     height: 100%;
@@ -55,7 +62,7 @@
 }
 
 @media screen and (min-width: $break-medium) {
-  #slider {
+  .slider {
     height: 520px;
     .slide-container {
       height: 520px;

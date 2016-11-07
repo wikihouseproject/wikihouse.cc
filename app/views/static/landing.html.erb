@@ -1,27 +1,6 @@
 <%#= content_for(:header) do "&nbsp;"; end %>
 
-<style type="text/css">
-  /* inline styles so that they load instantly */
-  .hero {
-    background-image: url(<%= asset_path('hero.jpg') %>);
-    background-size: cover;
-    background-color: #232323;
-    background-position: 20% 25px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-</style>
-
-<div class="hero">
-  <div class="fade">
-    <div class="container">
-      <span class="typed">The future of homes<br/>by everyone, for everyone</span>
-      <p>Simple, sustainable, open building technologies</p>
-      <%= link_to "View the GitHub Library", "#", class: 'white-button' %>
-    </div>
-  </div>
-</div>
-
+<%= render "application/hero" %>
 <%= render "application/slider" %>
 
 <div id="preview">

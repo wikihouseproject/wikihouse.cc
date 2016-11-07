@@ -10,13 +10,15 @@
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-    background-color: transparent !important;
-    @include linear-gradient(
-      to top,
-      rgba(#717171, 0.2) 0%,
-      rgba(#717171, 0.1) 50%,
-      rgba(#717171, 0) 100%
-    );
+    // background-color: transparent !important;
+    // @include linear-gradient(
+    //   to top,
+    //   rgba(#717171, 0.2) 0%,
+    //   rgba(#717171, 0.1) 50%,
+    //   rgba(#717171, 0) 100%
+    // );
+    background: image-url('fade@2x.png') bottom left no-repeat;
+    background-size: cover;
   }
 
 video {
@@ -25,6 +27,15 @@ video {
   transform: translateY(-50%);
 }
 
+#hero-holder {
+  position: relative;
+  .slider {
+    padding: 0;
+  }
+  .unslider-nav {
+    display: none;
+  }
+}
 
 .hero {
   height: 500px;
@@ -32,8 +43,17 @@ video {
   overflow: hidden;
   position: relative;
 
+  li {
+    background-size: cover;
+    background-color: #232323;
+    background-position: 20% 25px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   .container {
-    @include vertical-center();
+    // @include vertical-center();
+    position: relative !important;
   }
   .typed {
     font-weight: 300;
@@ -50,11 +70,11 @@ video {
     margin: 1.7em 0;
     max-width: 100%;
 
-    box-shadow: 1px 2px 32px 2px rgba(0,0,0,0.1);
+    box-shadow: 2px 4px 32px 2px rgba(0,0,0,0.2);
   }
 
   .typed, p {
-    text-shadow: 2px 2px 8px rgba(#717171, 0.1);
+    text-shadow: 2px 2px 16px rgba(#717171, 0.2);
   }
 
   .typed, .typed-cursor {

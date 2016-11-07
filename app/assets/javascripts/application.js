@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require lodash.js
 //= require pjax
 //= require unslider-min
 //= require countUp

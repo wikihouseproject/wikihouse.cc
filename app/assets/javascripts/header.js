@@ -67,8 +67,9 @@ $(document).on("pjax:success", function() {
 });
 
 $(document).on('pjax:success ready', function() {
-  setVars();
   setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
+  setVars();
+  $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('header').removeClass('drop-shadow')
   $('header#sub-header').addClass('drop-shadow')
 })
@@ -78,7 +79,6 @@ $(document).ready(function() {
   uniformHeights('.big-type-link', false);
   uniformHeights('.type-row', false);
 
-  $('.hero').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('#side-nav').click(function() {
     $('body').removeClass('open-menu')
     // $('#toggle-menu').removeClass('open')
@@ -95,6 +95,7 @@ $(document).ready(function() {
 });
 
 var doScroll = function() {
+  console.log('s')
   var scrollPos = $(window).scrollTop();
 
   var h = -75;
@@ -133,7 +134,7 @@ var doScroll = function() {
 }
 
 $(document).on('ready pjax:success', doScroll)
-$(window).on('scroll', doScroll)
+$(window).on('scroll', _.debounce(doScroll, 10))
 
 // $(document).on('pjax:send', function(e) {
 //   console.log(e.target.URL)

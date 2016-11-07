@@ -2,6 +2,7 @@
 $(document).on("ready", function() {
   var parent, ink, d, x, y;
   $("header li a").click(function(e){
+    $(this).addClass('ripple')
     // e.preventDefault()
     parent = $(this).parent();
     //create .ink element if it doesn't exist

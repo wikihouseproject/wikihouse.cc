@@ -50,7 +50,6 @@ var setVars = function() {
   doneCount = false;
 }
 
-$(document).on("ready pjax:success", setVars);
 $(window).resize(setVars);
 // $(window).load(setVars);
 
@@ -58,6 +57,13 @@ $(document).on("pjax:success", function() {
   uniformHeights('.big-type-link', true);
   uniformHeights('.type-row', true);
 });
+
+$(document).on('pjax:success ready', function() {
+  setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
+  $('header').removeClass('drop-shadow')
+  $('header#sub-header').addClass('drop-shadow')
+  setVars();
+})
 
 $(document).ready(function() {
 
@@ -81,7 +87,7 @@ $(document).ready(function() {
 
     var scrollPos = $(window).scrollTop();
 
-    if ( scrollPos - subHeadHeight >= 0 ) {
+    if ( scrollPos - subHeadHeight >= -75 ) {
       $('header#main-header').addClass('drop-shadow')
       $('header#sub-header').removeClass('drop-shadow')
     } else {

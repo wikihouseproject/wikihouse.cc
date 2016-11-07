@@ -24,11 +24,14 @@ body.open-menu {
 }
 
 #sub-header {
-  background: white;
+  min-height: 75px;
+  margin-top: -75px;
+  padding-top: 75px;
+  background: #FFF;
   width: 100%;
   // overflow: hidden;
   // position: absolute;
-  padding: 1em 0 2em 0;
+  // padding: 1em 0 2em 0;
   position: relative;
   transition: all 10s;
   z-index: 1000;
@@ -70,6 +73,7 @@ header#main-header {
   width: 100%;
   // overflow: hidden;
   background: #FFF;
+
   @include fill-parent;
 
     #logo-link {
@@ -81,7 +85,7 @@ header#main-header {
     #logo-link {
       height: $largeHeaderHeight;
     }
-    @include drop-shadow();
+    // @include drop-shadow();
     #logo {
       height: $largeHeaderHeight - 30;
     }
@@ -90,7 +94,7 @@ header#main-header {
   // box-shadow: 0px 10px 20px 1px rgba(255,255,255,1);
 
   &.scrolled {
-    box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
+    // box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
   }
 
 
@@ -110,9 +114,10 @@ header#main-header {
     border-radius: 100%;
     transform: scale(0);
     z-index: 10000;
+    pointer-events: none;
   }
   /*animation effect*/
-  .ink.animate {animation: ripple 0.5s linear;}
+  .ink.animate {animation: ripple 0.5s linear forwards;}
   @keyframes ripple {
     /*scale the element to 250% to safely cover the entire link and fade it out*/
     100% {opacity: 0; transform: scale(2);}

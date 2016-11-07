@@ -97,7 +97,6 @@ $(document).ready(function() {
 });
 
 var doScroll = function() {
-  console.log('s')
   var scrollPos = $(window).scrollTop();
 
   var h = -75;

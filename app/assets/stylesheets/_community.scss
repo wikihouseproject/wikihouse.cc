@@ -46,6 +46,16 @@ a.bottom-link {
   &, h4 {
     color: #000;
   }
+  .description {
+    padding-left: 65px;
+  }
+  h4 {
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
   ol {
     counter-reset:li;
     margin-left: 0;
@@ -53,11 +63,13 @@ a.bottom-link {
     list-style:none;
   }
   ol > li:before {
+    position: absolute;
+    margin-top: -8px;
     content:counter(li);
     counter-increment:li;
-    font-size: 1em;
+    font-size: 3em;
     padding-right: 1em;
-    font-weight: bold;
+    font-weight: 400;
     float: left;
   }
   ol > li {

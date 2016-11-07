@@ -67,6 +67,7 @@ a.big-type-link {
 .right-info {
   padding-top: 40px;
   @media screen and (min-width: $break-large) {
+    padding-top: 0;
     @include span-columns(4);
   }
 }

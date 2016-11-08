@@ -1,3 +1,14 @@
+form {
+  margin-bottom: 2em;
+  label {
+    display: inline-block;
+    width: 200px;
+  }
+  .input {
+    margin-bottom: 1em;
+  }
+}
+
 textarea {
   padding: 5px;
 }
@@ -31,4 +42,12 @@ textarea {
       padding-left: 10px;
     }
   }
+}
+
+form {
+  width: 100%;
+}
+
+.input label {
+  font-weight: normal;
 }

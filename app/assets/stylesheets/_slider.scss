@@ -1,3 +1,11 @@
+#slider ul li {
+  display: none;
+}
+#slider ul li:first-child {
+  display: block;
+}
+
+
 #unslider {
   position: relative;
 }
@@ -7,10 +15,11 @@
   width: 40%;
   background-color: transparent;
   // background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAYAAADESFVDAAAAt0lEQVQokXXSIU9CURQH8B+Gt8HcmEG/CkYDzUAz2Uw2m4FKpxv5BkYCiUIwsZEMfATY0Dmd41JuOO/y3t1OuNtvZ/f8z4UpfjBOKWkq+ELK9dqG3gJKeG5CFd4DOuKxhrLsYhHgP0Y1lOElVgH+YlhDGV5hHeA3bpsmucFngNsL56dCJ9z/yi7X2IQuewwi6OOjeM9djKCHZTHZfRnmvMjooUx8VqT91LSWQ0AvbQueYNf2A1JKTpZ/5VBQ5JGhAAAAAElFTkSuQmCC');
-  background-image: image-url('icons/rightarrow.svg');
+  background-image: image-url('icons/ic_arrow_forward_black_24dp_2x.png');
   transition: opacity 0.5s;
   background-position: center right;
-  background-size: 22px 22px;
+  // background-size: 22px 22px;
+  background-size: auto auto;
   &:hover {
     opacity: 1;
   }
@@ -19,7 +28,7 @@
 
 .slider {
   @include fill-parent;
-  background: #F0F0F0;
+  background: #f0f0f0;
   height: 400px;
   width: 100%;
   padding: 20px;
@@ -28,6 +37,7 @@
   }
   .container {
     height: 100%;
+    // background: #f0f0f0;
   }
   .slide-content {
     @include vertical-center();
@@ -38,6 +48,7 @@
   li {
     position: relative;
     background-size: cover;
+    background-position: center center;
     // background-color: #F0F0F0;
   }
   img {

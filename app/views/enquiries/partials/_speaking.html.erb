@@ -1,13 +1,12 @@
-<%= f.input :name, label: "Your Name", autofocus: true %>
 <%= f.input :organisation, label: "Event Name" %>
 
-<%= f.input :date_of_event, as: :date, label: 'from' %>
-<%= f.input :date_of_event, as: :date, label: 'to' %>
+<%= f.input :date_from, as: :date, label: 'from' %>
+<%= f.input :date_to, as: :date, label: 'to' %>
 
 <%= f.input :requested_speaker %>
 <%= f.input :about_event, as: :text %>
 <%= f.input :expenses, as: :boolean, label: "Expenses included?" %>
 <%= f.input :speaking_fee %>
-<%= f.input :notes, as: :text %>
+<%= f.input :message, as: :text %>
 
 <p>Message received, thankyou. One of the team will get in contact with you as soon as possible.</p>

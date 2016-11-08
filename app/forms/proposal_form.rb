@@ -1,4 +1,5 @@
 class ProposalForm < Reform::Form
+  include ActiveModel::ModelReflections
 
   property :role
   property :name
@@ -13,5 +14,14 @@ class ProposalForm < Reform::Form
   property :services_required
   property :anything_else
 
-  validates :name, presence: true
+  validates :name,
+            :email_address,
+            :role,
+            :country,
+            :has_site,
+            :has_budget,
+            :has_planning,
+            :has_mortgage,
+            presence: true
+
 end

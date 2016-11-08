@@ -1,0 +1,70 @@
+<!--
+<%= form_for ProposalForm.new(Proposal.new) do |f| %>
+ <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <%= f.text_field :name %>
+          <%= f.label :name, "First Name" %>
+        </div>
+        <div class="input-field col s6">
+          <%= f.text_field :name %>
+          <%= f.label :name, "Last Name" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :organisation %>
+          <%= f.label :organisation %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.email_field :email_address %>
+          <%= f.label :email_address %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :country %>
+          <%= f.label :country %>
+        </div>
+      </div>
+    </form>
+  </div>
+<% end %>
+ -->
+
+<%= simple_form_for ProposalForm.new(Proposal.new) do |f| %>
+  <%= f.input :role,
+    # label: "My role in the project will be",
+    collection: [
+    "Client","Architect","Builder","Project manager","Other"
+    ] %>
+
+  <%= f.input :name, label: "Full name" %>
+  <%= f.input :organisation %>
+  <%= f.input :email_address, as: :email %>
+  <%= f.input :country, as: :string %>
+  <%= f.input :description, as: :text, label: "Outline description of your project" %>
+  <%= f.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'] %>
+  <%= f.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'] %>
+  <%= f.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"] %>
+  <%= f.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"] %>
+  <%= f.input :services_required,
+    label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
+    collection: [
+    "Project management",
+    "Outline design",
+    "Planning application",
+    "Detail design",
+    "Engineering / checking",
+    "CNC manufacturing",
+    "Site and foundations work",
+    "Assembly",
+    "Services and electrics",
+    "R&D, developing new solutions"
+    ], as: :check_boxes %>
+  <%= f.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text %>
+  <%= f.submit "Submit" %>
+<% end %>

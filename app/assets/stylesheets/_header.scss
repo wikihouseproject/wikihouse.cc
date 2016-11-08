@@ -197,8 +197,9 @@ header#main-header {
         /*static positioned elements appear behind absolutely positioned siblings(.ink in this case) hence we will make the links relatively positioned to bring them above .ink*/
         position: relative;
         border-bottom: 2px solid #FFF;
-        transition: all 0.4s;
-        font-weight: bold;
+        transition: all 0.2s;
+        font-weight: 700;
+        font-size: 14px;
         &:hover {
           color: #AAA;
           border-color: #CCC;

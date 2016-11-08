@@ -30,8 +30,20 @@ $visual-grid: false;
 @import "unslider";
 @import "unslider-dots";
 @import "typed";
-
+@import "typography";
 // @import "leaflet";
+
+// @import "materialize/components/forms/forms";
+// @import"materialize/components/forms/checkboxes";
+// @import"materialize/components/forms/file-input";
+// @import"materialize/components/forms/forms";
+// @import"materialize/components/forms/input-fields";
+// @import"materialize/components/forms/radio-buttons";
+// @import"materialize/components/forms/range";
+// @import"materialize/components/forms/select";
+// @import"materialize/components/forms/switches";
+// @import "materialize";
+
 
 @import "about";
 @import "about_wikihouse_foundation";
@@ -42,7 +54,7 @@ $visual-grid: false;
 @import "forms";
 @import "footer";
 @import "grid-settings";
-@import "header";
+@import "_header";
 @import "landing";
 @import "library";
 @import "main_header";
@@ -76,50 +88,8 @@ body {
   }
 }
 
-* {
-  font-weight: 400;
-}
-
-h1, h2, h3 {
-  font-family: $mono;
-  margin-bottom: 0;
-  // line-height: 1;
-}
-h1,h2,h3,h4,h5,h6 {
-  font-weight: normal;
-}
-h3,h4,h5,h6 {
-  color: #AAA;
-}
-h1 {
-  font-size: 2em;
-}
-h2 {
-  font-size: 2em;
-}
-
-form {
-  margin-bottom: 2em;
-  label {
-    display: inline-block;
-    width: 200px;
-  }
-  .input {
-    margin-bottom: 1em;
-  }
-}
-
 a {
   text-decoration: none;
-}
-
-p {
-  line-height: 1.6;
-}
-
-.propose {
-  color: #FFF;
-  background: #2D2D2D;
 }
 
 .top {
@@ -194,32 +164,7 @@ p {
 }
 
 hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid #5B5B5B;
-}
-
-.github-user {
-  span {
-    vertical-align: top;
-  }
-  img {
-    width: 66px;
-    height: 66px;
-    border-radius: 66px;
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
-
-form {
-  width: 100%;
-}
-
-p {
-  line-height: 1.7;
-}
-
-.input label {
-  font-weight: normal;
+  border: 0;
+  height: 0;
+  border-top: 1px solid #5B5B5B;
 }

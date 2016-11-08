@@ -207,3 +207,16 @@
     height: 26px;
   }
 }
+
+.github-user {
+  span {
+    vertical-align: top;
+  }
+  img {
+    width: 66px;
+    height: 66px;
+    border-radius: 66px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

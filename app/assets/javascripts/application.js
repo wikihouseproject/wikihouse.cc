@@ -17,4 +17,5 @@
 //= require unslider-min
 //= require countUp
 //= require jquery-scrollspy
+// require materialize
 //= require_tree .

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <script type="text/javascript">
+      window.pjax = null;
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -9,11 +11,13 @@
 
     <title><%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %></title>
     <%= csrf_meta_tags %>
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Mono:300,400,500" rel="stylesheet">
-    <script type="text/javascript">
-      window.pjax = null;
-    </script>
+    <!--
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Mono:300,400,500" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Mono:300,400,500,700|Material+Icons" rel="stylesheet"> -->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,500,500italic,700,700italic|Roboto:300,400,400italic,500,500italic,700,700italic|Material+Icons" rel="stylesheet" type="text/css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 

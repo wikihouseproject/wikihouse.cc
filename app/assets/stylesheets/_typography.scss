@@ -1,0 +1,23 @@
+* {
+  font-weight: 400;
+}
+h1, h2, h3 {
+  font-family: $mono;
+  margin-bottom: 0;
+  // line-height: 1;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+h3,h4,h5,h6 {
+  color: #AAA;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 2em;
+}
+p {
+  line-height: 1.7;
+}

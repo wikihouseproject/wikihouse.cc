@@ -1,9 +1,7 @@
 class Enquiry < ApplicationRecord
 
   store_accessor :data,
-    :name,
     :organisation,
-    :email,
     :description,
     :message,
     :phone,
@@ -13,5 +11,7 @@ class Enquiry < ApplicationRecord
     :expenses,
     :speaking_fee,
     :notes
+
+  validates_presence_of :first_name, :email
 
 end

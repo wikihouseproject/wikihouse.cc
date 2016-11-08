@@ -69,7 +69,7 @@ $(document).on("pjax:success", function() {
 $(document).on('pjax:success ready', function() {
   // setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
   setVars();
-  $('.hero, .big-slider').css('height', $(window).innerHeight() - $('header#main-header').height())
+  // $('.hero, .big-slider').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('header').removeClass('drop-shadow')
   $('header#sub-header').addClass('drop-shadow')
 })

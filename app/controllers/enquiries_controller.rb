@@ -11,8 +11,13 @@ class EnquiriesController < ApplicationController
   end
 
   def create
+    ap(enquiry_params)
     @enquiry = Enquiry.new(enquiry_params)
-    unless @enquiry.save
+    if @enquiry.save
+      notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
+      notifier.ping "[ENQUIRY] #{@enquiry.first_name}"
+      render json: @enquiry.to_json
+    else
       redirect_to :back
     end
   end

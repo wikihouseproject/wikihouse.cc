@@ -1,17 +1,13 @@
 <% content_for :header do %>
   <div id="partners-holder">
-  <div class="container">
+  <div class="container top">
     <h1>We work for you</h1>
     <div class="we-work-for-you flex">
       <div class="description half">
-        <div class="container">
+        <div class="container" style="padding-left: 0">
           <p>WikiHouse Foundation is a small non-profit with a huge mission: to put the knowledge and tools to build sustainable, low-cost homes into commons where they are freely accessible to anyone, and owned by everyone.</p>
           <p>To do that, we need your support.</p>
           <p>Please help us to keep working for the common good by making a one-off donation, or making a small monthly stipend.</p>
-          <!-- <p>WikiHouse Foundation is not backed by venture capital. It’s a small non-profit with a huge mission: to put the knowledge and tools to build low-cost, sustainable homes into commons where they are freely accessible to anyone, and owned by everyone.</p>
-          <p>We need your support to achieve that.</p>
-          <p>Please help us to keep working for the common good by making a one-off donation, or making a small monthly stipend.</p>
-          <p style="text-align: right"><strong>Alastair Parvin</strong>, Co-founder</p> -->
         </div>
       </div>
       <div class="form half">
@@ -43,7 +39,7 @@
             <%= f.input :frequency, collection: %w(one_off weekly monthly) %>
 
             <!-- <p>2000 of these would fund our core team for a year</p> -->
-            <%= f.submit %>
+            <%#= f.submit %>
           <% end %>
         </div>
       </div>
@@ -53,10 +49,12 @@
   </div>
 <% end %>
 
-<div class="container">
-  <h2>Supporters</h2>
+<div id="about-points">
+  <div class="container top">
+  <h4 class='mono'>Supporters</h4>
 
   <% @names.each do |name| %>
     <div class="supporter"><%= name %></div>
   <% end %>
+  </div>
 </div>

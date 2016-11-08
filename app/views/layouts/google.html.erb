@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wikihouse</title>
+    <%= csrf_meta_tags %>
+    <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,500,500italic,700,700italic|Roboto:400,400italic,500,500italic,700,700italic|Material+Icons" rel="stylesheet" type="text/css">
+    <!-- <link href="https://design.google.com/css/site.css" rel="stylesheet" type="text/css"> -->
+    <!-- <base href="https://design.google.com/"></base> -->
+    <%= stylesheet_link_tag 'header', media: 'all' %>
+  </head>
+  <body>
+    <%= render "head" %>
+    <%= yield %>
+    <!--
+    <script src="https://design.google.com/api/site-meta.min.js" type="text/javascript"></script>
+    <script src="https://design.google.com/js/vendor.min.js" type="text/javascript"></script>
+    <script src="https://design.google.com/js/app.min.js" type="text/javascript"></script>
+    -->
+  </body>
+</html>

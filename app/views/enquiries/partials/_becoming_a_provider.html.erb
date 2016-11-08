@@ -8,10 +8,9 @@
 </div>
 <div class="half">
   <div class="container">
-    <%= f.input :name, autofocus: true %>
     <%= f.input :organisation %>
 
-    <%= f.input :organisation,
+    <%= f.input :services,
       label: "Service(s) you’re interested in providing: *<p><i>Check all that apply</i></p>".html_safe,
       collection: [
       'Architectural design',
@@ -25,5 +24,3 @@
   </div>
 </div>
 </div>
-
-

@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 gem 'stripe'
 gem "awesome_print"
 gem 'slack-notifier'
+gem 'invisible_captcha'
 # gem 'materialize-sass'
 
 # Use SCSS for stylesheets

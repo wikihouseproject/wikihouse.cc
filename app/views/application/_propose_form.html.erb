@@ -33,6 +33,6 @@
       ], as: :check_boxes %>
     <%= sf.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text %>
   <% end %>
-
+  <%= f.invisible_captcha :subtitle %>
   <%= f.submit "Submit Project Proposal" %>
 <% end %>

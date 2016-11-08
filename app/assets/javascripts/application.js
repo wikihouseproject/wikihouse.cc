@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require lodash.js
 //= require pjax
-//= require moment
 //= require unslider-min
 //= require countUp
 //= require jquery-scrollspy

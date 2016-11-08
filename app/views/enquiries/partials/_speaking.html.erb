@@ -1,7 +1,7 @@
 <%= f.input :organisation, label: "Event Name" %>
 
-<%= f.input :date_from, as: :date, label: 'from' %>
-<%= f.input :date_to, as: :date, label: 'to' %>
+<%= f.input :event_start_date, as: :date %>
+<%= f.input :event_end_date, as: :date, include_blank: true %>
 
 <%= f.input :requested_speaker %>
 <%= f.input :about_event, as: :text %>

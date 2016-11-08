@@ -11,11 +11,20 @@ class EnquiriesController < ApplicationController
   end
 
   def create
-    ap(enquiry_params)
     @enquiry = Enquiry.new(enquiry_params)
     if @enquiry.save
       notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
-      notifier.ping "[ENQUIRY] #{@enquiry.first_name}"
+      notifier.ping "#{@enquiry.first_name}",
+        icon_emoji: ':wikihouse:',
+        username: @enquiry.kind,
+        attachments: [{
+          fallback: "Fallback",
+          pretext: @enquiry.message,
+          # author_name: [@enquiry.first_name],
+          # title: @enquiry.kind,
+          # text: @enquiry.message,
+          fields: @enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
+        }]
       render json: @enquiry.to_json
     else
       redirect_to :back

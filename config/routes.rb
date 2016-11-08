@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   resources :things, path: 'types'
   resources :enquiries, path: 'contact-us'
   resources :donations
-  resources :proposals
   resources :donations
 
   root to: 'static#landing'

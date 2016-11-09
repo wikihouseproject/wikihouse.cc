@@ -18,8 +18,8 @@
   <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
     <div class="about-point">
       <div class="inner">
-        <!-- <div class="icon"><%= image_tag "about-icons/#{item['icon']}.svg" %></div> -->
-        <div class="icon"><%= image_tag "points/Asset #{index+1}.svg", class: 'svg' %></div>
+        <!-- <div class="icon"><%= image_tag "about_icons/#{item['icon']}.svg" %></div> -->
+        <div class="icon"><%= image_tag "about_icons/no_circle/Asset #{index+1}.svg", class: 'svg' %></div>
         <div class="description">
           <p style="font-weight: bold; margin-bottom: 1em"><%= item['title'] %></p>
           <p style=""><%= item['description'] %></p>
@@ -47,7 +47,8 @@
   <input id="toggle1" type="checkbox" name="toggle" />
     <label for="toggle1"><div class="container">
     <span>FAQ</span>
-    <i class="material-icons">arrow_forward</i>
+    <i class="material-icons closed-icon">arrow_forward</i>
+    <i class="material-icons open-icon">arrow_downward</i>
     </div></label>
   <section id="content1">
     <div class="container" id="faq">
@@ -69,7 +70,8 @@
   <input id="toggle3" type="checkbox" name="toggle" />
   <label for="toggle3"><div class="container">
     <span>Licenses & terms of use</span>
-    <i class="material-icons">arrow_forward</i>
+    <i class="material-icons closed-icon">arrow_forward</i>
+    <i class="material-icons open-icon">arrow_downward</i>
   </div></label>
   <section id="content3">
     <div class="container">

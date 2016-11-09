@@ -83,6 +83,10 @@
       text-align: center;
       width: 50%;
       margin-bottom: 20px;
+      img {
+        background: #000;
+        border-radius: 100%;
+      }
     }
 
 
@@ -159,6 +163,13 @@
     float: right;
   }
 
+    i.open-icon {
+      display: none;
+    }
+    i.closed-icon {
+      display: inline;
+    }
+
   }
   label[for='toggle1'] {
     border: none;
@@ -180,6 +191,15 @@
     // set height for transition duration to work
     // (also can set to auto without transition)
     height: auto;
+  }
+  #toggle1:checked ~ label[for='toggle1'],
+  #toggle3:checked ~ label[for='toggle3'] {
+    i.open-icon {
+      display: inline;
+    }
+    i.closed-icon {
+      display: none;
+    }
   }
 }
 

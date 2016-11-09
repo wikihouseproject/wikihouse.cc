@@ -78,7 +78,8 @@ video {
     background-color: #232323;
     background-position: 20% 25px;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    // background-attachment: fixed;
+    background-attachment: initial;
   }
 
   .container {
@@ -102,11 +103,11 @@ video {
     margin: 1.7em 0;
     max-width: 100%;
 
-    box-shadow: 2px 4px 32px 2px rgba(0,0,0,0.2);
+    box-shadow: 2px 4px 32px 2px rgba(#717171,0.4);
   }
 
   .typed, p {
-    text-shadow: 2px 2px 16px rgba(#717171, 0.2);
+    text-shadow: 2px 2px 16px rgba(#717171, 0.4);
   }
 
   .typed, .typed-cursor {

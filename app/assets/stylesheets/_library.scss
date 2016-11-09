@@ -82,7 +82,12 @@
   }
   p {
     -webkit-font-smoothing: antialiased;
-    width: 70%;
+    @media screen and (min-width: $break-large) {
+      width: 70%;
+    }
+    @media screen and (min-width: $break-xlarge) {
+      width: 60%;
+    }
   }
 }
 

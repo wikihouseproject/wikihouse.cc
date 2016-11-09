@@ -52,7 +52,10 @@ var setVars = function() {
 
 }
 
-$(window).resize(setVars);
+$(window).resize( _.debounce(function() {
+  $('.ink').removeClass('animate');
+  setVars()
+}, 500));
 // $(window).load(setVars);
 
 $(document).on("pjax:success", function() {
@@ -92,7 +95,7 @@ $(document).ready(function() {
     // $('#side-nav').hide()
   });
   $('#main-toggler').click(function(event) {
-    $('.ink').remove();
+    $('.ink').removeClass('animate');
     event.preventDefault();
     $('body').toggleClass('open-menu');
     // $('#toggle-menu').toggleClass('open');

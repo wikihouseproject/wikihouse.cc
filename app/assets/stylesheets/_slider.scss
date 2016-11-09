@@ -76,9 +76,10 @@
   .slider {
     height: 520px;
     .slide-container {
-      height: 520px;
-      background-position: center left;
-      background-size: 52%;
+      height: 480px;
+      // height: 100%;
+      background-position: 5% center;
+      background-size: auto 86%;
       .description {
         margin-top: 0;
         margin-left: 50%;

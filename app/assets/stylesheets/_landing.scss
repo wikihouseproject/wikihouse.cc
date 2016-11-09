@@ -46,15 +46,23 @@ video {
 }
 
 #hero-holder {
-  position: relative;
-  .slider {
-    padding: 0;
-  }
   .unslider-nav {
     display: none;
   }
   .unslider-arrow {
     background-image: image-url('icons/ic_arrow_forward_white_24dp_2x.png');
+  }
+  .slider {
+    padding: 0;
+  }
+
+  &.propose-slider {
+    .typed {
+      // margin-top: 10px;
+    }
+    .small {
+      font-size: 1em;
+    }
   }
 }
 
@@ -63,6 +71,7 @@ video {
   color: #FFF;
   overflow: hidden;
   position: relative;
+
 
   li {
     background-size: cover;
@@ -75,8 +84,10 @@ video {
   .container {
     // @include vertical-center();
     position: relative !important;
+    z-index: 101;
   }
   .typed {
+    display: block;
     font-weight: 300;
   }
 
@@ -102,7 +113,7 @@ video {
     font-family: $mono;
     font-size: 2.7em;
     line-height: 1.3;
-    margin-top: 1.5em;
+    // margin-top: 1.5em;
     // display: block;
   }
   p {

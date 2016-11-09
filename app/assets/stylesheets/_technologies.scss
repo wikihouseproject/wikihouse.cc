@@ -6,6 +6,20 @@
 .product {
   padding: 40px;
   width: 100%;
+  .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    background: #FFF;
+    transition: opacity 0.2s ease;
+  }
+  &:hover .hover {
+    opacity: 0.16;
+  }
   @media screen and (min-width: $break-small) {
     width: 50%;
   }

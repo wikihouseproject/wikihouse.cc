@@ -6,7 +6,7 @@ vals = [["Pre", "Manual<br/> Distributed"], ["1st", "Mechanised<br/> Centralised
   <div class="flex">
   <% vals.each_with_index do |val, index| %>
     <div class="part">
-      <div class="img"><%= image_tag "prospectus/Asset #{index+20}.svg" %></div>
+      <div class="img"><%= image_tag "steps/#{index}@2x.png" %></div>
       <h3><%= val[0] %></h3>
       <p><%= val[1].html_safe %></p>
     </div>

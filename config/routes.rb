@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  %w(google about donate propose_a_pilot library community partners technologies tools about_wikihouse_foundation prospectus terms).each do |page|
+  %w(google about donate propose_a_pilot library community partners technologies tools about_wikihouse_foundation prospectus terms message_received).each do |page|
     get page.gsub("_","-"), to: "static##{page}", as: page
   end
 

@@ -26,6 +26,10 @@ class EnquiriesController < ApplicationController
           # text: @enquiry.message,
           fields: @enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
         }]
+        respond_to do |format|
+          format.html { redirect_to message_received_path }
+          format.js
+        end
     else
       redirect_to :back
     end

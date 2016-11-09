@@ -1,5 +1,7 @@
 class Enquiry < ApplicationRecord
 
+  attr_accessor :subtitle
+
   store_accessor :data,
     :organisation,
     :description,

@@ -1,6 +1,8 @@
 <% title "Donate" %>
 <% content_for :header do %>
   <div id="partners-holder">
+
+  <%= simple_form_for Donation.new do |f| %>
   <div class="container top">
     <h1>We work for you</h1>
     <div class="we-work-for-you flex">
@@ -13,7 +15,6 @@
       </div>
       <div class="form half">
         <div class="container">
-          <%= simple_form_for Donation.new do |f| %>
             <%= f.input :display_name %>
             <!-- <label for="name">Name to appear on donation</label>
             <input type="text" placeholder="Name" name="name" id="name" class="green" />
@@ -41,12 +42,14 @@
 
             <!-- <p>2000 of these would fund our core team for a year</p> -->
             <%#= f.submit %>
-          <% end %>
         </div>
       </div>
     </div>
   </div>
-  <div class="donate-button">Donate</div>
+
+  <!-- <div class="donate-button">Donate</div> -->
+  <%= f.submit "Donate", class: "donate-button" %>
+  <% end %>
   </div>
 <% end %>
 

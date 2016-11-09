@@ -11,7 +11,7 @@
       "Client","Architect","Builder","Project manager","Other"
       ] %>
     <%= sf.input :organisation %>
-    <%= sf.input :country %>
+    <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true %>
     <%= sf.input :description, as: :text, label: "Outline description of your project" %>
     <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'] %>
     <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'] %>

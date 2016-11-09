@@ -46,8 +46,8 @@ var uniformHeights = function(selector, pjax) {
 var setVars = function() {
   $('header#main-header, #logo').attr('style', null)
   subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
-  origHeight = $('header#main-header').height();
-  origLogoHeight = $('#logo').height();
+  origHeight = parseInt($('header#main-header').height());
+  origLogoHeight = parseInt($('#logo').height());
   doneCount = false;
 
 }

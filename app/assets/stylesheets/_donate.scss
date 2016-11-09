@@ -9,6 +9,10 @@
 //   }
 // }
 
+form.new_donation {
+  margin: 0;
+}
+
 .form input {
   background: #E1FF9C;
   border: none;
@@ -18,7 +22,13 @@
 }
 
 .donate-button {
+  border: none;
+  margin: 0;
+  cursor: pointer;
   background: #C5FF5B;
+  &:hover {
+    background: darken(#C5FF5B, 5%)
+  }
   padding: 20px;
   // margin-bottom: -2em;
   // position: absolute;

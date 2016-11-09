@@ -6,7 +6,7 @@
 <div id="products-container">
 <div class="container">
   <% JSON.parse(open('data/products.json').read).each_with_index do |item, index| %>
-    <div class="product" style="background-color: <%= item['color'] %>">
+    <div class="product product-icon-<%= index + 7 %>" style="background-color: <%= item['color'] %>">
       <div class="hover"></div>
       <span class="count"><%= item['count'] %></span>
       <%= image_tag "icons/Asset #{index + 7}.svg", class: 'products-icon' %>

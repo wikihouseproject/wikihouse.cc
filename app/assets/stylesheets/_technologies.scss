@@ -1,10 +1,20 @@
 .products-icon {
-  height: 120px;
+  height: 110px;
   max-width: 100%;
-  margin: 10px auto;
+  margin: 0 auto 20px;
+}
+// power icon
+.product-icon-14 {
+  img.products-icon {
+    max-width: 100% !important;
+  }
 }
 .product {
-  padding: 40px;
+  padding: 40px 0;
+  @media screen and (min-width: $break-xlarge) {
+    padding: 80px 0;
+  }
+
   width: 100%;
   .hover {
     position: absolute;

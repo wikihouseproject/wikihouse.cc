@@ -26,7 +26,6 @@ class EnquiriesController < ApplicationController
           # text: @enquiry.message,
           fields: @enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
         }]
-      render json: @enquiry.to_json
     else
       redirect_to :back
     end

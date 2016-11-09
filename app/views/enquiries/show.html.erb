@@ -2,7 +2,7 @@
   <div class="container">
     <%= render "header" %>
     <%= title params[:id].gsub('-','_').humanize %>
-    <%= simple_form_for Enquiry.new(kind: params[:id]) do |f| %>
+    <%= simple_form_for Enquiry.new(kind: params[:id]), remote: true do |f| %>
       <%= f.input :kind, as: :hidden %>
       <%= f.input :first_name %>
       <%= f.input :last_name %>

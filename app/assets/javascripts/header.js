@@ -67,6 +67,7 @@ $(document).on("pjax:success", function() {
 });
 
 $(document).on('pjax:success ready', function() {
+
   $('.hidden-fields').hide()
   // setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
   setVars();

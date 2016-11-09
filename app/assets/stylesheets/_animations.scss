@@ -40,6 +40,10 @@
 .Animate--noDelay { animation-delay: 0s !important;  }
 
 .Animate--slideInUp { animation-name: Animation-slideInUp }
+#enquiries-container, .enquiries-header {
+  animation: none !important;
+}
+
 @keyframes Animation-slideInUp {
   0% {
     opacity: 0;

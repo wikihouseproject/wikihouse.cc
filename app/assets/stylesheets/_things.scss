@@ -35,6 +35,7 @@ a.big-type-link {
     font-family: $roboto;
     color: #FFF;
     font-size: 150px;
+    font-weight: 300;
     // font-weight: 300;
     @include vertical-center();
   }

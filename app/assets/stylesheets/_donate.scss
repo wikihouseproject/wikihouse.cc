@@ -11,6 +11,16 @@
 
 form.new_donation {
   margin: 0;
+
+  input.boolean {
+    display: inline;
+    width: auto;
+  }
+  .boolean label {
+    width: auto;
+    display: inline;
+    padding-left: 0.5em;
+  }
 }
 
 .form input {

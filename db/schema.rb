@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108172439) do
+ActiveRecord::Schema.define(version: 20161109142212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20161108172439) do
     t.string   "postcode"
     t.string   "email"
     t.string   "phone"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "stripe_customer_token"
   end
 
   create_table "enquiries", force: :cascade do |t|

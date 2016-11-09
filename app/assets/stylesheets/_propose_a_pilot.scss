@@ -16,7 +16,19 @@
   .half .container {
     padding-top: 0 !important;
   }
+  .radio label {
+    display: inline;
+    width: auto;
+    padding: 0 2em 0 0.2em;
+  }
+  .input {
+    vertical-align: top;
+  }
 }
+.enquiry_data_role abbr {
+  display: none;
+}
+
 .big-slider {
   position: relative;
   background-size: cover;

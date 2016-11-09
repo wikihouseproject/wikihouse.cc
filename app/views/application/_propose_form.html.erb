@@ -16,10 +16,10 @@
       <%= sf.input :organisation %>
       <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true %>
       <%= sf.input :description, as: :text, label: "Outline description of your project" %>
-      <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'] %>
-      <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'] %>
-      <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"] %>
-      <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"] %>
+      <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'], as: :radio_buttons %>
+      <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'], as: :radio_buttons %>
+      <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"], as: :radio_buttons %>
+      <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"], as: :radio_buttons %>
       <%= sf.input :services_required,
         label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
         collection: [

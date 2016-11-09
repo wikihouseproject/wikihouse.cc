@@ -67,11 +67,16 @@ $(document).on("pjax:success", function() {
 });
 
 $(document).on('pjax:success ready', function() {
+  $('.hidden-fields').hide()
   // setTimeout(function() { $('.ink').remove(); $('header .js-Pjax-remove').remove(); }, 1000);
   setVars();
   // $('.hero, .big-slider').css('height', $(window).innerHeight() - $('header#main-header').height())
   $('header').removeClass('drop-shadow')
   $('header#sub-header').addClass('drop-shadow')
+
+  $('.hidden-toggle').on('change', function() {
+    $('.hidden-fields').fadeIn()
+  })
 })
 
 $(document).ready(function() {

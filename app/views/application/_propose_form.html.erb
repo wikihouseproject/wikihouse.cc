@@ -1,38 +1,42 @@
 <%= simple_form_for Enquiry.new(kind: 'project-proposal') do |f| %>
-  <%= f.input :kind, as: :hidden %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email, as: :email %>
 
   <%= f.simple_fields_for :data do |sf| %>
     <%= sf.input :role,
       # label: "My role in the project will be",
       collection: [
       "Client","Architect","Builder","Project manager","Other"
-      ] %>
-    <%= sf.input :organisation %>
-    <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true %>
-    <%= sf.input :description, as: :text, label: "Outline description of your project" %>
-    <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'] %>
-    <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'] %>
-    <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"] %>
-    <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"] %>
-    <%= sf.input :services_required,
-      label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
-      collection: [
-      "Project management",
-      "Outline design",
-      "Planning application",
-      "Detail design",
-      "Engineering / checking",
-      "CNC manufacturing",
-      "Site and foundations work",
-      "Assembly",
-      "Services and electrics",
-      "R&D, developing new solutions"
-      ], as: :check_boxes %>
-    <%= sf.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text %>
+      ], label: "I am a...", input_html: { class: 'hidden-toggle' } %>
+
+    <div class="hidden-fields">
+      <%= f.input :kind, as: :hidden %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email, as: :email %>
+
+      <%= sf.input :organisation %>
+      <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true %>
+      <%= sf.input :description, as: :text, label: "Outline description of your project" %>
+      <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'] %>
+      <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'] %>
+      <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"] %>
+      <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"] %>
+      <%= sf.input :services_required,
+        label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
+        collection: [
+        "Project management",
+        "Outline design",
+        "Planning application",
+        "Detail design",
+        "Engineering / checking",
+        "CNC manufacturing",
+        "Site and foundations work",
+        "Assembly",
+        "Services and electrics",
+        "R&D, developing new solutions"
+        ], as: :check_boxes %>
+      <%= sf.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text %>
+      <%= f.invisible_captcha :subtitle %>
+      <%= f.submit "Submit Project Proposal" %>
+    </div>
   <% end %>
-  <%= f.invisible_captcha :subtitle %>
-  <%= f.submit "Submit Project Proposal" %>
 <% end %>

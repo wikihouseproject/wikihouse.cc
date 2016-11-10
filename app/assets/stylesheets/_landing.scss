@@ -149,9 +149,11 @@ video {
     color: #FFF;
   }
   .container {
-    @include span-columns(8);
-    .inside {
+    @media screen and (min-width: $break-large) {
       @include span-columns(8);
+      .inside {
+        @include span-columns(8);
+      }
     }
   }
 }

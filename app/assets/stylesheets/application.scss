@@ -1,4 +1,4 @@
-$break-small: 320px;
+$break-small: 330px;
 $break-medium: 600px;
 $break-large: 850px;
 $break-xlarge: 1100px;
@@ -32,6 +32,7 @@ $visual-grid: false;
 @import "typed";
 @import "typography";
 // @import "leaflet";
+// @import "ripple";
 
 // @import "materialize/components/forms/forms";
 // @import"materialize/components/forms/checkboxes";
@@ -82,7 +83,15 @@ body {
   background: #F0F0F0;
   line-height: 1.4;
   min-width: 320px;
-  font-size: 15px;
+
+  font-size: 12px;
+  @media screen and (min-width: $break-small) {
+    font-size: 13px;
+  }
+  @media screen and (min-width: $break-medium) {
+    font-size: 15px;
+  }
+
   &.large {
     padding-top: $largeHeaderHeight;
   }
@@ -99,6 +108,7 @@ a {
 #main .container {
   overflow: hidden;
 }
+
 #main {
   flex: 1;
   display: flex;

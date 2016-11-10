@@ -1,13 +1,39 @@
+.donation-widget {
+  &, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    // display: none;
+  }
+  li:first-child {
+    display: block;
+  }
+  .widget-button {
+    background: #EEE;
+    display: block;
+    padding: 10px;
+  }
+}
+
 #partners-holder {
   background: #FFF;
 }
 
-// .we-work-for-you {
-//   @include outer-container();
-//   .description, .form {
-//     @include span-columns(5);
-//   }
-// }
+.we-work-for-you {
+  // @include outer-container();
+  // .description, .form {
+  //   @include span-columns(5);
+  // }
+  .form input {
+    background: #E1FF9C;
+    border: none;
+    padding: 10px;
+    display: block;
+    width: 100%;
+  }
+}
 
 form.new_donation {
   margin: 0;
@@ -21,14 +47,6 @@ form.new_donation {
     display: inline;
     padding-left: 0.5em;
   }
-}
-
-.form input {
-  background: #E1FF9C;
-  border: none;
-  padding: 10px;
-  display: block;
-  width: 100%;
 }
 
 .donate-button {

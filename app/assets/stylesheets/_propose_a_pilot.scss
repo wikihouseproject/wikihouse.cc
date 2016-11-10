@@ -8,6 +8,18 @@
   color: #FFF;
   display: none;
 }
+.propose-slider {
+  .fade {
+    background-color: transparent !important;
+    @include linear-gradient(
+      to top,
+      rgba(#000, 0.2) 0%,
+      rgba(#000, 0) 40%,
+      rgba(#000, 0) 60%,
+      rgba(#000, 0.2) 100%
+    );
+  }
+}
 .propose-a-pilot-project {
   position: relative;
   background: #2D2D2D;

@@ -4,7 +4,6 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     if @donation.save_with_payment
       # redirect_to @subscription, :notice => "Thank you for &crarr; subscribing!"
-      render text: "DONE"
     else
       # render :new
       render text: "FAIL"

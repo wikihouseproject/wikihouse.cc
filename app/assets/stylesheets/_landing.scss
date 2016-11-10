@@ -28,15 +28,21 @@
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
-  // background-color: transparent !important;
+  background-color: transparent !important;
   // @include linear-gradient(
   //   to top,
   //   rgba(#717171, 0.2) 0%,
   //   rgba(#717171, 0.1) 50%,
   //   rgba(#717171, 0) 100%
   // );
-  background: image-url('fade@2x.png') bottom left no-repeat;
-  background-size: cover;
+  // background: image-url('fade@2x.png') bottom left no-repeat;
+  // background-size: cover;
+  @include linear-gradient(
+    to top,
+    rgba(#000, 0.3) 0%,
+    rgba(#000, 0) 40%,
+    rgba(#000, 0) 100%
+  );
 }
 
 video {

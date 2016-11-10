@@ -14,49 +14,7 @@
       </div>
       <div class="form half">
         <div class="container">
-          <%= f.input :stripe_card_token, as: :hidden %>
-          <%= f.input :display_name, label: "Name to appear on donation" %>
-          <%= f.input :is_public, label: 'I do not want my name to be listed' %>
-
-          <table>
-            <% %w(2 5 10 20 50 100 200 500).each_slice(4) do |slice| %>
-              <tr>
-                <% slice.each_with_index do |amount, index| %>
-                  <td>
-                    <label class="amount">
-                    <%= radio_button_tag "donation[amount_in_cents]", amount %>
-                    £<%= amount %>
-                    </label>
-                  </td>
-                <% end %>
-              </tr>
-            <% end %>
-          </table>
-
-          <!-- <label>
-          <h3><%= radio_button_tag "amount", 'other' %>Other Amount</h3>
-          <input type="text" placeholder="Name" name="name" id="name" class="green" />
-          </label> -->
-
-          <%= f.input :frequency, collection: [['One off payment', 'one_off'], ['Weekly', 'wdonation'], ['Monthly', 'mdonation']], include_blank: false %>
-
-
-          <div class="input">
-            <%= label_tag :card_number, "Credit Card Number " %>
-            <%= text_field_tag :card_number, '4242424242424242', name: nil %>
-          </div>
-          <div class="input">
-            <%= label_tag :card_code, "Security Code on Card (CVV)" %>
-            <%= text_field_tag :card_code, '123', name: nil %>
-          </div>
-          <div class="input">
-            <%= label_tag :card_month, "Card Expiration" %>
-            <%= select_month nil, {add_month_numbers_true: true}, {name: nil, id: "card_month"}%>
-            <%= select_year nil, {start_year: Date.today.year + 1, end_year: Date.today.year+15}, {name: nil, id: "card_year"}%>
-          </div>
-
-          <!-- <p>2000 of these would fund our core team for a year</p> -->
-          <%#= f.submit %>
+          <%= render "donations/widget", f: f %>
         </div>
       </div>
     </div>

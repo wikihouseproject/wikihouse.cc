@@ -8,4 +8,8 @@ class StaticController < ApplicationController
     render 'nothing', layout: 'google'
   end
 
+  def communities_guide
+    render 'communities_guide', layout: false
+  end
+
 end

@@ -15,7 +15,7 @@
   padding: 1em 0 2em;
   width: 100%;
   @media screen and (min-width: $break-small) {
-    @include span-columns(8);
+    @include span-columns(9);
   }
   @media screen and (min-width: $break-medium) {
     @include span-columns(6);

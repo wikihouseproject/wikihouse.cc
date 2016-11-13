@@ -151,7 +151,7 @@ a {
     }
     .container {
       max-width: $max-width/2;
-
+      display: flex;
     }
   }
 
@@ -164,7 +164,7 @@ a {
       // padding-bottom: 3em;
       height: 100%;
       overflow: auto;
-      display: flex;
+      display: block;
       flex-direction: column;
       .top {
         flex: 1;

@@ -22,16 +22,51 @@
   <div class="team">
   <!-- <div class="container"> -->
     <h2>Team</h2>
-    <% team_members = ["Alastair Parvin", "Harry Knight", "Clayton Prest", "Nikee Virdee", "John"] %>
-    <% 6.times.map{ Faker::Name.name }.collect.each do |team_member| %>
-      <div class="team-member">
-        <div class="photo"></div>
-        <div class="description">
-          <span class="name"><%= team_member %></span>
-          <span class="role">role</span>
-          <p>A description of that person</p>
-        </div>
+
+
+    <%
+      team_members = [
+      {
+        first_name: "John",
+        last_name: "Rees",
+        role: "Lead Developer",
+        twitter: "john_rees"
+      },
+      {
+        first_name: "Alastair",
+        last_name: "Parvin",
+        role: "Co-Founder",
+        twitter: "AlastairParvin"
+      },
+      {
+        first_name: "Clayton",
+        last_name: "Prest",
+        role: "R&D Lead",
+        twitter: "ClaytonPrest"
+      },
+      {
+        first_name: "Harry",
+        last_name: "Knight",
+        role: "Community Host",
+        twitter: "KnightLifeNZ"
+      },
+      {
+        first_name: "Justyna",
+        last_name: "Swat",
+        role: "Connector",
+        twitter: "j_taws"
+      }
+      ]
+    %>
+    <% team_members.shuffle.each do |team_member| %>
+    <div class="team-member">
+      <div class="photo" style="background-image: url('<%= asset_path "team/#{[team_member[:first_name],team_member[:last_name]].join('_').downcase}.jpg" %>')"></div>
+      <div class="description">
+        <span class="name"><%= [team_member[:first_name],team_member[:last_name]].join(' ') %></span>
+        <span class="role"><%= team_member[:role] %></span>
+        <p><%= link_to "@#{team_member[:twitter]}", "https://twitter.com/#{team_member[:twitter]}" %></p>
       </div>
+    </div>
     <% end %>
   <!-- </div> -->
   </div>

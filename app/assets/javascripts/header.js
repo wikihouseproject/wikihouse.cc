@@ -43,8 +43,8 @@ $(document).on("pjax:success", function() {
 });
 
 $(document).on('pjax:success ready', function() {
-  uniformHeights('.big-type-link', true);
-  uniformHeights('.type-row', true);
+  // uniformHeights('.big-type-link', true);
+  // uniformHeights('.type-row', true);
 
   setVars();
 

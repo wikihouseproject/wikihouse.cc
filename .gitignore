@@ -20,3 +20,5 @@ public/videos/*
 .env
 donators.json
 donations.rb
+donations
+repos/*

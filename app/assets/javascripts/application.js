@@ -15,6 +15,7 @@
 //= require lodash.js
 //= require pjax
 //= require unslider-min
+//= require ripple
 //= require countUp
 //= require jquery-scrollspy
 //= require_tree .

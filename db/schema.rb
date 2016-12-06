@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161109142212) do
+ActiveRecord::Schema.define(version: 20161206165529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,25 +43,6 @@ ActiveRecord::Schema.define(version: 20161109142212) do
     t.string   "kind"
   end
 
-  create_table "preview_invitations", force: :cascade do |t|
-    t.string   "email"
-    t.datetime "invited_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_preview_invitations_on_email", using: :btree
-  end
-
-  create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.float    "lat"
-    t.float    "lng"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "creator_id"
-    t.index ["creator_id"], name: "index_projects_on_creator_id", using: :btree
-    t.index ["name"], name: "index_projects_on_name", using: :btree
-  end
-
   create_table "proposals", force: :cascade do |t|
     t.string   "name"
     t.jsonb    "data"
@@ -69,25 +50,13 @@ ActiveRecord::Schema.define(version: 20161109142212) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "team_members", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "project_id"
+  create_table "repos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "owner"
+    t.jsonb    "data"
+    t.datetime "scraped_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "project_id"], name: "index_team_members_on_user_id_and_project_id", unique: true, using: :btree
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-  end
-
-  add_foreign_key "projects", "users", column: "creator_id"
-  add_foreign_key "team_members", "projects"
-  add_foreign_key "team_members", "users"
 end

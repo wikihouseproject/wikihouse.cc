@@ -1,7 +1,7 @@
 <% content_for :header do %>
   <div class="container">
     <div class="top-description">
-      <h1><%= link_to "Library", library_path %> / <%= link_to "Types", things_path %> / Microhouse</h1>
+      <h1><%= link_to "Library", library_path %> / <%= link_to "Types", things_path %> / <%= @repo.name %></h1>
     </div>
   </div>
 <% end %>
@@ -11,26 +11,13 @@
 <div class="type-details">
   <div class="container">
     <div class="left-info">
-      <%= title "Microhouse" %>
-
-      <p>MicroHouse is a high-performance, one-bed house type, designed using the WikiHouse building system. It uses WikiHouse products WREN and SPARROW. It has been designed primarily for use in the UK, but could also be adapted for other countries and regions. The home can be largely self-assembled, and costs around £37,000 GBP to produce.</p>
-      <p>These files are also intended as starter files for architects, designers, engineers and others interested in getting to know the WikiHouse WREN system.</p>
-      <%= image_tag "https://github.com/wikihouseproject/Microhouse/raw/master/microhouse_0.5_isoFull.jpg" %>
-      <p>_Project Engine: contains specification, costing/quantity information, and overall dimensions of the Microhouse design</p>
-      <p>_AssemblyManual: Detailed guide on how to put the whole thing together</p>
-      <p>_othercomponents_v0.5.dxf: Additional CNC cutting files for other components, such as fit-out furniture using SPARROW and cladding panels.</p>
-      <p>_WRENchassis_v0.5.dxf: Complete CNC cutting files for the building's structural chassis</p>
-      <p>_microhouse_0.5.skp: Sketchup 3D Model of the complete design including cladding, fitout and services</p>
-      <p>_microhouse_0.5_chassis.skp: Sketchup 3D Model of the Wikihouse structural chassis</p>
-      <%= image_tag "https://github.com/wikihouseproject/Microhouse/raw/master/microhouse_0.5_iso.jpg" %>
-
-      <iframe width="100%" height="480" src="https://sketchfab.com/models/ac3263022fca412c934ea9dd7c5b5521/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-
+      <% title @repo.name %>
+      <%= markdown(image_sub(@repo.data['readme'])) %>
     </div>
     <div class="right-info">
       <div class="download-buttons">
-        <%= link_to '<i class="material-icons">file_download</i> Download'.html_safe, "https://github.com/wikihouseproject/Microhouse/archive/master.zip", class: 'download button' %>
-        <%= link_to fa_icon("github", text: "Fork on github").html_safe, "https://github.com/wikihouseproject", class: 'button' %>
+        <%= link_to '<i class="material-icons">file_download</i> Download'.html_safe, @repo.archive_url, class: 'download button' %>
+        <%= link_to fa_icon("github", text: "Fork on github").html_safe, @repo.fork_url, class: 'button' %>
       </div>
       <h5>Hosts</h5>
       <ul>
@@ -44,46 +31,28 @@
         <li><%= link_to "claytonprest", "https://www.github.com/claytonprest" %></li>
         <li><%= link_to "Alastairparvin", "https://www.github.com/Alastairparvin" %></li>
       </ul>
-      <p><strong>Forks</strong> <%= link_to "3", "https://github.com/wikihouseproject/Microhouse/network" %></p>
-      <p><strong>Latest Update</strong> <%= link_to "05/10/16", "https://github.com/wikihouseproject/Microhouse/commits/master" %></p>
+      <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network" %></p>
+      <p><strong>Latest Update</strong><%= @repo['updated_at'] %></p>
       <hr/>
       <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
       <!-- <hr/> -->
       <h5>Files</h5>
-      <% files = [
-        'MicroHouse Pilot Engine.xlsx',
-        'MicroHouse_AssemblyManual_v1_sm.pdf',
-        'MicroHouse_othercomponents_v0.5.dxf',
-        'Microhouse_WRENchassis_v0.5.dxf',
-        'README.md',
-        'microhouse_0.5.skp',
-        'microhouse_0.5_chassis.skp',
-        'microhouse_0.5_iso.jpg',
-        'microhouse_0.5_iso.pdf',
-        'microhouse_0.5_isoFull.jpg',
-        'microhouse_0.5_isoFull.pdf'
-      ]
-      %>
-
       <ul id="files-list">
-        <% files.each do |file| %>
+        <% @repo.data['files'].each do |file| %>
           <li>
-            <%= render "application/file", file: file %>
+            <%= render "application/file", filename: file['name'], datetime: file['updated_at'] %>
           </li>
         <% end %>
       </ul>
 
       <ul id="action-buttons">
-        <!-- <li id="download-icon"><%= link_to image_tag("icons/download.svg"), "https://github.com/wikihouseproject/Microhouse/archive/master.zip", title: "Download this" %></li>
-        <li id="fork-icon"><%= link_to image_tag("icons/fork.svg"), "https://github.com/wikihouseproject/Microhouse", title: "Fork this" %></li> -->
         <li id="exclamation-icon"><%= image_tag("icons/exclamation.svg") %></li>
-        <li id="fork-text"><%= link_to "Report an Issue", "https://github.com/wikihouseproject/Microhouse" %></li>
+        <li id="fork-text"><%= link_to "Report an Issue", @repo.issues_url %></li>
       </ul>
 
       <hr/>
       <h5>License</h5>
       <p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution Sharealike 3.0 Unported License</a></p>
-
     </div>
   </div>
 </div>

@@ -12,7 +12,7 @@ gem "awesome_print"
 gem 'slack-notifier'
 gem 'invisible_captcha'
 # gem 'materialize-sass'
-
+gem 'hashie'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

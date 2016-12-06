@@ -6,6 +6,11 @@ module ApplicationHelper
     end
   end
 
+  def image_sub text
+    text = text.gsub("github.com", "raw.githubusercontent.com")
+    text.gsub("/blob/master/", "/master/")
+  end
+
   def file_info filename
     info = {
       'icon': nil,
@@ -42,7 +47,7 @@ module ApplicationHelper
 
   def markdown(text)
     options = {
-      filter_html:     true,
+      filter_html:     false,
       hard_wrap:       true,
       link_attributes: { rel: 'nofollow', target: "_blank" },
       space_after_headers: true,

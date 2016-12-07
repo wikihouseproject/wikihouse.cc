@@ -31,8 +31,8 @@
         <li><%= link_to "claytonprest", "https://www.github.com/claytonprest" %></li>
         <li><%= link_to "Alastairparvin", "https://www.github.com/Alastairparvin" %></li>
       </ul>
-      <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network" %></p>
-      <p><strong>Latest Update</strong><%= @repo['updated_at'] %></p>
+      <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network", class: 'data' %></p>
+      <p><strong>Latest Update</strong><span class="data"><%= @repo['updated_at'].to_s(:short) %></span></p>
       <hr/>
       <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
       <!-- <hr/> -->

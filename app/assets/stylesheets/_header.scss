@@ -124,7 +124,7 @@ header#main-header {
 
   #logo {
     @media screen and (min-width: $break-xlarge) {
-      margin-left: -20px;
+      margin-left: -10px;
     }
     max-height: $shortHeaderHeight - 30;
     min-height: $shortHeaderHeight - 30 !important;

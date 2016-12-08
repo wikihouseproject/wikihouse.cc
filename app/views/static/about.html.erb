@@ -12,22 +12,26 @@
   </div>
 <% end %>
 
-<div id="about-points">
-<div class="container top">
-  <h4 class="mono">Design Principles</h4>
-  <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
-    <div class="about-point">
-      <div class="inner">
-        <!-- <div class="icon"><%= image_tag "about_icons/#{item['icon']}.svg" %></div> -->
-        <div class="icon"><%= image_tag "about_icons/no_circle/Asset #{index+1}.svg", class: 'svg' %></div>
-        <div class="description">
-          <p style="font-weight: bold; margin-bottom: 1em"><%= item['title'] %></p>
-          <p style=""><%= item['description'] %></p>
+<iframe src="http://localhost:3000/index.html" frameborder="no" id="about-iframe"></iframe>
+
+<div id="about-points-container">
+  <div id="about-points">
+  <div class="container top">
+    <h4 class="mono">Design Principles</h4>
+    <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
+      <div class="about-point">
+        <div class="inner">
+          <!-- <div class="icon"><%= image_tag "about_icons/#{item['icon']}.svg" %></div> -->
+          <div class="icon"><%= image_tag "about_icons/no_circle/Asset #{index+1}.svg", class: 'svg' %></div>
+          <div class="description">
+            <p style="font-weight: bold; margin-bottom: 1em"><%= item['title'] %></p>
+            <p style=""><%= item['description'] %></p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+  </div>
 </div>
 
 <div class="our-mission">

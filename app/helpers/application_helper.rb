@@ -4,6 +4,14 @@ module ApplicationHelper
     index <= point ? "●" : "&nbsp;".html_safe
   end
 
+  def page_classes
+    [
+      "c-#{controller_name}",
+      "a-#{action_name}",
+      ('large' if request.path == root_path)
+    ].join(" ")
+  end
+
   def github_user username
     link_to "https://github.com/#{username}", class: 'github-user' do
       image_tag("https://avatars1.githubusercontent.com/#{username}?v=3&s=120") + content_tag(:span, username)

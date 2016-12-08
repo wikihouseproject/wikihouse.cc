@@ -1,14 +1,16 @@
-// div.form {
-//   max-width: 40%;
-// }
 form.new_enquiry {
   -webkit-font-smoothing: antialiased;
+}
+
+#enquiries-holder {
+  display: inline;
 }
 
 #enquiries-header {
   line-height: 3;
   margin-top: 1em;
 }
+
 #enquiries-container {
   position: relative;
   background: #2D2D2D;
@@ -17,8 +19,8 @@ form.new_enquiry {
   p {
     -webkit-font-smoothing: antialiased;
   }
-
 }
+
 ul#enquiries-options {
   position: absolute;
   margin: 0 0 0 1em;
@@ -33,20 +35,15 @@ ul#enquiries-options {
   &:hover li {
     background: #FFF;
   }
-}
-
-ul#enquiries-options li a {
-  display: none;
-  color: #CCC;
-}
-ul#enquiries-options li {
-  background: #F0F0F0;
-  display: block;
-  color: #000;
-  padding: 0 1em;
-}
-ul#enquiries-options li:hover { background: #666; }
-
-#enquiries-holder {
-  display: inline;
+  li {
+    background: #F0F0F0;
+    display: block;
+    color: #000;
+    padding: 0 1em;
+    &:hover { background: #666; }
+    a {
+      display: none;
+      color: #CCC;
+    }
+  }
 }

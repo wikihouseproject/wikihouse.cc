@@ -1,82 +1,86 @@
-.donation-widget {
-  &, li {
-    list-style: none;
+body.a-donate {
+  
+  .donation-widget {
+    &, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      // display: none;
+    }
+    li:first-child {
+      display: block;
+    }
+    .widget-button {
+      background: #EEE;
+      display: block;
+      padding: 10px;
+    }
+  }
+
+  #partners-holder {
+    background: #FFF;
+  }
+
+  .we-work-for-you {
+    // @include outer-container();
+    // .description, .form {
+    //   @include span-columns(5);
+    // }
+    .form input {
+      background: #E1FF9C;
+      border: none;
+      padding: 10px;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  form.new_donation {
     margin: 0;
-    padding: 0;
-  }
-  li {
-    // display: none;
-  }
-  li:first-child {
-    display: block;
-  }
-  .widget-button {
-    background: #EEE;
-    display: block;
-    padding: 10px;
-  }
-}
 
-#partners-holder {
-  background: #FFF;
-}
+    input.boolean {
+      display: inline;
+      width: auto;
+    }
+    .boolean label {
+      width: auto;
+      display: inline;
+      padding-left: 0.5em;
+    }
+  }
 
-.we-work-for-you {
-  // @include outer-container();
-  // .description, .form {
-  //   @include span-columns(5);
-  // }
-  .form input {
-    background: #E1FF9C;
+  .donate-button {
     border: none;
-    padding: 10px;
-    display: block;
+    margin: 0;
+    cursor: pointer;
+    background: #C5FF5B;
+    &:hover {
+      background: darken(#C5FF5B, 5%)
+    }
+    padding: 20px;
+    // margin-bottom: -2em;
+    // position: absolute;
+    // bottom: 0;
     width: 100%;
+    left: 0;
+    text-align: center;
+    color: #000;
   }
-}
 
-form.new_donation {
-  margin: 0;
-
-  input.boolean {
-    display: inline;
-    width: auto;
+  .supporter {
+    padding: 1em;
+    display: inline-block;
   }
-  .boolean label {
-    width: auto;
-    display: inline;
-    padding-left: 0.5em;
-  }
-}
 
-.donate-button {
-  border: none;
-  margin: 0;
-  cursor: pointer;
-  background: #C5FF5B;
-  &:hover {
-    background: darken(#C5FF5B, 5%)
+  label.amount {
+    display: inline-block;
+    width: 24%;
+    padding: 10px;
+    &.selected {
+      background: yellow;
+    }
   }
-  padding: 20px;
-  // margin-bottom: -2em;
-  // position: absolute;
-  // bottom: 0;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  color: #000;
-}
 
-.supporter {
-  padding: 1em;
-  display: inline-block;
-}
-
-label.amount {
-  display: inline-block;
-  width: 24%;
-  padding: 10px;
-  &.selected {
-    background: yellow;
-  }
 }

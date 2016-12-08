@@ -1,7 +1,13 @@
 <% title "Partners" %>
-<%
-vals = [["Pre", "Manual<br/> Distributed"], ["1st", "Mechanised<br/> Centralised"], ["2nd", "Electrical<br/> Centralised"], ["3rd", "Digital<br/> Centralised"], ["4th", "Digital<br/> Decentralised"]]
-%>
+<% vals = [
+  ["Pre", "Manual<br/> Distributed"],
+  ["1st", "Mechanised<br/> Centralised"],
+  ["2nd", "Electrical<br/> Centralised"],
+  ["3rd", "Digital<br/> Centralised"],
+  ["4th", "Digital<br/> Decentralised"]
+] %>
+
+
 <div class="container" id="revolutions">
   <div class="flex">
   <% vals.each_with_index do |val, index| %>
@@ -17,16 +23,21 @@ vals = [["Pre", "Manual<br/> Distributed"], ["1st", "Mechanised<br/> Centralised
 <div class="flex">
   <div class="half next-industrial">
     <div class="container">
-      <h2>The next industrial revolution in housing</h2>
-      <p>Along with our partners WikiHouse Foundation are developing the first smart, distributed supply chain for homes. Join us.</p>
-      <%= link_to "Download our PDF prospectus", "#", class: 'bottom-link' %>
+      <div class="top">
+        <h2>The next industrial revolution in housing</h2>
+        <p>Along with our partners WikiHouse Foundation are developing the first smart, distributed supply chain for homes. Join us.</p>
+      </div>
+      <%= link_to "Download our PDF prospectus", "#", class: 'bottom-link download-pdf' %>
     </div>
   </div>
 
   <div class="half digital-infrastructure">
     <div class="fade"></div>
     <div class="container" style="z-index: 200; position: relative">
-      <h2>Digital infrastructure for resilient cities</h2>
+      <div class="top">
+        <h2>Digital infrastructure for resilient cities</h2>
+      </div>
+      <%= link_to "Read our white paper on the UK housing crisis", "#", class: 'bottom-link' %>
     </div>
   </div>
 </div>

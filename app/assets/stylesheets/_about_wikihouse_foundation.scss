@@ -1,55 +1,58 @@
-// .photo img {
-//   width: 100%;
-//   height: 100%;
-// }
-.team-container {
-  background: #FFF;
-}
-.team {
-  @include outer-container();
-  padding-top: 1em;
-  padding-bottom: 2em;
-  h2 {
-    margin-bottom: 1em;
-  }
-}
-.team .team-member:nth-child(even) {
-  @include omega();
-}
+.a-about_wikihouse_foundation {
 
-.team-member {
-  @media screen and (min-width: $break-medium) {
-    @include span-columns(5);
+  .team-container {
+    background: #FFF;
   }
-  a {
-    color: #000;
+
+  .team {
+    @include outer-container();
+    padding-top: 1em;
+    padding-bottom: 2em;
+    h2 {
+      margin-bottom: 1em;
+    }
   }
-  display: flex !important;
-  margin-bottom: 2em;
-  .description {
-    flex: 1;
+
+  .team .team-member:nth-child(even) {
+    @include omega();
   }
-  span {
-    display: block;
+
+  .team-member {
+    @media screen and (min-width: $break-medium) {
+      @include span-columns(5);
+    }
+    a {
+      color: #000;
+    }
+    display: flex !important;
+    margin-bottom: 2em;
+    .description {
+      flex: 1;
+    }
+    span {
+      display: block;
+    }
+    .name {
+      font-weight: bold;
+      padding-top: 0.5em;
+    }
+    .role {
+      color: #717171;
+    }
+    .photo {
+      $size: 120px;
+      width: $size;
+      height: $size;
+      border-radius: $size/2;
+      background: #F0F0F0;
+      background-size: 100%;
+      margin-right: 20px;
+    }
   }
-  .name {
-    font-weight: bold;
-    padding-top: 0.5em;
+
+  #about-diagram {
+    padding: 50px 0;
+    text-align: center;
   }
-  .role {
-    color: #717171;
-  }
-  .photo {
-    $size: 120px;
-    width: $size;
-    height: $size;
-    border-radius: $size/2;
-    background: #F0F0F0;
-    background-size: 100%;
-    margin-right: 20px;
-  }
-}
-#about-diagram {
-  padding: 50px 0;
-  text-align: center;
+
 }

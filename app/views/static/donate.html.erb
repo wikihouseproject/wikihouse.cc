@@ -14,24 +14,25 @@
       </div>
       <div class="form half">
         <div class="container">
-          <%= render "donations/widget", f: f %>
+          <%#= render "donations/widget", f: f %>
+          <%= render "donations/donorbox" %>
         </div>
       </div>
     </div>
   </div>
 
   <!-- <div class="donate-button">Donate</div> -->
-  <%= f.submit "Donate", class: "donate-button" %>
+  <%#= f.submit "Donate", class: "donate-button" %>
   <% end %>
   </div>
 <% end %>
 
-<div id="about-points">
-  <div class="container top">
-  <h4 class='mono'>Supporters</h4>
+  <div id="about-points">
+    <div class="container top">
+    <h4 class='mono'>Supporters</h4>
 
-  <% @names.each do |name| %>
-    <div class="supporter"><%= name %></div>
-  <% end %>
+    <% @names.each do |name| %>
+      <div class="supporter"><%= name %></div>
+    <% end %>
+    </div>
   </div>
-</div>

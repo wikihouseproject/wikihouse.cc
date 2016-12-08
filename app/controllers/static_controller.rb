@@ -1,5 +1,9 @@
 class StaticController < ApplicationController
 
+  def nothing
+    render nil, layout: 'application'
+  end
+
   def donate
     @names = 100.times.map{ Faker::Name.name }
   end

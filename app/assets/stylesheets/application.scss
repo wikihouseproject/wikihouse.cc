@@ -158,13 +158,13 @@ a {
   .half {
     flex: 1;
     .container {
-      // padding: $gutter;
       padding: 37px;
       position: relative;
+      // padding: $gutter;
       // padding-bottom: 3em;
       height: 100%;
       overflow: auto;
-      display: block;
+      display: flex;
       flex-direction: column;
       .top {
         flex: 1;
@@ -179,3 +179,11 @@ hr {
   height: 0;
   border-top: 1px solid #5B5B5B;
 }
+
+// img[src$=".gif"], img[src$=".png"], img[src$=".svg"] {
+//  image-rendering: -moz-pixelated;         /* Firefox */
+//  image-rendering: -o-pixelated;         /* Opera */
+//  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+//  image-rendering: pixelated;
+//  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+// }

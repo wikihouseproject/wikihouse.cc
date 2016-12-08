@@ -262,6 +262,9 @@ $(document).ready(function() {
           forward: ""
         },
         callbacks: {
+          addElement: function(el) {
+            $('body').removeClass().addClass($(el).data('body-class'))
+          },
           removeElement: function(el) {
             // $('header .js-Pjax-remove').remove();
             // el.style.marginLeft = "-" + (el.getBoundingClientRect().width/2) + "px"

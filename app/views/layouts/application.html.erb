@@ -8,24 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <%= render "favicon" %>
-
     <title><%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %></title>
     <%= csrf_meta_tags %>
-    <!--
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Mono:300,400,500" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Roboto+Mono:300,400,500,700|Material+Icons" rel="stylesheet"> -->
     <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,500,500italic,700,700italic|Roboto:300,400,400italic,500,500italic,700,700italic|Material+Icons" rel="stylesheet" type="text/css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <meta name="stripe-key" content="<%= ENV.fetch('stripe_public_key') %>"></meta>
-
   </head>
 
-  <body class="site c-<%= controller_name %> a-<%= action_name %> <%= 'large' if request.path == root_path %>"">
+  <body class="site <%= page_classes %>">
     <% if flash.any? %>
       <div class="container">
         <% flash.each do |name, msg| %>
@@ -34,29 +24,24 @@
       </div>
     <% end %>
 
-    <%= render "main_header" %>
-
-    <!-- animated fadeInUp -->
-    <div id="main" role="main"><%= yield %></div>
-    <!--  class="Animated Animate--slideInUp" -->
-    <%= render "footer" %>
-
+    <%= render "application/header" %>
+    <div id="main" role="main"><div data-body-class="<%= page_classes %>"><%= yield %></div></div>
+    <%= render "application/footer" %>
 
     <div id="side-nav">
-    <div class="container">
-      <ul>
-      <li class="mobile-only-link"><%= link_to "About", about_path %></li>
-      <li class="mobile-only-link"><%= link_to "Library", library_path %></li>
-      <li class="mobile-only-link"><%= link_to "R&D", community_path %></li>
-      <li class="mobile-only-link"><%= link_to "Partners", partners_path %></li>
+      <div class="container">
+        <ul>
+          <li class="mobile-only-link"><%= link_to "About", about_path %></li>
+          <li class="mobile-only-link"><%= link_to "Library", library_path %></li>
+          <li class="mobile-only-link"><%= link_to "R&D", community_path %></li>
+          <li class="mobile-only-link"><%= link_to "Partners", partners_path %></li>
 
-      <li><%= link_to "Propose a pilot", propose_a_pilot_path %></li>
-      <li><%= link_to "About WikiHouse Foundation", about_wikihouse_foundation_path %></li>
-      <li><%= link_to "Contact Us", enquiries_path %></li>
-      <li><%= link_to "Donate", donate_path %></li>
-      <!-- <li><%#= link_to "Prospectus", prospectus_path %></li> -->
-    </ul>
-    </div>
+          <li><%= link_to "Propose a pilot", propose_a_pilot_path %></li>
+          <li><%= link_to "About WikiHouse Foundation", about_wikihouse_foundation_path %></li>
+          <li><%= link_to "Contact Us", enquiries_path %></li>
+          <li><%= link_to "Donate", donate_path %></li>
+        </ul>
+      </div>
     </div>
 
 

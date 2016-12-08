@@ -78,8 +78,8 @@ body.large {
     max-height: $largeHeaderHeight;
     min-height: $shortHeaderHeight;
     @include drop-shadow();
-    #logo {
-      max-height: $largeHeaderHeight - 30 !important;
+    #logo-link {
+      // height: $largeHeaderHeight - 30;
       // height: $largeHeaderHeight - 30;
     }
   }
@@ -88,6 +88,9 @@ body.large {
 header#main-header {
   @media screen and (min-width: $break-medium) {
     // min-height: $shortHeaderHeight;
+  }
+  > .container {
+    position: absolute !important;
   }
   // overflow: hidden;
 
@@ -104,35 +107,21 @@ header#main-header {
 
   @include fill-parent;
 
-  // #logo-link {
-  //   max-width: 300px;
-  //   // display: inline-block;
-  //   float: left;
-  //   display: block;
-  //   height: 100%;
-  //   // display: inline-block;
-  //   // min-height: $shortHeaderHeight;
-  // }
-
-
-  // box-shadow: 0px 10px 20px 1px rgba(255,255,255,1);
-
-  &.scrolled {
-    // box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.2);
-  }
-
-
-  #logo {
+  #logo-link {
+    height: 100%;
+    padding-bottom: 25px;
+    // height: $shortHeaderHeight - 30;
+    display: block;
+    // max-width: 50%;
+    text-align: left;
+    float: left;
+    margin: 10px 0 0 0;
     @media screen and (min-width: $break-xlarge) {
       margin-left: -10px;
     }
-    max-height: $shortHeaderHeight - 30;
-    min-height: $shortHeaderHeight - 30 !important;
-    // background: red;
-    height: 100%;
-    margin: 10px 0 0 0;
-    // max-height: $shortHeaderHeight - 30;
-    text-align: left;
+    #logo {
+      height: 100%;
+    }
   }
 
   .ink {

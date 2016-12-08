@@ -31,6 +31,24 @@ vals = [["Pre", "Manual<br/> Distributed"], ["1st", "Mechanised<br/> Centralised
   </div>
 </div>
 
+<%
+  things = [["Visible on all website & communications",
+  "Opportunities for product promotion where appropriate",
+  "Membership of online consortium group",
+  "First private BETA access to the platform",
+  "Attendance of annual seminar"],
+
+  ["Keynote talk from a founder at your organisation on request",
+  "Use of WikiHouse Partners logo",
+  "Support developing your local pilot project*",
+  "First opportunity to list as a certified provider through the OpenChain",
+  "Private workshops with the WikiHouse Foundation team*"],
+
+  ["Opportunity to set/host an R&D working group, major pilot project or open challenge",
+  "Headline listing as a core partner in the WikiHouse project",
+  "First opportunity to deploy a system-wide product or service through the OpenChain*",
+  "Seat on the steering group"]]
+%>
 <div id="join-us">
   <div class="container">
     <h2>Join Us</h2>
@@ -38,29 +56,19 @@ vals = [["Pre", "Manual<br/> Distributed"], ["1st", "Mechanised<br/> Centralised
       <thead>
         <tr><td></td><th><div><span>Supporter</span></div></th><th><div><span>Partner</span></div></th><th><div><span>Core Partner</span></div></th></tr>
       </thead>
-      <tbody>
-        <tr><th>Use of WikiHouse supporter / partner badge</th><td data-label="Supporter">●</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Visible on all website & communications</th><td data-label="Supporter">●</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Membership of online consortium group</th><td data-label="Supporter">●</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>First private BETA access to the platform</th><td data-label="Supporter">●</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Invitation to annual seminar / launch event</th><td data-label="Supporter">●</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>First opportunity to certify as a provider in the supply chain</th><td data-label="Supporter">●</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-      </tbody>
-      <tbody>
-        <tr><th>Support developing your pilot project, product or service</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Keynote talk from founder / workshops with the team (as agreed)</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>First opportunity to list your product in the supply chain (as appropriate)</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">●</td><td data-label="Core Partner">●</td></tr>
-      </tbody>
-      <tbody>
-        <tr><th>Headline recognition as a core partner in the WikiHouse project</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">&nbsp;</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Set/host an R&D working group, major pilot project or open challenge</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">&nbsp;</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Seat on the steering group</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">&nbsp;</td><td data-label="Core Partner">●</td></tr>
-        <tr><th>Test and launch a system-wide product or service in the supply chain</th><td data-label="Supporter">&nbsp;</td><td data-label="Partner">&nbsp;</td><td data-label="Core Partner">●</td></tr>
-      </tbody>
+      <% things.each_with_index do |thing, index| %>
+        <tbody>
+          <% thing.each do |label| %>
+            <tr><th><%= label %></th><td data-label="Supporter"><%= dot_helper index, 0 %></td><td data-label="Partner"><%= dot_helper index, 1 %></td><td data-label="Core Partner"><%= dot_helper index, 2 %></td></tr>
+          <% end %>
+        </tbody>
+      <% end %>
       <tfoot>
         <tr><th><span class="title">Suggested Amount</span></th><td data-label="Supporter">£5k+</td><td data-label="Partner">£15k+</td><td data-label="Core Partner">£50k+</td></tr>
       </tfoot>
     </table>
+
+    <p>* Figure & scope will vary case by case.</p>
   </div>
 
   <div style="position: relative; padding: 4em 0 2em 0;">

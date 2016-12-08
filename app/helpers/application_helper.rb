@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def dot_helper index, point
+    index <= point ? "●" : "&nbsp;".html_safe
+  end
+
   def github_user username
     link_to "https://github.com/#{username}", class: 'github-user' do
       image_tag("https://avatars1.githubusercontent.com/#{username}?v=3&s=120") + content_tag(:span, username)

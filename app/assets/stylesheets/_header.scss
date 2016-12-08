@@ -78,8 +78,9 @@ body.large {
     max-height: $largeHeaderHeight;
     min-height: $shortHeaderHeight;
     @include drop-shadow();
-    #logo-link {
-      // height: $largeHeaderHeight - 30;
+    #logo-link #logo {
+      height: 100%;
+      max-height: $largeHeaderHeight;
       // height: $largeHeaderHeight - 30;
     }
   }
@@ -90,7 +91,7 @@ header#main-header {
     // min-height: $shortHeaderHeight;
   }
   > .container {
-    position: absolute !important;
+    // position: absolute !important;
   }
   // overflow: hidden;
 
@@ -110,7 +111,6 @@ header#main-header {
   #logo-link {
     height: 100%;
     padding-bottom: 25px;
-    // height: $shortHeaderHeight - 30;
     display: block;
     // max-width: 50%;
     text-align: left;
@@ -120,7 +120,8 @@ header#main-header {
       margin-left: -10px;
     }
     #logo {
-      height: 100%;
+      height: $shortHeaderHeight - 25;
+      // height: $shortHeaderHeight - ;
     }
   }
 

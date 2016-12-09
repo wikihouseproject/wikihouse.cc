@@ -1,13 +1,14 @@
-<%= f.input :organisation, label: "Event Name" %>
+<h3>Event Details</h3>
+<%= f.input :organisation, label: "Event Name", as: :string, required: true %>
 
 <%= f.input :event_start_date, as: :date %>
 <%= f.input :event_end_date, as: :date, include_blank: true %>
 
-<%= f.input :requested_speaker %>
-<%= f.input :about_event, as: :text %>
-<%= f.input :expenses, as: :boolean, label: "Expenses included?" %>
-<%= f.input :speaking_fee %>
-<%= f.input :message, as: :text %>
+<%= f.input :requested_speaker, wrapper: :default %>
+<%= f.input :about_event, as: :text, wrapper: :default %>
+<%= f.input :expenses, as: :boolean, label: "Expenses included?", wrapper: :default %>
+<%= f.input :speaking_fee, as: :string, required: true %>
+<%= f.input :message, as: :text, wrapper: :default %>
 
 <div class="thanks">
   <div class="container">

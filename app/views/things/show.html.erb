@@ -17,7 +17,7 @@
     <div class="right-info">
       <div class="download-buttons">
         <%= link_to '<i class="material-icons">file_download</i> Download'.html_safe, @repo.archive_url, class: 'download button' %>
-        <%= link_to fa_icon("github", text: "Fork on github").html_safe, @repo.fork_url, class: 'button' %>
+        <%= link_to fa_icon("github", text: "Fork on github").html_safe, @repo.url, class: 'button' %>
       </div>
       <h5>Hosts</h5>
       <ul>
@@ -32,7 +32,7 @@
         <li><%= link_to "Alastairparvin", "https://www.github.com/Alastairparvin" %></li>
       </ul>
       <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network", class: 'data' %></p>
-      <p><strong>Latest Update</strong><span class="data"><%= @repo['updated_at'].to_s(:short) %></span></p>
+      <p><strong>Latest Update</strong><span class="data"><%= Time.parse(@repo.data['updated_at']).to_s(:short) %></span></p>
       <hr/>
       <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
       <!-- <hr/> -->

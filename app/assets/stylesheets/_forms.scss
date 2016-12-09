@@ -1,3 +1,126 @@
+textarea {
+  width: 500px;
+  padding: 10px;
+  min-height: 80px;
+  background: none;
+  color: #FFF;
+  border: none;
+  border-bottom:1px solid #757575;
+  border-right:1px solid #757575;
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid #FFF;
+    border-right: none;
+  }
+}
+
+label {
+  cursor: pointer;
+  color: #AAA;
+}
+
+span.checkbox,
+span.radio {
+  label {
+    color: #FFF;
+    display: inline-block;
+    padding-left: 10px;
+  }
+  input {
+    margin-right: 10px;
+  }
+}
+
+form.new_enquiry {
+  padding-top: 50px;
+  input[type=submit] {
+    margin-top: 30px;
+  }
+  .input.text {
+    label {
+      display: block;
+    }
+  }
+  .group.string, .group.email { 
+    position:relative; 
+    margin-bottom:45px; 
+    
+    input         {
+      font-size:18px;
+      padding:10px 10px 10px 5px;
+      display:block;
+      width:300px;
+      border:none;
+      border-bottom:1px solid #757575;
+      background: none;
+      color: #FFF;
+    }
+    input:focus     { outline:none; }
+    label          {
+      color:#999; 
+      font-size:18px;
+      font-weight:normal;
+      position:absolute;
+      pointer-events:none;
+      left:5px;
+      top:2px;
+      transition:0.2s ease all; 
+    }
+
+    /* active state */
+    input:focus ~ label,
+    input:placeholder-shown ~ label,
+    input:valid ~ label
+    {
+      top:-20px;
+      font-size:14px;
+      color: white;
+    }
+
+    .bar  { position:relative; display:block; width:300px; }
+    .bar:before, .bar:after   {
+      content:'';
+      height:2px; 
+      width:0;
+      bottom:1px; 
+      position:absolute;
+      background:white; 
+      transition:0.2s ease all; 
+    }
+    .bar:before {
+      left:50%;
+    }
+    .bar:after {
+      right:50%; 
+    }
+
+    /* active state */
+    input:focus ~ .bar:before, input:focus ~ .bar:after {
+      width:50%;
+    }
+    .highlight {
+      position:absolute;
+      height:60%; 
+      width:300px; 
+      top:25%; 
+      left:0;
+      pointer-events:none;
+      opacity:0.1;
+    }
+
+    input:focus ~ .highlight {
+      animation:inputHighlighter 0.3s ease;
+    }
+
+    @keyframes inputHighlighter {
+      from  { background:white; }
+      to    { width:0; background:transparent; }
+    }
+  }
+}
+
+
+
 form {
   margin-bottom: 2em;
   label {
@@ -13,15 +136,15 @@ textarea {
   padding: 5px;
 }
 
-.input.text {
-  label {
-    display: block;
-    width: 100%;
-  }
-  textarea {
-    width: 100%;
-  }
-}
+// .input.text {
+//   label {
+//     display: block;
+//     width: 100%;
+//   }
+//   textarea {
+//     width: 100%;
+//   }
+// }
 
 .input.check_boxes {
   > label {
@@ -42,10 +165,6 @@ textarea {
       padding-left: 10px;
     }
   }
-}
-
-form {
-  width: 100%;
 }
 
 .input label {

@@ -16,4 +16,8 @@ class Repo < ApplicationRecord
     "#{url}/archive/master.zip"
   end
 
+  # def updated_at
+  #   data[:files].sort_by{|f| f[:updated_at] }.first
+  # end
+
 end

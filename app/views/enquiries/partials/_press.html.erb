@@ -2,9 +2,9 @@
 
 <p>If you are looking for images or video footage to use you do not need to contact us. Our press resource pack is here. All content is licensed under CC-BY-ND unless stated otherwise.</p>
 
-<%= f.input :organisation %>
-<%= f.input :phone %>
-<%= f.input :message, as: :text %>
+<%= f.input :organisation, required: true %>
+<%= f.input :phone, as: :string, required: true %>
+<%= f.input :message, as: :text, wrapper: :default %>
 
 <!-- Message received, thankyou. -->
 <div class="thanks">

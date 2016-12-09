@@ -5,9 +5,9 @@
     <div class="form">
       <%= simple_form_for Enquiry.new(kind: params[:id]), remote: true do |f| %>
         <%= f.input :kind, as: :hidden %>
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
-        <%= f.input :email %>
+        <%= f.input :first_name, required: true, autofocus: true %>
+        <%= f.input :last_name, required: true %>
+        <%= f.input :email, required: true %>
         <%= f.simple_fields_for :data do |s| %>
           <%= render "enquiries/partials/#{params[:id].gsub('-','_')}.html.erb", f: s %>
         <% end %>

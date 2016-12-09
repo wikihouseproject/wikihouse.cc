@@ -178,6 +178,8 @@ video {
   // padding: 40px 0;
   overflow: hidden;
   margin-bottom: 520px;
+  @include drop-shadow();
+  
   .container {
     max-width: $max-width;
   }
@@ -227,16 +229,15 @@ video {
 
 .unslider-arrow.next {
     left: auto;
-    right: 20px;
+    right: 0;
 }
 .unslider-arrow {
     position: absolute;
-    left: 20px;
     z-index: 100;
     cursor: pointer;
 }
 .unslider-arrow.prev {
-    left: 20px;
+    left: 0;
     right: auto;
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg);

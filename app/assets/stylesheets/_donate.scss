@@ -1,5 +1,10 @@
 body.a-donate {
-  
+  background: #FFF;
+
+  header {
+    box-shadow: none;
+  }
+
   .donation-widget {
     &, li {
       list-style: none;

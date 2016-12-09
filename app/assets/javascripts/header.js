@@ -107,7 +107,7 @@ var doScroll = function() {
   // $('#logo-link').height( parseInt(Math.max(origLogoHeight-scrollPos, 50)) );
   $('header#main-header').height( parseInt(Math.max(origHeight-scrollPos, 75)) );
 
-  $('header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
+  $('body:not(.a-donate) header#sub-header .container').css('opacity', Math.max(0, 1 - (scrollPos-10)/30) )
 
 }
 

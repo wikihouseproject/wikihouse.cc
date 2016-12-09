@@ -14,6 +14,9 @@ class EnquiriesController < ApplicationController
   def create
     @enquiry = Enquiry.new(enquiry_params)
     if @enquiry.save
+
+      # TODO: send details to salesseek
+
       notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
       notifier.ping "#{@enquiry.first_name}",
         icon_emoji: ':wikihouse:',

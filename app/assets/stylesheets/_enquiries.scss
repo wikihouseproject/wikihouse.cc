@@ -1,7 +1,13 @@
-.enquiry_data_has_planning label,
-.enquiry_data_has_mortgage label {
-  display: block;
-  clear: both;
+.enquiry_data_has_planning,
+.enquiry_data_has_mortgage,
+.enquiry_data_anything_else,
+.enquiry_data_description {
+  label {
+    display: block;
+    clear: both;
+    width: auto;
+    margin-bottom: 1em;
+  }
 }
 
 body.c-enquiries {

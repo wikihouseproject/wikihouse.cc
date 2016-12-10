@@ -70,6 +70,7 @@ video {
     display: none;
   }
   .unslider-arrow {
+    &, * { outline: none; }
     background-image: image-url('icons/ic_arrow_forward_white_24dp_2x.png');
   }
   .slider {

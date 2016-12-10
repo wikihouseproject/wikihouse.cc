@@ -157,18 +157,22 @@ a {
 
   .half {
     flex: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
     .container {
-      padding: 37px;
+      display: flex;
+      flex: 1;
       position: relative;
+      padding: 37px;
       // padding: $gutter;
       // padding-bottom: 3em;
       height: 100%;
       overflow: auto;
-      display: flex;
       flex-direction: column;
       .top {
         flex: 1;
-        height: 100vh;
+        // margin-bottom: 200px;
       }
     }
   }

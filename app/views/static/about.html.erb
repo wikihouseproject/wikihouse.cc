@@ -12,7 +12,7 @@
   </div>
 <% end %>
 
-<iframe src="https://johnrees.github.io/wikihouse-about-widget/index.html" frameborder="no" id="about-iframe"></iframe>
+<iframe src="<%= ENV.fetch('about_widget_url') %>" frameborder="no" id="about-iframe"></iframe>
 
 <div id="about-points-container">
   <div id="about-points">

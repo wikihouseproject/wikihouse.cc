@@ -1,4 +1,5 @@
 #about-iframe {
+  display: block;
   width: 100%;
   height: 500px;
 }
@@ -169,13 +170,14 @@
     font-family: $mono;
     border-top: 1px solid #8E8E8E;
     padding: 20px;
-// }
-  span {
-    // background: image_url('icons/ic_arrow_forward_black_24dp_2x.png') center right no-repeat; display: block;
-  }
-  i {
-    float: right;
-  }
+  // }
+    span, i {
+      // background: image_url('icons/ic_arrow_forward_black_24dp_2x.png') center right no-repeat; display: block;
+      color: #000;
+    }
+    i {
+      float: right;
+    }
 
     i.open-icon {
       display: none;

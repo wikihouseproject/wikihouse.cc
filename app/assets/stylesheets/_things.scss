@@ -24,11 +24,18 @@
   a.big-type-link {
     color: #000 !important;
     margin-bottom: 2px;
+    &:hover {
+      opacity: 1;
+    }
     h2 {
       font-weight: 400;
     }
     .flex {
+      opacity: 0.85;
       height: 100%;
+    }
+    &:hover .flex {
+      opacity: 1;
     }
     img {
       max-height: 300px;

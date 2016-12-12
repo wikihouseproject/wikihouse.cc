@@ -14,25 +14,27 @@ class EnquiriesController < ApplicationController
   def create
     @enquiry = Enquiry.new(enquiry_params)
     if @enquiry.save
-
       # TODO: send details to salesseek
-
-      notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
-      notifier.ping "#{@enquiry.first_name}",
-        icon_emoji: ':wikihouse:',
-        username: @enquiry.kind,
-        attachments: [{
-          fallback: "Fallback",
-          pretext: @enquiry.message,
-          # author_name: [@enquiry.first_name],
-          # title: @enquiry.kind,
-          # text: @enquiry.message,
-          fields: @enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
-        }]
-        respond_to do |format|
-          format.html { redirect_to message_received_path }
-          format.js
-        end
+      begin
+        notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
+        notifier.ping "#{@enquiry.first_name}",
+          icon_emoji: ':wikihouse:',
+          username: @enquiry.kind,
+          attachments: [{
+            fallback: "Fallback",
+            pretext: @enquiry.message,
+            # author_name: [@enquiry.first_name],
+            # title: @enquiry.kind,
+            # text: @enquiry.message,
+            fields: @enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
+          }]
+      rescue
+        Rails.logger.info "unable to connect to slack for enquiry: #{@enquiry.id}"
+      end
+      respond_to do |format|
+        format.html { redirect_to message_received_path }
+        format.js
+      end
     else
       redirect_to :back
     end

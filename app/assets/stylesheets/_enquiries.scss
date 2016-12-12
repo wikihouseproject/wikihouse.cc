@@ -11,7 +11,7 @@
 }
 
 body.c-enquiries {
-  background: #2d2d2d;
+  #main { background: #2d2d2d; }
   h3 {
     color: #FFF;
     margin-bottom: 50px;
@@ -28,6 +28,19 @@ form.new_enquiry {
 #enquiries-header {
   line-height: 3;
   margin-top: 1em;
+}
+
+.enquiry-desc {
+  padding: 1em 0 2em;
+  width: 100%;
+  clear: both;
+  float: none !important;
+  @media screen and (min-width: $break-small) {
+    @include span-columns(9);
+  }
+  @media screen and (min-width: $break-medium) {
+    @include span-columns(6);
+  }
 }
 
 #enquiries-container {

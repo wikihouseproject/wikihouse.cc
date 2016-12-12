@@ -1,3 +1,7 @@
+body {
+  background: #FFF !important;
+}
+
 body.open-menu {
   #logo-link {
     display: none !important;
@@ -26,9 +30,10 @@ body.open-menu {
   display: none;
 }
 #sub-header {
-  min-height: 75px;
-  margin-top: -75px;
-  padding-top: 75px;
+  $offset: 75px;
+  min-height: $offset;
+  margin-top: -$offset;
+  padding-top: $offset;
   background: #FFF;
   width: 100%;
   // overflow: hidden;

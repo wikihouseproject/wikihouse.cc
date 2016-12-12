@@ -43,6 +43,13 @@ $(document).on("pjax:success", function() {
 });
 
 $(document).on('pjax:success ready', function() {
+
+  // if ($('#enquiry-form').length > 0 && $('.enquiry-desc').length > 0) {
+    $('.enquiry-form').each(function() {
+      $(this).prepend($(this).find('.enquiry-desc'))
+    })
+  // }
+
   // uniformHeights('.big-type-link', true);
   // uniformHeights('.type-row', true);
 

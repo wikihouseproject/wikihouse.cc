@@ -74,6 +74,8 @@ $visual-grid: false;
 }
 
 body {
+   -webkit-overflow-scrolling: touch;
+
   margin: 0;
   padding: $shortHeaderHeight 0 0 0;
   display: flex;

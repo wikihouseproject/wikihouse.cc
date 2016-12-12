@@ -1,3 +1,4 @@
+<!-- <div class="header-container" style="background: red; overflow: hidden; position: relative"> -->
 <header id="main-header" class="<%= 'large' if request.path == root_path %>">
   <div class="container">
     <%= link_to root_path, id: 'logo-link' do %><%= image_tag "wikihouse-logo.svg", id: 'logo' %><% end %>
@@ -25,3 +26,4 @@
 <%# if content_for?(:header) %>
   <header id="sub-header"><%= yield(:header) %></header>
 <%# end %>
+<!-- </div> -->

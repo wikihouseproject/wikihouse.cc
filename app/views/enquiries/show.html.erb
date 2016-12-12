@@ -2,7 +2,8 @@
   <div class="container">
     <%= render "enquiries/header" %>
     <%= title params[:id].gsub('-','_').humanize %>
-    <div class="form">
+
+    <div class="form enquiry-form">
       <%= simple_form_for Enquiry.new(kind: params[:id]), remote: true do |f| %>
         <%= f.input :kind, as: :hidden %>
         <%= f.input :first_name, required: true, autofocus: true %>
@@ -11,7 +12,6 @@
         <%= f.simple_fields_for :data do |s| %>
           <%= render "enquiries/partials/#{params[:id].gsub('-','_')}.html.erb", f: s %>
         <% end %>
-
         <%= f.invisible_captcha :subtitle %>
         <%= f.submit "Submit Enquiry" %>
       <% end %>

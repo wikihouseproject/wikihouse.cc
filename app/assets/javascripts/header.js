@@ -44,6 +44,8 @@ $(document).on("pjax:success", function() {
 
 $(document).on('pjax:success ready', function() {
 
+  // $('select').niceSelect()
+
   // if ($('#enquiry-form').length > 0 && $('.enquiry-desc').length > 0) {
     $('.enquiry-form').each(function() {
       $(this).prepend($(this).find('.enquiry-desc'))

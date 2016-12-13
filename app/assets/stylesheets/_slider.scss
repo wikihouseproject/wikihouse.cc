@@ -28,7 +28,8 @@
 
 .main-slider-holder {
   .slide-content {
-    @include vertical-center();
+    @include vertical-center(-70%);
+
   }
 
 }

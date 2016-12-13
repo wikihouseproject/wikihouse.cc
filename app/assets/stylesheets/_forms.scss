@@ -1,3 +1,10 @@
+.mui-select:focus > label, .mui-select > select:focus ~ label {
+  color: #FFF;
+}
+.mui-select__menu {
+  color: #000;
+}
+
 textarea {
   width: 100%;
   max-width: 500px;
@@ -168,12 +175,21 @@ textarea {
     width: 100%;
   }
   span.checkbox {
+    padding: 0.5em;
+    display: block;
+
     &, * {
       vertical-align: top;
     }
-    padding: 0.5em;
-    display: inline-block;
-    width: 50%;
+    
+    @media screen and (min-width: $break-medium) {
+      display: inline-block;
+      width: 50%;
+    }
+    // @media screen and (min-width: $break-large) {
+    //   width: 33%;
+    // }
+
     input {
       margin-top: 5px;
     }

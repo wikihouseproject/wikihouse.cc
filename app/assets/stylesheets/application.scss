@@ -25,11 +25,6 @@ $largeHeaderHeight: 145px;
 @import "grid-settings";
 $visual-grid: false;
 
-@mixin oc() {
-  @include outer-container;
-  padding: 0 20px;
-}
-
 // @import "animate";
 @import "neat";
 @import "unslider";
@@ -52,6 +47,20 @@ $visual-grid: false;
 // @import"materialize/components/forms/switches";
 // @import "materialize";
 
+@mixin oc() {
+  @include outer-container;
+  padding: 0 15px;
+  @media screen and (min-width: $break-medium) {
+    padding: 0 25px;
+  }
+}
+
+header .container,
+.header-container,
+.description-container
+{
+  @include oc;
+}
 
 @import "about";
 @import "about_wikihouse_foundation";

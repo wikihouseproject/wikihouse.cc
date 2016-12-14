@@ -25,6 +25,11 @@ $largeHeaderHeight: 145px;
 @import "grid-settings";
 $visual-grid: false;
 
+@mixin oc() {
+  @include outer-container;
+  padding: 0 20px;
+}
+
 // @import "animate";
 @import "neat";
 @import "unslider";
@@ -134,7 +139,7 @@ a {
 }
 
 .container {
-  @include outer-container;
+  @include oc;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;

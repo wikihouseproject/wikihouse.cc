@@ -40,7 +40,7 @@
   border: 1px solid transparent;
 }
 #about-points {
-  @include outer-container;
+  @include oc;
   // font-size: 0.9em;
   h4 {
     margin-top: 4em;
@@ -94,19 +94,18 @@
 
   overflow: hidden;
   // margin: 0 0 2em 0;
-  padding-right: 10px;
-  padding-left: 10px;
+  // padding-right: 10px;
+  // padding-left: 10px;
 
-    .icon {
-      text-align: center;
-      width: 50%;
-      margin-bottom: 20px;
-      img {
-        background: #000;
-        border-radius: 100%;
-      }
+  .icon {
+    text-align: center;
+    width: 50%;
+    margin-bottom: 20px;
+    img {
+      background: #000;
+      border-radius: 100%;
     }
-
+  }
 
   @media screen and (min-width: $break-medium) {
     @include span-columns(5);
@@ -123,7 +122,6 @@
       width: 100px;
       margin-right: 20px;
     }
-
   }
   &:nth-child(even) {
     // @include omega();
@@ -200,7 +198,7 @@
 
   // Style accordion content
   section {
-    @include outer-container;
+    @include oc;
     height: 0;
     transition: .3s all;
     overflow: hidden;
@@ -227,7 +225,10 @@
 }
 
 #faq {
-  @include span-columns(8);
+  padding-top: 2em;
+  @media screen and (min-width: $break-medium) {
+    @include span-columns(8);
+  }
   h2 {
     font-family: Roboto;
     font-weight: bold;

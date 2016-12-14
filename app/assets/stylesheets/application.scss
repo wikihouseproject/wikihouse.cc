@@ -78,17 +78,20 @@ $visual-grid: false;
 #thank-you {
   padding-top: 75px;
 }
-
+html {
+  min-height: 100%;
+}
+// #main {
+//   background: transparent !important;
+// }
 body {
-   -webkit-overflow-scrolling: touch;
-
+  height: 100%;
   margin: 0;
   padding: $shortHeaderHeight 0 0 0;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   font-family: $roboto;
-  background: #F0F0F0;
+  background-color: #F0F0F0;
   line-height: 1.4;
   min-width: 320px;
   
@@ -168,22 +171,15 @@ a {
 
   .half {
     flex: 1;
-    display: flex;
     position: relative;
-    flex-direction: column;
     .container {
       display: flex;
-      flex: 1;
+      flex-direction: column;
+      height: 100%;
       position: relative;
       padding: 37px;
-      // padding: $gutter;
-      // padding-bottom: 3em;
-      // height: 100%;
-      overflow: auto;
-      flex-direction: column;
       .top {
         flex: 1;
-        // margin-bottom: 200px;
       }
     }
   }

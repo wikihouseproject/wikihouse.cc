@@ -37,10 +37,11 @@
 }
 #about-points-container {
   background: #FFF;
+  border: 1px solid transparent;
 }
 #about-points {
   @include outer-container;
-  font-size: 0.9em;
+  // font-size: 0.9em;
   h4 {
     margin-top: 4em;
     margin-bottom: 4em;
@@ -91,8 +92,10 @@
 
 .about-point {
 
-
   overflow: hidden;
+  // margin: 0 0 2em 0;
+  padding-right: 10px;
+  padding-left: 10px;
 
     .icon {
       text-align: center;
@@ -107,7 +110,11 @@
 
   @media screen and (min-width: $break-medium) {
     @include span-columns(5);
-    margin-right: 0;
+    margin-bottom: $gutter;
+    // margin-right: 0;
+    &:nth-child(odd) {
+      @include omega();
+    }
 
     .inner {
       display: flex;
@@ -128,9 +135,6 @@
   // overflow: hidden;
   // display: flex;
   // margin-bottom: 2em;
-  margin: 0 0 2em 0;
-  padding-right: 10px;
-  padding-left: 10px;
   h5 {
     font-size: 1.1em;
     margin: 0;
@@ -147,6 +151,8 @@
 
 
 .togglebox {
+
+  background: #FFF;
   & > a {
     color: #000;
   }
@@ -163,6 +169,7 @@
 
   // Style label/entry for accordion
   label {
+    background: #F0F0F0;
     position: relative;
     display: block;
     cursor: pointer;
@@ -193,10 +200,10 @@
 
   // Style accordion content
   section {
+    @include outer-container;
     height: 0;
     transition: .3s all;
     overflow: hidden;
-    background: #FFF;
   }
 
   // Open content when clicking label
@@ -220,6 +227,7 @@
 }
 
 #faq {
+  @include span-columns(8);
   h2 {
     font-family: Roboto;
     font-weight: bold;
@@ -231,6 +239,9 @@
   h2,p {
     position: relative;
     padding-left: 40px;
+  }
+  p {
+    margin-bottom: $gutter;
   }
   h2:before, p:before {
     position: absolute;

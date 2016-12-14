@@ -47,12 +47,20 @@ $visual-grid: false;
 // @import"materialize/components/forms/switches";
 // @import "materialize";
 
+
+
+@mixin sidePadding() {
+  $padding: 15px;
+  padding-left: $padding;
+  padding-right: $padding;
+  @media screen and (min-width: $break-medium) {
+    padding-left: $padding+10;
+    padding-right: $padding+10;
+  }
+}
 @mixin oc() {
   @include outer-container;
-  padding: 0 15px;
-  @media screen and (min-width: $break-medium) {
-    padding: 0 25px;
-  }
+  @include sidePadding;
 }
 
 header .container,
@@ -151,7 +159,6 @@ a {
   @include oc;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
   h3 {
     margin-top: 0;
   }
@@ -171,11 +178,13 @@ a {
     flex-direction: row;
     .half:nth-child(1) .container {
       float: right;
-      padding-left: 20px;
+      // padding-left: 20px;
+      @include sidePadding;
     }
     .half:nth-child(2) .container {
       float: left;
-      padding-right: 20px;
+      // padding-right: 20px;
+      @include sidePadding;
     }
     .container {
       max-width: $max-width/2;

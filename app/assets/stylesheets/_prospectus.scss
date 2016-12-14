@@ -1,15 +1,21 @@
 #revolutions {
-  padding: 4em 0;
+  @include oc;
+  padding-top: 4em;
+  padding-bottom: 4em;
   .img {
     height: 200px;
   }
-  .part {
-    flex: 1;
-    padding: 20px;
+  .revolution {
+    text-align: center;
+    @media screen and (min-width: $break-medium) {
+      @include span-columns(2);
+    }
+    // flex: 1;
+    // padding: 20px;
     img {
       @include vertical-center();
-      max-width: 75%;
-      max-height: 180px;
+      max-width: 70%;
+      max-height: 170px;
     }
     &, h3 {
       color: #5B5B5B;

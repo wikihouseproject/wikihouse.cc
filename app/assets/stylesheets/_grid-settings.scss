@@ -1,11 +1,11 @@
 @import "neat-helpers";
 
 // Change the grid settings
-$column: 85px;
-$gutter: 30px;
-$grid-columns: 10;
+$column: 70px;
+$gutter: 20px;
+$grid-columns: 12;
 // $max-width: 1080px;
-$max-width: 1150px;
+$max-width: 1080px;
 
 // Define your breakpoints
 $tablet: new-breakpoint(max-width 768px 8);

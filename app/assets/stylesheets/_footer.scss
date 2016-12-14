@@ -55,10 +55,10 @@ footer {
 }
 
 .footer-nav {
-  @include span-columns(5);
+  @include span-columns(6);
 }
 .social-icons-holder {
-  @include span-columns(5);
+  @include span-columns(6);
   text-align: right;
 }
 

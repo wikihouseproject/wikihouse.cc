@@ -13,19 +13,17 @@
 <div class="flex drop-shadow">
   <div class="half propose">
     <div class="container">
-      <div class="top">
-        <div class="inside">
+      <div class="top wr">
           <h3>Propose a pilot project.</h3>
           <p>The first WikiHouse technologies are in BETA stage and are being used in pilot projects. If you'd like your project to be one of them, please tell us about it here.</p>
           <%= image_tag "righthouse.svg", style: 'width: 75%; float: right; margin-right: 10px; margin-top: 30px; margin-bottom: 50px;' %>
-        </div>
       </div>
       <%= link_to "Propose a pilot", propose_a_pilot_path, class: 'bottom-link', style: 'text-transform: none' %>
     </div>
   </div>
   <div class="half stats" id="counts">
     <div class="container">
-      <div class="top">
+      <div class="top wr">
         <div class="info"><span class="count" id="c1">30</span> active teams</div>
         <div class="info"><span class="count" id="c2">804</span> downloads in the last month</div>
         <div class="info"><span class="count" id="c3">45</span> commits in the last month</div>
@@ -41,16 +39,14 @@
 <video class="sleep-video" src="https://wikihouse.cc/timelapse.webm" loop autoplay muted></video>
 
 <div id="media-links">
-  <div class="container">
-    <ul id="press-logos">
-      <li><%= image_tag "press/BBC-01.svg" %></li>
-      <li><%= image_tag "press/Forbes-01.svg" %></li>
-      <li><%= image_tag "press/TED-01.svg" %></li>
-      <li><%= image_tag "press/The Guardian-01.svg" %></li>
-      <li><%= image_tag "press/The Independent.svg" %></li>
-      <li><%= image_tag "press/Wired-01.svg" %></li>
-    </ul>
-  </div>
+  <ul id="press-logos">
+    <li><%= image_tag "press/BBC-01.svg" %></li>
+    <li><%= image_tag "press/Forbes-01.svg" %></li>
+    <li><%= image_tag "press/TED-01.svg" %></li>
+    <li><%= image_tag "press/The Guardian-01.svg" %></li>
+    <li><%= image_tag "press/The Independent.svg" %></li>
+    <li><%= image_tag "press/Wired-01.svg" %></li>
+  </ul>
 </div>
 
 <%= render "partners" %>

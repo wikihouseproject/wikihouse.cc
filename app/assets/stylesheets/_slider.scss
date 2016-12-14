@@ -71,6 +71,7 @@
       margin-right: 20px;
     }
     .description {
+      // @include span-columns(4 of 6);
       margin-top: 70px;
       // margin-left: 50%;
     }
@@ -84,10 +85,11 @@
       height: 480px;
       // height: 100%;
       background-position: 5% center;
-      background-size: 44% auto;
+      background-size: 48% auto;
       .description {
         margin-top: 0;
-        margin-left: 48%;
+        margin-left: 50%;
+        @include span-columns(5);
       }
     }
   }

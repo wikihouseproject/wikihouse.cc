@@ -1,85 +1,91 @@
-.enquiry_data_has_planning,
-.enquiry_data_has_mortgage,
-.enquiry_data_anything_else,
-.enquiry_data_description {
-  label {
-    display: block;
-    clear: both;
-    width: auto;
-    margin-bottom: 1em;
-  }
-}
-
 body.c-enquiries {
-  #main { background: #2d2d2d; }
+
+  .enquiry_data_has_planning,
+  .enquiry_data_has_mortgage,
+  .enquiry_data_anything_else,
+  .enquiry_data_description {
+    label {
+      display: block;
+      clear: both;
+      width: auto;
+      margin-bottom: 1em;
+    }
+  }
+
+
+  #main {
+    background: #2d2d2d;
+    h1 {
+      margin: 2em 0 1em;
+    }
+  }
   h3 {
     color: #FFF;
     margin-bottom: 50px;
   }
-  #main h1 {
-    margin: 2em 0 1em;
-  }
-}
+    
 
-form.new_enquiry {
-  -webkit-font-smoothing: antialiased;
-}
-
-#enquiries-holder {
-  display: inline;
-}
-
-#enquiries-header {
-  line-height: 3;
-  margin-top: 1em;
-}
-
-.enquiry-desc {
-  padding: 1em 0 2em;
-  width: 100%;
-  clear: both;
-  float: none !important;
-  @media screen and (min-width: $break-small) {
-    @include span-columns(9);
-  }
-  @media screen and (min-width: $break-medium) {
-    @include span-columns(6);
-  }
-}
-
-#enquiries-container {
-  position: relative;
-  background: #2D2D2D;
-  color: #FFF;
-  flex: 1;
-  p {
+  form.new_enquiry {
     -webkit-font-smoothing: antialiased;
   }
-}
 
-ul#enquiries-options {
-  position: absolute;
-  margin: 0 0 0 1em;
-  padding: 0;
-  display: inline;
-  &, li {
-    list-style: none;
+  #enquiries-holder {
+    display: inline;
   }
-  &:hover a {
-    display: block;
+
+  #enquiries-header {
+    line-height: 3;
+    margin-top: 1em;
   }
-  &:hover li {
-    background: #FFF;
-  }
-  li {
-    background: #F0F0F0;
-    display: block;
-    color: #000;
-    padding: 0 1em;
-    &:hover { background: #666; }
-    a {
-      display: none;
-      color: #CCC;
+
+  .enquiry-desc {
+    padding: 1em 0 2em;
+    width: 100%;
+    clear: both;
+    float: none !important;
+    @media screen and (min-width: $break-small) {
+      @include span-columns(9);
+    }
+    @media screen and (min-width: $break-medium) {
+      @include span-columns(6);
     }
   }
+
+  #enquiries-container {
+    position: relative;
+    background: #2D2D2D;
+    color: #FFF;
+    flex: 1;
+    p {
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  ul#enquiries-options {
+    position: absolute;
+    margin: 0 0 0 1em;
+    padding: 0;
+    display: inline;
+    &, li {
+      list-style: none;
+    }
+    &:hover a {
+      display: block;
+    }
+    &:hover li {
+      background: #FFF;
+    }
+    li {
+      background: #F0F0F0;
+      display: block;
+      color: #000;
+      padding: 0 1em;
+      &:hover { background: #666; }
+      a {
+        display: none;
+        color: #CCC;
+      }
+    }
+  }
+
 }

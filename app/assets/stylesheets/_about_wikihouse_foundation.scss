@@ -1,4 +1,4 @@
-.a-about_wikihouse_foundation {
+body.c-static.a-about_wikihouse_foundation {
 
   .team-container {
     background: #FFF;
@@ -13,13 +13,10 @@
     }
   }
 
-  .team .team-member:nth-child(even) {
-    @include omega();
-  }
-
   .team-member {
     @media screen and (min-width: $break-medium) {
-      @include span-columns(5);
+      @include span-columns(4);
+      @include omega(3n);
     }
     a {
       color: #000;

@@ -3,23 +3,20 @@
     <div class="container">
       <div class="top-description">
         <%= title "About WikiHouse Foundation" %>
-        <p>WikiHouse Foundation is a non-profit open technology foundation, based in the UK. Our purpose is to allow companies, organisations and governments to work together to develop new open technologies, standards and common infrastrucutres for housing and sustainable development.</p>
+        <p>WikiHouse Foundation is a non-profit open technology foundation, based in the UK. Our purpose is to allow companies, organisations and governments to work together to develop new open technologies, standards and common infrastructures for housing and sustainable development.</p>
       </div>
     </div>
   </div>
 <% end %>
 
 <div id="about-diagram">
-  <div class="container">
-    <%= image_tag "clock.svg", style: 'width: 60%; margin: 20px auto;' %>
-  </div>
+  <%= image_tag "clock.svg", style: 'width: 60%; margin: 20px auto;' %>
 </div>
 
 <div class="team-container">
-<div class="container">
+  <h2>Team</h2>
   <div class="team">
   <!-- <div class="container"> -->
-    <h2>Team</h2>
     <%
       team_members = [
       {
@@ -66,5 +63,4 @@
     <% end %>
   <!-- </div> -->
   </div>
-</div>
 </div>

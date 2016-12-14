@@ -1,0 +1,22 @@
+@mixin vertical-center($margin: -50%, $position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY($margin);
+  -ms-transform: translateY($margin);
+  transform: translateY($margin);
+}
+
+@mixin sidePadding() {
+  $padding: 15px;
+  padding-left: $padding;
+  padding-right: $padding;
+  @media screen and (min-width: $break-medium) {
+    padding-left: $padding+10;
+    padding-right: $padding+10;
+  }
+}
+
+@mixin oc() {
+  @include outer-container;
+  @include sidePadding;
+}

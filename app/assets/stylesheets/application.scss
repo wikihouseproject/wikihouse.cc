@@ -9,66 +9,20 @@ $mono: "Roboto Mono", "Menlo", "Lucida Sans Typewriter", "Lucida Console", monac
 $shortHeaderHeight: 75px;
 $largeHeaderHeight: 145px;
 
-@mixin vertical-center($margin: -50%, $position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY($margin);
-  -ms-transform: translateY($margin);
-  transform: translateY($margin);
-}
-
 @import "normalize";
-
 @import "bourbon";
-@import "font-awesome";
-
 @import "grid-settings";
 $visual-grid: false;
-
-// @import "animate";
 @import "neat";
+
 @import "unslider";
 @import "unslider-dots";
-@import "typed";
+
+@import "mixins";
+// @import "typed";
 @import "typography";
-// @import "nice-select";
-// @import "mui.min";
-// @import "leaflet";
-// @import "ripple";
 
-// @import "materialize/components/forms/forms";
-// @import"materialize/components/forms/checkboxes";
-// @import"materialize/components/forms/file-input";
-// @import"materialize/components/forms/forms";
-// @import"materialize/components/forms/input-fields";
-// @import"materialize/components/forms/radio-buttons";
-// @import"materialize/components/forms/range";
-// @import"materialize/components/forms/select";
-// @import"materialize/components/forms/switches";
-// @import "materialize";
-
-
-
-@mixin sidePadding() {
-  $padding: 15px;
-  padding-left: $padding;
-  padding-right: $padding;
-  @media screen and (min-width: $break-medium) {
-    padding-left: $padding+10;
-    padding-right: $padding+10;
-  }
-}
-@mixin oc() {
-  @include outer-container;
-  @include sidePadding;
-}
-
-header .container,
-.header-container,
-.description-container
-{
-  @include oc;
-}
+@import "font-awesome";
 
 @import "about";
 @import "about_wikihouse_foundation";
@@ -83,12 +37,12 @@ header .container,
 @import "landing";
 @import "library";
 @import "main_header";
-@import "technologies";
 @import "partners";
 @import "propose_a_pilot";
 @import "prospectus";
 @import "side_nav";
 @import "slider";
+@import "technologies";
 @import "things";
 @import "toggle_menu";
 
@@ -97,26 +51,32 @@ header .container,
   // -webkit-font-smoothing: antialiased;
 }
 
+header .container,
+.header-container,
+.description-container,
+#press-logos
+{
+  @include oc;
+}
+
 #thank-you {
   padding-top: 75px;
 }
+
 html {
   min-height: 100%;
 }
-// #main {
-//   background: transparent !important;
-// }
+
 body {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   margin: 0;
   padding: $shortHeaderHeight 0 0 0;
-  display: flex;
-  flex-direction: column;
   font-family: $roboto;
-  background-color: #F0F0F0;
+  background-color: #FFF;
   line-height: 1.4;
   min-width: 320px;
-  
   & {
     font-size: 13px;
     @media screen and (min-width: $break-small) {
@@ -126,7 +86,6 @@ body {
       font-size: 15px;
     }
   }
-
   &.large {
     padding-top: $largeHeaderHeight;
   }
@@ -141,15 +100,18 @@ a {
   padding-top: 10px !important;
 }
 
-#main .container {
-  overflow: hidden;
-}
+// #main {
+//   background: transparent !important;
+// }
 
 #main {
   background: #F0F0F0;
   flex: 1;
   display: flex;
   flex-direction: column;
+  .container {
+    overflow: hidden;
+  }
   form input {
     padding: 5px;
   }
@@ -173,17 +135,14 @@ a {
 .flex {
   display: flex;
   flex-direction: column;
-
   @media screen and (min-width: $break-medium) {
     flex-direction: row;
     .half:nth-child(1) .container {
       float: right;
-      // padding-left: 20px;
       @include sidePadding;
     }
     .half:nth-child(2) .container {
       float: left;
-      // padding-right: 20px;
       @include sidePadding;
     }
     .container {
@@ -191,7 +150,6 @@ a {
       display: flex;
     }
   }
-
   .half {
     flex: 1;
     position: relative;
@@ -206,7 +164,6 @@ a {
       }
     }
   }
-
 }
 
 hr {
@@ -226,3 +183,8 @@ iframe {
 //  image-rendering: pixelated;
 //  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 // }
+
+
+.wr {
+  @include span-columns(5 of 6)
+}

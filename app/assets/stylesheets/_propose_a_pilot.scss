@@ -1,78 +1,80 @@
-body.c-static.a-propose_a_pilot #main {
-  background: #2d2d2d;
-}
+body.c-static.a-propose_a_pilot {
+  #main {
+    background: #2d2d2d;
+  }
 
-.hidden-fields {
-  margin-top: 50px;
-}
+  .hidden-fields {
+    margin-top: 50px;
+  }
 
-.thanks {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #2D2D2D;
-  color: #FFF;
-  display: none;
-}
-.propose-slider {
-  .fade {
-    background-color: transparent !important;
-    @include linear-gradient(
-      to top,
-      rgba(#000, 0.2) 0%,
-      rgba(#000, 0) 40%,
-      rgba(#000, 0) 60%,
-      rgba(#000, 0.2) 100%
-    );
+  .thanks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2D2D2D;
+    color: #FFF;
+    display: none;
   }
-}
-.propose-a-pilot-project {
-  position: relative;
-  background: #2D2D2D;
-  color: white;
-  overflow: hidden;
-  h1 {
-    font-size: 2.3em;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    margin: 40px 0 30px;
+  .propose-slider {
+    .fade {
+      background-color: transparent !important;
+      @include linear-gradient(
+        to top,
+        rgba(#000, 0.2) 0%,
+        rgba(#000, 0) 40%,
+        rgba(#000, 0) 60%,
+        rgba(#000, 0.2) 100%
+      );
+    }
   }
-  p {
-    -webkit-font-smoothing: antialiased;
-    font-size: 1.2em;
-    line-height: 1.4;
-  }
-  .half .container {
-    padding-top: 0 !important;
-  }
-  .radio label {
-    display: inline;
-    width: auto;
-    padding: 0 2em 0 0.2em;
-  }
-  .input {
-    vertical-align: top;
-  }
-}
-.enquiry_data_role abbr {
-  display: none;
-}
-
-.big-slider {
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  height: 600px;
-  color: #FFF;
-  .container {
+  .propose-a-pilot-project {
     position: relative;
-    z-index: 200;
+    background: #2D2D2D;
+    color: white;
+    overflow: hidden;
+    h1 {
+      font-size: 2.3em;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      margin: 40px 0 30px;
+    }
+    p {
+      -webkit-font-smoothing: antialiased;
+      font-size: 1.2em;
+      line-height: 1.4;
+    }
+    .half .container {
+      padding-top: 0 !important;
+    }
+    .radio label {
+      display: inline;
+      width: auto;
+      padding: 0 2em 0 0.2em;
+    }
+    .input {
+      vertical-align: top;
+    }
   }
-}
-.propose-slider {
-  .slide-content {
-    margin-top: 3em;
+  .enquiry_data_role abbr {
+    display: none;
+  }
+
+  .big-slider {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    color: #FFF;
+    .container {
+      position: relative;
+      z-index: 200;
+    }
+  }
+  .propose-slider {
+    .slide-content {
+      margin-top: 3em;
+    }
   }
 }

@@ -1,7 +1,17 @@
-.c-things {
+body.c-things {
+
+  .header-preview {
+    text-align: center;
+    img {
+      max-height: 400px;
+      padding: 40px 0;
+    }
+  }
+
   .container.plus-holder {
     display: block !important;
   }
+
   #types-links {
     line-height: 4em;
     &, li {
@@ -21,6 +31,7 @@
       }
     }
   }
+
   a.big-type-link {
     color: #000 !important;
     margin-bottom: 2px;
@@ -82,13 +93,17 @@
       font-size: 2em;
     }
   }
+
   .right-info {
     padding-top: 40px;
     @media screen and (min-width: $break-large) {
       padding-top: 0;
-      @include span-columns(4);
+      @include span-columns(5);
+      @include shift(1);
+      @include omega;
     }
   }
+
   .terms {
     h1 {
       font-size: 1.2em;
@@ -97,7 +112,9 @@
       font-size: 1em;
     }
   }
+
   .data {
     padding-left:10px;
   }
+
 }

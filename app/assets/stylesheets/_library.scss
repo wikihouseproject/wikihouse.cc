@@ -1,231 +1,232 @@
-body.c-static.a-library #main {
-  background: #2d2d2d;
-}
-.download-buttons {
-  overflow: hidden;
-  margin-bottom: 80px;
-  .button {
-    display: block;
-    width: 50%;
-    float: left;
-    clear: none;
-    line-height: 2.3em;
-    font-size: 1.15em;
-  }
-}
-.header-preview {
-  text-align: center;
-  img {
-    max-height: 400px;
-    padding: 40px 0;
+body.a-library {
+  #main {
+    background: #2d2d2d;
   }
 }
 
-.types {
-  overflow: hidden;
-  .img {
-    position: relative;
-  }
-  img {
-    position: absolute !important;
-    width: 100px;
-    float: left;
-    // margin: 10px 60px 30px 20px;
-    @include vertical-center();
-  }
-  h2 {
-    margin-top: 0;
-  }
-  p {
-    margin-bottom: 0;
-  }
-}
+body.a-library,
+body.c-things {
 
-.types .type {
-  background: #2D2D2D;
-  border-bottom: 1px solid white;
-  // overflow: hidden;
-  // height: 180px;
-  // margin-top: 100px;
-  &:hover {
-    background: #333;
-  }
-
-  img {
-    display: none;
-  }
-
-  @media screen and (min-width: $break-medium) {
-    img {
+  .download-buttons {
+    overflow: hidden;
+    margin-bottom: 80px;
+    .button {
       display: block;
+      width: 50%;
+      float: left;
+      clear: none;
+      line-height: 2.3em;
+      font-size: 1.15em;
+    }
+  }
+
+  .types {
+    overflow: hidden;
+    .img {
+      position: relative;
+    }
+    img {
+      position: absolute !important;
+      width: 100px;
+      float: left;
+      // margin: 10px 60px 30px 20px;
+      @include vertical-center();
+    }
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .types .type {
+    background: #2D2D2D;
+    border-bottom: 1px solid white;
+    // overflow: hidden;
+    // height: 180px;
+    // margin-top: 100px;
+    &:hover {
+      background: #333;
+    }
+
+    img {
+      display: none;
+    }
+
+    @media screen and (min-width: $break-medium) {
+      img {
+        display: block;
+      }
+      .img {
+        width: 200px;
+      }
+      .container {
+        display: flex;
+        margin-top: 0;
+      }
+    }
+
+    .container{
+      padding: 50px 20px;
+    }
+    * {
+      color: #FFF;
     }
     .img {
       width: 200px;
     }
-    .container {
-      display: flex;
-      margin-top: 0;
+    .description {
+      flex: 1;
     }
-  }
-
-  .container{
-    padding: 50px 20px;
-  }
-  * {
-    color: #FFF;
-  }
-  .img {
-    width: 200px;
-  }
-  .description {
-    flex: 1;
-  }
-  a {
-    display: block;
-    overflow: hidden;
-  }
-  p {
-    -webkit-font-smoothing: antialiased;
-    @media screen and (min-width: $break-large) {
-      width: 70%;
-    }
-    @media screen and (min-width: $break-xlarge) {
-      width: 60%;
-    }
-  }
-}
-
-.type-details {
-  h1 {
-    font-weight: 400;
-  }
-
-  h5 {
-    color: #000;
-    font-size: 0.9em;
-    font-weight: 800;
-  }
-  img {
-    max-width: 100%;
-  }
-  a {
-    // font-weight: bold;
-    color: #666;
-    &:hover {
-      color: #000;
-    }
-  }
-  ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    line-height: 1.5;
-  }
-}
-
-.download {
-  background: #000;
-  color: #FFF !important;
-  &:hover {
-    background: #2D2D2D;
-  }
-}
-
-.button {
-  padding: 10px 20px;
-  display: inline-block;
-  clear: both;
-  line-height: 2em;
-}
-
-#files-list li {
-  $height: 62px;
-  $width: 45px;
-  display: flex;
-  margin-bottom: 20px;
-  .file {
-    width: $width;
-    height: $height;
-    background: url(image-path('blackfile.svg'));
-    background-size: cover;
-    margin-right: 15px;
-    text-align: center;
-    img {
-      @include vertical-center();
-      width: 25px;
-    }
-    span {
-      line-height: $height;
-      color: #FFF;
-    }
-  }
-  .file-name {
-    font-weight: bold;
-  }
-  .file-details {
-    flex: 1;
-    font-size: 0.9em;
-    span {
+    a {
       display: block;
+      overflow: hidden;
     }
-    a { color: #000; }
-    .file-date, .file-type {
-      color: #999;
-    }
-  }
-}
-
-.terms {
-  padding-bottom: 2em;
-  &, * {
-    color: #5B5B5B;
-  }
-  h1 {
-    margin: 1em 0;
-    font-size: 2.4em !important;
-    font-weight: bold;
-  }
-}
-
-#action-buttons {
-  padding: 0;
-  margin: 4em 0 0 0;
-  overflow: hidden;
-  display: flex;
-  li {
-    display: block;
-    margin-right: 5px;
-    a:hover {
-      opacity: 0.7;
+    p {
+      -webkit-font-smoothing: antialiased;
+      @media screen and (min-width: $break-large) {
+        width: 70%;
+      }
+      @media screen and (min-width: $break-xlarge) {
+        width: 60%;
+      }
     }
   }
-  #download-icon {
-    width: 40px;
-  }
-  #fork-icon {
-    width: 50px;
-  }
-  #exclamation-icon {
-    width: 35px;
-  }
-  #fork-text {
-    flex: 1;
-    text-align: left;
-  }
-  li img {
-    height: 26px;
-  }
-}
 
-.github-user {
-  span {
-    vertical-align: top;
+  .type-details {
+    h1 {
+      font-weight: 400;
+    }
+
+    h5 {
+      color: #000;
+      font-size: 0.9em;
+      font-weight: 800;
+    }
+    img {
+      max-width: 100%;
+    }
+    a {
+      // font-weight: bold;
+      color: #666;
+      &:hover {
+        color: #000;
+      }
+    }
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1.5;
+    }
   }
-  img {
-    width: 66px;
-    height: 66px;
-    border-radius: 66px;
+
+  .download {
+    background: #000;
+    color: #FFF !important;
+    &:hover {
+      background: #2D2D2D;
+    }
+  }
+
+  .button {
+    padding: 10px 20px;
     display: inline-block;
-    margin-right: 10px;
+    clear: both;
+    line-height: 2em;
   }
+
+  #files-list li {
+    $height: 62px;
+    $width: 45px;
+    display: flex;
+    margin-bottom: 20px;
+    .file {
+      width: $width;
+      height: $height;
+      background: url(image-path('blackfile.svg'));
+      background-size: cover;
+      margin-right: 15px;
+      text-align: center;
+      img {
+        @include vertical-center();
+        width: 25px;
+      }
+      span {
+        line-height: $height;
+        color: #FFF;
+      }
+    }
+    .file-name {
+      font-weight: bold;
+    }
+    .file-details {
+      flex: 1;
+      font-size: 0.9em;
+      span {
+        display: block;
+      }
+      a { color: #000; }
+      .file-date, .file-type {
+        color: #999;
+      }
+    }
+  }
+
+  .terms {
+    padding-bottom: 2em;
+    &, * {
+      color: #5B5B5B;
+    }
+    h1 {
+      margin: 1em 0;
+      font-size: 2.4em !important;
+      font-weight: bold;
+    }
+  }
+
+  #action-buttons {
+    padding: 0;
+    margin: 4em 0 0 0;
+    overflow: hidden;
+    display: flex;
+    li {
+      display: block;
+      margin-right: 5px;
+      a:hover {
+        opacity: 0.7;
+      }
+    }
+    #download-icon {
+      width: 40px;
+    }
+    #fork-icon {
+      width: 50px;
+    }
+    #exclamation-icon {
+      width: 35px;
+    }
+    #fork-text {
+      flex: 1;
+      text-align: left;
+    }
+    li img {
+      height: 26px;
+    }
+  }
+
+  .github-user {
+    span {
+      vertical-align: top;
+    }
+    img {
+      width: 66px;
+      height: 66px;
+      border-radius: 66px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
 }

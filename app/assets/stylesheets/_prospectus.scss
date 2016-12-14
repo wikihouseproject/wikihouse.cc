@@ -6,12 +6,13 @@
     height: 200px;
   }
   .revolution {
-    text-align: center;
-    @media screen and (min-width: $break-medium) {
-      @include span-columns(2);
-    }
     // flex: 1;
     // padding: 20px;
+    text-align: center;
+    @media screen and (min-width: $break-medium) {
+      width: 20%;
+      float: left;
+    }
     img {
       @include vertical-center();
       max-width: 70%;

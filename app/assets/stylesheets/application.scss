@@ -1,5 +1,5 @@
 $break-small: 330px;
-$break-medium: 600px;
+$break-medium: 650px;
 $break-large: 850px;
 $break-xlarge: 1100px;
 
@@ -176,6 +176,14 @@ iframe {
   max-width: 100%;
 }
 
+// .arrows {
+//   @include oc;
+//   background: green;
+//   position: absolute;
+//   height: 100%;
+//   z-index: 10;
+// }
+
 // img[src$=".gif"], img[src$=".png"], img[src$=".svg"] {
 //  image-rendering: -moz-pixelated;         /* Firefox */
 //  image-rendering: -o-pixelated;         /* Opera */
@@ -187,4 +195,19 @@ iframe {
 
 .wr {
   @include span-columns(5 of 6)
+}
+
+.sketchfab-embed-wrapper a {
+  color: #000 !important;
+}
+
+.thanks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2D2D2D;
+  color: #FFF;
+  display: none;
 }

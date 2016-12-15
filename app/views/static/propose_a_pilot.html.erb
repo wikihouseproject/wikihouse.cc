@@ -1,59 +1,28 @@
 <%= render "application/propose_slider" %>
-<!-- <div class="big-slider" style="background-image: url('https://i.imgur.com/UmxYPqN.jpg')">
-  <div class="fade"></div>
-  <div class="container">
-    <h2>A-Barn</h2>
-    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-</div> -->
 
 <div class="propose-a-pilot-project">
-  <div class="container">
-    <%= title "Propose a pilot project" %>
-  </div>
+  <div class="propose-container">
 
-  <div class="flex">
-    <div class="half">
+    <div class="propose-title">
+      <%= title "Propose a pilot project" %>
+    </div>
+
+    <div class="propose-description">
+      <p>Do you want to use WikiHouse to build your project? </p>
+      <p>The first WikiHouse technology is now in Beta, but there is not yet an established supply chain to provide it. </p>
+      <p>Over the next two years, we will be developing new web tools and growing a wider network of architects, manufacturers, builders, insurers and suppliers ready to help you realise your project. In the meantime, there are a number of pilots happening around the world, from tiny studios to homes to whole neighbourhoods. If you would like your project to be one of these pilots, please take 5 minutes to tell us about it.</p>
+      <p>We will try to connect you with the support you need to make it happen.</p>
+    </div>
+    <div class="propose-form">
+      <%= render "propose_form" %>
+    </div>
+
+    <div class="thanks" id="thank-you">
       <div class="container">
-
-        <p>Do you want to use WikiHouse to build your project? </p>
-
-        <p>The first WikiHouse technology is now in Beta, but there is not yet an established supply chain to provide it. </p>
-
-        <p>Over the next two years, we will be developing new web tools and growing a wider network of architects, manufacturers, builders, insurers and suppliers ready to help you realise your project. In the meantime, there are a number of pilots happening around the world, from tiny studios to homes to whole neighbourhoods. If you would like your project to be one of these pilots, please take 5 minutes to tell us about it.</p>
-
-        <p>We will try to connect you with the support you need to make it happen.</p>
-
+        <h1>Thank you.</h1>
+        <p>We’ll get back in touch with you as soon as we can, and see if we can connect you with providers in our network to make your project a reality.  Please be aware many pilots may not be possible at this stage.</p>
       </div>
     </div>
-    <div class="half">
-      <div class="container">
 
-<!--       <div class="mui-select">
-        <select>
-          <option>Option 0</option>
-          <% 100.times do %>
-          <option>Option 1</option>
-          <% end %>
-          <option>Option 2</option>
-          <option>Option 3</option>
-          <option>Option 4</option>
-        </select>
-        <label>Select Example</label>
-      </div> -->
-
-        <%= render "propose_form" %>
-      </div>
-    </div>
-  </div>
-
-
-<div class="thanks" id="thank-you">
-  <div class="container">
-    <h1>Thank you.</h1>
-    <p>We’ll get back in touch with you as soon as we can, and see if we can connect you with providers in our network to make your project a reality.  Please be aware many pilots may not be possible at this stage.</p>
   </div>
 </div>
-
-</div>
-

@@ -1,11 +1,12 @@
 <%= simple_form_for Enquiry.new(kind: 'project-proposal'), remote: true do |f| %>
 
   <%= f.simple_fields_for :data do |sf| %>
-    <%= sf.input :role,
-      # label: "My role in the project will be",
-      collection: [
-      "Client","Architect","Builder","Project manager","Other"
-      ], label: "I am a...", input_html: { class: 'hidden-toggle' }, wrapper: :default %>
+    
+    <p><%= sf.input :role,
+          # label: "My role in the project will be",
+          collection: [
+          "Client","Architect","Builder","Project manager","Other"
+          ], label: "I am a...", input_html: { class: 'hidden-toggle propose-toggle' }, wrapper: :default %></p>
 
     <div class="hidden-fields">
       <%= f.input :kind, as: :hidden %>

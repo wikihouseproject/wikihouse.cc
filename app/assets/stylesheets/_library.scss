@@ -43,30 +43,17 @@ body.c-things {
   .types .type {
     background: #2D2D2D;
     border-bottom: 1px solid white;
-    // overflow: hidden;
-    // height: 180px;
-    // margin-top: 100px;
+    .inner {
+      overflow: hidden;
+      position: relative;
+      @include oc;
+    }
     &:hover {
       background: #333;
     }
-
     img {
-      display: none;
+      // display: none;
     }
-
-    @media screen and (min-width: $break-medium) {
-      img {
-        display: block;
-      }
-      .img {
-        width: 200px;
-      }
-      .container {
-        display: flex;
-        margin-top: 0;
-      }
-    }
-
     .container{
       padding: 50px 20px;
     }
@@ -74,24 +61,48 @@ body.c-things {
       color: #FFF;
     }
     .img {
-      width: 200px;
+      // width: 200px;
+      height: 200px;
     }
     .description {
-      flex: 1;
+      padding-top: 2em;
+      padding-bottom: 2em;
     }
+
+    @media screen and (min-width: $break-medium) {
+      .img { @include span-columns(3); }
+      .description { @include span-columns(8); }
+    }
+    @media screen and (min-width: $break-large) {
+      .img { @include span-columns(2); }
+      .description { @include span-columns(6); }
+    }
+
     a {
       display: block;
       overflow: hidden;
     }
     p {
       -webkit-font-smoothing: antialiased;
-      @media screen and (min-width: $break-large) {
-        width: 70%;
-      }
-      @media screen and (min-width: $break-xlarge) {
-        width: 60%;
-      }
+      // @media screen and (min-width: $break-large) {
+      //   width: 70%;
+      // }
+      // @media screen and (min-width: $break-xlarge) {
+      //   width: 60%;
+      // }
     }
+    // @media screen and (min-width: $break-medium) {
+    //   img {
+    //     display: block;
+    //   }
+    //   .img {
+    //     width: 200px;
+    //   }
+    //   .container {
+    //     display: flex;
+    //     margin-top: 0;
+    //   }
+    // }
   }
 
   .type-details {

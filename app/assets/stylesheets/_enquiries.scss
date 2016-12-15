@@ -1,5 +1,9 @@
 body.c-enquiries {
+  .enquiry_first_name {
+    margin-top: 50px;
+  }
 
+  
   .enquiry_data_has_planning,
   .enquiry_data_has_mortgage,
   .enquiry_data_anything_else,
@@ -39,7 +43,7 @@ body.c-enquiries {
   }
 
   .enquiry-desc {
-    padding: 1em 0 2em;
+    padding: 1em 0 0;
     width: 100%;
     clear: both;
     float: none !important;

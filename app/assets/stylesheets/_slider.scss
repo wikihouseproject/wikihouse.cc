@@ -1,3 +1,15 @@
+.s-container {
+  position: relative;
+  z-index: 500;
+  @include oc;
+  height: 100%;
+  @media screen and (min-width: $break-medium) {  
+    .slide-content {
+      @include span-columns(10);
+      @include shift(1);
+    }
+  }
+}
 #slider ul li {
   display: none;
 }
@@ -83,7 +95,6 @@
     height: 520px;
     .slide-container {
       height: 480px;
-      // height: 100%;
       background-position: 5% center;
       background-size: 48% auto;
       .description {
@@ -93,4 +104,8 @@
       }
     }
   }
+}
+
+.slider-container {
+  @include oc;
 }

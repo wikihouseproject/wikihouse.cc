@@ -34,55 +34,74 @@
     <div class="container" style="z-index: 200; position: relative">
       <div class="top">
         <h2>Digital infrastructure for resilient cities</h2>
+        <p class="image-credit">Image credit: Rogue State Media</p>
       </div>
-      <%= link_to "Read our white paper on the UK housing crisis", "#", class: 'bottom-link' %>
+      <%= link_to "Read our white paper on the UK housing crisis", "https://medium.com/@AlastairParvin/scaling-the-citizen-sector-20a20dbb7a4c", class: 'bottom-link' %>
     </div>
   </div>
 </div>
 
 <%
-  things = [["Visible on all website & communications",
-  "Opportunities for product promotion where appropriate",
-  "Membership of online consortium group",
-  "First private BETA access to the platform",
-  "Attendance of annual seminar"],
+  things = [
+    ["Consortium badge & visibility",
+    "Membership of online consortium group",
+    "First private BETA access to the platform",
+    "First opportunity to certify as a provider",
+    "Invitation to seminars / workshops / launch events"],
 
-  ["Keynote talk from a founder at your organisation on request",
-  "Use of WikiHouse Partners logo",
-  "Support developing your local pilot project*",
-  "First opportunity to list as a certified provider through the OpenChain",
-  "Private workshops with the WikiHouse Foundation team*"],
+    ["Support developing your pilot project, product or service",
+    "Keynote talk from founder / workshops with the team*",
+    "First opportunity to integrate your product / solution into the supply chain*"],
 
-  ["Opportunity to set/host an R&D working group, major pilot project or open challenge",
-  "Headline listing as a core partner in the WikiHouse project",
-  "First opportunity to deploy a system-wide product or service through the OpenChain*",
-  "Seat on the steering group"]]
+    ["Headline recognition as a core partner",
+    "Set / host an R&D working group, major pilot project or open challenge",
+    "Seat on the steering group",
+    "Test and launch a system-wide product or service in the supply chain"]
+  ]
 %>
 <div id="join-us">
   <div class="container">
     <h2>Join Us</h2>
-    <table>
+    <table id="pricing-table">
       <thead>
-        <tr><td></td><th><div><span>Supporter</span></div></th><th><div><span>Partner</span></div></th><th><div><span>Core Partner</span></div></th></tr>
+        <tr>
+          <td></td>
+          <th><div><span>Provider</span></div></th>
+          <th><div><span>Member</span></div></th>
+          <th><div><span>Partner</span></div></th>
+          <th><div><span>Core Partner</span></div></th>
+        </tr>
       </thead>
       <% things.each_with_index do |thing, index| %>
         <tbody>
           <% thing.each do |label| %>
-            <tr><th><%= label %></th><td data-label="Supporter"><%= dot_helper index, 0 %></td><td data-label="Partner"><%= dot_helper index, 1 %></td><td data-label="Core Partner"><%= dot_helper index, 2 %></td></tr>
+            <tr>
+              <th><%= label %></th>
+              <td data-label="Provider"><%= dot_helper index, -1 %></td>
+              <td data-label="Member"><%= dot_helper index, 0 %></td>
+              <td data-label="Partner"><%= dot_helper index, 1 %></td>
+              <td data-label="Core Partner"><%= dot_helper index, 2 %></td>
+            </tr>
           <% end %>
         </tbody>
       <% end %>
       <tfoot>
-        <tr><th><span class="title">Suggested Amount</span></th><td data-label="Supporter">£5k+</td><td data-label="Partner">£15k+</td><td data-label="Core Partner">£50k+</td></tr>
+        <tr>
+          <th><span class="title">ANNUAL</span></th>
+          <td data-label="Provider" class="register-only"><span>Register</span> <span>interest</span> <span>only</span></td>
+          <td class="price" data-label="Member">£1k+</td>
+          <td class="price" data-label="Partner">£25k+</td>
+          <td class="price" data-label="Core Partner">£50k+</td>
+        </tr>
       </tfoot>
     </table>
 
-    <p>* Figure & scope will vary case by case.</p>
+    <p class="asterisk">* Figure & scope will vary case by case.</p>
   </div>
 
   <div style="position: relative; padding: 4em 0 2em 0;">
     <div class="container">
-      <%= link_to "Get in touch", enquiries_path, class: 'bottom-link' %>
+      <%= link_to "Get in touch", enquiries_path('becoming-a-partner'), class: 'bottom-link' %>
     </div>
   </div>
 </div>

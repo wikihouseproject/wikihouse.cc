@@ -77,14 +77,15 @@ body.c-static.a-about {
     // padding-left: 10px;
 
     .icon {
-      text-align: center;
-      width: 50%;
+      // text-align: left;
+      // width: 50%;
       margin-bottom: 20px;
+      margin-right: 20px;
       img {
         background: #000;
-        border-radius: 100%;
-        max-width: 130px;
-        max-height: 130px;
+        border-radius: 140px;
+        width: 140px;
+        height: 140px;
       }
     }
 
@@ -100,8 +101,12 @@ body.c-static.a-about {
         display: flex;
       }
       .icon {
-        width: 100px;
-        margin-right: 20px;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+        }
+        // margin-right: 20px;
       }
     }
     &:nth-child(even) {

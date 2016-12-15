@@ -69,8 +69,11 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
   height: 100%;
+  min-height: 100vh;
+  // _height: 100vh; /* for our special friend Internet Explorer 11 */
+  flex-direction: column;
+
   margin: 0;
   padding: $shortHeaderHeight 0 0 0;
   font-family: $roboto;

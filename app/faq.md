@@ -64,7 +64,7 @@ Depending on the size of the house, the chassis can usually be assembled by a te
 
 ## Can WREN be disassembled?
 
-Yes, however over months and years some of the parts may tighten, meaning that some components may not be reuseable.
+Yes, however over months and years some of the parts may tighten, meaning that some components may not be reusable.
 
 ## Where can I find a CNC fabricator?
 

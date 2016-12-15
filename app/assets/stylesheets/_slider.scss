@@ -6,10 +6,35 @@
   @media screen and (min-width: $break-medium) {  
     .slide-content {
       @include span-columns(10);
-      @include shift(1);
+      // @include shift(1);
     }
+    .s-left, .s-right {
+      // display: block;
+      @include span-columns(1);
+      height: 100%;
+      a {
+        vertical-align: middle;
+        // position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+      }
+    }
+    .s-left {
+      background: left center image-url('icons/ic_arrow_backward_white_24dp_2x.png') no-repeat;
+    }
+    .s-right {
+      background: right center image-url('icons/ic_arrow_forward_white_24dp_2x.png') no-repeat;
+      @include omega();
+    }
+
+  }
+  .s-left, .s-right {
+    // display: none;
   }
 }
+
 #slider ul li {
   display: none;
 }

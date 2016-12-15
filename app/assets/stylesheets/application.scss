@@ -138,14 +138,37 @@ a {
 .flex {
   display: flex;
   flex-direction: column;
+
+  .half {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    h2 {
+      padding-bottom: 0.1em;
+    }
+    .container {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      position: relative;
+      padding: 37px;
+      .top {
+        flex: 1;
+        flex-grow: 1;
+        // display: block;
+      }
+    }
+  }
+
   @media screen and (min-width: $break-medium) {
     flex-direction: row;
     .half:nth-child(1) .container {
-      float: right;
+      margin-right: 0; // float: right;
       @include sidePadding;
     }
     .half:nth-child(2) .container {
-      float: left;
+      margin-left: 0; // float: left;
       @include sidePadding;
     }
     .container {
@@ -153,20 +176,7 @@ a {
       display: flex;
     }
   }
-  .half {
-    flex: 1;
-    position: relative;
-    .container {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
-      padding: 37px;
-      .top {
-        flex: 1;
-      }
-    }
-  }
+
 }
 
 hr {
@@ -194,7 +204,6 @@ iframe {
 //  image-rendering: pixelated;
 //  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 // }
-
 
 .wr {
   @include span-columns(5 of 6)

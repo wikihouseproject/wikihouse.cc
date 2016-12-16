@@ -1,8 +1,6 @@
 @mixin vertical-center($margin: -50%, $position: relative) {
   position: $position;
   top: 50%;
-  -webkit-transform: translateY($margin);
-  -ms-transform: translateY($margin);
   transform: translateY($margin);
 }
 

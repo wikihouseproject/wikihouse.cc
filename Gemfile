@@ -11,6 +11,7 @@ gem 'stripe'
 gem "awesome_print"
 gem 'slack-notifier'
 gem 'invisible_captcha'
+gem 'autoprefixer-rails'
 # gem 'materialize-sass'
 gem 'hashie'
 # Use SCSS for stylesheets

@@ -39,10 +39,6 @@
   // z-index: 100;
   pointer-events: none;
   user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
   background-color: transparent !important;
   // @include linear-gradient(
   //   to top,
@@ -76,11 +72,6 @@ video {
       outline: none;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
       -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      -o-user-select: none;
       user-select: none;
     }
     background-image: image-url('icons/ic_arrow_forward_white_24dp_2x.png');

@@ -12,6 +12,7 @@
       // display: block;
       @include span-columns(1);
       height: 100%;
+      position: relative;
       a {
         vertical-align: middle;
         // position: absolute;
@@ -19,10 +20,15 @@
         left: 0;
         display: block;
         height: 100%;
+        width: 500px;
+        position: absolute;
       }
     }
     .s-left {
       background: left center image-url('icons/ic_arrow_backward_white_24dp_2x.png') no-repeat;
+      a {
+        margin-left: -450px;
+      }
     }
     .s-right {
       background: right center image-url('icons/ic_arrow_forward_white_24dp_2x.png') no-repeat;

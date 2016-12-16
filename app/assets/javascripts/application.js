@@ -16,6 +16,7 @@
 //= require pjax
 //= require unslider-min
 //= require countUp
+//= require modernizr.min.js
 //= require jquery-scrollspy
 //= require_tree .
 

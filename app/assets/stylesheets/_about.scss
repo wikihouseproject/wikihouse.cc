@@ -68,9 +68,12 @@ body.c-static.a-about {
 
       .about-point {
         overflow: hidden;
+        .about-point-title {
+          font-size: 1.15em;
+        }
         .icon {
           margin-bottom: 20px;
-          margin-right: 20px;
+          margin-right: 30px;
           img {
             background: #000;
             border-radius: 140px;
@@ -83,6 +86,7 @@ body.c-static.a-about {
           margin-bottom: $gutter;
           &:nth-child(odd) {
             @include omega();
+            // @include shift(2);
           }
           .inner {
             display: flex;

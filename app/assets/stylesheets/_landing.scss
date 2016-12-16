@@ -186,18 +186,12 @@ video {
 #preview {
   font-size: 0;
   background: #FFF;
-  // padding: 40px 0;
   overflow: hidden;
-  
+  height: 580px;
   .container {
     max-width: $max-width;
+    background: #FFF;
   }
-  // .container {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   height: 100%;
-  // }
   a {
     position: absolute;
     color: #000;

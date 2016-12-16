@@ -14,21 +14,25 @@ body.c-static.a-propose_a_pilot {
   .propose-slider {
     .propose-slide {
       @include oc;
+      position: relative;
+      z-index: 2;
     }
     .slide-content {
+      text-shadow: 2px 2px 16px rgba(#717171, 0.4);
       @media screen and (min-width: $break-medium) {
         @include span-columns(8);
         @include shift(1);
       }
     }
     .fade {
+      z-index: 1 !important;
       background-color: transparent !important;
       @include linear-gradient(
         to top,
         rgba(#000, 0.2) 0%,
         rgba(#000, 0) 40%,
         rgba(#000, 0) 60%,
-        rgba(#000, 0.2) 100%
+        rgba(#000, 0.4) 100%
       );
     }
     li {

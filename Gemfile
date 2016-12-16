@@ -12,6 +12,7 @@ gem "awesome_print"
 gem 'slack-notifier'
 gem 'invisible_captcha'
 gem 'autoprefixer-rails'
+gem 'rest-client'
 # gem 'materialize-sass'
 gem 'hashie'
 # Use SCSS for stylesheets

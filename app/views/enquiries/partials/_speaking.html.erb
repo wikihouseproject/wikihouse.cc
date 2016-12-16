@@ -9,8 +9,8 @@
 <%= f.input :about_event, as: :text, wrapper: :default, label: "About the event" %>
 
 <%= f.input :requested_speaker, required: true %>
-<%= f.input :speaking_fee, as: :string, required: true %>
-<%= f.input :expenses, as: :boolean, label: "&nbsp;Expenses included?".html_safe, wrapper: :default %>
+<%= f.input :speaking_fee, as: :boolean, wrapper: :default, label: "Speaking fee?".html_safe %>
+<%= f.input :expenses, as: :boolean, label: "Expenses included?".html_safe, wrapper: :default %>
 
 <%= f.input :message, as: :text, wrapper: :default %>
 

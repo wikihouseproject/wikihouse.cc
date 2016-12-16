@@ -13,6 +13,7 @@ class EnquiriesController < ApplicationController
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
+    
     if @enquiry.save
       # TODO: send details to salesseek
       begin
@@ -31,6 +32,7 @@ class EnquiriesController < ApplicationController
       rescue
         Rails.logger.info "unable to connect to slack for enquiry: #{@enquiry.id}"
       end
+
       respond_to do |format|
         format.html { redirect_to message_received_path }
         format.js

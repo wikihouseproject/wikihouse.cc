@@ -13,7 +13,11 @@
     <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,500,500italic,700,700italic|Roboto:300,400,400italic,500,500italic,700,700italic|Material+Icons" rel="stylesheet" type="text/css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script>Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));</script>
+    <script>
+      Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign', 'end', true));
+
+      (function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
+    </script>
   </head>
 
   <body class="site <%= page_classes %>">
@@ -44,7 +48,5 @@
         </ul>
       </div>
     </div>
-
-
   </body>
 </html>

@@ -250,6 +250,7 @@ DEPENDENCIES
   rails_12factor
   redcarpet
   reform-rails
+  rest-client
   sass-rails (~> 5.0)
   simple_form
   slack-notifier

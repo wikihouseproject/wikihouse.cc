@@ -12,6 +12,15 @@ body.c-static.a-propose_a_pilot {
   }
 
   .propose-slider {
+    .propose-slide {
+      @include oc;
+    }
+    .slide-content {
+      @media screen and (min-width: $break-medium) {
+        @include span-columns(8);
+        @include shift(1);
+      }
+    }
     .fade {
       background-color: transparent !important;
       @include linear-gradient(

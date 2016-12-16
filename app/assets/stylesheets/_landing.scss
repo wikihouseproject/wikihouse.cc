@@ -25,8 +25,8 @@
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
+  // width: auto;
+  // height: auto;
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -157,11 +157,11 @@ video {
   p {
     -webkit-font-smoothing: antialiased;
   }
-  a {
+  a.bottom-link {
     color: #FFF;
     display: block;
     font-family: $mono;
-    margin-top: 2em;
+    padding-top: 2em;
   }
   h3 {
     font-family: $mono;

@@ -188,8 +188,6 @@ video {
   background: #FFF;
   // padding: 40px 0;
   overflow: hidden;
-  margin-bottom: 520px;
-  @include drop-shadow();
   
   .container {
     max-width: $max-width;

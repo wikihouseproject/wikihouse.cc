@@ -1,13 +1,13 @@
 body.c-enquiries {
-  .input.boolean input {
-    margin-right: 1em;
-  }
+  
   .enquiry_first_name {
     margin-top: 50px;
   }
 
-  .input.date label {
-    padding-right: 20px;
+  .input.date label,
+  .input.select label,
+  .input.boolean input {
+    margin-right: 20px;
   }
 
   

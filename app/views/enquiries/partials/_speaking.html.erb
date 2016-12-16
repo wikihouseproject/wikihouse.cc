@@ -8,7 +8,14 @@
 
 <%= f.input :about_event, as: :text, wrapper: :default, label: "About the event" %>
 
-<%= f.input :requested_speaker, required: true %>
+<%= f.input :requested_speaker, wrapper: :default, collection:[
+    ["Alastair Parvin (Co-Founder)", "alastair_parvin"],
+    ["Harry Knight (Community Host)", "harry_knight"],
+    ["Clayton Prest (R&D Lead)", "clayton_prest"],
+    ["John Rees (Lead Developer)", "john_rees"],
+    ["Justyna Swat (Connector)", "justyna_swat"]
+  ] %>
+
 <%= f.input :speaking_fee, as: :boolean, wrapper: :default, label: "Speaking fee?".html_safe %>
 <%= f.input :expenses, as: :boolean, label: "Expenses included?".html_safe, wrapper: :default %>
 

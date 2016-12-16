@@ -1,3 +1,8 @@
+body.a-landing {
+  #main {
+    background: none;
+  }
+}
 .stats {
   color: #FFF;
   font-family: $mono;
@@ -16,7 +21,7 @@
   }
 }
 
-.sleep-video {
+#sleep-video {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -25,8 +30,8 @@
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  // width: auto;
-  // height: auto;
+  width: auto;
+  height: auto;
   transform: translateX(-50%) translateY(-50%);
 }
 

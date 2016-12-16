@@ -38,7 +38,13 @@
   </div>
 </div>
 
-<video class="sleep-video" src="https://wikihouse.cc/timelapse.webm" loop autoplay muted></video>
+<video id="sleep-video" loop autoplay muted>
+  <source src="https://wikihouse.cc/timelapse.webm" type="video/webm">
+  <!--
+    <source src="<%= asset_path('videos/wikihouse-build.mp4') %>" type="video/mp4">
+    <source src="<%= asset_path('videos/wikihouse-build.webm') %>" type="video/webm">
+  -->
+</video>
 
 <div id="media-links">
   <ul id="press-logos">

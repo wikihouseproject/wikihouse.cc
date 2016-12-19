@@ -10,16 +10,7 @@ namespace :github do
     open(url).read
   end
 
-  task :get_filelist do
-    user = 'wikihouseproject'
-    project = 'Microhouse'
-    url = "https://api.github.com/repos/#{user}/#{project}/contents/"
-    p JSON.parse(open(url).read).map{|f| f['name']}
-  end
-
-  task scrape_repo: :environment do
-    user = 'wikihouseproject'
-    project = 'Microhouse'
+  def scrape user, project
     repo = Repo.find_or_create_by(name: project, owner: user)
     url = "https://github.com/#{user}/#{project}"
     doc = Nokogiri::HTML(open(url))
@@ -42,6 +33,23 @@ namespace :github do
     end
     repo.data = h
     repo.save!
+  end
+
+  task scrape_all: :environment do
+    %w(Wren StepUp Mallet Microhouse).each do |project|
+      scrape('wikihouseproject', project)
+    end
+  end
+
+  task :get_filelist do
+    user = 'wikihouseproject'
+    project = 'Microhouse'
+    url = "https://api.github.com/repos/#{user}/#{project}/contents/"
+    p JSON.parse(open(url).read).map{|f| f['name']}
+  end
+
+  task scrape_repo: :environment do
+    
   end
   
   task :scrape do

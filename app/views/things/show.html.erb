@@ -26,11 +26,15 @@
         </li>
       </ul>
       <hr/>
-      <h5>Contributors</h5>
-      <ul id="contributors">
-        <li><%= link_to "claytonprest", "https://www.github.com/claytonprest" %></li>
-        <li><%= link_to "Alastairparvin", "https://www.github.com/Alastairparvin" %></li>
-      </ul>
+
+      <div class="side-item contributors">
+        <h5>Contributors</h5>
+        <ul id="contributors">
+          <li><%= link_to "claytonprest", "https://www.github.com/claytonprest" %></li>
+          <li><%= link_to "Alastairparvin", "https://www.github.com/Alastairparvin" %></li>
+        </ul>
+      </div>
+
       <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network", class: 'data' %></p>
       <p><strong>Latest Update</strong><span class="data"><%= Time.parse(@repo.data['updated_at']).to_s(:short) %></span></p>
       <hr/>

@@ -9,7 +9,19 @@ body.a-landing {
   }
   #microhouse-render {
     height: 500px;
-    background: #43442D;
+    background: #43442D url(https://i.imgur.com/EbFvGfM.jpg) right 95% no-repeat;
+    background-size: cover;
+    // position: relative;
+    .inner {
+      @include oc;
+    }
+    a {
+      color: #FFF;
+      // position: absolute;
+      // left: 0;
+      // bottom: 0;
+      padding: 10px;
+    }
   }
 }
 

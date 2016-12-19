@@ -29,10 +29,24 @@ body.a-donate {
   }
 
   .we-work-for-you {
-    // @include outer-container();
-    // .description, .form {
-    //   @include span-columns(5);
-    // }
+    @include oc();
+    .top-description, .form {
+      @include fill-parent;
+    }
+    @media screen and (min-width: $break-large) {
+      .top-description {
+        @include span-columns(6);
+      }
+      .form {
+        @include shift(1);
+        @include span-columns(5); 
+        @include omega;
+      }
+      iframe {
+        float: right;
+      }
+    }
+
     .form input {
       background: #E1FF9C;
       border: none;

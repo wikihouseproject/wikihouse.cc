@@ -5,12 +5,12 @@
   height: 100%;
   @media screen and (min-width: $break-medium) {  
     .slide-content {
-      @include span-columns(10);
+      @include fill-parent;
       // @include shift(1);
     }
     .s-left, .s-right {
       // display: block;
-      @include span-columns(1);
+      // @include span-columns(1);
       height: 100%;
       position: relative;
       a {
@@ -71,8 +71,7 @@
 
 .main-slider-holder {
   .slide-content {
-    @include vertical-center(-70%);
-
+    // @include vertical-center(-70%);
   }
 
 }

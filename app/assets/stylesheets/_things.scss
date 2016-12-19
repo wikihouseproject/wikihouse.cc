@@ -1,7 +1,9 @@
 body.c-things {
 
-  .side-item.contributors {
-    display: none;
+  .side-item {
+    &.contributors, &.hosts {
+      display: none;
+    }
   }
 
   .header-preview {

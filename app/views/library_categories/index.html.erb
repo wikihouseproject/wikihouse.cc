@@ -6,7 +6,7 @@
 
 <div class="types">
 
-  <%= link_to things_path do %>
+  <%= link_to library_category_things_path(library_category_id: "types") do %>
   <div class="type big-type-link">
     <div class="inner">
       <div class="img"><%= image_tag "library/Asset 1.svg" %></div>
@@ -18,19 +18,19 @@
   </div>
   <% end %>
 
-  <%= link_to technologies_path do %>
+  <%= link_to library_category_things_path(library_category_id: "technologies") do %>
   <div class="type big-type-link">
     <div class="inner">
       <div class="img"><%= image_tag "library/Asset 2.svg" %></div>
       <div class="description">
         <h2>Technologies</h2>
-        <p>Open products and systems that can make up a sub components of an overall building.</p>
+        <p>Open products and systems that can make up sub-components of an overall building.</p>
       </div>
     </div>
   </div>
   <% end %>
 
-  <%= link_to '#' do %>
+  <%= link_to library_category_things_path(library_category_id: "tools") do %>
   <div class="type big-type-link">
     <div class="inner">
       <div class="img"><%= image_tag "library/Asset 3.svg" %></div>

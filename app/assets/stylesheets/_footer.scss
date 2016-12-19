@@ -40,17 +40,20 @@ footer {
       display: inline-block;
       a {
         transition: all 0.5s;
-        color: #ddd;
+        // color: #ddd;
+        color: #2d2d2d;
         display: block;
       }
       a:hover {
-        color: #FFF;
+        // color: #FFF;
+        color: #2d2d2d;
       }
     }
   }
 
   .fa-stack-1x {
-    color: #2D2D2D;
+    // color: #2D2D2D;
+    color: #FFF;
   }
 
 }

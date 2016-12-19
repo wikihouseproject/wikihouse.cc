@@ -1,12 +1,16 @@
 <% content_for :header do %>
   <div class="container">
     <div class="top-description">
-      <h1><%= link_to "Library", library_path %> / <%= link_to "Types", things_path %> / <%= @repo.name %></h1>
+      <h1>
+        <%= link_to "Library", library_categories_path %> /
+        <%= link_to params[:library_category_id].capitalize, library_category_path(id: params[:library_category_id]) %> /
+        <%= @repo.name %>
+      </h1>
     </div>
   </div>
 <% end %>
 
-<div class="header-preview"><div class="container"><%= image_tag "microhouse.svg" %></div></div>
+<div class="header-preview"><div class="container"><%= image_tag @repo.img %></div></div>
 
 <div class="type-details">
   <div class="container">
@@ -19,13 +23,16 @@
         <%= link_to '<i class="material-icons">file_download</i> Download'.html_safe, @repo.archive_url, class: 'download button' %>
         <%= link_to fa_icon("github", text: "Fork on github").html_safe, @repo.url, class: 'button' %>
       </div>
-      <h5>Hosts</h5>
-      <ul>
-        <li>
-          <%= github_user "claytonprest" %>
-        </li>
-      </ul>
-      <hr/>
+
+      <div class="side-item hosts">
+        <h5>Hosts</h5>
+        <ul>
+          <li>
+            <%= github_user "claytonprest" %>
+          </li>
+        </ul>
+        <hr/>
+      </div>
 
       <div class="side-item contributors">
         <h5>Contributors</h5>

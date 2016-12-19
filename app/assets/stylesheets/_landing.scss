@@ -38,7 +38,7 @@ body.a-landing {
       height: 100%;
       position: relative;
     }
-    a {
+    .bottom-link {
       position: absolute;
       color: #FFF;
       // left: 0;
@@ -209,7 +209,7 @@ video {
   p {
     -webkit-font-smoothing: antialiased;
   }
-  a.bottom-link {
+  .bottom-link {
     color: #FFF;
     display: block;
     font-family: $mono;

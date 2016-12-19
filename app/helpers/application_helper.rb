@@ -7,8 +7,8 @@ module ApplicationHelper
   def page_classes
     [
       "c-#{controller_name}",
-      "a-#{action_name}",
-      ('large' if request.path == root_path)
+      "a-#{action_name}"
+      # ('large' if request.path == root_path)
     ].join(" ")
   end
 

@@ -2,7 +2,17 @@ body.a-landing {
   #main {
     background: none;
   }
+
+  #homepage-slider {
+    height: 500px;
+    @include oc;
+  }
+  #microhouse-render {
+    height: 500px;
+    background: #43442D;
+  }
 }
+
 .stats {
   color: #FFF;
   font-family: $mono;

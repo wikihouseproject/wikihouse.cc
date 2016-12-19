@@ -35,11 +35,11 @@ $(document).on("pjax:success", function() {
   $('#main-menu a').removeClass('active')
   $('#main-menu a[href="' + window.location.pathname + '"]').addClass('active')
 
-  if (window.location.pathname === "/") {
-    $('body').addClass('large')
-  } else {
-    $('body').removeClass('large')
-  }
+  // if (window.location.pathname === "/") {
+  //   $('body').addClass('large')
+  // } else {
+  //   $('body').removeClass('large')
+  // }
 });
 
 $(document).on('pjax:success ready', function() {

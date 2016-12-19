@@ -14,13 +14,17 @@ body.a-landing {
     // position: relative;
     .inner {
       @include oc;
+      height: 100%;
+      position: relative;
     }
     a {
+      position: absolute;
       color: #FFF;
-      // position: absolute;
       // left: 0;
-      // bottom: 0;
-      padding: 10px;
+      bottom: 0;
+      margin-bottom: 40px;
+      text-transform: none;
+      // padding: 10px 0;
     }
   }
 }

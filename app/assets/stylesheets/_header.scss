@@ -147,7 +147,9 @@ header#main-header {
       margin-left: -10px;
     }
     #logo {
-      height: $shortHeaderHeight - 25;
+      height: 50px;
+      width: 70px;
+      // height: $shortHeaderHeight - 25;
       // height: $shortHeaderHeight - ;
     }
   }

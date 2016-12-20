@@ -1,0 +1,21 @@
+<div class="enquiry-desc">
+<p>The WikiHouse library is a commons curated by WikiHouse Foundation. Anyone may fork solutions, however, for now, only a selected list of solutions can be listed on WikiHouse. If you would like to contribute a new solution to the WikiHouse library, please submit it here. It will then be reviewed on the basis of:</p>
+
+<ol>
+<li>Whether your solution is fully compatible with the <%= link_to "WikiHouse design principles", about_path %>, including any legal and ethical implications.</li>
+<li>How well documented your solution is. For more on documentation read the <%= link_to "WikiHouse community handbook", "https://www.gitbook.com/book/harryknight/wikihouse-slack/details" %>.</li>
+</ol>
+
+<p>Before submitting your solution, please make sure you have read <%= link_to "the WikiHouse terms", terms_path %>. After you submitted your solution, one of the WikiHouse Foundation team will be in touch.</p>
+</div>
+
+<%= f.input :country, label: "Your country", required: true, as: :country, wrapper: :default %>
+
+<%= f.input :name_of_solution, label: "Name of solution", required: true %>
+
+<p>WikiHouse types are named based on their physical description (eg LongHouse). WikiHouse technologies are named after animals which reflect their geography or function. (eg Wren)</p><br/>
+
+<%= f.input :stage_of_development, required: true, collection: ['pre-prototype', 'prototyped', 'tested', 'commercialised'], wrapper: :default %>
+
+<%= f.input :link_to_github, label: "Link to your GitHub repo", required: true %>
+<%= f.input :description, label: "Description", required: true, as: :text, wrapper: :default %>

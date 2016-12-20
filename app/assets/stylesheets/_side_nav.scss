@@ -35,6 +35,7 @@ body.open-menu #side-nav {
     position: relative;
     z-index: 5000;
     color: #FFF;
+    text-decoration: none !important;
   }
   a:hover {
     color: #dadada;

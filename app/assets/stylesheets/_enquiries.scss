@@ -1,4 +1,25 @@
 body.c-enquiries {
+
+  #enquiries-header .mui-btn--primary {
+    background: #FFF;
+    color: #111;
+    text-transform: none;
+    font-size: 1em;
+    *, & {
+      font-family: $roboto;
+      font-weight: 400;
+    }
+    &.mui-btn {
+      margin-top: 3px;
+      padding: 0 16px;
+    }
+  }
+
+  .input.country {
+    label {
+      padding-right: 10px;
+    }
+  }
   
   .enquiry_first_name {
     margin-top: 50px;
@@ -69,6 +90,10 @@ body.c-enquiries {
     flex: 1;
     p {
       -webkit-font-smoothing: antialiased;
+    }
+    a {
+      color: #FFF;
+      text-decoration: underline;
     }
   }
 

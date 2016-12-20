@@ -26,6 +26,20 @@ body.a-landing {
         color: #FFF;
       }
     }
+    .s-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .slide-content {
+      flex: 1;
+    }
+    .bottom-link {
+      padding: 0;
+      line-height: 90px;
+      background-position: right center;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+    }
   }
 
   #microhouse-render {

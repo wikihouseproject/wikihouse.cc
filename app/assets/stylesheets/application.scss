@@ -130,6 +130,9 @@ a {
   form input {
     padding: 5px;
   }
+  a, a:hover {
+    text-decoration: none;
+  }
 }
 
 .container {

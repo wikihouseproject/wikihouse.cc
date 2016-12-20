@@ -9,6 +9,7 @@
             <% @filenames.each do |filename| %>
               <li><%= link_to_unless_current filename.humanize, enquiry_path(filename.gsub('_','-')) %></li>
             <% end %>
+            <li><%= link_to "Proposing a pilot", propose_a_pilot_path %></li>
           </ul>
         </div>
       </div>

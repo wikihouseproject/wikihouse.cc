@@ -19,6 +19,7 @@
 //= require modernizr.min.js
 //= require jquery-scrollspy
 //= require material-components-web
+//= require swiper
 //= require_tree .
 
 // require materialize

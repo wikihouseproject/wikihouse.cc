@@ -1,8 +1,8 @@
-<div id="homepage-slider" class="main-slider-holder">
-  <div class="slider">
-    <ul>
-      <li style="background-image: url('<%= asset_path('hero.jpg') %>')" class="dark">
-        <div class="fade"></div>
+<div id="homepage-slider" class="main-slider-holder swiper-container">
+  <div class="swiper-wrapper">
+
+      <div class="dark swiper-slide" style="background-image: url('https://i.imgur.com/KRZMY6m.jpg'); background-position: center bottom">
+        <!-- <div class="fade"></div> -->
         <div class="s-container">
           <div class="slide-content">
             <span class="typed">The future of homes<br/> by everyone, for everyone</span>
@@ -11,9 +11,10 @@
           </div>
           <%= link_to "View the github library", library_categories_path, class:'bottom-link dark' %>
         </div>
-      </li>
-      <li class="hidden" style="background-image: url('<%= asset_path('slides/LyntonPepper_CC_BY_1063_ed_sm.jpg') %>')">
-        <div class="fade"></div>
+      </div>
+
+      <div class="swiper-slide" style="background-image: url('https://i.imgur.com/aZ3obzh.jpg'); background-position: top center;">
+        <!-- <div class="fade"></div> -->
         <div class="s-container">
           <div class="slide-content">
             <span class="typed">Custom design,<br/> precision manufacturing</span>
@@ -22,9 +23,10 @@
           </div>
           <%= link_to "Find out more", about_path, class:'bottom-link' %>
         </div>
-      </li>
-      <li class="hidden" style="background-image: url('<%= asset_path('slides/Farmhouse10_WikiHouseFoundation_CC_BY.jpg') %>')">
-        <div class="fade"></div>
+      </div>
+
+      <div class="swiper-slide" style="background-image: url('https://i.imgur.com/pGZW9PN.jpg'); background-position: center center;">
+        <!-- <div class="fade"></div> -->
         <div class="s-container">
           <div class="slide-content">
             <span class="typed">High-performance homes<br/> made simple</span>
@@ -33,7 +35,9 @@
           </div>
           <%= link_to "Watch a video", '#', class:'bottom-link' %>
         </div>
-      </li>
-    </ul>
+      </div>
+
   </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
 </div>

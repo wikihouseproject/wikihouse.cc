@@ -46,7 +46,8 @@ $visual-grid: false;
 @import "things";
 @import "toggle_menu";
 
-// @import "mui";
+@import "swiper";
+
 @import "material-components-web";
 
 * {
@@ -256,7 +257,12 @@ div.mdc-select {
 .mdc-select.mdc-dark {
   padding-left: 12px;
   padding-right: 12px;
-  background-color: #FFF;
   padding-right: 40px;
   background-position: right 10px center;
+  &, &:focus {
+    background-color: #FFF;
+  }
+}
+.mdc-select:focus {
+  background-color: transparent; 
 }

@@ -6,14 +6,16 @@ body.open-menu #side-nav {
   display: none;
   background: #2D2D2D;
   position: fixed;
+  overflow-y: scroll;
   // top: -20px;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 1200;
   display: none;
   padding-top: 2em;
+  padding-bottom: 2em;
 
   .container {
     margin-top: $shortHeaderHeight;

@@ -1,4 +1,5 @@
 <div class="flex drop-shadow">
+
   <div class="half propose">
     <%= link_to propose_a_pilot_path do %>
       <div class="container">
@@ -11,17 +12,19 @@
       </div>
     <% end %>
   </div>
+
   <div class="half stats" id="counts">
     <div class="container">
       <div class="top wr">
         <div class="info"><span class="count" id="c1">30</span> active teams</div>
-        <div class="info"><span class="count" id="c2">804</span> downloads in the last month</div>
+        <!-- <div class="info"><span class="count" id="c2">804</span> downloads in the last month</div> -->
         <div class="info"><span class="count" id="c3">45</span> commits in the last month</div>
-        <div class="info"><span class="count" id="c4">3000</span> files</div>
-        <div class="info"><span class="count" id="c5">3</span> open challenges</div>
+        <!-- <div class="info"><span class="count" id="c4">3000</span> files</div> -->
+        <div class="info"><span class="count" id="c5">5</span> open challenges</div>
       </div>
       <%= link_to "Contribute to R&D", community_path, class: 'bottom-link', style: 'text-transform: none' %>
       <!-- #{fa_icon('github')} -->
     </div>
   </div>
+
 </div>

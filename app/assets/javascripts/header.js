@@ -44,6 +44,13 @@ $(document).on("pjax:success", function() {
 
 $(document).on('pjax:success ready', function() {
 
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    loop: true,
+    slidesPerView: 1
+  });
+
   // $('select').niceSelect()
 
   // if ($('#enquiry-form').length > 0 && $('.enquiry-desc').length > 0) {

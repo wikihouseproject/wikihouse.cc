@@ -44,12 +44,17 @@ $(document).on("pjax:success", function() {
 
 $(document).on('pjax:success ready', function() {
 
-  var swiper = new Swiper('.swiper-container', {
-    pagination: '.swiper-pagination',
+  var swiper = new Swiper('.main-slider-container', {
+    loop: true,
+    slidesPerView: 1
+  })
+
+  var swiper = new Swiper('.sub-slider-container', {
+    pagination: '.sub-slider-pagination',
     paginationClickable: true,
     loop: true,
     slidesPerView: 1
-  });
+  })
 
   // $('select').niceSelect()
 

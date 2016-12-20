@@ -8,6 +8,16 @@ body.a-landing {
   }
   #main {
     background: none;
+
+    .swiper-pagination-bullet {
+      background: transparent;
+      border: 1px solid #000;
+
+    }
+    .swiper-pagination-bullet-active {
+      background: #000;
+      border: 1px solid #000;
+    }
   }
 
   #homepage-slider {
@@ -15,9 +25,6 @@ body.a-landing {
 
     @media screen and (min-width: $break-medium) {
       height: 500px;
-    }
-    .swiper-pagination-bullet-active {
-      background: #FFF;
     }
     .slider {
       padding: 0;

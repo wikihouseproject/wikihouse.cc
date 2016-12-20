@@ -7,7 +7,8 @@ module ApplicationHelper
   def page_classes
     [
       "c-#{controller_name}",
-      "a-#{action_name}"
+      "a-#{action_name}",
+      "lcid-#{params[:library_category_id]}"
       # ('large' if request.path == root_path)
     ].join(" ")
   end

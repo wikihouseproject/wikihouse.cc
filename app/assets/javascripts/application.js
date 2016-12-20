@@ -18,6 +18,7 @@
 //= require countUp
 //= require modernizr.min.js
 //= require jquery-scrollspy
+//= require material-components-web
 //= require_tree .
 
 // require materialize

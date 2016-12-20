@@ -19,7 +19,7 @@ $visual-grid: false;
 @import "unslider-dots";
 
 @import "mixins";
-// @import "typed";
+
 @import "typography";
 
 @import "font-awesome";
@@ -46,7 +46,8 @@ $visual-grid: false;
 @import "things";
 @import "toggle_menu";
 
-@import "mui";
+// @import "mui";
+@import "material-components-web";
 
 * {
   box-sizing: border-box;
@@ -237,4 +238,25 @@ iframe {
   background: #2D2D2D;
   color: #FFF;
   display: none;
+}
+
+div.mdc-select {
+  display: none !important;
+}
+.select-manager {
+  display: inline;
+}
+.interested-in {
+  padding-right: 20px;
+}
+#change-link {
+  display: none;
+}
+
+.mdc-select.mdc-dark {
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #FFF;
+  padding-right: 40px;
+  background-position: right 10px center;
 }

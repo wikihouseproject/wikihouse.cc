@@ -6,7 +6,7 @@
           # label: "My role in the project will be",
           collection: [
           "Client","Architect","Builder","Project manager","Other"
-          ], label: "I am a...", input_html: { class: 'hidden-toggle propose-toggle' }, wrapper: :default %></p>
+          ], label: "I am a...", input_html: { class: 'mdc-select mdc-dark hidden-toggle propose-toggle' }, wrapper: :default %></p>
 
 
 <!--     <div class="mui-dropdown">
@@ -30,12 +30,12 @@
       <%= f.input :email, as: :email, required: true %>
 
       <%= sf.input :organisation, required: true %>
-      <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true, wrapper: :default %>
+      <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
       <%= sf.input :description, as: :text, label: "Outline description of your project", wrapper: :default %>
       <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'], as: :radio_buttons, wrapper: :default %>
       <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'], as: :radio_buttons, wrapper: :default %>
-      <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"], as: :select, wrapper: :default %>
-      <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"], as: :select, wrapper: :default %>
+      <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"], as: :select, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
+      <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"], as: :select, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
       <%= sf.input :services_required,
         label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
         collection: [

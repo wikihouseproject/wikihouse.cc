@@ -4,6 +4,7 @@
       <h1>Contact us</h1>
       <div id="enquiries-header">
         <span>I am interested in...</span>
+        <!-- 
         <div id="enquiries-holder">
           <ul id="enquiries-options">
             <% @filenames.each do |filename| %>
@@ -12,6 +13,20 @@
             <li><%= link_to "Proposing a pilot", propose_a_pilot_path %></li>
           </ul>
         </div>
+        -->
+        <div class="mui-dropdown">
+          <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
+            <%= params[:id].gsub('-',' ').capitalize %>
+            <span class="mui-caret"></span>
+          </button>
+          <ul class="mui-dropdown__menu">
+            <% @filenames.each do |filename| %>
+              <li><%= link_to filename.humanize, enquiry_path(filename.gsub('_','-')) %></li>
+            <% end %>
+            <li><%= link_to "Proposing a pilot", propose_a_pilot_path %></li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </div>

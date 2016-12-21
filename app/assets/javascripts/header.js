@@ -56,7 +56,8 @@ $(document).on('pjax:success ready', function() {
     pagination: '.sub-slider-pagination',
     paginationClickable: true,
     loop: true,
-    slidesPerView: 1
+    slidesPerView: 1,
+    speed: 900
   })
 
   // $('select').niceSelect()

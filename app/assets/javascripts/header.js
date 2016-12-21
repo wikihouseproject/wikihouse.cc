@@ -46,7 +46,10 @@ $(document).on('pjax:success ready', function() {
 
   var swiper = new Swiper('.main-slider-container', {
     loop: true,
-    slidesPerView: 1
+    slidesPerView: 1,
+    autoplay: 3500,
+    autoplayDisableOnInteraction: true,
+    speed: 1000
   })
 
   var swiper = new Swiper('.sub-slider-container', {

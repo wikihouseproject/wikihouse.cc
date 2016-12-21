@@ -29,7 +29,9 @@ module ApplicationHelper
       'icon': nil,
       'type': nil
     }
-    extension = filename.split(".").last.upcase
+    splits = filename.split(".")
+    return info if splits.length == 1
+    extension = splits.last.upcase
     case extension
     when "SKP"
       info['icon'] = image_tag("house-icon.svg")

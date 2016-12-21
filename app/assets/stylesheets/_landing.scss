@@ -58,10 +58,41 @@ body.a-landing {
   }
 
   #microhouse-render {
+    position: relative;
     height: 500px;
-    background: #43442D url(https://i.imgur.com/EbFvGfM.jpg) right 95% no-repeat;
+    background: #43442D url(https://i.imgur.com/EbFvGfM.jpg) bottom -10px right no-repeat;
     background-size: cover;
-    // position: relative;
+
+    // .parallax {
+    //   perspective: 1px;
+    //   height: 100vh;
+    //   overflow-x: hidden;
+    //   overflow-y: auto;
+    // }
+    // .parallax-layer {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    // }
+    // .parallax-layer-base {
+    //   transform: translateZ(0);
+    // }
+    // .parallax-layer-back {
+    //   transform: translateZ(-1px) scale(1.1);
+    //   background: #43442D url(https://i.imgur.com/EbFvGfM.jpg) right 95% no-repeat;
+    //   background-size: cover;
+    //   background-attachment: fixed;
+    //   // background-position: fixed;
+    // }
+    // .parallax-group {
+    //   position: relative;
+    //   height: 100%;
+    //   transform-style: preserve-3d;
+    // }
+
+
     .inner {
       @include oc;
       height: 100%;
@@ -79,6 +110,7 @@ body.a-landing {
       width: calc(100%-50px)
       // padding: 10px 0;
     }
+    
   }
 }
 

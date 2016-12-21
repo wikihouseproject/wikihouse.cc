@@ -3,7 +3,7 @@
   <%= file_info['icon'] %>
 </div>
 <div class="file-details">
-  <span class="file-name"><%= link_to filename, "https://github.com/wikihouseproject/Microhouse/blob/master/#{filename}" %></span>
+  <span class="file-name"><%= link_to filename, "#{url}/blob/master/#{filename}" %></span>
   <span class="file-type"><%= file_info['type'] %></span>
   <span class="file-date"><%= Time.parse(datetime).to_s(:short) %></span>
 </div>

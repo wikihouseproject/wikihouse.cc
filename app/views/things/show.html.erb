@@ -51,7 +51,7 @@
       <ul id="files-list">
         <% @repo.data['files'].each do |file| %>
           <li>
-            <%= render "application/file", filename: file['name'], datetime: file['updated_at'] %>
+            <%= render "application/file", filename: file['name'], datetime: file['updated_at'], url: @repo.url %>
           </li>
         <% end %>
       </ul>

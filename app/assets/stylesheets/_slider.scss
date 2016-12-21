@@ -79,7 +79,7 @@
 .slider {
   @include fill-parent;
   background: #f0f0f0;
-  height: 560px !important;
+  height: 460px;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -102,41 +102,84 @@
   img {
     height: 100%;
   }
-  .slide-container {
-    display: flex;
-    align-items: center;
-    height: 400px;
+  .inner {
+    background-position: center top;
+    background-size: auto 140px;
     background-repeat: no-repeat;
-    background-position: center 30px;
-    background-size: auto 110px;
-    img {
-      height: 600px;
-      margin-right: 20px;
-    }
+    margin-top: -70px;
+  }
+  // .slide-container {
+  //   display: flex;
+  //   align-items: center;
+  //   height: 400px;
+  //   background-repeat: no-repeat;
+  //   img {
+  //     height: 600px;
+  //     margin-right: 20px;
+  //   }
     .description {
-      // @include span-columns(4 of 6);
-      margin-top: 70px;
-      // margin-left: 50%;
+      @include vertical-center;
+      margin-top: 120px;
     }
+  // }
+}
+
+.slide-1 .inner {
+  background-image: image-url("sliders/homepage_sub/laptop@2x.png");
+}
+.slide-2 .inner {
+  background-image: image-url("sliders/homepage_sub/cnc@2x.png");
+}
+.slide-3 .inner {
+  background-image: image-url("sliders/homepage_sub/frame@2x.png");
+}
+.slide-4 .inner {
+  background-image: image-url("sliders/homepage_sub/house@2x.png");
+}
+
+@media screen and (min-width: $break-small) {
+  .slider {
+    .slide-1 .inner { background-size: 48% auto; }
+    .slide-2 .inner { background-size: 48% auto; }
+    .slide-3 .inner { background-size: 48% auto; }
+    .slide-4 .inner { background-size: 48% auto; }
   }
 }
 
 @media screen and (min-width: $break-medium) {
-  .slider {
-    height: 520px;
-    .slide-container {
-      height: 480px;
-      background-position: 5% center;
-      background-size: 48% auto;
-      .description {
-        margin-top: 0;
-        margin-left: 50%;
-        @include span-columns(4);
-      }
+  .slider  {
+    height: 560px;
+    
+    .inner {
+      background-position: 20px center;
+      margin-top: 0;
     }
+
+    // .slide-container {
+    //   height: 480px;
+    //   background-position: left center;
+    .description {
+      margin-top: 0;
+      @include shift(7);
+      @include span-columns(4);
+    }
+    // }
+
   }
 }
 
-.slider-container {
+@media screen and (min-width: $break-large) {
+  .slider  {
+    .slide-1 .inner { background-size: 48% auto; }
+    .slide-2 .inner { background-size: auto 90%; }
+    .slide-3 .inner { background-size: auto 90%; }
+    .slide-4 .inner { background-size: auto 90%; }
+  }
+}
+
+// .sub-slider-container,
+.slider .swiper-slide .inner {
   @include oc;
+  height: 100%;
+  position: relative;
 }

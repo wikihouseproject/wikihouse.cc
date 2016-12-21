@@ -49,10 +49,10 @@ $(document).on('pjax:success ready', function() {
     slidesPerView: 1,
     autoplay: 3500,
     autoplayDisableOnInteraction: true,
-    speed: 1000
+    speed: 900
   })
 
-  var swiper = new Swiper('.sub-slider-container', {
+  var swiper = new Swiper('#secondary-slider', {
     pagination: '.sub-slider-pagination',
     paginationClickable: true,
     loop: true,

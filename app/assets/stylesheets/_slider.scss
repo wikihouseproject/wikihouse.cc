@@ -79,9 +79,10 @@
 .slider {
   @include fill-parent;
   background: #f0f0f0;
-  height: 400px;
+  height: 560px !important;
   width: 100%;
-  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   ul, li {
     height: 100%;
   }

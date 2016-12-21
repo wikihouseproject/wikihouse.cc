@@ -130,7 +130,7 @@
       .description {
         margin-top: 0;
         margin-left: 50%;
-        @include span-columns(5);
+        @include span-columns(4);
       }
     }
   }

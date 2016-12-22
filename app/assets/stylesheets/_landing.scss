@@ -172,7 +172,7 @@ body.a-landing {
   // z-index: 100;
   pointer-events: none;
   user-select: none;
-  background-color: transparent !important;
+  // background-color: transparent !important;
   // @include linear-gradient(
   //   to top,
   //   rgba(#717171, 0.2) 0%,
@@ -183,9 +183,10 @@ body.a-landing {
   // background-size: cover;
   @include linear-gradient(
     to top,
-    rgba(#000, 0.3) 0%,
-    rgba(#000, 0) 40%,
-    rgba(#000, 0) 100%
+    rgba(#000, 0.15) 0%,
+    rgba(#000, 0) 30%,
+    rgba(#000, 0) 70%,
+    rgba(#000, 0.15) 100%
   );
 }
 

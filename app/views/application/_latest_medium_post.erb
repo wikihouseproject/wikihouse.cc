@@ -1,14 +1,14 @@
-<% x = File.open("data/alastairparvin.xml") { |f| Nokogiri::XML(f) } %>
-<% x2 = Nokogiri::XML(x.at_xpath('//item//description')) %>
-
-<div class="half news" style="background: url(<%= x2.at_xpath('//img').attr('src') %>); background-size: cover">
+<div class="half news" style="background: #1C2229 url('<%= @img %>'); background-size: cover; background-position: 83% center;">
+  <%= link_to @url, class: 'wrap' do %>
   <div class="fade"></div>
   <div class="container">
     <%#= link_to x2.at_xpath('//a').attr('href') do %>
       <div class="top wr">
-        <h2><%= x.at_xpath('//item//title').text %></h2>
+        <h2><%= @title %></h2>
       </div>
-      <%= link_to "Read blog post", "https://medium.com/@AlastairParvin/scaling-the-citizen-sector-20a20dbb7a4c", class: 'bottom-link' %>
+      <!-- <span class="bottom-link">Read blog post</span> -->
+      <%= link_to "Read blog post", @url, class: 'bottom-link' %>
     <%# end %>
   </div>
+  <% end %>
 </div>

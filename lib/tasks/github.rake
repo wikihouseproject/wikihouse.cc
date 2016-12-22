@@ -19,9 +19,14 @@ namespace :github do
       stars: doc.css('a.social-count')[1].text.strip.to_i,
       forks: doc.css('a.social-count')[2].text.strip.to_i,
       readme: get_readme(user, project).strip,
-      updated_at: doc.css('span[itemprop=dateModified] relative-time')[0].attr('datetime').strip,
       files: []
     }
+
+    begin
+      h[:updated_at] = doc.css('span[itemprop=dateModified] relative-time')[0].attr('datetime').strip
+    rescue
+    end
+    
     doc.css('table.files tr').each do |file|
       begin
         h[:files] << {

@@ -15,7 +15,6 @@
 //= require lodash.js
 //= require pjax
 //= require countUp
-//= require modernizr.min.js
 //= require jquery-scrollspy
 //= require material-components-web
 //= require swiper

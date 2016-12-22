@@ -14,8 +14,15 @@
 }
 
 .top-description {
-  padding-top: 1em;
+  // display: block;
+  // overflow: hidden;
   padding-bottom: 2em;
+  // overflow: hidden;
+  // position: relative;
+  // p {
+  //   position: relative;
+  //   display: block;
+  // }
 
   @media screen and (min-width: $break-small) {
     @include span-columns(11);
@@ -53,24 +60,26 @@ body.open-menu {
   display: none;
 }
 #sub-header {
+  // overflow: hidden;
+  position: relative;
+  background: #FFF;
+  // background: yellow;
+  // border: 40px solid green;
   $offset: 75px;
-  min-height: $offset;
+  // min-height: $offset;
   margin-top: -$offset;
   padding-top: $offset;
-  // background-color: #FFF;
+  // padding-bottom: $offset;
   width: 100%;
-  // overflow: hidden;
-  // position: absolute;
-  // padding: 1em 0 2em 0;
-  position: relative;
-  // transition: all 10s;
+  // position: relative;
   z-index: 1000;
-
-  // transform: scaleY(0);
-  // transform: scaleY(1);
-  // transform-origin: top;
-  max-height: 100%;
-  // transition: all 0.26s ease;
+  
+  // max-height: 100%;
+  // overflow: hidden;
+  // .container {
+  //   overflow: hidden;
+  //   background: yellow;
+  // }
 }
 
 header {

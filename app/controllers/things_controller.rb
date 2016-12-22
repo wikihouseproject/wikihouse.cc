@@ -9,7 +9,12 @@ class ThingsController < ApplicationController
   end
 
   def show
-    @repo = Repo.find_by(name: params[:id])
+    repos = Repo.where("LOWER(name) = ?", params[:id].downcase)
+    if repos.length > 0
+      @repo = repos.first
+    else
+      redirect_to library_categories_path
+    end
   end
 
 end

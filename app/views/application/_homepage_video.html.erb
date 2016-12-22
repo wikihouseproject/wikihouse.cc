@@ -1,9 +1,14 @@
-<video id="sleep-video" loop autoplay muted>
-  <% if Rails.env.development? %>
-    <source src="<%= asset_path('videos/wikihouse-build-vp9.webm') %>" type='video/webm; codecs="vp9.0"'>
-    <source src="<%= asset_path('videos/wikihouse-build.webm') %>" type='video/webm; codecs="vp8.0"'>
-    <source src="<%= asset_path('videos/wikihouse-build.mp4') %>" type="video/mp4">
-  <% else %>
-    <source src="https://wikihouse.cc/timelapse.webm" type="video/webm">
-  <% end %>
-</video>
+<div class="overlay">
+  <video id="sleep-video" loop autoplay muted controls>
+    <% if Rails.env.development? %>
+      <source src="<%= asset_path('videos/wikihouse-build-vp9.webm') %>" type='video/webm; codecs="vp9.0"'>
+      <source src="<%= asset_path('videos/wikihouse-build.webm') %>" type='video/webm; codecs="vp8.0"'>
+      <source src="<%= asset_path('videos/wikihouse-build.mp4') %>" type="video/mp4">
+    <% else %>
+      <source src="https://wikihouse.cc/timelapse.webm" type="video/webm">
+      <source src="https://static.wikihouse.cc/videos/wikihouse-build-vp9.webm" type='video/webm; codecs="vp9.0"'>
+      <source src="https://static.wikihouse.cc/videos/wikihouse-build.webm" type='video/webm; codecs="vp8.0"'>
+      <source src="https://static.wikihouse.cc/videos/wikihouse-build.mp4" type="video/mp4">
+    <% end %>
+  </video>
+</div>

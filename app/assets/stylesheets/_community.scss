@@ -62,7 +62,9 @@ body.c-static.a-community {
     }
     h4 {
       font-weight: bold;
-      margin: 0;
+      margin: 0 0 0.5em 0;
+      font-size: 1.25em;
+      line-height: 1.4;
     }
     p {
       margin: 0;
@@ -84,7 +86,7 @@ body.c-static.a-community {
       float: left;
     }
     ol > li {
-      margin-bottom: 1em;
+      margin-bottom: 2em;
     }
     .bottom-link {
       color: #000;

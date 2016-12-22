@@ -1,4 +1,12 @@
 class Repo < ApplicationRecord
+
+  def self.total_watchers
+    self.all.map{|r| r.data['info']['watchers_count'] }.sum
+  end
+
+  def self.total_filecount
+    self.all.map{|r| r.data['filecount'] }.sum
+  end
   
   def url
     "https://github.com/#{owner}/#{name}"

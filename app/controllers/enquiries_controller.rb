@@ -1,3 +1,5 @@
+require 'salesseek'
+
 class EnquiriesController < ApplicationController
 
   before_action :set_filenames
@@ -8,14 +10,18 @@ class EnquiriesController < ApplicationController
   end
 
   def show
-    redirect_to enquiries_path unless @filenames.include?(params[:id].gsub("-","_"))
+    redirect_to enquiries_path unless @filenames.include?(clean_id)
   end
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
     
     if @enquiry.save
-      # TODO: send details to salesseek
+      begin
+        SalesSeek.new.post(clean_id)
+      rescue
+      end
+
       begin
         notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
         notifier.ping "#{@enquiry.first_name}",
@@ -52,5 +58,9 @@ class EnquiriesController < ApplicationController
       files = Dir.glob("app/views/enquiries/partials/*.html.erb").sort
       # files = files.insert(-1, files.delete_at(files.index('app/views/enquiries/partials/_something_else.html.erb')) )
       @filenames = files.map{|f| File.basename(f, ".html.erb")[1..-1] }
+    end
+
+    def clean_id
+      params[:id].gsub("-","_").downcase.strip
     end
 end

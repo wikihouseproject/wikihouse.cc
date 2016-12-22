@@ -37,6 +37,16 @@ namespace :github do
       end
     end
     repo.data = h
+
+    url = "https://api.github.com/repos/#{user}/#{project}/contents"
+    data = JSON.parse(open(url).read)
+    h[:filecount] = data.length
+
+    url = "https://api.github.com/repos/#{user}/#{project}"
+    data = JSON.parse(open(url).read)
+    h[:info] = data
+    
+
     repo.save!
   end
 

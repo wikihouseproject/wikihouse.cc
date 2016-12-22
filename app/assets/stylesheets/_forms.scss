@@ -74,6 +74,9 @@ form.new_enquiry {
       color: #FFF;
     }
     input:focus     { outline:none; }
+  
+  // LABEL
+
     label          {
       color:#999; 
       font-size:18px;
@@ -86,14 +89,19 @@ form.new_enquiry {
     }
 
     /* active state */
+    // input:placeholder-shown ~ label,
     input:focus ~ label,
-    input:placeholder-shown ~ label,
     input:valid ~ label
     {
       top:-20px;
       font-size:14px;
-      color: white;
+      color: white !important;
     }
+    input:invalid {
+      color: red;
+    }
+
+  // BOTTOM BARS
 
     .bar  { position:relative; display:block; max-width:350px;
       width: 100%; }
@@ -113,10 +121,14 @@ form.new_enquiry {
       right:50%; 
     }
 
-    /* active state */
+  // active state
+
     input:focus ~ .bar:before, input:focus ~ .bar:after {
       width:50%;
     }
+    
+  // HIGHLIGHTER
+    
     .highlight {
       position:absolute;
       height:60%; 
@@ -136,6 +148,7 @@ form.new_enquiry {
       from  { background:white; }
       to    { width:0; background:transparent; }
     }
+
   }
 }
 

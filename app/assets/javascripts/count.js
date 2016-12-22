@@ -1,10 +1,9 @@
 window.doCount = function() {
-  var i = 1;
   try {
-    $('.count').each(function(el) {
-      var numAnim = new CountUp( ("c"+i), 0, parseInt($(this).html()));
-      numAnim.start();
-      i++;
+    $('span.count').each(function(el) {
+      var end = parseInt($(this).text())
+      var numAnim = new CountUp( $(this).attr('id'), 0, end, 0, 2.5)
+      numAnim.start()
     });
   } catch(e) {}
 }

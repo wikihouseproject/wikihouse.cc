@@ -1,5 +1,15 @@
 body.c-enquiries {
 
+  .enquiry-form {
+    @include fill-parent;
+    @media screen and (min-width: $break-small) {
+      @include span-columns(9);
+    }
+    @media screen and (min-width: $break-medium) {
+      @include span-columns(8);
+    }
+  }
+
   #enquiries-header .mui-btn--primary {
     background: #FFF;
     color: #111;
@@ -75,12 +85,6 @@ body.c-enquiries {
     width: 100%;
     clear: both;
     float: none !important;
-    @media screen and (min-width: $break-small) {
-      @include span-columns(9);
-    }
-    @media screen and (min-width: $break-medium) {
-      @include span-columns(6);
-    }
   }
 
   #enquiries-container {

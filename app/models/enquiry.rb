@@ -13,7 +13,9 @@ class Enquiry < ApplicationRecord
     :expenses,
     :speaking_fee,
     :notes,
-    :role
+    :role,
+    :wants_to,
+    :event_name
 
   validates_presence_of :first_name, :email
 

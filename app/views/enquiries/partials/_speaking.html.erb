@@ -1,12 +1,15 @@
-<h3>Event Details</h3>
-
-<%= f.input :organisation, label: "Event Name", as: :string, required: true %>
+<%= f.input :organisation, as: :string, required: true %>
 <%= f.input :role, required: true, label: "Your Role" %>
 
+<h3>Event Details</h3>
+
+<%= f.input :event_name, as: :string, required: true %>
 <%= f.input :event_start_date, as: :date, wrapper: :default, start_year: Date.today.year, end_year: Date.today.year + 4, include_blank: true, input_html: { class: 'mdc-select mdc-dark' } %>
 <%= f.input :event_end_date, as: :date, include_blank: true, wrapper: :default, start_year: Date.today.year, end_year: Date.today.year + 4, input_html: { class: 'mdc-select mdc-dark' } %>
 
 <%= f.input :about_event, as: :text, wrapper: :default, label: "About the event" %>
+
+<h3>Speaker Details</h3>
 
 <%= f.input :requested_speaker, wrapper: :default, collection:[
     ["Alastair Parvin (Co-Founder)", "alastair_parvin"],
@@ -18,6 +21,8 @@
 
 <%= f.input :speaking_fee, as: :boolean, wrapper: :default, label: "Speaking fee?".html_safe %>
 <%= f.input :expenses, as: :boolean, label: "Expenses included?".html_safe, wrapper: :default %>
+
+<h3>Anything Else?</h3>
 
 <%= f.input :message, as: :text, wrapper: :default %>
 

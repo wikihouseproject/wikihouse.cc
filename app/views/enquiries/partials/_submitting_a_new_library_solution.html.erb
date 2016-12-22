@@ -9,9 +9,9 @@
 <p>Before submitting your solution, please make sure you have read <%= link_to "the WikiHouse terms", terms_path %>. After you submitted your solution, one of the WikiHouse Foundation team will be in touch.</p>
 </div>
 
-<%= f.input :country, label: "Your country", required: true, as: :country, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
+<%= f.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
 
-<%= f.input :name_of_solution, label: "Name of solution", required: true %>
+<%= f.input :name_of_solution, label: "Name of your solution", required: true %>
 
 <p>WikiHouse types are named based on their physical description (eg LongHouse). WikiHouse technologies are named after animals which reflect their geography or function. (eg Wren)</p><br/>
 

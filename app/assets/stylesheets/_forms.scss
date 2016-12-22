@@ -77,7 +77,7 @@ form.new_enquiry {
   
   // LABEL
 
-    label          {
+    label {
       color:#999; 
       font-size:18px;
       font-weight:normal;
@@ -95,10 +95,15 @@ form.new_enquiry {
     {
       top:-20px;
       font-size:14px;
-      color: white !important;
+      color: white;
     }
+
     input:invalid {
       color: red;
+    }
+
+    input:invalid:focus {
+      color: #FFF;
     }
 
   // BOTTOM BARS

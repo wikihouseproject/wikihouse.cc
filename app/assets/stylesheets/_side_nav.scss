@@ -1,8 +1,4 @@
-body.open-menu #side-nav {
-  display: block;
-}
-
-#side-nav {
+#overlay {
   display: none;
   background: #2D2D2D;
   position: fixed;
@@ -13,14 +9,19 @@ body.open-menu #side-nav {
   width: 100vw;
   height: 100vh;
   z-index: 1200;
-  display: none;
   padding-top: 2em;
   padding-bottom: 2em;
-
   .container {
     margin-top: $shortHeaderHeight;
   }
+  video {
+    width: 100%;
+    display: none;
+  }
+}
 
+#side-nav {
+  display: none;
   ul, li {
     padding: 0;
     margin: 0;
@@ -43,3 +44,16 @@ body.open-menu #side-nav {
     color: #dadada;
   }
 }
+
+body.overlay-visible {
+  #overlay {
+    display: block !important;
+  }
+  &.side-nav #side-nav {
+    display: block !important;
+  }
+  &.video video {
+    display: block !important;
+  }
+}
+

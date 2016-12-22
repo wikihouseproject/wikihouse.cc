@@ -131,6 +131,9 @@ a {
   @include oc;
   width: 100%;
   margin: 0 auto;
+  & > a.wrap {
+    flex: 1;
+  }
   h3 {
     margin-top: 0;
   }

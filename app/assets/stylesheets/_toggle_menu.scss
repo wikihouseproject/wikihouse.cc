@@ -74,7 +74,7 @@ $splitHeight: $height/5;
     top: $splitHeight * 4;
   }
 
-  body.open-menu {
+  body.overlay-visible {
 
     .toggle-menu span:nth-child(1) {
       top: $splitHeight * 2;

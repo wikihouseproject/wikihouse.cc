@@ -32,19 +32,34 @@
     <div id="main" role="main"><div data-body-class="<%= page_classes %>"><%= yield %></div></div>
     <%= render "application/footer" %>
 
-    <div id="side-nav">
+    <div id="overlay">
       <div class="container">
-        <ul>
-          <li class="mobile-only-link"><%= link_to "About", about_path %></li>
-          <li class="mobile-only-link"><%= link_to "Library", library_categories_path %></li>
-          <li class="mobile-only-link"><%= link_to "R&D", community_path %></li>
-          <li class="mobile-only-link"><%= link_to "Partners", partners_path %></li>
+        <video id="sleep-video" loop autoplay muted controls>
+          <% if Rails.env.development? %>
+            <source src="<%= asset_path('videos/wikihouse-build-vp9.webm') %>" type='video/webm; codecs="vp9.0"'>
+            <source src="<%= asset_path('videos/wikihouse-build.webm') %>" type='video/webm; codecs="vp8.0"'>
+            <source src="<%= asset_path('videos/wikihouse-build.mp4') %>" type="video/mp4">
+          <% else %>
+            <source src="https://wikihouse.cc/timelapse.webm" type="video/webm">
+            <source src="https://static.wikihouse.cc/videos/wikihouse-build-vp9.webm" type='video/webm; codecs="vp9.0"'>
+            <source src="https://static.wikihouse.cc/videos/wikihouse-build.webm" type='video/webm; codecs="vp8.0"'>
+            <source src="https://static.wikihouse.cc/videos/wikihouse-build.mp4" type="video/mp4">
+          <% end %>
+        </video>
 
-          <li><%= link_to "Propose a pilot", propose_a_pilot_path %></li>
-          <li><%= link_to "About WikiHouse Foundation", about_wikihouse_foundation_path %></li>
-          <li><%= link_to "Contact Us", enquiries_path %></li>
-          <li><%= link_to "Donate", donate_path %></li>
-        </ul>
+        <div id="side-nav">
+          <ul id="overlay-nav">
+            <li class="mobile-only-link"><%= link_to "About", about_path %></li>
+            <li class="mobile-only-link"><%= link_to "Library", library_categories_path %></li>
+            <li class="mobile-only-link"><%= link_to "R&D", community_path %></li>
+            <li class="mobile-only-link"><%= link_to "Partners", partners_path %></li>
+
+            <li><%= link_to "Propose a pilot", propose_a_pilot_path %></li>
+            <li><%= link_to "About WikiHouse Foundation", about_wikihouse_foundation_path %></li>
+            <li><%= link_to "Contact Us", enquiries_path %></li>
+            <li><%= link_to "Donate", donate_path %></li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>

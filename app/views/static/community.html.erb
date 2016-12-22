@@ -9,6 +9,7 @@
 
 <div class="flex">
   <div class="half wren">
+    <%= link_to library_category_thing_path(library_category_id: 'tools', id: 'Wren'), class: 'wrap', style: 'color: #000' do %>
     <div class="container">
         <div class="top">
           <h2>WREN v4.3</h2>
@@ -17,6 +18,7 @@
         </div>
       <%= link_to "View WREN v4.3 in the library", library_category_thing_path(library_category_id: 'tools', id: 'Wren'), class: 'bottom-link dark' %>
     </div>
+    <% end %>
   </div>
   <div class="half connect">
     <div class="container">

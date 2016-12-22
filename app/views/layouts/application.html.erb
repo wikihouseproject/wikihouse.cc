@@ -34,7 +34,7 @@
 
     <div id="overlay">
       <div class="container">
-        <video id="sleep-video" loop autoplay muted controls>
+        <video id="sleep-video" muted>
           <% if Rails.env.development? %>
             <source src="<%= asset_path('videos/wikihouse-build-vp9.webm') %>" type='video/webm; codecs="vp9.0"'>
             <source src="<%= asset_path('videos/wikihouse-build.webm') %>" type='video/webm; codecs="vp8.0"'>

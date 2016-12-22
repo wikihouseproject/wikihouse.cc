@@ -86,14 +86,15 @@ $(document).on('ready', function() {
 
   $('#main').on('click', '#video-toggle', function (event) {
     event.preventDefault()
+    document.getElementById('sleep-video').currentTime = 0
+    document.getElementById('sleep-video').play()
     $('body').removeClass('side-nav')
     $('body').addClass('overlay-visible video')
-    document.getElementById('sleep-video').currentTime = 0;
   })
 
-  $('#overlay').on('click', 'video', function (event) {
-    event.stopPropogation()
-  })
+  // $('#overlay').on('click', 'video', function (event) {
+  //   event.stopPropogation()
+  // })
 
   $('#overlay').on('click', 'a', function (event) {
     $('.ink').removeClass('animate')

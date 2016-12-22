@@ -41,9 +41,9 @@ $(document).on('pjax:success ready', function() {
   var swiper = new Swiper('.main-slider-container', {
     loop: true,
     slidesPerView: 1,
-    autoplay: 3500,
+    autoplay: 5000,
     autoplayDisableOnInteraction: true,
-    speed: 900
+    speed: 1100
   })
 
   var swiper = new Swiper('#secondary-slider', {
@@ -51,7 +51,7 @@ $(document).on('pjax:success ready', function() {
     paginationClickable: true,
     loop: true,
     slidesPerView: 1,
-    speed: 900
+    speed: 1100
   })
 
   // $('select').niceSelect()

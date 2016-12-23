@@ -39,16 +39,16 @@
       <%= sf.input :services_required,
         label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
         collection: [
-        "Project management",
         "Outline design",
         "Planning application",
         "Detail design",
         "Engineering / checking",
         "CNC manufacturing",
-        "Site and foundations work",
-        "Assembly",
-        "Services and electrics",
-        "R&D, developing new solutions"
+        "Construction management",
+        "Site and foundations contractor",
+        "Part or full assembly contractor",
+        "Electrical / plumbing contractors",
+        "Project support from WikiHouse Foundation"
         ], as: :check_boxes, wrapper: :default %>
       <%= sf.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text, wrapper: :default %>
       <%= f.invisible_captcha :subtitle %>

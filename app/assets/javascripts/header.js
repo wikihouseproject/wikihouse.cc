@@ -46,7 +46,7 @@ $(document).on('pjax:success ready', function() {
     autoplay: 5000,
     autoplayDisableOnInteraction: true,
     speed: dragspeed,
-    grabCursor: true
+    // grabCursor: true
   })
 
   var swiper = new Swiper('#secondary-slider', {
@@ -55,7 +55,7 @@ $(document).on('pjax:success ready', function() {
     loop: true,
     slidesPerView: 1,
     speed: dragspeed,
-    grabCursor: true
+    // grabCursor: true
   })
 
   // $('select').niceSelect()
@@ -93,7 +93,9 @@ $(document).on('ready', function() {
     var video = document.getElementById('sleep-video')
     video.innerHTML = video.innerHTML.replace('<!--','').replace('-->','')
     video.load()
-    video.currentTime = 0
+    if (video.readyState === 4 && !isNaN(video.duration)) {
+      video.currentTime = 0
+    }
     video.play()
     $('body').removeClass('side-nav')
     $('body').addClass('overlay-visible video')

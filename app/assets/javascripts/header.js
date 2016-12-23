@@ -38,12 +38,14 @@ $(document).on("pjax:success", function() {
 
 $(document).on('pjax:success ready', function() {
 
+  var dragspeed = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) ? 300 : 1100
+
   var swiper = new Swiper('.main-slider-container', {
     loop: true,
     slidesPerView: 1,
     autoplay: 5000,
     autoplayDisableOnInteraction: true,
-    speed: 1100,
+    speed: dragspeed,
     grabCursor: true
   })
 
@@ -52,7 +54,7 @@ $(document).on('pjax:success ready', function() {
     paginationClickable: true,
     loop: true,
     slidesPerView: 1,
-    speed: 1100,
+    speed: dragspeed,
     grabCursor: true
   })
 

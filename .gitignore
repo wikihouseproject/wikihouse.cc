@@ -17,7 +17,7 @@
 .byebug_history
 *.webm
 public/videos/*
-.env
+*.env
 donators.json
 donations.rb
 donation-names

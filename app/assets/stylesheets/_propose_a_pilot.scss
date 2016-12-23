@@ -26,8 +26,8 @@ body.c-static.a-propose_a_pilot {
     .slide-content {
       text-shadow: 2px 2px 16px rgba(#717171, 0.4);
       @media screen and (min-width: $break-medium) {
-        @include span-columns(8);
-        @include shift(1);
+        @include span-columns(6);
+        // @include shift(1);
       }
     }
     .fade {

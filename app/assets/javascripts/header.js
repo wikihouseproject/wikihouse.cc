@@ -88,8 +88,11 @@ $(document).on('ready', function() {
 
   $('#main').on('click', '#video-toggle', function (event) {
     event.preventDefault()
-    document.getElementById('sleep-video').currentTime = 0
-    document.getElementById('sleep-video').play()
+    var video = document.getElementById('sleep-video')
+    video.innerHTML = video.innerHTML.replace('<!--','').replace('-->','')
+    video.load()
+    video.currentTime = 0
+    video.play()
     $('body').removeClass('side-nav')
     $('body').addClass('overlay-visible video')
   })

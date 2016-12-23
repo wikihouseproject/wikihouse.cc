@@ -8,11 +8,11 @@ Yes. Over the next years we are aiming to grow a register of architects, CNC man
 
 ## Can I contribute to research and development?
 
-Yes, WikiHouse technologies are being developed by an open, collaborative community of designers, technologists and researchers, developing common solutions and standards. You can help test, document and develop existing WikiHouse technologies or submit new technologies which share the same core WikiHouse principles. If you’re working on something you think could be valuable, get in touch.
+Yes, WikiHouse technologies are being developed by an open, collaborative community of designers, technologists and researchers, developing common solutions and standards. You can help test, document and develop existing WikiHouse technologies or submit new technologies which share the same core WikiHouse principles. If you’re working on something you think could be valuable, [get in touch](/contact-us).
 
 ## Do I need to sign up to github to contribute?
 
-Like most open source project, WikiHouse current uses github for file sharing and version control. However, if you have developed
+Like most open source project, WikiHouse current uses [github](https://github.com/wikihouseproject) for file sharing and version control. However, if you have developed
 
 ## How robust is the ‘Wren’ timber chassis system?
 
@@ -20,7 +20,7 @@ Very. The WREN chassis system uses interlocked structural plywood to make a robu
 
 ## What is the lifetime of the structure?
 
-Indefinite, providing that it is properly protected and maintained. WikiHouse WREN is simply a more advanced version of a timber frame; a construction technique established over centuries. Also, because WikiHouses are modular, they are easier to mend, maintain and adapt than most houses.
+Indefinite, providing that it is properly protected and maintained. [WikiHouse WREN](/library/technologies/structure/Wren) is simply a more advanced version of a timber frame; a construction technique established over centuries. Also, because WikiHouses are modular, they are easier to mend, maintain and adapt than most houses.
 
 ## What foundations does it use?
 
@@ -28,7 +28,7 @@ The Wren system can use any kind of foundation. The structure sits onto timber �
 
 ## Can I just download a design from the WikiHouse website and build it?
 
-Yes. All WikiHouse design information is open source, which means anyone can access,  use or improve it. However, you are entirely responsible for its use and for your own project. You must always comply with local regulation and professional safety checks. It is hoped that WikiHouse information will make that process easier, but it comes with no guarantee, and no liability for its use can be passed back to WikiHouse Foundation or contributors to the WikiHouse project. Please note also that the technologies shared are still in development, You can read our full terms of use here.
+Yes. All WikiHouse design information is open source, which means anyone can access, use or improve it. However, you are entirely responsible for its use and for your own project. You must always comply with local regulation and professional safety checks. It is hoped that WikiHouse information will make that process easier, but it comes with no guarantee, and no liability for its use can be passed back to WikiHouse Foundation or contributors to the WikiHouse project. Please note also that the technologies shared are still in development, You can read our full [terms of use here](/terms).
 
 ## Can I build it myself?
 
@@ -68,7 +68,7 @@ Yes, however over months and years some of the parts may tighten, meaning that s
 
 ## Where can I find a CNC fabricator?
 
-There is already a wide network of workshops providing CNC cutting services around the UK, Europe and USA. You can find one using directories such as FabHub or 100K Garages, or get in touch with us about your project, and we’ll see if we can help you find one.
+There is already a wide network of workshops providing CNC cutting services around the UK, Europe and USA. You can find one using directories such as FabHub or 100K Garages, or [get in touch with us about your project](/propose-a-pilot), and we’ll see if we can help you find one.
 
 ## How can I support the WikiHouse project and accelerate development?
 

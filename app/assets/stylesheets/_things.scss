@@ -59,7 +59,11 @@ body.c-things {
       opacity: 1;
     }
     img {
-      max-height: 300px;
+      width: 100%;
+      @media screen and (min-width: $break-small) {
+        max-height: 300px;
+      }
+      
     }
   }
 

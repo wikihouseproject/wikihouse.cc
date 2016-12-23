@@ -1,7 +1,7 @@
 body.c-enquiries {
 
   .enquiry-form {
-    @include fill-parent;
+    @include span-columns(11);
     @media screen and (min-width: $break-small) {
       @include span-columns(10);
     }

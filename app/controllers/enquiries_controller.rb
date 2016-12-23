@@ -17,10 +17,10 @@ class EnquiriesController < ApplicationController
     @enquiry = Enquiry.new(enquiry_params)
     
     if @enquiry.save
-      begin
-        SalesSeek.new.post(clean_id)
-      rescue
-      end
+      # begin
+      #   SalesSeek.new.post(clean_id)
+      # rescue
+      # end
 
       begin
         notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')

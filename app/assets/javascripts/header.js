@@ -40,16 +40,16 @@ $(document).on('pjax:success ready', function() {
 
   var dragspeed = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) ? 300 : 1100
 
-  var swiper = new Swiper('.main-slider-container', {
+  var swiper1 = new Swiper('.main-slider-container', {
     loop: true,
     slidesPerView: 1,
-    autoplay: 5000,
+    autoplay: 9000,
     autoplayDisableOnInteraction: true,
     speed: dragspeed,
     // grabCursor: true
   })
 
-  var swiper = new Swiper('#secondary-slider', {
+  var swiper2 = new Swiper('.secondary-slider', {
     pagination: '.sub-slider-pagination',
     paginationClickable: true,
     loop: true,

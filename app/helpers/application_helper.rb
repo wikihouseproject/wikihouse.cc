@@ -8,7 +8,8 @@ module ApplicationHelper
     [
       "c-#{controller_name}",
       "a-#{action_name}",
-      "lcid-#{params[:library_category_id]}"
+      "lcid-#{params[:library_category_id]}",
+      "id-#{params[:id]}"
       # ('large' if request.path == root_path)
     ].join(" ")
   end

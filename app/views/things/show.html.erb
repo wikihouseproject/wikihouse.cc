@@ -2,9 +2,7 @@
   <div class="container">
     <div class="top-description">
       <h1>
-        <%= link_to "Library", library_categories_path %> /
-        <%= link_to params[:library_category_id].capitalize, library_category_path(id: params[:library_category_id]) %> /
-        <%= @repo.name %>
+        <%= @breadcrumbs.map{ |crumb, link| link_to(crumb, link)}.join(" / ").html_safe %>
       </h1>
     </div>
   </div>
@@ -43,7 +41,11 @@
       </div>
 
       <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network", class: 'data' %></p>
+      
+      <% if @repo.data['updated_at'] %>
       <p><strong>Latest Update</strong><span class="data"><%= Time.parse(@repo.data['updated_at']).to_s(:short) %></span></p>
+      <% end %>
+      
       <hr/>
       <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
       <!-- <hr/> -->

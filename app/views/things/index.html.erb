@@ -1,6 +1,12 @@
 <% content_for :header do %>
   <div class="container">      <div class="top-description">
-  <h1><%= link_to "Library", library_categories_path %> / <%= params[:library_category_id].capitalize %></h1></div></div>
+  <h1>
+    <%= link_to "Library", library_categories_path %>
+    / <%= link_to params[:library_category_id].capitalize, library_category_things_path(library_category_id: params[:library_category_id]) %>
+    <% if params[:id] %>
+    / <%= params[:id].capitalize %>
+    <% end %>
+  </h1></div></div>
 <% end %>
 
 <% @repos.each do |repo| %>
@@ -16,7 +22,7 @@
       <div class="container">
         <h2><%= repo.name %></h2>
         <!-- <p>MicroHouse is a high-performance, one-bed house type, designed using the WikiHouse building system. It uses WikiHouse products WREN and SPARROW. It has been designed primarily for use in the UK, but could also be adapted for other countries and regions. The home can be largely self-assembled, and costs around £37,000 GBP to produce.</p> -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+        <%= simple_format(repo.data['info']['description']) %>
       </div>
     </div>
   </div>

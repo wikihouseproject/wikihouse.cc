@@ -1,5 +1,9 @@
 body.c-things {
 
+  .top-description {
+    @include fill-parent();
+  }
+
   .side-item {
     &.contributors, &.hosts {
       display: none;

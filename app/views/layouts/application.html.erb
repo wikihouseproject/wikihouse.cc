@@ -17,20 +17,17 @@
       (function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
     </script>
 
-    <meta property="og:title" content="<%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %>">
-    <meta property="og:description" content="WikiHouse is a collaborative R&D project to bring about a digital revolution in the way we make homes.">
-    <meta property="og:image" content="https://static.wikihouse.cc/social.png">
-    <meta property="og:url" content="<%= request.url %>">
-    <meta property="twitter:card" content="summary_large_image">
-    
-    <meta property="og:site_name" content="WikiHouse">
-    <meta property="twitter:site" content="@WikiHouse">
-<!-- 
-    <meta property="twitter:image:src" content="https://static.wikihouse.cc/twitter.png">    
-    <meta property="twitter:url" content="<%= request.url %>">
-    <meta property="twitter:description" content="WikiHouse is a collaborative R&D project to bring about a digital revolution in the way we make homes.">
-    <meta property="twitter:title" content="<%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %>">
- -->
+    <meta property="og:title" content="<%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %>" />
+    <meta property="og:description" content="WikiHouse is a collaborative R&D project to bring about a digital revolution in the way we make homes." />
+    <meta property="og:image" content="https://static.wikihouse.cc/social.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="<%= request.url %>" />
+    <meta property="og:site_name" content="WikiHouse" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@WikiHouse" />
   </head>
 
   <body class="site <%= page_classes %>">

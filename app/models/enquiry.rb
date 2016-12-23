@@ -17,6 +17,6 @@ class Enquiry < ApplicationRecord
     :wants_to,
     :event_name
 
-  validates_presence_of :first_name, :email
+  # validates_presence_of :first_name, :email
 
 end

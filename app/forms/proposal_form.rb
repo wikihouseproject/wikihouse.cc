@@ -14,14 +14,14 @@ class ProposalForm < Reform::Form
   property :services_required
   property :anything_else
 
-  validates :name,
-            :email_address,
-            :role,
-            :country,
-            :has_site,
-            :has_budget,
-            :has_planning,
-            :has_mortgage,
-            presence: true
+  # validates :name,
+  #           :email_address,
+  #           :role,
+  #           :country,
+  #           :has_site,
+  #           :has_budget,
+  #           :has_planning,
+  #           :has_mortgage,
+  #           presence: true
 
 end

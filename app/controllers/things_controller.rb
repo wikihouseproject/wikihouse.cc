@@ -17,10 +17,10 @@ class ThingsController < ApplicationController
     split_path.each_with_index do |crumb, index|
       @breadcrumbs.push([crumb.capitalize, ['',split_path[0..index]].flatten.join("/") ])
     end
-    @breadcrumbs = @breadcrumbs
 
     if repos.length > 0
       @repo = repos.first
+      @breadcrumbs.last[0] = @repo.name
     else
       redirect_to library_categories_path
     end

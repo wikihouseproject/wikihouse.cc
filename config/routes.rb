@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :library_categories, path: 'library' do
     resources :things, path: ''
   end
-  resources :enquiries, path: 'contact-us'
+  resources :enquiries, path: 'contact-us' do
+    get 'preview', on: :member
+  end
+
   resources :donations
 
 

@@ -1,0 +1,10 @@
+<h1><%= @enquiry.class %></h1>
+<h3><%= @enquiry.first_name %> <%= @enquiry.last_name %> (<%= @enquiry.email %>)</h3>
+
+<table>
+<% @enquiry.data.reject{|k,v| v.blank?}.each do |k,v| %>
+<tr>
+  <th><%= k %></th><td><%= v %></td>
+</tr>
+<% end %>
+</table>

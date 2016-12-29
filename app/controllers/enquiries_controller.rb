@@ -5,6 +5,11 @@ class EnquiriesController < ApplicationController
   before_action :set_filenames
   invisible_captcha only: [:create], honeypot: :subtitle
 
+  def preview
+    @enquiry = Enquiry.find(params[:id])
+    render :preview, layout: false
+  end
+
   def index
     redirect_to enquiry_path(@filenames[0].gsub("_","-"))
   end

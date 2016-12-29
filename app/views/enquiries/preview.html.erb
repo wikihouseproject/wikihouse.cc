@@ -1,13 +1,14 @@
-<h1><%= @enquiry.kind.gsub('-',' ').humanize %></h1>
-<h3><%= @enquiry.first_name %> <%= @enquiry.last_name %> (<%= mail_to @enquiry.email %>)</h3>
-
 <%= simple_format(@enquiry.data['description'])%>
 <%= simple_format(@enquiry.data['message'])%>
+
+<p>- <%= @enquiry.first_name %> <%= @enquiry.last_name %> (<%= mail_to @enquiry.email %>)</p>
+
+<hr />
 
 <table>
   <% @enquiry.data.reject{|k,v| v.blank? || k == 'description' || k == 'message' }.each do |k,v| %>
     <tr style="vertical-align: top; text-align: left;">
-      <th><%= k.humanize %></th>
+      <th style="padding-right: 20px;"><p><%= k.humanize %></p></th>
       <td><%= simple_format( v.is_a?(Array) ? v.reject(&:blank?).join("\n") : v) %></td>
     </tr>
   <% end %>

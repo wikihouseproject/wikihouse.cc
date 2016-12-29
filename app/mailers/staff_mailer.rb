@@ -5,14 +5,12 @@ class StaffMailer < ApplicationMailer
   #
   #   en.staff_mailer.proposal.subject
   #
-  def proposal
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
-  end
 
   def enquiry enquiry_id
     @enquiry = Enquiry.find(enquiry_id)
-    mail to: "john@bitsushi.com"
+    mail to: "john@bitsushi.com",
+      reply_to: "#{@enquiry.first_name} #{@enquiry.last_name} <#{@enquiry.email}>",
+      subject: @enquiry.kind.gsub('-',' ').humanize,
+      from: "WikiHouse.cc <no-reply@wikihouse.cc>"
   end
 end

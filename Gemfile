@@ -38,6 +38,7 @@ gem 'simple_form'
 gem 'redcarpet'
 gem 'dotenv-rails'
 gem 'reform-rails'
+gem 'mailgun_rails'
 
 group :production do
   gem 'rails_12factor'

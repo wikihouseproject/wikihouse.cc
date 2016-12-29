@@ -10,4 +10,9 @@ class StaffMailer < ApplicationMailer
 
     mail to: "to@example.org"
   end
+
+  def enquiry enquiry_id
+    @enquiry = Enquiry.find(enquiry_id)
+    mail to: "john@bitsushi.com"
+  end
 end

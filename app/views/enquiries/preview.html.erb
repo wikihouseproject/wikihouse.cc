@@ -1,15 +1,27 @@
 <%= simple_format(@enquiry.data['description'])%>
 <%= simple_format(@enquiry.data['message'])%>
 
-<p>- <%= @enquiry.first_name %> <%= @enquiry.last_name %> (<%= mail_to @enquiry.email %>)</p>
+<p>- <%= @enquiry.first_name %> <%= @enquiry.last_name %></p>
 
+<br/>
 <hr />
 
 <table>
-  <% @enquiry.data.reject{|k,v| v.blank? || k == 'description' || k == 'message' }.each do |k,v| %>
+  <% data = {
+    'organisation'=> @enquiry.data['organisation'],
+    'role'=> @enquiry.data['role'],
+    'country'=> @enquiry.data['country']
+  }.merge(@enquiry.data) %>
+  <% data.reject{|k,v| v.blank? || k == 'description' || k == 'message' }.each do |k,v| %>
     <tr style="vertical-align: top; text-align: left;">
       <th style="padding-right: 20px;"><p><%= k.humanize %></p></th>
-      <td><%= simple_format( v.is_a?(Array) ? v.reject(&:blank?).join("\n") : v) %></td>
+      <td>
+        <% if k == "country" %>
+        <p><%= @enquiry.country_name %></p>
+        <% else %>
+        <%= simple_format( v.is_a?(Array) ? v.reject(&:blank?).join("\n") : v) %>
+        <% end %>
+      </td>
     </tr>
   <% end %>
 </table>

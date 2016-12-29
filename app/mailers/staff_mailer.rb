@@ -8,9 +8,9 @@ class StaffMailer < ApplicationMailer
 
   def enquiry enquiry_id
     @enquiry = Enquiry.find(enquiry_id)
-    mail to: "john@bitsushi.com",
+    mail to: "admin@wikihouse.cc",
       reply_to: "#{@enquiry.first_name} #{@enquiry.last_name} <#{@enquiry.email}>",
-      subject: @enquiry.kind.gsub('-',' ').humanize,
-      from: "WikiHouse.cc <no-reply@wikihouse.cc>"
+      subject: "[WikiHouse] #{@enquiry.kind.gsub('-',' ').humanize} enquiry",
+      from: "#{@enquiry.first_name} #{@enquiry.last_name} <no-reply@#{ENV.fetch('mailgun_domain')}>"
   end
 end

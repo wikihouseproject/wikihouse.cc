@@ -20,7 +20,7 @@ class EnquiriesController < ApplicationController
 
   def create
     @enquiry = Enquiry.new(enquiry_params)
-    
+
     if @enquiry.save
       # begin
       #   SalesSeek.new.post(cleaned(enquiry_params[:kind]))
@@ -42,6 +42,11 @@ class EnquiriesController < ApplicationController
           }]
       rescue
         Rails.logger.info "unable to connect to slack for enquiry: #{@enquiry.id}"
+      end
+
+      begin
+        StaffMailer.enquiry(@enquiry.id).deliver
+      rescue
       end
 
       respond_to do |format|

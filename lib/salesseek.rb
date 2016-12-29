@@ -6,7 +6,7 @@ class SalesSeek
   attr_accessor :email, :password, :client, :cookies
 
   CATEGORIES = {
-    'students' => ENV.fetch('salesseek_students'),
+    'student_enquiry' => ENV.fetch('salesseek_students'),
     'providers' => ENV.fetch('salesseek_providers'),
     'speaking_requests' => ENV.fetch('salesseek_speaking_requests'),
     'job_enquiries' => ENV.fetch('salesseek_job_enquiries'),
@@ -28,7 +28,9 @@ class SalesSeek
     cookies = login
     r = RestClient.post url_for("individuals"), payload.to_json, { cookies: cookies, content_type: :json }
     json = JSON.parse(r)
-    RestClient.put url_for("groups/#{CATEGORIES[type]}/items/#{json['id']}"), nil, {cookies: cookies}
+    url = url_for("groups/#{CATEGORIES[type]}/items/#{json['id']}")
+    p url
+    RestClient.put url, nil, {cookies: cookies}
   end
 
   def url_for path

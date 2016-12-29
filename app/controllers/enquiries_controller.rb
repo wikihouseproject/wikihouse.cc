@@ -15,7 +15,7 @@ class EnquiriesController < ApplicationController
   end
 
   def show
-    redirect_to enquiries_path unless @filenames.include?(clean_id)
+    redirect_to enquiries_path unless @filenames.include?(cleaned)
   end
 
   def create
@@ -23,7 +23,7 @@ class EnquiriesController < ApplicationController
     
     if @enquiry.save
       # begin
-      #   SalesSeek.new.post(clean_id)
+      #   SalesSeek.new.post(cleaned(enquiry_params[:kind]))
       # rescue
       # end
 
@@ -65,7 +65,7 @@ class EnquiriesController < ApplicationController
       @filenames = files.map{|f| File.basename(f, ".html.erb")[1..-1] }
     end
 
-    def clean_id
-      params[:id].gsub("-","_").downcase.strip
+    def cleaned dirty=params[:id]
+      dirty.gsub("-","_").downcase.strip
     end
 end

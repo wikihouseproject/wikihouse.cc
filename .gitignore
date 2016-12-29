@@ -24,3 +24,5 @@ donation-names
 repos/*
 app/assets/videos
 Banner*.jpg
+.sync/*
+Icon?

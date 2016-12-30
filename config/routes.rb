@@ -14,8 +14,5 @@ Rails.application.routes.draw do
     get 'preview', on: :member
   end
 
-  resources :donations
-
-
   root to: 'static#landing'
 end

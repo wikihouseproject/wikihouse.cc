@@ -24,6 +24,13 @@ class SalesSeek
     return response.cookies
   end
 
+  def new_post
+    cookies = login
+    r = RestClient.post url_for("individuals"), self.salesseek_payload.to_json, { cookies: cookies, content_type: :json }
+    json = JSON.parse(r)
+    p json
+  end
+
   def post type='speaking_requests', payload=salesseek_payload
     cookies = login
     r = RestClient.post url_for("individuals"), payload.to_json, { cookies: cookies, content_type: :json }
@@ -42,6 +49,7 @@ class SalesSeek
     {
       first_name: "John",
       last_name: "Rees",
+      group: "Students",
       organization: {name: 'Bitsushi'},
       roles: [{title: "Developer"}],
       comments: "Automatically added via enquiry form",

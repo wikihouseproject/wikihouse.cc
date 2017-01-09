@@ -19,8 +19,7 @@
     <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
       <div class="about-point">
         <div class="inner">
-          <!-- <div class="icon"><%= image_tag "icons/about_icons/#{item['icon']}.svg" %></div> -->
-          <div class="icon"><%= image_tag "icons/about_icons/no_circle/Asset #{index+1}.svg", class: 'svg' %></div>
+          <div class="icon"><%= image_tag "icons/about-icons/no-circle/Asset #{index+1}.svg", class: 'svg' %></div>
           <div class="description">
             <p class="about-point-title"><%= item['title'] %></p>
             <p style=""><%= item['description'] %></p>

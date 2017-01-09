@@ -18,5 +18,5 @@
 .env
 repos/*
 .sync/*
-Icon?
+/Icon?
 _localonly/*

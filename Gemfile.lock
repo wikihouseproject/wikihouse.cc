@@ -40,6 +40,9 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    airbrake (5.6.1)
+      airbrake-ruby (~> 1.6)
+    airbrake-ruby (1.6.0)
     arel (7.1.4)
     autoprefixer-rails (6.6.1)
       execjs
@@ -239,6 +242,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake (~> 5.0)
   autoprefixer-rails
   awesome_print
   bourbon

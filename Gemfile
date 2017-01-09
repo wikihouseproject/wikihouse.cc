@@ -39,6 +39,7 @@ gem 'redcarpet'
 gem 'dotenv-rails'
 gem 'reform-rails'
 gem 'mailgun_rails'
+gem 'airbrake', '~> 5.0'
 
 group :production do
   gem 'rails_12factor'

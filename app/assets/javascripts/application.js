@@ -10,17 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require lodash.js
-//= require pjax
-//= require countUp
-//= require jquery-scrollspy
-//= require material-components-web
-//= require swiper
-//= require_tree .
-
-// require materialize
-
-// mui.min
-// jquery.nice-select
+// = require jquery
+// = require jquery_ujs
+// = require lodash.js
+// = require pjax
+// = require countUp
+// = require material-components-web
+// = require swiper
+// = require_tree .

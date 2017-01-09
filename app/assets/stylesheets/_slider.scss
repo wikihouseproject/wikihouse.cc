@@ -3,7 +3,7 @@
   z-index: 500;
   @include oc;
   height: 100%;
-  @media screen and (min-width: $break-medium) {  
+  @media screen and (min-width: $break-medium) {
     .slide-content {
       @include fill-parent;
       // @include shift(1);
@@ -126,16 +126,16 @@
 }
 
 .slide-1 .inner {
-  background-image: image-url("sliders/homepage_sub/laptop@2x.png");
+  background-image: image-url("slides/homepage_sub/laptop@2x.png");
 }
 .slide-2 .inner {
-  background-image: image-url("sliders/homepage_sub/cnc@2x.png");
+  background-image: image-url("slides/homepage_sub/cnc@2x.png");
 }
 .slide-3 .inner {
-  background-image: image-url("sliders/homepage_sub/frame@2x.png");
+  background-image: image-url("slides/homepage_sub/frame@2x.png");
 }
 .slide-4 .inner {
-  background-image: image-url("sliders/homepage_sub/house@2x.png");
+  background-image: image-url("slides/homepage_sub/house@2x.png");
 }
 
 @media screen and (min-width: $break-small) {
@@ -150,7 +150,7 @@
 @media screen and (min-width: $break-medium) {
   .slider  {
     height: 560px;
-    
+
     .inner {
       background-position: 20px center;
       margin-top: 0;

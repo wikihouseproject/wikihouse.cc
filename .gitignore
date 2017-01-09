@@ -15,15 +15,8 @@
 
 # Ignore Byebug command history file.
 .byebug_history
-*.webm
-public/videos/*
-*.env
-donators.json
-donations.rb
-donation-names
+.env
 repos/*
-app/assets/videos
-Banner*.jpg
 .sync/*
 Icon?
-latest.dump
+_localonly/*

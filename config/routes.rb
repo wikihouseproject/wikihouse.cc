@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   namespace :admin, path: 'backstage' do
     resource :about, controller: :about
+    root to: 'about#edit'
   end
 
   root to: 'static#landing'

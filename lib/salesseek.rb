@@ -5,14 +5,6 @@ class SalesSeek
 
   attr_accessor :email, :password, :client, :cookies
 
-  CATEGORIES = {
-    'student_enquiry' => ENV.fetch('salesseek_students'),
-    'providers' => ENV.fetch('salesseek_providers'),
-    'speaking_requests' => ENV.fetch('salesseek_speaking_requests'),
-    'job_enquiries' => ENV.fetch('salesseek_job_enquiries'),
-    'press' => ENV.fetch('salesseek_press')
-  }
-
   def initialize
     self.email   = ENV.fetch('salesseek_email')
     self.password    = ENV.fetch('salesseek_pass')
@@ -35,8 +27,10 @@ class SalesSeek
     cookies = login
     r = RestClient.post url_for("individuals"), payload.to_json, { cookies: cookies, content_type: :json }
     json = JSON.parse(r)
-    url = url_for("groups/#{CATEGORIES[type]}/items/#{json['id']}")
-    p url
+
+    group_id = ENV.fetch("salesseek_group_#{type}")
+    url = url_for("groups/#{group_id}/items/#{json['id']}")
+
     RestClient.put url, nil, {cookies: cookies}
   end
 

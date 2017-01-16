@@ -22,11 +22,6 @@ class EnquiriesController < ApplicationController
     @enquiry = Enquiry.new(enquiry_params)
 
     if @enquiry.save
-      # begin
-      #   SalesSeek.new.post(cleaned(enquiry_params[:kind]))
-      # rescue
-      # end
-
       begin
         notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
         notifier.ping "#{@enquiry.first_name}",
@@ -46,6 +41,11 @@ class EnquiriesController < ApplicationController
 
       begin
         StaffMailer.enquiry(@enquiry.id).deliver
+      rescue
+      end
+
+      begin
+        SalesSeek.new.post(cleaned(enquiry_params[:kind]))
       rescue
       end
 

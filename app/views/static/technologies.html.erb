@@ -6,7 +6,7 @@
 <div id="products-container">
 <div class="container">
   <% JSON.parse(open('data/products.json').read).each_with_index do |item, index| %>
-    <%= "<a href='#{request.path}/structure'>".html_safe if (item['count'].to_i > 0) %>
+    <%= "<a href='#{request.path}/#{item['name'].parameterize}'>".html_safe if (item['count'].to_i > 0) %>
       <div class="product product-icon-<%= index + 7 %>" style="background-color: <%= item['color'] %>">
         <div class="hover"></div>
         <span class="count"><%= item['count'] %></span>

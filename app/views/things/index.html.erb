@@ -4,7 +4,7 @@
     <%= link_to "Library", library_categories_path %>
     / <%= link_to params[:library_category_id].capitalize, library_category_things_path(library_category_id: params[:library_category_id]) %>
     <% if params[:id] %>
-    / <%= params[:id].capitalize %>
+    / <%= params[:id].humanize.titleize %>
     <% end %>
   </h1></div></div>
 <% end %>

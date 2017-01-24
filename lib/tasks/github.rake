@@ -26,7 +26,7 @@ namespace :github do
       h[:updated_at] = doc.css('span[itemprop=dateModified] relative-time')[0].attr('datetime').strip
     rescue
     end
-    
+
     doc.css('table.files tr').each do |file|
       begin
         h[:files] << {
@@ -45,13 +45,13 @@ namespace :github do
     url = "https://api.github.com/repos/#{user}/#{project}"
     data = JSON.parse(open(url).read)
     h[:info] = data
-    
+
 
     repo.save!
   end
 
   task scrape_all: :environment do
-    %w(Wren StepUp Mallet Microhouse).each do |project|
+    %w(Wren StepUp Mallet Microhouse Owl).each do |project|
       scrape('wikihouseproject', project)
     end
   end
@@ -64,9 +64,9 @@ namespace :github do
   end
 
   task scrape_repo: :environment do
-    
+
   end
-  
+
   task :scrape do
   end
 

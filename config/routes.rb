@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
 
   get 'library/technologies/:id', to: 'things#index'
-  get 'library/technologies/structure/:id', to: 'things#show'
+  get 'library/technologies/:kind/:id', to: 'things#show'
 
   resources :library_categories, path: 'library' do
     resources :things, path: ''

@@ -1,11 +1,14 @@
 class ThingsController < ApplicationController
-  
+
   def index
     if request.path == "/library/technologies"
       render "static/technologies"
     else
       params[:library_category_id] ||= 'technologies'
       @repos = Repo.where(kind: params[:library_category_id].singularize.capitalize)
+      if params[:id].present?
+        @repos = @repos.where(sub_kind: params[:id])
+      end
     end
   end
 

@@ -45,7 +45,7 @@ class EnquiriesController < ApplicationController
       end
 
       begin
-        SalesSeek.new.post(cleaned(enquiry_params[:kind]))
+        SalesSeek.new.post(cleaned(enquiry_params[:kind]), @enquiry.salesseek_payload)
       rescue
       end
 

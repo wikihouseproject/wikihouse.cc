@@ -24,4 +24,24 @@ class Enquiry < ApplicationRecord
     country.translations[I18n.locale.to_s] || country.name
   end
 
+  def salesseek_payload
+    {
+      first_name: first_name,
+      last_name: last_name,
+      organization: {name: organisation},
+      roles: [{title: role}],
+      comments: "Automatically added via enquiry form ##{id}",
+      communication: [
+        {
+          medium: "email",
+          value: email
+        }
+      ]
+      # locations: [{
+      #   name: "Office",
+      #   address: "United Kingdom"
+      # }]
+    }
+  end
+
 end

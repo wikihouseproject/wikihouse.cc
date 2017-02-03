@@ -55,6 +55,15 @@ $visual-grid: false;
   // -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+  background: #BEFF51; /* WebKit/Blink Browsers */
+  color: #111;
+}
+::-moz-selection {
+  background: #BEFF51; /* Gecko Browsers */
+  color: #111;
+}
+
 header, footer {
   flex-shrink: 0;
 }
@@ -261,5 +270,5 @@ select.mdc-select {
   }
 }
 .mdc-select:focus {
-  background-color: transparent; 
+  background-color: transparent;
 }

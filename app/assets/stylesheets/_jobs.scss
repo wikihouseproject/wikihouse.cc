@@ -21,5 +21,11 @@ body.a-jobs {
   }
 }
 .job-container {
-  @include span-columns(8);
+  @include fill-parent;
+  @media screen and (min-width: $break-small) {
+    @include span-columns(11);
+  }
+  @media screen and (min-width: $break-medium) {
+    @include span-columns(8);
+  }
 }

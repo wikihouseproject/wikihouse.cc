@@ -1,7 +1,7 @@
 <%= simple_form_for Enquiry.new(kind: 'project-proposal'), remote: true do |f| %>
 
   <%= f.simple_fields_for :data do |sf| %>
-    
+
     <p><%= sf.input :role,
           # label: "My role in the project will be",
           collection: [
@@ -37,7 +37,7 @@
       <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"], as: :select, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
       <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"], as: :select, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
       <%= sf.input :services_required,
-        label: "What services will you be looking for, and what would you plan to do for yourself? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
+        label: "Which services do you require? <i>Don’t worry if these are just guesses for now.</i>".html_safe,
         collection: [
         "Outline design",
         "Planning application",

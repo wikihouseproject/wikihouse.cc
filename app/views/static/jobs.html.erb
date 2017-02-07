@@ -1,0 +1,14 @@
+<% content_for :header do %>
+  <div class="description-container">
+    <div class="top-description">
+      <%= title "Jobs" %>
+    </div>
+  </div>
+<% end %>
+
+
+<div id="jobs" class="container">
+<div class="job-container">
+<%= markdown( File.open('app/views/jobs/rails_developer.md').read ) %>
+</div>
+</div>

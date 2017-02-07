@@ -1,0 +1,25 @@
+body.a-jobs {
+  #main {
+    background: #fff;
+  }
+  #jobs {
+    padding-top: 30px !important;
+    padding-bottom: 100px !important;
+
+    h3 {
+      color: #000;
+    }
+
+    a {
+      color: #666;
+      transition: color 0.3s linear;
+      &:hover {
+        color: #000;
+      }
+    }
+
+  }
+}
+.job-container {
+  @include span-columns(8);
+}

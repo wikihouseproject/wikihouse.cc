@@ -26,7 +26,7 @@ The role will initially be a short-term (3 month) engagement on a part-time or f
 * Interest in reactive programming (e.g. [RXJS](http://reactivex.io), [most.js](https://github.com/cujojs/most))
 * Any parametric/CAD design software experience
 
-Initial rate £250-300 per day (flexible working) / £45,000 (part time pro-rata).
+Initial rate £250 per day (flexible working) / £45,000 (part time pro-rata).
 
 London-based preferable, but not essential.
 

@@ -3,25 +3,17 @@
   <%= f.simple_fields_for :data do |sf| %>
 
     <p><%= sf.input :role,
-          # label: "My role in the project will be",
-          collection: [
-          "Project Owner","Architect","Project organiser","Contractor","Other"
-          ], label: "I am a...", input_html: { class: 'mdc-select mdc-dark hidden-toggle propose-toggle' }, wrapper: :default %></p>
-
-
-<!--     <div class="mui-dropdown">
-      <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
-        <span class="mui-caret"></span>
-      </button>
-      <ul class="mui-dropdown__menu">
-        <li><a href="#">Client</a></li>
-        <li><a href="#">Architect</a></li>
-        <li><a href="#">Builder</a></li>
-        <li><a href="#">Project manager</a></li>
-        <li><a href="#">Other</a></li>
-      </ul>
-    </div> -->
-
+        label: "I am a...",
+        collection: [
+          "Project Owner",
+          "Architect",
+          "Project organiser",
+          "Contractor",
+          "Other"
+        ],
+        input_html: {
+          class: 'mdc-select mdc-dark hidden-toggle propose-toggle'
+        }, wrapper: :default %></p>
 
     <div class="hidden-fields">
       <%= f.input :kind, as: :hidden %>
@@ -31,6 +23,7 @@
 
       <%= sf.input :organisation, required: true %>
       <%= sf.input :country, selected: request.headers["HTTP_CF_IPCOUNTRY"].try(:upcase), include_blank: true, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
+      <p style="display: none;" id="country-notification">We're currently not able to help projects outside the EU. However we would still love to hear from you so we know where to support next.</p>
       <%= sf.input :description, as: :text, label: "Outline description of your project", wrapper: :default %>
       <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'], as: :radio_buttons, wrapper: :default %>
       <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'], as: :radio_buttons, wrapper: :default %>

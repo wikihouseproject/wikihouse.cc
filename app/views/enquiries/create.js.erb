@@ -1,2 +1,7 @@
 $('.thanks').show()
+<% if @enquiry.kind === "press" %>
+  if (confirm("Thank you for your enquiry. Would you like to see our press pack?")) {
+    window.open("https://drive.google.com/drive/folders/0BxKrrlaHSn_UbEgxaGZHMTBYdk0?usp=sharing", "_blank")
+  }
+<% end %>
 window.location = "#thank-you"

@@ -8,7 +8,7 @@ class ProposalForm < Reform::Form
   property :country
   property :description
   property :has_site
-  property :has_budget
+  property :budget
   property :has_planning
   property :has_mortgage
   property :services_required

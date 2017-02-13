@@ -26,7 +26,7 @@
       <p style="display: none;" id="country-notification">We're currently not able to help projects outside the EU. However we would still love to hear from you so we know where to support next.</p>
       <%= sf.input :description, as: :text, label: "Outline description of your project", wrapper: :default %>
       <%= sf.input :has_site, label: "Do you have a site?", collection: ['Yes', 'Not yet'], as: :radio_buttons, wrapper: :default %>
-      <%= sf.input :has_budget, label: "Do you have a budget?", collection: ['Yes', 'Not yet'], as: :radio_buttons, wrapper: :default %>
+      <%= sf.input :budget, label: "What is your estimated budget?<span class='hint'>(leave blank if none)</span>".html_safe, wrapper: :default %>
       <%= sf.input :has_planning, label: "Do you have planning permission?", collection: ['Yes', 'Not yet', 'Not needed', "It's complicated"], as: :select, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
       <%= sf.input :has_mortgage, label: "Will your project be part financed by a mortgage?", collection: ['Yes', 'No', "Don't know yet"], as: :select, wrapper: :default, input_html: { class: 'mdc-select mdc-dark' } %>
       <%= sf.input :services_required,

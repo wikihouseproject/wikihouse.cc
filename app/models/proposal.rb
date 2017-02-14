@@ -5,7 +5,8 @@ class Proposal < ApplicationRecord
     :country,
     :description,
     :has_site,
-    :has_budget,
+    :has_budget, # to be removed
+    :budget,
     :has_planning,
     :has_mortgage,
     :has_mortgage,

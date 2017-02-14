@@ -4,7 +4,7 @@
     <%= title params[:id].gsub('-','_').humanize %>
 
     <div class="form enquiry-form">
-      <%= simple_form_for Enquiry.new(kind: params[:id]), remote: true do |f| %>
+      <%= simple_form_for Enquiry.new(kind: params[:id]), remote: true, html: { novalidate: false }  do |f| %>
         <%= f.input :kind, as: :hidden %>
         <%= f.input :first_name, required: true %>
         <%= f.input :last_name, required: true %>

@@ -6,7 +6,7 @@
 <%= f.input :organisation, required: true %>
 <%= f.input :role, required: true %>
 <%= f.input :phone, as: :string, required: true %>
-<%= f.input :message, as: :text, wrapper: :default %>
+<%= f.input :message, as: :text, wrapper: :default, required: true %>
 
 <!-- Message received, thankyou. -->
 <div class="thanks" id="thank-you">

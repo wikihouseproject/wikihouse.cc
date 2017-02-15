@@ -36,7 +36,8 @@ gem 'dotenv-rails'
 gem 'reform-rails'
 gem 'mailgun_rails'
 gem 'airbrake', '~> 5.0'
-gem 'sidekiq'
+gem 'delayed_job_active_record'
+gem 'hirefire'
 
 group :production do
   gem 'rails_12factor'

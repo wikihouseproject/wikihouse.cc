@@ -1,14 +1,7 @@
-require 'salesseek'
-
 class EnquiriesController < ApplicationController
 
   before_action :set_filenames
   invisible_captcha only: [:create], honeypot: :subtitle
-
-  def preview
-    @enquiry = Enquiry.find(params[:id])
-    render :preview, layout: false
-  end
 
   def index
     redirect_to enquiry_path(@filenames[0].gsub("_","-"))
@@ -22,32 +15,12 @@ class EnquiriesController < ApplicationController
     @enquiry = Enquiry.new(enquiry_params)
 
     if @enquiry.save
-      begin
-        notifier = Slack::Notifier.new ENV.fetch('slack_webhook_url')
-        notifier.ping "#{@enquiry.first_name}",
-          icon_emoji: ':wikihouse:',
-          username: @enquiry.kind,
-          attachments: [{
-            fallback: "Fallback",
-            pretext: @enquiry.message,
-            # author_name: [@enquiry.first_name],
-            # title: @enquiry.kind,
-            # text: @enquiry.message,
-            fields: @enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
-          }]
-      rescue
-        Rails.logger.info "unable to connect to slack for enquiry: #{@enquiry.id}"
-      end
-
-      begin
-        StaffMailer.enquiry(@enquiry.id).deliver
-      rescue
-      end
-
-      begin
-        SalesSeek.new.post(cleaned(enquiry_params[:kind]), @enquiry.salesseek_payload)
-      rescue
-      end
+      # email enquiry
+      StaffMailer.delay.enquiry(@enquiry.id)
+      # send contact to salesseek
+      Delayed::Job.enqueue(EnquirySalesseekWorker.new(cleaned(enquiry_params[:kind]), @enquiry.id))
+      # add notification in slack
+      Delayed::Job.enqueue(EnquirySlackWorker.new(@enquiry.id))
 
       respond_to do |format|
         format.html { redirect_to message_received_path }
@@ -56,6 +29,11 @@ class EnquiriesController < ApplicationController
     else
       redirect_to :back
     end
+  end
+
+  def preview
+    @enquiry = Enquiry.find(params[:id])
+    render :preview, layout: false
   end
 
   private

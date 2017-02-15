@@ -36,6 +36,7 @@ gem 'dotenv-rails'
 gem 'reform-rails'
 gem 'mailgun_rails'
 gem 'airbrake', '~> 5.0'
+gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'hirefire'
 

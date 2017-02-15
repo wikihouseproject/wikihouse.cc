@@ -5,7 +5,7 @@ class StaticController < ApplicationController
   end
 
   def donate
-    @names = 100.times.map{ Faker::Name.name }
+    # @names = 100.times.map{ Faker::Name.name }
   end
 
   def google

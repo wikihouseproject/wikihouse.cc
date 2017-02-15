@@ -1,7 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
 require 'json'
-require 'hashie'
 
 namespace :github do
 

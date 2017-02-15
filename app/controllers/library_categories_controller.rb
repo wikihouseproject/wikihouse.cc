@@ -4,8 +4,4 @@ class LibraryCategoriesController < ApplicationController
 
   def show
   end
-
-  def hi
-    render text: "HI"
-  end
 end

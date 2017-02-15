@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  %w(nothing google about donate propose_a_pilot communities_guide community partners technologies tools about_wikihouse_foundation prospectus terms message_received jobs).each do |page|
-    get page.gsub("_","-"), to: "static##{page}", as: page
+  %w(about donate propose_a_pilot communities_guide community
+    partners technologies tools about_wikihouse_foundation
+    prospectus terms message_received jobs).each do |page|
+      get page.gsub("_","-"), to: "static##{page}", as: page
   end
 
   get 'library/technologies/:id', to: 'things#index'

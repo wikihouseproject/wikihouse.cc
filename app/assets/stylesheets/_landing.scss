@@ -110,7 +110,7 @@ body.a-landing {
       width: calc(100%-50px)
       // padding: 10px 0;
     }
-    
+
   }
 }
 
@@ -169,18 +169,8 @@ body.a-landing {
   left: 0;
   width: 100%;
   height: 100%;
-  // z-index: 100;
   pointer-events: none;
   user-select: none;
-  // background-color: transparent !important;
-  // @include linear-gradient(
-  //   to top,
-  //   rgba(#717171, 0.2) 0%,
-  //   rgba(#717171, 0.1) 50%,
-  //   rgba(#717171, 0) 100%
-  // );
-  // background: image-url('fade@2x.png') bottom left no-repeat;
-  // background-size: cover;
   @include linear-gradient(
     to top,
     rgba(#000, 0.15) 0%,

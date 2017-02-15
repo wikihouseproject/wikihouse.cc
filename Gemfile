@@ -39,6 +39,7 @@ gem 'airbrake', '~> 5.0'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'hirefire'
+gem "hirefire-resource"
 
 group :production do
   gem 'rails_12factor'

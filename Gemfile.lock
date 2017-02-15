@@ -113,6 +113,7 @@ GEM
     hirefire (0.1.4)
       heroku (>= 1.4)
       rush (~> 0.6.7)
+    hirefire-resource (0.4.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -279,6 +280,7 @@ DEPENDENCIES
   faker
   font-awesome-rails
   hirefire
+  hirefire-resource
   invisible_captcha
   jquery-rails
   letter_opener

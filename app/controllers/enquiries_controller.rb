@@ -1,3 +1,4 @@
+# /contact-us
 class EnquiriesController < ApplicationController
 
   before_action :set_filenames

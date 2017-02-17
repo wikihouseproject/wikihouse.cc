@@ -56,7 +56,7 @@ class SalesSeek
           }
         ],
         custom_fields: {
-          ENV.fetch('salesseed_priority_proposal_custom_field_id') => 'true'
+          ENV.fetch('salesseed_priority_proposal_custom_field_id') => o.priority_proposal?.to_s
         }
       }
     end

@@ -1,9 +1,10 @@
-<!-- <div class="header-container" style="background: red; overflow: hidden; position: relative"> -->
 <header id="main-header">
   <div class="container">
     <%= link_to root_path, id: 'logo-link' do %><%= image_tag "wikihouse-logo_1@2x.png", id: 'logo' %><% end %>
+
     <a href="#" id="main-toggler">
       <span class="toggle-menu">
+        <!-- these 4 spans are required for the hamburger menu icon -->
         <span></span>
         <span></span>
         <span></span>
@@ -12,18 +13,13 @@
     </a>
 
     <ul id="main-menu">
-      <!-- <li><%= link_to "WikiHouse", root_path, 'data-tg-refresh': 'page' %></li> -->
-      <li><%= link_to "About", about_path, 'data-tg-refresh': 'page', class: ('active' if request.path == about_path) %></li>
-      <li><%= link_to "Library", library_categories_path, 'data-tg-refresh': 'page', class: ('active' if request.path == library_categories_path) %></li>
-      <li><%= link_to "R&D", community_path, 'data-tg-refresh': 'page', class: ('active' if request.path == community_path) %></li>
-      <li><%= link_to "Partners", partners_path, 'data-tg-refresh': 'page', class: ('active' if request.path == partners_path) %></li>
-      <!-- <li><%= link_to fa_icon("bars"), '#', id: 'toggle-menu' %></li> -->
+      <li><%= header_link_to "About", about_path %></li>
+      <li><%= header_link_to "Library", library_categories_path %></li>
+      <li><%= header_link_to "R&D", community_path %></li>
+      <li><%= header_link_to "Partners", partners_path %></li>
     </ul>
 
   </div>
 </header>
 
-<%# if content_for?(:header) %>
-  <header id="sub-header"><%= yield(:header) %></header>
-<%# end %>
-<!-- </div> -->
+<header id="sub-header"><%= yield(:header) %></header>

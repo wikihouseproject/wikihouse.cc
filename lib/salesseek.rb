@@ -11,7 +11,7 @@ class SalesSeek
     self.client  = ENV.fetch('salesseek_client_id')
   end
 
-  def post kind='speaking_requests', object
+  def post kind, object
     payload = build_payload(object).to_json
     cookies = login
     r = RestClient.post url_for("individuals"), payload, { cookies: cookies, content_type: :json }
@@ -54,7 +54,10 @@ class SalesSeek
             medium: "email",
             value: o.email
           }
-        ]
+        ],
+        custom_fields: {
+          ENV.fetch('salesseed_priority_proposal_custom_field_id') => 'true'
+        }
       }
     end
 

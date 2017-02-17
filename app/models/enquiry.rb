@@ -15,7 +15,8 @@ class Enquiry < ApplicationRecord
     :notes,
     :role,
     :wants_to,
-    :event_name
+    :event_name,
+    :budget
 
   # validates_presence_of :first_name, :email
 
@@ -24,24 +25,11 @@ class Enquiry < ApplicationRecord
     country.translations[I18n.locale.to_s] || country.name
   end
 
-  def salesseek_payload
-    {
-      first_name: first_name,
-      last_name: last_name,
-      organization: {name: organisation},
-      roles: [{title: role}],
-      comments: "Automatically added via enquiry form ##{id}",
-      communication: [
-        {
-          medium: "email",
-          value: email
-        }
-      ]
-      # locations: [{
-      #   name: "Office",
-      #   address: "United Kingdom"
-      # }]
-    }
+  def priority_proposal?
+    kind == 'project-proposal' and
+    data['country'].try(:downcase) == "gb" and
+    data['has_mortgage'].try(:downcase) == "no" and
+    data['budget'].try(:match, /\d+/) ? true : false
   end
 
 end

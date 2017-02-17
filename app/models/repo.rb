@@ -12,10 +12,6 @@ class Repo < ApplicationRecord
     "https://github.com/#{owner}/#{name}"
   end
 
-  def fork_url
-    "#{url}/network"
-  end
-
   def issues_url
     "#{url}/issues"
   end
@@ -31,6 +27,10 @@ class Repo < ApplicationRecord
       '<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Attribution Sharealike 3.0 Unported License</a>'
     end
   end
+
+  # def fork_url
+  #   "#{url}/network"
+  # end
 
   # def updated_at
   #   data[:files].sort_by{|f| f[:updated_at] }.first

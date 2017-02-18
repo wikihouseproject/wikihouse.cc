@@ -8,8 +8,6 @@ class StaticController < ApplicationController
     # @names = 100.times.map{ Faker::Name.name }
   end
 
-  def google
-    render 'nothing', layout: 'google'
   end
 
   def communities_guide

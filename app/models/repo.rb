@@ -28,6 +28,10 @@ class Repo < ApplicationRecord
     end
   end
 
+  def self.total_commits
+    Repo.sum(:commits_count)
+  end
+
   # def fork_url
   #   "#{url}/network"
   # end

@@ -9,7 +9,7 @@ namespace :github do
     open(url).read
   end
 
-  def scrape user, project
+  def scrape user, project, delay=0
     repo = Repo.find_or_create_by(name: project, owner: user)
     url = "https://github.com/#{user}/#{project}"
     doc = Nokogiri::HTML(open(url))
@@ -26,6 +26,12 @@ namespace :github do
     rescue
     end
 
+    begin
+      h[:commits_count] = doc.css('div.overall-summary li.commits span.num')[0].text.to_i
+      repo.commits_count = h[:commits_count]
+    rescue
+    end
+
     doc.css('table.files tr').each do |file|
       begin
         h[:files] << {
@@ -37,21 +43,38 @@ namespace :github do
     end
     repo.data = h
 
+    sleep(delay)
+
     url = "https://api.github.com/repos/#{user}/#{project}/contents"
     data = JSON.parse(open(url).read)
     h[:filecount] = data.length
+
+    sleep(delay)
 
     url = "https://api.github.com/repos/#{user}/#{project}"
     data = JSON.parse(open(url).read)
     h[:info] = data
 
-
     repo.save!
+
+    sleep(delay)
   end
+
+  # def get_commit_counts user, project
+  #   url = "https://api.github.com/repos/#{user}/#{project}/stats/contributors"
+  #   json = JSON.parse(open(url).read)
+  #   repo = Repo.find_or_create_by(name: project, owner: user)
+  #   commits_count = json.map{|t| t['total'] }.sum
+  #   if (commits_count > 0)
+  #     repo.update_column(:commits_count, commits_count)
+  #   end
+  # end
 
   task scrape_all: :environment do
     %w(Wren StepUp Mallet Microhouse Owl).each do |project|
-      scrape('wikihouseproject', project)
+      puts "> Scraping #{project}"
+      scrape('wikihouseproject', project, 0.3)
+      # get_commit_counts('wikihouseproject', project)
     end
   end
 
@@ -60,13 +83,6 @@ namespace :github do
     project = 'Microhouse'
     url = "https://api.github.com/repos/#{user}/#{project}/contents/"
     p JSON.parse(open(url).read).map{|f| f['name']}
-  end
-
-  task scrape_repo: :environment do
-
-  end
-
-  task :scrape do
   end
 
 end

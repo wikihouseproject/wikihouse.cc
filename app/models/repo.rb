@@ -1,5 +1,7 @@
 class Repo < ApplicationRecord
 
+  belongs_to :product, required: false
+
   def self.total_watchers
     self.all.map{|r| r.data['info']['watchers_count'] }.sum
   end

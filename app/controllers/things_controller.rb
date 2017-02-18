@@ -1,6 +1,7 @@
 class ThingsController < ApplicationController
 
   def index
+    @products = Product.includes(:repos)
     if request.path == "/library/technologies"
       render "static/technologies"
     else

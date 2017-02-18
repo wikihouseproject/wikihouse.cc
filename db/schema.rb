@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170218153239) do
+ActiveRecord::Schema.define(version: 20170218161225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20170218153239) do
     t.string   "kind"
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "ordinal",    default: 0
+    t.string   "icon"
+    t.string   "color"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["ordinal"], name: "index_products_on_ordinal", using: :btree
+  end
+
   create_table "repos", force: :cascade do |t|
     t.string   "name"
     t.string   "owner"
@@ -52,6 +62,9 @@ ActiveRecord::Schema.define(version: 20170218153239) do
     t.text     "img"
     t.string   "sub_kind"
     t.integer  "commits_count", default: 0
+    t.integer  "product_id"
+    t.index ["product_id"], name: "index_repos_on_product_id", using: :btree
   end
 
+  add_foreign_key "repos", "products"
 end

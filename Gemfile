@@ -29,7 +29,7 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 gem 'bourbon'
-gem 'neat'
+gem 'neat', '~> 1.8'
 gem 'simple_form'
 gem 'redcarpet'
 gem 'dotenv-rails'

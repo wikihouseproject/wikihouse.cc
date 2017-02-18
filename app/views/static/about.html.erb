@@ -16,13 +16,13 @@
   <div id="about-points">
 
     <h4 class="mono">Design Principles</h4>
-    <% JSON.parse(open('data/about.json').read).each_with_index do |item, index| %>
+    <% @about_points.each do |about_point| %>
       <div class="about-point">
         <div class="inner">
-          <div class="icon"><%= image_tag "icons/about-icons/no-circle/Asset #{index+1}.svg", class: 'svg' %></div>
+          <div class="icon"><%= image_tag "icons/about-icons/no-circle/Asset #{about_point.id}.svg", class: 'svg' %></div>
           <div class="description">
-            <p class="about-point-title"><%= item['title'] %></p>
-            <p style=""><%= item['description'] %></p>
+            <p class="about-point-title"><%= about_point.name %></p>
+            <p><%= about_point.description %></p>
           </div>
         </div>
       </div>

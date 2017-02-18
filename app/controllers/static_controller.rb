@@ -8,6 +8,8 @@ class StaticController < ApplicationController
     # @names = 100.times.map{ Faker::Name.name }
   end
 
+  def about
+    @about_points = AboutPoint.order(ordinal: :asc)
   end
 
   def communities_guide

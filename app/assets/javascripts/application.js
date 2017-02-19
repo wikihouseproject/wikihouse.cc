@@ -15,9 +15,7 @@
 // = require lodash.js
 // = require pjax
 // = require countUp
-// = require material-components-web
 // = require swiper
 // = require_tree .
-
 
 console.log("Hello, we're hiring! Check out https://wikihouse.cc/jobs for info")

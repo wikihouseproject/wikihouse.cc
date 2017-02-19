@@ -1,7 +1,7 @@
 class ThingsController < ApplicationController
 
   def index
-    @products = Product.includes(:repos).order(ordinal: :asc)
+    @technologies = Technology.includes(:repos).order(ordinal: :asc)
     if request.path == "/library/technologies"
       render "static/technologies"
     else

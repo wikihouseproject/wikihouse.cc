@@ -6,9 +6,7 @@ The new wikihouse website https://wikihouse.cc
 
 First get the required vars -
 
-`heroku config -s -a wikihousecc > .env`
-
-Run with `rails s`, please note, this will be using the live database. Try not to do anything destructive!
+`heroku config -s -a wikihousecc > .env` (check bin/setup)
 
 ## Deploying
 

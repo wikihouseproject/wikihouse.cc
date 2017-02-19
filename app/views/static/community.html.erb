@@ -75,9 +75,9 @@
         </ol>
 
       </div>
-      
+
       <%= link_to "Join our Slack group", "https://wikihouse.typeform.com/to/OHv4SE", class: 'bottom-link dark typeform-share link', data: { mode: '2' } %>
     </div>
   </div>
-  <%= render "application/latest_medium_post" %>
+  <%= render "application/latest_medium_post", medium_post: @medium_post %>
 </div>

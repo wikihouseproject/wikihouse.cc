@@ -1,3 +1,5 @@
+require 'ostruct'
+
 class StaticController < ApplicationController
 
   def nothing
@@ -17,14 +19,16 @@ class StaticController < ApplicationController
   end
 
   def community
-    @img = "https://static.wikihouse.cc/MiniWiki-v1.1.jpg"
-    @title = "New year, new website."
-    @url = "https://medium.com/@WikiHouse/new-year-new-website-bcb1dd233bbe"
-    # "https://medium.com/@AlastairParvin/scaling-the-citizen-sector-20a20dbb7a4c"
-    # x.at_xpath('//item//title').text
-    # <%= x2.at_xpath('//img').attr('src') %>
-    # x = File.open("data/alastairparvin.xml") { |f| Nokogiri::XML(f) } %>
-    # x2 = Nokogiri::XML(x.at_xpath('//item//description')) %>
+    @medium_post = OpenStruct.new({
+      img: "https://static.wikihouse.cc/MiniWiki-v1.1.jpg",
+      title: "New year, new website.",
+      url: "https://medium.com/@WikiHouse/new-year-new-website-bcb1dd233bbe",
+      background_css: "background-color: #1C2229; background-size: cover; background-position: 83% center;"
+    })
+  end
+
+  def about_wikihouse_foundation
+    @team_members = TeamMember.all # (not an ActiveRecord model)
   end
 
 end

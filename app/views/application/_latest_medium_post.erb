@@ -1,14 +1,11 @@
-<div class="half news" style="background: #1C2229 url('<%= @img %>'); background-size: cover; background-position: 83% center;">
-  <%= link_to @url, class: 'wrap' do %>
+<div class="half news" style="background-image: url('<%= @medium_post.img %>'); <%= medium_post.background_css %>">
+  <%= link_to medium_post.url, class: 'wrap' do %>
   <div class="fade"></div>
   <div class="container">
-    <%#= link_to x2.at_xpath('//a').attr('href') do %>
-      <div class="top wr">
-        <h2><%= @title %></h2>
-      </div>
-      <!-- <span class="bottom-link">Read blog post</span> -->
-      <%= link_to "Read blog post", @url, class: 'bottom-link' %>
-    <%# end %>
+    <div class="top wr">
+      <h2><%= medium_post.title %></h2>
+    </div>
+    <%= link_to "Read blog post", medium_post.url, class: 'bottom-link' %>
   </div>
   <% end %>
 </div>

@@ -15,13 +15,11 @@
     <div class="half">
       <div class="container">
         <%= image_tag repo.img %>
-        <%#= image_tag "microhouse.svg" %>
       </div>
     </div>
     <div class="half type-description">
       <div class="container">
         <h2><%= repo.name %></h2>
-        <!-- <p>MicroHouse is a high-performance, one-bed house type, designed using the WikiHouse building system. It uses WikiHouse products WREN and SPARROW. It has been designed primarily for use in the UK, but could also be adapted for other countries and regions. The home can be largely self-assembled, and costs around £37,000 GBP to produce.</p> -->
         <%= simple_format(repo.data['info']['description']) %>
       </div>
     </div>
@@ -29,27 +27,23 @@
   <% end %>
 <% end %>
 
-
 <%= link_to enquiry_path(id: 'submitting-a-new-library-solution'), class: 'big-type-link new-type' do %>
-<div class="flex">
-  <div class="half">
-    <div class="container plus-holder">
-      <span class="plus">+</span>
+  <div class="flex">
+    <div class="half">
+      <div class="container plus-holder">
+        <span class="plus">+</span>
+      </div>
+    </div>
+    <div class="half type-description">
+      <div class="container">
+        <span>Submit a new type to this library</span>
+      </div>
     </div>
   </div>
-  <div class="half type-description">
-    <div class="container">
-      <span>Submit a new type to this library</span>
-    </div>
-  </div>
-</div>
 <% end %>
 
 <div class="container">
-<ul id="types-links">
-  <!-- <li><%= link_to "Submit a new item to this repository", "#", style: "background: url(#{asset_path('icons/plus.png')}) center right no-repeat;" %></li> -->
-  <!-- <li><%= link_to "Can't see the type you need? To commission a new design, get in touch <strong>here</strong>".html_safe, "#", style: "background: url(#{asset_path('icons/rightarrow.png')})
-  center right no-repeat;" %></li> -->
-  <li><%= link_to "Can't see the type you need? To commission a new design, get in touch <strong>here</strong>".html_safe, "#" %></li>
-</ul>
+  <ul id="types-links">
+    <li><%= link_to "Can't see the type you need? To commission a new design, get in touch <strong>here</strong>".html_safe, "#" %></li>
+  </ul>
 </div>

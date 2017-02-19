@@ -41,14 +41,13 @@
       </div>
 
       <p><strong>Forks</strong><%= link_to @repo.data['forks'], "https://github.com/#{@repo.name}/#{@repo.owner}/network", class: 'data' %></p>
-      
+
       <% if @repo.data['updated_at'] %>
-      <p><strong>Latest Update</strong><span class="data"><%= Time.parse(@repo.data['updated_at']).to_s(:short) %></span></p>
+        <p><strong>Latest Update</strong><span class="data"><%= Time.parse(@repo.data['updated_at']).to_s(:short) %></span></p>
       <% end %>
-      
+
       <hr/>
-      <!-- <p><strong>Status in your location:</strong> Ready to prototype</p> -->
-      <!-- <hr/> -->
+
       <h5>Files</h5>
       <ul id="files-list">
         <% @repo.data['files'].each do |file| %>
@@ -71,11 +70,3 @@
     </div>
   </div>
 </div>
-
-<!-- 
-<div class="container terms">
-  <div class="left-info">
-    <%#= markdown( File.open('app/views/things/terms.md').read ) %>
-  </div>
-</div>
- -->

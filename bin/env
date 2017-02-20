@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require 'pathname'
+require 'fileutils'
+include FileUtils
+
+# path to your application root.
+APP_ROOT = Pathname.new File.expand_path('../../', __FILE__)
+
+def heading(message)
+  puts "\n== #{message} =="
+end
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+chdir APP_ROOT do
+
+  heading "Pulling from heroku config"
+  system! 'heroku config -s > .env'
+
+  heading "Removing production specific env vars"
+  words = %w( DATABASE_URL RACK_ENV RAILS_ENV RAILS_LOG_TO_STDOUT LANG
+              RAILS_SERVE_STATIC_FILES SECRET_KEY_BASE).map{|w| "/#{w}/d;"}.join
+  system! "sed -i.production '#{words}' .env"
+
+end

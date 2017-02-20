@@ -23,17 +23,12 @@ chdir APP_ROOT do
   system! "heroku git:remote -a wikihousecc"
 
   heading "Fetching env vars"
-  system! 'heroku config -s > .env'
+  system! 'bin/env'
 
-  heading "Removing production specific env vars"
-  words = %w( DATABASE_URL RACK_ENV RAILS_ENV RAILS_LOG_TO_STDOUT
-              RAILS_SERVE_STATIC_FILES SECRET_KEY_BASE).map{|w| "/#{w}/d;"}.join
-  system! "sed -i.production '#{words}' .env"
-
-  # puts "\n== Copying sample files =="
-  # unless File.exist?('config/database.yml')
-  #   cp 'config/database.yml.sample', 'config/database.yml'
-  # end
+  puts "\n== Copying sample files =="
+  unless File.exist?('config/database.yml')
+    cp 'config/database.yml.sample', 'config/database.yml'
+  end
 
   heading "Preparing database"
   system! 'bin/rails db:setup'

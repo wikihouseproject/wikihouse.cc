@@ -6,17 +6,25 @@ class SalesSeek
   attr_accessor :email, :password, :client, :cookies
 
   def initialize
-    self.email   = ENV.fetch('salesseek_email')
-    self.password    = ENV.fetch('salesseek_pass')
-    self.client  = ENV.fetch('salesseek_client_id')
+    self.email    = ENV.fetch('salesseek_email')
+    self.password = ENV.fetch('salesseek_pass')
+    self.client   = ENV.fetch('salesseek_client_id')
   end
 
   def post kind, object
     payload = build_payload(object).to_json
+
+    # get cookie from login request
     cookies = login
-    r = RestClient.post url_for("individuals"), payload, { cookies: cookies, content_type: :json }
+
+    # create a new SalesSeek Invidividual
+    r = RestClient.post url_for("individuals"), payload, {
+      cookies: cookies,
+      content_type: :json
+    }
     json = JSON.parse(r)
 
+    # add the new Individual to the correct group
     group_id = ENV.fetch("salesseek_group_#{kind}")
     url = url_for("groups/#{group_id}/items/#{json['id']}")
 
@@ -26,16 +34,12 @@ class SalesSeek
   private
 
     def login
-      response = RestClient.post url_for("login"), { email_address: self.email, password: self.password }
+      response = RestClient.post url_for("login"), {
+        email_address: self.email,
+        password: self.password
+      }
       return response.cookies
     end
-
-    # def new_post
-    #   cookies = login
-    #   r = RestClient.post url_for("individuals"), self.salesseek_payload.to_json, { cookies: cookies, content_type: :json }
-    #   json = JSON.parse(r)
-    #   p json
-    # end
 
     def url_for path
       url = "https://#{client}.salesseek.net/api"
@@ -60,26 +64,5 @@ class SalesSeek
         }
       }
     end
-
-  # def salesseek_payload
-  #   {
-  #     first_name: "",
-  #     last_name: "",
-  #     group: "",
-  #     organization: {name: ""},
-  #     roles: [{title: ""}],
-  #     comments: "Automatically added via enquiry form",
-  #     communication: [
-  #       {
-  #         medium: "email",
-  #         value: ""
-  #       }
-  #     ]
-  #     # locations: [{
-  #     #   name: "Office",
-  #     #   address: "United Kingdom"
-  #     # }]
-  #   }
-  # end
 
 end

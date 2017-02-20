@@ -2,11 +2,25 @@
 
 The new wikihouse website https://wikihouse.cc
 
-## Running locally
+## Development setup
 
-First get the required vars -
+Prerequisites:
 
-`heroku config -s -a wikihousecc > .env` (check bin/setup)
+* Ruby 2.4.0
+* PostgreSQL
+* Heroku credentials
+
+Then run `bin/setup`. This script is idempotent, so it can be re-run if
+something fails.
+
+## Copying production database locally
+
+```
+$ dropdb wikihouse_development
+$ heroku pg:backups:download
+$ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse_development latest.dump
+$ rm latest.dump
+```
 
 ## Deploying
 

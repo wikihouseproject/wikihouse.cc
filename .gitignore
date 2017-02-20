@@ -20,3 +20,5 @@ repos/*
 .sync/*
 /Icon?
 _localonly/*
+
+/.sass-cache

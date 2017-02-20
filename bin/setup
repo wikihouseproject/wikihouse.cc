@@ -15,6 +15,10 @@ def system!(*args)
 end
 
 chdir APP_ROOT do
+  heading 'Installing dependencies'
+  system! 'gem install bundler --conservative'
+  system('bundle check') || system!('bundle install')
+
   heading "Setting up Heroku"
   system! "heroku git:remote -a wikihousecc"
 
@@ -25,10 +29,6 @@ chdir APP_ROOT do
   words = %w( DATABASE_URL RACK_ENV RAILS_ENV RAILS_LOG_TO_STDOUT
               RAILS_SERVE_STATIC_FILES SECRET_KEY_BASE).map{|w| "/#{w}/d;"}.join
   system! "sed -i.production '#{words}' .env"
-
-  heading 'Installing dependencies'
-  system! 'gem install bundler --conservative'
-  system('bundle check') || system!('bundle install')
 
   # puts "\n== Copying sample files =="
   # unless File.exist?('config/database.yml')

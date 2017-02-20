@@ -22,6 +22,13 @@ $ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -
 $ rm latest.dump
 ```
 
+## Day-to-day development
+
+Run `heroku local` to start a web server and a job worker (see
+`Procfile`). You can now visit the site at http://localhost:5000/.
+
+Run `rspec` to run the tests.
+
 ## Deploying
 
 The github master branch is auto-linked to heroku, so a simple `git push` will put your code on github and heroku at the same time.

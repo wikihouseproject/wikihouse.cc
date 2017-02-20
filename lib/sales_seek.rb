@@ -6,9 +6,9 @@ class SalesSeek
   attr_accessor :email, :password, :client, :cookies
 
   def initialize
-    self.email    = ENV.fetch('salesseek_email')
-    self.password = ENV.fetch('salesseek_pass')
-    self.client   = ENV.fetch('salesseek_client_id')
+    self.email    = ENV.fetch('sales_seek_email')
+    self.password = ENV.fetch('sales_seek_pass')
+    self.client   = ENV.fetch('sales_seek_client_id')
   end
 
   def post kind, object
@@ -25,7 +25,7 @@ class SalesSeek
     json = JSON.parse(r)
 
     # add the new Individual to the correct group
-    group_id = ENV.fetch("salesseek_group_#{kind}")
+    group_id = ENV.fetch("sales_seek_group_#{kind}")
     url = url_for("groups/#{group_id}/items/#{json['id']}")
 
     RestClient.put url, nil, {cookies: cookies}
@@ -60,7 +60,7 @@ class SalesSeek
           }
         ],
         custom_fields: {
-          ENV.fetch('salesseek_priority_proposal_custom_field_id') => o.priority_proposal?.to_s
+          ENV.fetch('sales_seek_priority_proposal_custom_field_id') => o.priority_proposal?.to_s
         }
       }
     end

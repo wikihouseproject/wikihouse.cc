@@ -18,8 +18,8 @@ class EnquiriesController < ApplicationController
     if @enquiry.save
       # email enquiry
       StaffMailer.delay.enquiry(@enquiry.id)
-      # send contact to salesseek
-      Delayed::Job.enqueue(EnquirySalesseekWorker.new(cleaned(enquiry_params[:kind]), @enquiry.id))
+      # send contact to salesseek.net
+      Delayed::Job.enqueue(EnquirySalesSeekWorker.new(cleaned(enquiry_params[:kind]), @enquiry.id))
       # add notification in slack
       Delayed::Job.enqueue(EnquirySlackWorker.new(@enquiry.id))
 

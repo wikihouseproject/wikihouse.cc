@@ -1,6 +1,6 @@
-require 'salesseek'
+require 'sales_seek'
 
-class EnquirySalesseekWorker
+class EnquirySalesSeekWorker
   attr_accessor :enquiry_id, :kind
 
   def initialize(kind, enquiry_id)

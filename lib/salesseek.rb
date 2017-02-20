@@ -12,7 +12,7 @@ class SalesSeek
   end
 
   def post kind, object
-    payload = build_payload(object).to_json
+    payload = self.class.build_payload(object).to_json
     cookies = login
     r = RestClient.post url_for("individuals"), payload, { cookies: cookies, content_type: :json }
     json = JSON.parse(r)
@@ -23,6 +23,25 @@ class SalesSeek
     RestClient.put url, nil, {cookies: cookies}
   end
 
+  def self.build_payload o
+    {
+      first_name: o.first_name,
+      last_name: o.last_name,
+      organization: {name: o.data['organisation']},
+      roles: [{title: o.data['role']}],
+      comments: "Automatically added via enquiry form",
+      communication: [
+        {
+          medium: "email",
+          value: o.email
+        }
+      ],
+      custom_fields: {
+        ENV.fetch('salesseed_priority_proposal_custom_field_id') => o.priority_proposal?.to_s
+      }
+    }
+  end
+
   private
 
     def login
@@ -30,56 +49,9 @@ class SalesSeek
       return response.cookies
     end
 
-    # def new_post
-    #   cookies = login
-    #   r = RestClient.post url_for("individuals"), self.salesseek_payload.to_json, { cookies: cookies, content_type: :json }
-    #   json = JSON.parse(r)
-    #   p json
-    # end
-
     def url_for path
       url = "https://#{client}.salesseek.net/api"
       [url, path].join("/")
     end
-
-    def build_payload o
-      {
-        first_name: o.first_name,
-        last_name: o.last_name,
-        organization: {name: o.data['organisation']},
-        roles: [{title: o.data['role']}],
-        comments: "Automatically added via enquiry form",
-        communication: [
-          {
-            medium: "email",
-            value: o.email
-          }
-        ],
-        custom_fields: {
-          ENV.fetch('salesseed_priority_proposal_custom_field_id') => o.priority_proposal?.to_s
-        }
-      }
-    end
-
-  # def salesseek_payload
-  #   {
-  #     first_name: "",
-  #     last_name: "",
-  #     group: "",
-  #     organization: {name: ""},
-  #     roles: [{title: ""}],
-  #     comments: "Automatically added via enquiry form",
-  #     communication: [
-  #       {
-  #         medium: "email",
-  #         value: ""
-  #       }
-  #     ]
-  #     # locations: [{
-  #     #   name: "Office",
-  #     #   address: "United Kingdom"
-  #     # }]
-  #   }
-  # end
 
 end

@@ -1,20 +1,29 @@
-require 'nokogiri'
-require 'open-uri'
-require 'json'
+require "octokit"
 
 class GitHubProject
-  attr_reader :repo
+  attr_reader :github, :repo
 
   def initialize(repo)
-    @repo = repo
+    @github = Octokit::Client.new(access_token: ENV.fetch("git_hub_token"))
+    @repo   = github.repository("#{repo.owner}/#{repo.name}")
   end
 
-  def user
-    repo.owner
+  def repo_name
+    repo.full_name
   end
 
-  def project
-    repo.name
+  def contributors
+    github.contributors(repo_name)
+  end
+
+  def readme_contents
+    github.readme(repo_name, accept: "application/vnd.github.v3.raw")
+          .force_encoding("utf-8")
+          .strip
+  end
+
+  def tree
+    @tree ||= github.tree(repo_name, "master").tree
   end
 
   def to_h
@@ -27,51 +36,43 @@ class GitHubProject
   end
 
   def data
-    url = "https://github.com/#{user}/#{project}"
-    doc = Nokogiri::HTML(open(url))
-    h = {
-      watchers: doc.css('a.social-count')[0].text.strip.to_i,
-      stars: doc.css('a.social-count')[1].text.strip.to_i,
-      forks: doc.css('a.social-count')[2].text.strip.to_i,
-      readme: get_readme.strip,
-      files: []
-    }
-
-    begin
-      h[:updated_at] = doc.css('span[itemprop=dateModified] relative-time')[0].attr('datetime').strip
-    rescue
-    end
-
-    begin
-      h[:commits_count] = doc.css('div.overall-summary li.commits span.num')[0].text.to_i
-    rescue
-    end
-
-    doc.css('table.files tr').each do |file|
-      begin
-        h[:files] << {
-          name: file.css('a.js-navigation-open').text.strip,
-          updated_at: file.css('time-ago').attr('datetime').value.strip
-        }
-      rescue
-      end
-    end
-
-    url = "https://api.github.com/repos/#{user}/#{project}/contents"
-    data = JSON.parse(open(url).read)
-    h[:filecount] = data.length
-
-    url = "https://api.github.com/repos/#{user}/#{project}"
-    data = JSON.parse(open(url).read)
-    h[:info] = data
-
-    h
+    deep_format_times({
+      watchers:      repo.subscribers_count, # This is not the same as what GH considers "watchers"
+      stars:         repo.stargazers_count,
+      forks:         repo.forks_count,
+      readme:        readme_contents,
+      updated_at:    repo.pushed_at,
+      commits_count: contributors.sum(&:contributions),
+      files:         tree.map { |file| file_data(file) },
+      filecount:     tree.count,
+      info:          repo.to_h.deep_stringify_keys,
+    })
   end
 
   private
 
-  def get_readme
-    url = "https://raw.githubusercontent.com/#{user}/#{project}/master/README.md"
-    open(url).read
+  def file_data(file)
+    {
+      name:       file.path,
+      updated_at: latest_commit(file.path).commit.committer.date,
+    }
+  end
+
+  def latest_commit(path)
+    github.commits(repo_name, path: path, per_page: 1).first
+  end
+
+  # This is only for compatibility with the scraper, it can be removed later
+  def deep_format_times(data)
+    case data
+    when Array
+      data.map { |value| deep_format_times value }
+    when Hash
+      data.transform_values { |value| deep_format_times value }
+    when Time
+      data.xmlschema
+    else
+      data
+    end
   end
 end

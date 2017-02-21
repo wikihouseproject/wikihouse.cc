@@ -2,7 +2,7 @@ require "rails_helper"
 require "git_hub_scraper"
 
 RSpec.describe GitHubProject do
-  it "does the same thing as GitHubScraper" do
+  it "does the same thing as GitHubScraper", :vcr do
     repo = Repo.find_or_create_by(owner: "wikihouseproject", name: "Wren")
     repo2 = Repo.find(repo.id)
 
@@ -13,6 +13,9 @@ RSpec.describe GitHubProject do
 
     repo2.attributes = GitHubProject.new(repo2).to_h
 
-    expect(repo2.attributes.except("updated_at")).to eq(repo.attributes.except("updated_at"))
+    expected = repo.attributes.except("updated_at")
+    actual   = repo2.attributes.except("updated_at")
+
+    expect(actual).to eq(expected)
   end
 end

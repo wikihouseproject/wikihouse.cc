@@ -11,6 +11,10 @@ class GitHubScraper
     @delay   = delay
   end
 
+  def access_token
+    ENV.fetch("git_hub_token")
+  end
+
   def get_readme
     url = "https://raw.githubusercontent.com/#{user}/#{project}/master/README.md"
     open(url).read
@@ -52,13 +56,13 @@ class GitHubScraper
 
     sleep(delay)
 
-    url = "https://api.github.com/repos/#{user}/#{project}/contents"
+    url = "https://api.github.com/repos/#{user}/#{project}/contents?access_token=#{access_token}"
     data = JSON.parse(open(url).read)
     h[:filecount] = data.length
 
     sleep(delay)
 
-    url = "https://api.github.com/repos/#{user}/#{project}"
+    url = "https://api.github.com/repos/#{user}/#{project}?access_token=#{access_token}"
     data = JSON.parse(open(url).read)
     h[:info] = data
 

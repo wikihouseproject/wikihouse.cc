@@ -27,11 +27,9 @@ class GitHubProject
   end
 
   def to_h
-    data = self.data
-
     {
       data:          data,
-      commits_count: data[:commits_count], # FIXME: it's confusing to store this in two places
+      commits_count: contributors.sum(&:contributions),
     }
   end
 
@@ -42,7 +40,6 @@ class GitHubProject
       forks:         repo.forks_count,
       readme:        readme_contents,
       updated_at:    repo.pushed_at,
-      commits_count: contributors.sum(&:contributions),
       files:         tree.map { |file| file_data(file) },
       filecount:     tree.count,
       info:          repo.to_h.deep_stringify_keys,

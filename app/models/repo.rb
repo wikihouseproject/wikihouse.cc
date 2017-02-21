@@ -10,6 +10,10 @@ class Repo < ApplicationRecord
     self.all.map{|r| r.data['filecount'] }.sum
   end
 
+  def self.total_commits
+    Repo.sum(:commits_count)
+  end
+
   def url
     "https://github.com/#{owner}/#{name}"
   end
@@ -28,10 +32,6 @@ class Repo < ApplicationRecord
     else
       '<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Attribution Sharealike 3.0 Unported License</a>'
     end
-  end
-
-  def self.total_commits
-    Repo.sum(:commits_count)
   end
 
   # def fork_url

@@ -43,7 +43,12 @@ class Repo < ApplicationRecord
   end
 
   def refresh
-    update! git_hub_project.to_h
+    project = git_hub_project
+
+    update!(
+      data:          project.data,
+      commits_count: project.commits_count
+    )
   end
 
   # def fork_url

@@ -26,11 +26,8 @@ class GitHubProject
     @tree ||= github.tree(repo_name, "master").tree
   end
 
-  def to_h
-    {
-      data:          data,
-      commits_count: contributors.sum(&:contributions),
-    }
+  def commits_count
+    contributors.sum(&:contributions)
   end
 
   def data

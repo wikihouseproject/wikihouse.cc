@@ -4,61 +4,17 @@
       <h1>Contact us</h1>
       <div id="enquiries-header">
         <span class="interested-in">I am interested in...</span>
-
-        <!-- 
-        <div id="enquiries-holder">
-          <ul id="enquiries-options">
-            <% @filenames.each do |filename| %>
-              <li><%= link_to_unless_current filename.humanize, enquiry_path(filename.gsub('_','-')) %></li>
-            <% end %>
-            <li><%= link_to "Proposing a pilot", propose_a_pilot_path %></li>
-          </ul>
-        </div>
-        -->
-
-        <!-- 
-        <div class="mui-dropdown">
-          <button class="mui-btn mui-btn--primary" data-mui-toggle="dropdown">
-            <%= params[:id].gsub('-',' ').capitalize %>
-            <span class="mui-caret"></span>
-          </button>
-          <ul class="mui-dropdown__menu">
-            <% @filenames.each do |filename| %>
-              <li><%= link_to filename.humanize, enquiry_path(filename.gsub('_','-')) %></li>
-            <% end %>
-            <li><%= link_to "Proposing a pilot", propose_a_pilot_path %></li>
-          </ul>
-        </div>
-        -->
-
         <div class="select-manager">
-          <!-- Custom MDC Select, shown on desktop -->
-          <div class="mdc-select" role="listbox" tabindex="0">
-            <span class="mdc-select__selected-text">Pick one</span>
-            <div class="mdc-simple-menu mdc-select__menu">
-              <ul class="mdc-list mdc-simple-menu__items">
-                <li class="mdc-list-item" role="option" id="a" tabindex="0">A</li>
-                <li class="mdc-list-item" role="option" id="b" tabindex="0">B</li>
-                <li class="mdc-list-item" role="option" id="c" tabindex="0">C</li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Native element, shown on mobile devices -->
-          <!-- <form class="pjax" action="<%= enquiries_path %>"> -->
-            <select class="mdc-select" onchange="document.getElementById('change-link').href = this.value; document.getElementById('change-link').click()">
-              <% @filenames.each do |filename| %>
-                <option value="<%= enquiry_path(filename.gsub('_','-')) %>" <%= "selected" if request.path == enquiry_path(filename.gsub('_','-')) %>>
-                  <%= filename.humanize %>
-                </option>
-              <% end %>
-              <option value="<%= propose_a_pilot_path %>">Proposing a pilot</option>
-            </select>
-            <%= link_to "go", enquiries_path, id: 'change-link' %>
-          <!-- </form> -->
-
+          <select class="mdc-select enquiry-select">
+            <% @filenames.each do |filename| %>
+              <option value="<%= enquiry_path(filename.gsub('_','-')) %>" <%= "selected" if request.path == enquiry_path(filename.gsub('_','-')) %>>
+                <%= filename.humanize %>
+              </option>
+            <% end %>
+            <option value="<%= propose_a_pilot_path %>">Proposing a pilot</option>
+          </select>
+          <%= link_to "go", enquiries_path, id: 'change-link' %>
         </div>
-
       </div>
     </div>
   </div>

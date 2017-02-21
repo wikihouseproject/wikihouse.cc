@@ -36,7 +36,7 @@ class GitHubProject
   end
 
   def data
-    deep_format_times({
+    {
       watchers:      repo.subscribers_count, # This is not the same as what GH considers "watchers"
       stars:         repo.stargazers_count,
       forks:         repo.forks_count,
@@ -46,7 +46,7 @@ class GitHubProject
       files:         tree.map { |file| file_data(file) },
       filecount:     tree.count,
       info:          repo.to_h.deep_stringify_keys,
-    })
+    }
   end
 
   private
@@ -60,19 +60,5 @@ class GitHubProject
 
   def latest_commit(path)
     github.commits(repo_name, path: path, per_page: 1).first
-  end
-
-  # This is only for compatibility with the scraper, it can be removed later
-  def deep_format_times(data)
-    case data
-    when Array
-      data.map { |value| deep_format_times value }
-    when Hash
-      data.transform_values { |value| deep_format_times value }
-    when Time
-      data.xmlschema
-    else
-      data
-    end
   end
 end

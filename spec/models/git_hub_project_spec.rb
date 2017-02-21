@@ -1,21 +1,16 @@
 require "rails_helper"
 require "git_hub_scraper"
 
-RSpec.describe GitHubProject do
-  it "does the same thing as GitHubScraper", :vcr do
-    repo = Repo.find_or_create_by(owner: "wikihouseproject", name: "Wren")
-    repo2 = Repo.find(repo.id)
+RSpec.describe GitHubProject, :vcr do
+  let(:repo) { Repo.find_or_create_by(owner: "wikihouseproject", name: "Wren") }
 
-    expect(repo.data).to be_blank
+  it "pulls data about the repository" do
+    attributes = GitHubProject.new(repo).to_h
+    data       = JSON.parse(attributes[:data].to_json)
 
-    GitHubScraper.new("wikihouseproject", "Wren").scrape
-    expect(repo.reload.data).not_to be_empty
-
-    repo2.attributes = GitHubProject.new(repo2).to_h
-
-    expected = repo.attributes.except("updated_at")
-    actual   = repo2.attributes.except("updated_at")
-
-    expect(actual).to eq(expected)
+    expect(attributes[:commits_count]).to be > 0
+    expect(data["readme"]).not_to be_blank
+    expect(data["files"]).not_to be_empty
+    expect(Time.parse(data.dig("files", 0, "updated_at"))).not_to be_nil
   end
 end

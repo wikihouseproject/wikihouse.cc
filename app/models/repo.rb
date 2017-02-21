@@ -14,6 +14,10 @@ class Repo < ApplicationRecord
     Repo.sum(:commits_count)
   end
 
+  def self.get(owner, name)
+    find_or_create_by(owner: owner, name: name)
+  end
+
   def url
     "https://github.com/#{owner}/#{name}"
   end
@@ -32,6 +36,14 @@ class Repo < ApplicationRecord
     else
       '<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">Creative Commons Attribution Sharealike 3.0 Unported License</a>'
     end
+  end
+
+  def git_hub_project
+    GitHubProject.new(self)
+  end
+
+  def refresh
+    update! git_hub_project.to_h
   end
 
   # def fork_url

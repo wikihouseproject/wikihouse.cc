@@ -1,24 +1,6 @@
 class Enquiry < ApplicationRecord
 
-  attr_accessor :subtitle
-
-  store_accessor :data,
-    :organisation,
-    :description,
-    :message,
-    :phone,
-    :requested_speaker,
-    :date_of_event,
-    :about_event,
-    :expenses,
-    :speaking_fee,
-    :notes,
-    :role,
-    :wants_to,
-    :event_name,
-    :budget
-
-  # validates_presence_of :first_name, :email
+  attr_accessor :subtitle # required for invisible_captcha
 
   def country_name
     country = ISO3166::Country[data['country']]

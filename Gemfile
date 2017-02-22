@@ -40,6 +40,7 @@ gem 'delayed_job_active_record'
 gem 'hirefire'
 gem "hirefire-resource"
 gem "octokit", "~> 4.0"
+gem "push_type", "~> 0.10"
 
 group :production do
   gem 'rails_12factor'

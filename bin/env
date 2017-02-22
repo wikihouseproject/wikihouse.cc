@@ -17,7 +17,7 @@ end
 chdir APP_ROOT do
 
   heading "Pulling from heroku config"
-  system! 'heroku config -s > .env'
+  system! 'heroku config -s -a wikihousecc > .env'
 
   heading "Removing production specific env vars"
   words = %w( DATABASE_URL RACK_ENV RAILS_ENV RAILS_LOG_TO_STDOUT LANG

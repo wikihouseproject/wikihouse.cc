@@ -19,7 +19,11 @@ class Repo < ApplicationRecord
   end
 
   def url
-    "https://github.com/#{owner}/#{name}"
+    "https://github.com/#{full_name}"
+  end
+
+  def full_name
+    "#{owner}/#{name}"
   end
 
   def issues_url

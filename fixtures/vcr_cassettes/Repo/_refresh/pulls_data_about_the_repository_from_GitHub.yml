@@ -1,0 +1,649 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4930'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"d95e5be55d3e52eae83e976b055022e1"
+      Last-Modified:
+      - Wed, 22 Feb 2017 04:20:00 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - b0ef53392caa42315c6206737946d931
+      X-Github-Request-Id:
+      - DA36:173B:E286434:10EAC4F2:58ADABBF
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":66571845,"name":"Wren","full_name":"wikihouseproject/Wren","owner":{"login":"wikihouseproject","id":21242826,"avatar_url":"https://avatars.githubusercontent.com/u/21242826?v=3","gravatar_id":"","url":"https://api.github.com/users/wikihouseproject","html_url":"https://github.com/wikihouseproject","followers_url":"https://api.github.com/users/wikihouseproject/followers","following_url":"https://api.github.com/users/wikihouseproject/following{/other_user}","gists_url":"https://api.github.com/users/wikihouseproject/gists{/gist_id}","starred_url":"https://api.github.com/users/wikihouseproject/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/wikihouseproject/subscriptions","organizations_url":"https://api.github.com/users/wikihouseproject/orgs","repos_url":"https://api.github.com/users/wikihouseproject/repos","events_url":"https://api.github.com/users/wikihouseproject/events{/privacy}","received_events_url":"https://api.github.com/users/wikihouseproject/received_events","type":"Organization","site_admin":false},"private":false,"html_url":"https://github.com/wikihouseproject/Wren","description":"The
+        language and rules for the Wikihouse structural system for 1-3 storey buildings,
+        initially developed in the UK for European contexts","fork":false,"url":"https://api.github.com/repos/wikihouseproject/Wren","forks_url":"https://api.github.com/repos/wikihouseproject/Wren/forks","keys_url":"https://api.github.com/repos/wikihouseproject/Wren/keys{/key_id}","collaborators_url":"https://api.github.com/repos/wikihouseproject/Wren/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/wikihouseproject/Wren/teams","hooks_url":"https://api.github.com/repos/wikihouseproject/Wren/hooks","issue_events_url":"https://api.github.com/repos/wikihouseproject/Wren/issues/events{/number}","events_url":"https://api.github.com/repos/wikihouseproject/Wren/events","assignees_url":"https://api.github.com/repos/wikihouseproject/Wren/assignees{/user}","branches_url":"https://api.github.com/repos/wikihouseproject/Wren/branches{/branch}","tags_url":"https://api.github.com/repos/wikihouseproject/Wren/tags","blobs_url":"https://api.github.com/repos/wikihouseproject/Wren/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/wikihouseproject/Wren/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/wikihouseproject/Wren/git/refs{/sha}","trees_url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees{/sha}","statuses_url":"https://api.github.com/repos/wikihouseproject/Wren/statuses/{sha}","languages_url":"https://api.github.com/repos/wikihouseproject/Wren/languages","stargazers_url":"https://api.github.com/repos/wikihouseproject/Wren/stargazers","contributors_url":"https://api.github.com/repos/wikihouseproject/Wren/contributors","subscribers_url":"https://api.github.com/repos/wikihouseproject/Wren/subscribers","subscription_url":"https://api.github.com/repos/wikihouseproject/Wren/subscription","commits_url":"https://api.github.com/repos/wikihouseproject/Wren/commits{/sha}","git_commits_url":"https://api.github.com/repos/wikihouseproject/Wren/git/commits{/sha}","comments_url":"https://api.github.com/repos/wikihouseproject/Wren/comments{/number}","issue_comment_url":"https://api.github.com/repos/wikihouseproject/Wren/issues/comments{/number}","contents_url":"https://api.github.com/repos/wikihouseproject/Wren/contents/{+path}","compare_url":"https://api.github.com/repos/wikihouseproject/Wren/compare/{base}...{head}","merges_url":"https://api.github.com/repos/wikihouseproject/Wren/merges","archive_url":"https://api.github.com/repos/wikihouseproject/Wren/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/wikihouseproject/Wren/downloads","issues_url":"https://api.github.com/repos/wikihouseproject/Wren/issues{/number}","pulls_url":"https://api.github.com/repos/wikihouseproject/Wren/pulls{/number}","milestones_url":"https://api.github.com/repos/wikihouseproject/Wren/milestones{/number}","notifications_url":"https://api.github.com/repos/wikihouseproject/Wren/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/wikihouseproject/Wren/labels{/name}","releases_url":"https://api.github.com/repos/wikihouseproject/Wren/releases{/id}","deployments_url":"https://api.github.com/repos/wikihouseproject/Wren/deployments","created_at":"2016-08-25T15:48:19Z","updated_at":"2017-02-22T04:20:00Z","pushed_at":"2016-12-23T12:17:31Z","git_url":"git://github.com/wikihouseproject/Wren.git","ssh_url":"git@github.com:wikihouseproject/Wren.git","clone_url":"https://github.com/wikihouseproject/Wren.git","svn_url":"https://github.com/wikihouseproject/Wren","homepage":"","size":6961,"stargazers_count":23,"watchers_count":23,"language":null,"has_issues":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":2,"mirror_url":null,"open_issues_count":10,"forks":2,"open_issues":10,"watchers":23,"default_branch":"master","permissions":{"admin":false,"push":false,"pull":true},"organization":{"login":"wikihouseproject","id":21242826,"avatar_url":"https://avatars.githubusercontent.com/u/21242826?v=3","gravatar_id":"","url":"https://api.github.com/users/wikihouseproject","html_url":"https://github.com/wikihouseproject","followers_url":"https://api.github.com/users/wikihouseproject/followers","following_url":"https://api.github.com/users/wikihouseproject/following{/other_user}","gists_url":"https://api.github.com/users/wikihouseproject/gists{/gist_id}","starred_url":"https://api.github.com/users/wikihouseproject/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/wikihouseproject/subscriptions","organizations_url":"https://api.github.com/users/wikihouseproject/orgs","repos_url":"https://api.github.com/users/wikihouseproject/repos","events_url":"https://api.github.com/users/wikihouseproject/events{/privacy}","received_events_url":"https://api.github.com/users/wikihouseproject/received_events","type":"Organization","site_admin":false},"network_count":2,"subscribers_count":12}'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:23 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/readme
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3.raw
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:24 GMT
+      Content-Type:
+      - application/vnd.github.v3.raw; charset=utf-8
+      Content-Length:
+      - '7448'
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4929'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - '"15044a735401474548d9efb5b837c41e"'
+      Last-Modified:
+      - Fri, 23 Dec 2016 12:17:31 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; param=raw
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 49aa99f015c25437a7443c4d3a58cd17
+      X-Github-Request-Id:
+      - A47C:173B:E2864E6:10EAC5B5:58ADABBF
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        IyBXcmVuCgpUaGUgbGFuZ3VhZ2UgYW5kIHJ1bGVzIGZvciB0aGUgV2lraWhvdXNlIHN0cnVjdHVyYWwgc3lzdGVtIGZvciAxLTMgc3RvcmV5IGJ1aWxkaW5ncywgaW5pdGlhbGx5IGRldmVsb3BlZCBpbiB0aGUgVUsgZm9yIEV1cm9wZWFuIGNvbnRleHRzLgoKIVthbHQgdGFnXShodHRwczovL2dpdGh1Yi5jb20vd2lraWhvdXNlcHJvamVjdC9XcmVuL2Jsb2IvbWFzdGVyL0ltYWdlcy9XcmVuX292ZXJ2aWV3LmpwZykKCiMjIFdyZW4gSGFyZHdhcmUKCldyZW4gY29tcG9uZW50cyBhcmUgQ05DIG1hbnVmdWN0dXJlZCB1c2luZyBzdHJ1Y3R1cmFsLWdyYWRlIHRpbWJlciBwYW5lbCBtYXRlcmlhbHMgKHR5cGljYWxseSwgcGx5d29vZCkgYW5kIGNhbiBiZSByYXBpZGx5IGFzc2VtYmxlZCB0byBwcm9kdWNlIGEgc3RydWN0dXJhbCBjaGFzc2lzLCBvbnRvIHdoaWNoIG90aGVyIGNvbXBvbmVudHMgc3VjaCBhcyBjbGFkZGluZywgd2luZG93cywgZG9vcnMgY2FuIGJlIGZpdHRlZC4KCldyZW4gaXMgaW4gZGV2ZWxvcG1lbnQuIEZvciBmdWxsIGRvY3VtZW50YXRpb24gb24gaG93IFdyZW4gd29ya3MgYW5kIGhvdyB5b3UgY2FuIGNvbnRyaWJ1dGUgdG8gaXRzIGRldmVsb3BtZW50LCB2aXNpdCB0aGUgW1dyZW4gd2lraV0oaHR0cHM6Ly9naXRodWIuY29tL3dpa2lob3VzZXByb2plY3QvV3Jlbi93aWtpKQoKIyMgV3JlbiBQYXJhbWV0cmljcwoKVGhpcyB2ZXJzaW9uIG9mIHRoZSBXcmVuIHN0cnVjdHVyYWwgbGFuZ3VhZ2UgaGFzIGJlZW4gZGV2ZWxvcGVkIGluIEdyYXNzaG9wcGVyLCB0aGUgcGFyYW1ldHJpYyBzY3JpcHRpbmcgcGx1Z2luIGZvciBSaGlubyAzRC4gVGhpcyBjb21wdXRhdGlvbmFsIGRlc2lnbiBwbGF0Zm9ybSBpcyB3aWRlbHkgdXNlZCBpbiB0aGUgZGVzaWduIGFuZCBjb25zdHJ1Y3Rpb24gaW5kdXN0cmllcywgYW5kIGlzIGlkZWFsbHkgc3VpdGVkIHRvIGRpZ2l0YWwgbWFudWZhY3R1cmluZy4KCk90aGVyIGZvcm1hdHMgb2YgdGhlIFdyZW4gc3lzdGVtIGFyZSBjdXJyZW50bHkgYmVpbmcgZGV2ZWxvcGVkLCBidXQgY3VycmVudGx5IHRoaXMgdmVyc2lvbiBpbiBHcmFzc2hvcHBlciBmb3JtYXQgcmVwcmVzZW50cyB0aGUgbGF0ZXN0IHRoaW5raW5nIGFuZCB3b3JrZmxvdyBmb3IgdGhlIHN0cnVjdHVyYWwgdGVjaG5vbG9neS4KCkl0IHNob3VsZCBiZSB0YWtlbiBhcyBhIFdvcmsgaW4gUHJvZ3Jlc3MgYW5kIGZvbGxvd3Mg4oCYYSBidWlsZCBzb21ldGhpbmcgdGhhdCB3b3JrcyBmaXJzdOKAmSBhcHByb2FjaC4gVGhlcmUgYXJlIHN0aWxsIHNldmVyYWwga25vd24gYXJlYXMgd2hlcmUgZWZmaWNpZW5jeSBjYW4gYmUgaW1wcm92ZWQuIFRoZXJlIGFyZSBhbHNvIG1hbnkgd2F5cyB0aGUgc2NyaXB0IGNhbiBiZSBleHRlbmRlZCB0byBtYWtlIHVzZSBvZiBHcmFzc2hvcHBlcuKAmXMgZXhwYW5zaXZlIHN1aXRlIG9mIHRvb2xzIGluY2x1ZGUgbmV3IGZlYXR1cmVzIGxpa2Ugc3RydWN0dXJhbCBhbmFseXNpcywgbmVzdGluZywgR0lTIGRhdGEsIGFuZCBzb2xhci9lbnZpcm9ubWVudGFsIHRyYWNraW5nLiBXZSBnbGFkbHkgd2VsY29tZSBjb250cmlidXRpb25zIGZyb20gZmVsbG93IGNvbXB1dGF0aW9uYWwgZGVzaWduZXJzIHRvIGZvcmsgYW5kIGRldmVsb3AhCgoKIyMjIExpY2VuY2UKClRoZSByZXBvc2l0b3J5IEdyYXNzaG9wcGVyIGZpbGUgV2lraUhvdXNlX1dSRU5fKHY0LjMpIGhhcyBiZWVuIGRldmVsb3BlZCBieSBBcmNoaXRlY3R1cmUgMDAuICAKCkl0IGlzIGxpY2Vuc2VkIHVuZGVyIE1vemlsbGEgUHVibGljIExpY2VuY2UgKE1QTCkgdmVyc2lvbiAyLjAuIEZvciBmdWxsIGxlZ2FsIHRlcm1zIG9mIHRoaXMgbGljZW5jZSB2aXNpdDogaHR0cHM6Ly93d3cubW96aWxsYS5vcmcvZW4tVVMvTVBMLzIuMC8KCiMjIyBQbHVnaW5zCgpUaGlzIHNjcmlwdCBtYWtlcyB1c2Ugb2YgdGhlIGV4Y2VsbGVudCBkZXZlbG9wZXJzIHRvb2xib3ggb2YgR3Jhc3Nob3BwZXIgcGx1Z2lucywgd2hpY2ggbWFrZXMgdGhpcyBhbGwgcG9zc2libGUuIFlvdSB3aWxsIG5lZWQgdG8gZG93bmxvYWQgYW5kIGluc3RhbGwgdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiB0aGVzZSBwbHVnaW5zIGZyb20gRm9vZDRSaGluby5jb20gYmVmb3JlIG9wZW5pbmcgYW5kIHJ1bm5pbmcgdGhpcyBzY3JpcHQgZmlsZS4KClRoZSBwbHVnaW5zIHVzZWQgYXJlOgoKLSBbTGVhZmN1dHRlcl0oaHR0cDovL3d3dy5mb29kNHJoaW5vLmNvbS9hcHAvbGVhZmN1dHRlci1nb29nbGUtc2hlZXRzLWdyYXNzaG9wcGVyKSAtIGZvciBnb29nbGUgc2hlZXRzIGludGVncmF0aW9uCi0gW0VsZWZyb250XShodHRwOi8vd3d3LmZvb2Q0cmhpbm8uY29tL2FwcC9lbGVmcm9udCkgLSBmb3IgYXV0b21hdGVkIEdyYXNzaG9wcGVyLXRvLVJoaW5vIGZsb3cKLSBbSHVtYW5dKGh0dHA6Ly93d3cuZm9vZDRyaGluby5jb20vYXBwL2h1bWFuKSAtIGZvciBhdXRvbWF0ZWQgR3Jhc3Nob3BwZXItdG8tUmhpbm8gZmxvdwotIFtNZXRhaG9wcGVyXShodHRwOi8vd3d3LmdyYXNzaG9wcGVyM2QuY29tL2dyb3VwL21ldGFob3BwZXIpIC0gZm9yIGJhdGNoIGV4cG9ydHMgYW5kIHNjcmlwdCBhbmFseXNpcwoKIyMjIEtub3duIGlzc3VlcyAvIGxpbWl0cwoKLSAqKkQtSm9pbnQgc3BsaXR0aW5nIG9mIHRoZSBmcmFtZSoqIC0gdGhlcmUgaXMgY3VycmVudGx5IGEgdmVyeSBiYXNpYyB2ZXJzaW9uIG9mIHRoZSBsb2dpYyBidXQgdGhpcyBwcm9iYWJseSBuZWVkcyB0byBiZSBjdXN0b20gc2NyaXB0ZWQuIFRoZSBiYXNpYyBydWxlcyBhcmUgbm8gc2VjdGlvbiBzaG91bGQgYmUgbGFyZ2VyIHRoYW4gdGhlIHNoZWV0IG1hdGVyaWFsIChub21pbmFsbHkgMTIyMCB4IDI0NDBtbSkgYW5kIEQtam9pbnRzIGFyZSBuZXZlciBjbG9zZXIgdGhhbiB0d28gZ3JpcHMgdG8gYW55IGNvcm5lci9qdW5jdGlvbgotICoqSW50ZWdyYXRpb24gd2l0aCBHb29nbGUgU2hlZXRzKiogLSBXaGlsZSB5b3UgY2FuIOKAmGRyaXZl4oCZIHRoZSBXcmVuIHNjcmlwdCB1c2luZyB0aGUgcGFyYW1ldGVyIHNsaWRlcnMsIHRoZSBiZXN0IHdheSBtYWtlcyB1c2Ugb2YgdGhlIExlYWZjdXR0ZXIgcGx1Z2luLCB3aGljaCBjb25uZWN0cyB0aGUgc2NyaXB0IHdpdGggYSBnb29nbGUgc3ByZWFkc2hlZXQgZm9yIHRoZSBpbnB1dCBhbmQgb3V0cHV0IG9mIHByb2plY3QgZGF0YS4gVGhpcyBpcyBwYXJ0aWN1bGFybHkgaGFuZHkgd2hlbiBzZXR0aW5nIG91dCB0aGUgd2luZG93IGFuZCBkb29yIHNpemVzIGFuZCBsb2NhdGlvbnMuCi0gKipOdW1iZXIgb2Ygcm9vZiBwb2ludHMqKiAtIEhlcmUgYmUgYnVncywgaXQgbWF5IG5vdCB3b3JrIGZvciBtdWx0aXBsZSByb29mIHBvaW50cyBhbmQgbWF5IGFsc28gYnJlYWsgdGhlIGZyYW1lL3NoZWF0aGluZyBnZW9tZXRyeS4gVXNlIHdpdGggY2FyZS4KLSAqKlRvbGVyYW5jZSoqIC0gV2hpbGUgdG9sZXJhbmNlcyBjYW4gYmUgYWRkZWQgdG8gc2xvdHMgaW4gdGhlIDNEIG1vZGVsLCBhIG11Y2ggYmV0dGVyL3NhZmVyIGFwcHJvYWNoIGlzIHRvIGFkZCB0b2xlcmFuY2Ugb2Zmc2V0cyB0byB0aGUgZmluYWwgbmVzdGVkIGN1dHRpbmcgZmlsZXMsIGFuZCBrZWVwIHRoZSAzRCBnZW9tZXRyeSBhdCAwbW0gdG9sZXJhbmNlLgotICoqRGF0YSBUcmVlIHN0cnVjdHVyZXMqKiAtIFRoZXNlIGNhbiBiZSBzdHJlYW1saW5lZCBtdWNoIGZ1cnRoZXIgd2l0aGluIHRoZSBTaGVhdGhpbmcgYW5kIFNwYWNlciBjb21wb25lbnQgY2x1c3RlcnMgdG8gaW1wcm92ZSB0aGUgZmlsZSBzaXplL3NvbHV0aW9uIHNwZWVkCi0gQ3VzdG9tIHNjcmlwdHMgLSBjdXN0b20gQyMgLyBQeXRob24gc2NyaXB0cyBjYW4gYW5kIHNob3VsZCBiZSBhZGRlZCB0byByZXBsYWNlIGxhcmdlIHNlY3Rpb25zIG9mIHRoZSBzY3JpcHQgdG8gaW1wcm92ZSB0aGUgZmxvdyBhbmQgc3BlZWQgdXAgcHJvY2Vzc2luZwotICoqRW5kLXdhbGxzIChpbiBkZXZlbG9wbWVudCkqKiAtIFRoZSBnYWJsZSBlbmQgd2FsbHMgdXNlIHRoZSBXaWtpaG91c2UgV2VhdmVyIHN5c3RlbSAoY2Fzc2V0dGUtYmFzZWQpIGFuZCBzdGlsbCBtb3JlIGRldmVsb3BtZW50IG5lZWRlZCBvbiBhbiBhdXRvbWF0ZWQgd29ya2Zsb3cgaGVyZSwgc3BlY2lmaWNhbGx5IHdpdGggaG93IHRoZSBmcm9udCBhbmQgcmVhciBmYWNhZGVzIGFyZSBkaXZpZGVkIHVwIGFyb3VuZCB3aW5kb3cgb3BlbmluZ3MuIFRoZSBwYXJhbWV0cmljIHNjcmlwdCBmb3IgV2VhdmVyIGlzIG5vdCB5ZXQgaW5jbHVkZWQgaW4gdGhpcyBpbml0aWFsIHJlbGVhc2UuCi0gKipOb3Rlcy9jb21tZW50cyoqIC0gIFRoZXJl4oCZcyBhIGRlZmluaXRlIGxhY2sgb2YgdGhlc2UgaW4gdGhlIGNsdXN0ZXJzIGFuZCBzdWJjbHVzdGVycy4gTW9yZSBkZXRhaWwgYW5kIGNvbW1lbnRzIHdpbGwgYmUgYWRkZWQgc29vbiwgbXkgYXBvbG9naWVzISBJZiB5b3UgaGF2ZSBwYXJ0aWN1bGFybHkgcXVlc3Rpb25zIGdldCBpbiB0b3VjaCB2aWEgZW1haWwgb3IgcmFpc2UgYW4gaXNzdWUgaGVyZS4KCiMjIFdyZW4gSGFyZHdhcmUgUiZEIENvbnRyaWJ1dGlvbnMKCioqQXJjaGl0ZWN0dXJlIDAwKiogKHd3dy5hcmNoaXRlY3R1cmUwMC5uZXQpCi0gW0FsYXN0YWlyIFBhcnZpbl0oaHR0cHM6Ly90d2l0dGVyLmNvbS9BbGFzdGFpclBhcnZpbikKLSBbRGF2aWQgU2F4YnldKGh0dHBzOi8vdHdpdHRlci5jb20vZGF2aWRzeDAwKQotIFtSeWFuIE1jTG91Z2hsaW5dKGh0dHBzOi8vdHdpdHRlci5jb20vcnlhbmphbWVzbWFjKQotIFtDbGF5dG9uIFByZXN0XShodHRwczovL3R3aXR0ZXIuY29tL0NsYXl0b25QcmVzdCkgCi0gW05pY2sgSWVyb2RpYWNvbm91XShodHRwczovL3R3aXR0ZXIuY29tL25pY2tfZGlhY29ub3UpIAotIFtKb25pIFN0ZWluZXJdKGh0dHBzOi8vdHdpdHRlci5jb20vam9uaXN0ZWluZXIpCgoqKk1vbWVudHVtIEVuZ2luZWVyaW5nKiogKHd3dy5tb21lbnR1bWVuZ2luZWVyaW5nLmNvbSkKLSBCZW4gV2hpdGZpZWxkCi0gU3RldmUgRmlzaGVyCi0gUm9zaWUgU3RldmVuc29uCgoqKlNwYWNlIENyYWZ0IFN5c3RlbXMqKiAod3d3LnNwYWNlY3JhZnQuY28ubnopCi0gW0Rhbm55IFNxdWlyZXNdKGh0dHBzOi8vdHdpdHRlci5jb20vZWNvYXJrbnopCi0gW01hcnRpbiBMdWZmXShodHRwczovL3R3aXR0ZXIuY29tL21hcnRpbmx1ZmYpCgoqKkFydXAgQXNzb2NpYXRlcyoqICh3d3cuYXJ1cC5jb20pCi0gTmluYSBUYWJpbmsKLSBBZHJpYW4gQ2FtcGJlbGwKCgoqKkluZGl2aWR1YWwgQ29udHJpYnV0b3JzKioKLSBbQWxleCBXaGl0Y3JvZnRdKGh0dHBzOi8vdHdpdHRlci5jb20vQWxleFdoaXRjcm9mdCkKLSBKdXN0eW5hIFN3YXQKLSBOaWNvIE1hZXMKLSBBa2lrbyBLb2JheWFzaGkKCioqVUxCIEJydXhlbGxlcyoqCi0gU3RydWN0dXJhbCBlbmdpbmVlcmluZyBzdHVkZW50IGdyb3VwCgojIyBXcmVuIFBhcmFtZXRyaWMgQ29udHJpYnV0aW9ucwoKKipBcmNoaXRlY3R1cmUgMDAqKiAod3d3LmFyY2hpdGVjdHVyZTAwLm5ldCkKLSBbQ2xheXRvbiBQcmVzdF0oaHR0cHM6Ly90d2l0dGVyLmNvbS9DbGF5dG9uUHJlc3QpIAoKKipBcmNoaXR5cGUgLSBUZWFtIEFyY2hpdGVjdHMqKiAoaHR0cDovL3d3dy5hcmNoaXR5cGUtdGEuY28ubnovKQotIFtBZ25lZXNoIEJyYWhtYmhhdHRdKGh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9pbi9hZ25lZXNoLWJyYWhtYmhhdHQtNzU1NzIzND9hdXRoVHlwZT1OQU1FX1NFQVJDSCZhdXRoVG9rZW49TWRKWiZsb2NhbGU9ZW5fVVMmdHJrPXR5YWgmdHJrSW5mbz1jbGlja2VkVmVydGljYWwlM0FteW5ldHdvcmslMkNjbGlja2VkRW50aXR5SWQlM0ExMzczMzQ4OSUyQ2F1dGhUeXBlJTNBTkFNRV9TRUFSQ0glMkNpZHglM0ExLTEtMSUyQ3RhcklkJTNBMTQ4MjIzNTM0MDkyOCUyQ3RhcyUzQWFnKQoKSWYgeW91IGJlbGlldmUgeW91IGFyZSBtaXNzaW5nIGZyb20gZWl0aGVyIG9mIHRoZXNlIGxpc3RzIG9mIGhpc3RvcmljYWwgY29udHJpYnV0aW9ucywgcGxlYXNlIGNvbnRhY3QgdXMgb3IgZm9yayB0aGlzIGRvY3VtZW50IHRvIGFtZW5kLgoKCiMgVGVybXMgb2YgdXNlCgpCeSBkb3dubG9hZGluZyB0aGVzZSBmaWxlcyBvciBpbmZvcm1hdGlvbiB5b3UgYWdyZWUgdG8gdGhlIGZvbGxvd2luZyB0ZXJtcyBhbmQgY29uZGl0aW9ucy4KCkluZm9ybWF0aW9uIGlzIHNoYXJlZCB3aXRob3V0IGFueSBraW5kIG9mIHdhcnJhbnR5IG9yIGd1YXJhbnRlZQpBbGwgSW5mb3JtYXRpb24gaXMgcHJvdmlkZWQg4oCYYXMgaXPigJkuIE5vIHJlcHJlc2VudGF0aW9ucyBvciB3YXJyYW50aWVzIGV4cHJlc3Mgb3IgaW1wbGllZCBhcmUgbWFkZSByZWdhcmRpbmcgdGhlIFdpa2lob3VzZSBJbmZvLCBpdHMgYWNjdXJhY3ksIGNvbXBsZXRlbmVzcywgZnVuY3Rpb25hbGl0eSBvciBmaXRuZXNzIGZvciBhIHBhcnRpY3VsYXIgdXNlIGluIGEgcGFydGljdWxhciBsb2NhdGlvbi4gIAoKWW91IGFyZSBzb2xlbHkgcmVzcG9uc2libGUgZm9yIHRoZSB1c2Ugb2YgdGhlIGluZm9ybWF0aW9uCkJ5IHVzaW5nIHRoaXMgaW5mb3JtYXRpb24geW91IGFzc3VtZSBmdWxsIHJlc3BvbnNpYmlsaXR5IGZvciBhbnkgbG9zcyByZXN1bHRpbmcgZnJvbSB1c2Ugb3IgaW5hYmlsaXR5IHRvIHVzZSB0aGUgV2lraWhvdXNlIEluZm8sIGFuZCBmb3JldmVyIHJlbGVhc2VzIFdpa2lIb3VzZSBGb3VuZGF0aW9uIG9yIG90aGVyIFdpa2lIb3VzZSB1c2VycyBmcm9tIGFueSBsaWFiaWxpdHkgZm9yIHN1Y2ggbG9zczsgIGluY2x1ZGluZyBidXQgbm90IGxpbWl0ZWQgdG8gbG9zcyBvZiBwcm9maXRzLCBnb29kd2lsbCBvciBhc3NldHMuCgpZb3UgYXJlIHJlc3BvbnNpYmxlIGZvciBtZWV0aW5nIGxvY2FsIGNvZGVzIGFuZCBsZWdpc2xhdGlvbgpVc2VycyBtdXN0IHNhdGlzZnkgdGhlbXNlbHZlcyByZWdhcmRpbmcgdGhlIGFwcGxpY2F0aW9uIG9mIHN0YXR1dG9yeSByZXF1aXJlbWVudHMsIGxvY2FsIGJ1aWxkaW5nIHJlZ3VsYXRpb25zLCBjb2RlcywgaW5zdXJhbmNlIGNlcnRpZmljYXRpb24gb3Igb3RoZXIgcmVxdWlyZW1lbnRzIG9yIHJlY29tbWVuZGF0aW9ucyByZWxldmFudCB0byB0aGUgbG9jYXRpb24gd2hlcmUgYW5kIG1hdGVyaWFscyB3aXRoIHdoaWNoIHRoZXkgcGxhbiB0byBidWlsZC4gV2hlcmUgcmVxdWlyZWQgeW91IHNob3VsZCBhbHdheXMgc2VlayB0aGUgYWR2aWNlIG9mIGEgcmVsZXZhbnQgcXVhbGlmaWVkIHByb2Zlc3Npb25hbC4KCllvdSBhcmUgcmVzcG9uc2libGUgZm9yIHVzaW5nIHRoZSBpbmZvcm1hdGlvbiBpbiBhIHNhZmUgd2F5CiBVc2VycyBhcmUgcmVzcG9uc2libGUgZm9yIGVuc3VyaW5nIHRoYXQgaW5mb3JtYXRpb24gdGhleSB1c2Ugb3IgY2F1c2UgdG8gYmUgdXNlZCBpcyB1c2VkIGluIGEgd2F5IHdoaWNoIGlzIHNhZmUsIGFuZCBpcyBub3QgbGlrZWx5IHRvIGNhdXNlIGhhcm0gZHVyaW5nIG9yIGFmdGVyIG1hbnVmYWN0dXJpbmcsIGNvbnN0cnVjdGlvbiwgdXNlIG9yIGRpc2Fzc2VtYmx5Lgo=
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:24 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/git/trees/master
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4928'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"f67c9db58c93cd1f0feec6e70380dd7f"
+      Last-Modified:
+      - Wed, 22 Feb 2017 04:20:00 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 4537b68c46a1b65b106078b0a2578ee2
+      X-Github-Request-Id:
+      - DA3A:173B:E2865B0:10EAC695:58ADABC0
+    body:
+      encoding: ASCII-8BIT
+      string: '{"sha":"2e43b527757ea0a1be841e536cfe573de48b1494","url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees/2e43b527757ea0a1be841e536cfe573de48b1494","tree":[{"path":"Images","mode":"040000","type":"tree","sha":"6e05a9adbe8e25c04b574e2259750caf60366fa0","url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees/6e05a9adbe8e25c04b574e2259750caf60366fa0"},{"path":"My
+        Project Engine.xlsx","mode":"100644","type":"blob","sha":"8d04c7f8fb10b685756befdd0e4799089e8764a7","size":102520,"url":"https://api.github.com/repos/wikihouseproject/Wren/git/blobs/8d04c7f8fb10b685756befdd0e4799089e8764a7"},{"path":"README.md","mode":"100644","type":"blob","sha":"9bc1f8eda8828254816970ea426454f085d1d188","size":7448,"url":"https://api.github.com/repos/wikihouseproject/Wren/git/blobs/9bc1f8eda8828254816970ea426454f085d1d188"},{"path":"WikiHouse_WREN_(v4.3).gh","mode":"100644","type":"blob","sha":"93ea514a800ee5a61d60472c5c1429fa63bc8db2","size":2981755,"url":"https://api.github.com/repos/wikihouseproject/Wren/git/blobs/93ea514a800ee5a61d60472c5c1429fa63bc8db2"}],"truncated":false}'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:24 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/commits?path=Images&per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4927'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"71841fcaaf4bdd8ba73be91f70d8c246"
+      Last-Modified:
+      - Fri, 16 Dec 2016 19:38:19 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/repositories/66571845/commits?path=Images&per_page=1&page=2>;
+        rel="next", <https://api.github.com/repositories/66571845/commits?path=Images&per_page=1&page=11>;
+        rel="last"
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - e724c57ebb9961c772a91e2dd7421c8d
+      X-Github-Request-Id:
+      - A480:173B:E286636:10EAC73D:58ADABC1
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sha":"a88724feaa79e0f939938657be6261c21cb861b1","commit":{"author":{"name":"Alastair","email":"alastair@wikihouse.cc","date":"2016-12-16T19:38:19Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-16T19:38:19Z"},"message":"Wren
+        overview image added.","tree":{"sha":"d505ec319a526385ce54711ae55e6d8bce54f17a","url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees/d505ec319a526385ce54711ae55e6d8bce54f17a"},"url":"https://api.github.com/repos/wikihouseproject/Wren/git/commits/a88724feaa79e0f939938657be6261c21cb861b1","comment_count":0},"url":"https://api.github.com/repos/wikihouseproject/Wren/commits/a88724feaa79e0f939938657be6261c21cb861b1","html_url":"https://github.com/wikihouseproject/Wren/commit/a88724feaa79e0f939938657be6261c21cb861b1","comments_url":"https://api.github.com/repos/wikihouseproject/Wren/commits/a88724feaa79e0f939938657be6261c21cb861b1/comments","author":{"login":"Alastairparvin","id":9322547,"avatar_url":"https://avatars.githubusercontent.com/u/9322547?v=3","gravatar_id":"","url":"https://api.github.com/users/Alastairparvin","html_url":"https://github.com/Alastairparvin","followers_url":"https://api.github.com/users/Alastairparvin/followers","following_url":"https://api.github.com/users/Alastairparvin/following{/other_user}","gists_url":"https://api.github.com/users/Alastairparvin/gists{/gist_id}","starred_url":"https://api.github.com/users/Alastairparvin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Alastairparvin/subscriptions","organizations_url":"https://api.github.com/users/Alastairparvin/orgs","repos_url":"https://api.github.com/users/Alastairparvin/repos","events_url":"https://api.github.com/users/Alastairparvin/events{/privacy}","received_events_url":"https://api.github.com/users/Alastairparvin/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"c6c6a5c1c087742f5afcd9d10c583296a18c2445","url":"https://api.github.com/repos/wikihouseproject/Wren/commits/c6c6a5c1c087742f5afcd9d10c583296a18c2445","html_url":"https://github.com/wikihouseproject/Wren/commit/c6c6a5c1c087742f5afcd9d10c583296a18c2445"}]}]'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:25 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/commits?path=My%20Project%20Engine.xlsx&per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4926'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"add1e7293b58ab7d81324647c87672ce"
+      Last-Modified:
+      - Tue, 20 Dec 2016 09:42:34 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/repositories/66571845/commits?path=My+Project+Engine.xlsx&per_page=1&page=2>;
+        rel="next", <https://api.github.com/repositories/66571845/commits?path=My+Project+Engine.xlsx&per_page=1&page=1>;
+        rel="last"
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - edf23fdc48375d9066b698b8d98062e9
+      X-Github-Request-Id:
+      - DA3E:173C:900E79C:AB741F4:58ADABC1
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sha":"1a9723bf8dba15591e5ed1d8cebe7898a8779213","commit":{"author":{"name":"Clayton","email":"clayton@wikihouse.cc","date":"2016-12-20T09:42:34Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-20T09:42:34Z"},"message":"Sample
+        project engine for driving Grasshopper file\n\nUpload this into Google sheets
+        to use in connection with the Wren Grasshopper script, using the Leafcutter
+        plugin integrated with the Wren script. \r\n\r\nAlternatively switch out functions
+        to run from Excel, using same cell addresses.\r\n\r\nVery helpful of controlling
+        form and structural parameters, collating building data, and locating window/door
+        openings.","tree":{"sha":"35364eb7cdca61366a1fa7052fe8a824eec458de","url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees/35364eb7cdca61366a1fa7052fe8a824eec458de"},"url":"https://api.github.com/repos/wikihouseproject/Wren/git/commits/1a9723bf8dba15591e5ed1d8cebe7898a8779213","comment_count":0},"url":"https://api.github.com/repos/wikihouseproject/Wren/commits/1a9723bf8dba15591e5ed1d8cebe7898a8779213","html_url":"https://github.com/wikihouseproject/Wren/commit/1a9723bf8dba15591e5ed1d8cebe7898a8779213","comments_url":"https://api.github.com/repos/wikihouseproject/Wren/commits/1a9723bf8dba15591e5ed1d8cebe7898a8779213/comments","author":{"login":"claytonprest","id":15347227,"avatar_url":"https://avatars.githubusercontent.com/u/15347227?v=3","gravatar_id":"","url":"https://api.github.com/users/claytonprest","html_url":"https://github.com/claytonprest","followers_url":"https://api.github.com/users/claytonprest/followers","following_url":"https://api.github.com/users/claytonprest/following{/other_user}","gists_url":"https://api.github.com/users/claytonprest/gists{/gist_id}","starred_url":"https://api.github.com/users/claytonprest/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/claytonprest/subscriptions","organizations_url":"https://api.github.com/users/claytonprest/orgs","repos_url":"https://api.github.com/users/claytonprest/repos","events_url":"https://api.github.com/users/claytonprest/events{/privacy}","received_events_url":"https://api.github.com/users/claytonprest/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3","url":"https://api.github.com/repos/wikihouseproject/Wren/commits/8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3","html_url":"https://github.com/wikihouseproject/Wren/commit/8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3"}]}]'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:26 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/commits?path=README.md&per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4925'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"c8dff0b9922a9bdc24d5e888de809d6d"
+      Last-Modified:
+      - Fri, 23 Dec 2016 12:17:31 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/repositories/66571845/commits?path=README.md&per_page=1&page=2>;
+        rel="next", <https://api.github.com/repositories/66571845/commits?path=README.md&per_page=1&page=28>;
+        rel="last"
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - a474937f3b2fa272558fa6dc951018ad
+      X-Github-Request-Id:
+      - A484:173B:E28679F:10EAC8EA:58ADABC2
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sha":"2e43b527757ea0a1be841e536cfe573de48b1494","commit":{"author":{"name":"Alastair","email":"alastair@wikihouse.cc","date":"2016-12-23T12:17:31Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-23T12:17:31Z"},"message":"Update
+        README.md","tree":{"sha":"fc296d9d9f9a2269f47adb3cfa23c344a554c9c7","url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees/fc296d9d9f9a2269f47adb3cfa23c344a554c9c7"},"url":"https://api.github.com/repos/wikihouseproject/Wren/git/commits/2e43b527757ea0a1be841e536cfe573de48b1494","comment_count":0},"url":"https://api.github.com/repos/wikihouseproject/Wren/commits/2e43b527757ea0a1be841e536cfe573de48b1494","html_url":"https://github.com/wikihouseproject/Wren/commit/2e43b527757ea0a1be841e536cfe573de48b1494","comments_url":"https://api.github.com/repos/wikihouseproject/Wren/commits/2e43b527757ea0a1be841e536cfe573de48b1494/comments","author":{"login":"Alastairparvin","id":9322547,"avatar_url":"https://avatars.githubusercontent.com/u/9322547?v=3","gravatar_id":"","url":"https://api.github.com/users/Alastairparvin","html_url":"https://github.com/Alastairparvin","followers_url":"https://api.github.com/users/Alastairparvin/followers","following_url":"https://api.github.com/users/Alastairparvin/following{/other_user}","gists_url":"https://api.github.com/users/Alastairparvin/gists{/gist_id}","starred_url":"https://api.github.com/users/Alastairparvin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Alastairparvin/subscriptions","organizations_url":"https://api.github.com/users/Alastairparvin/orgs","repos_url":"https://api.github.com/users/Alastairparvin/repos","events_url":"https://api.github.com/users/Alastairparvin/events{/privacy}","received_events_url":"https://api.github.com/users/Alastairparvin/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"c8676b6e34abb6f242568c322c86cb66a471e4e1","url":"https://api.github.com/repos/wikihouseproject/Wren/commits/c8676b6e34abb6f242568c322c86cb66a471e4e1","html_url":"https://github.com/wikihouseproject/Wren/commit/c8676b6e34abb6f242568c322c86cb66a471e4e1"}]}]'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:26 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/commits?path=WikiHouse_WREN_(v4.3).gh&per_page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4924'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"fe0790f7d8caf9da7329b90ca2345a36"
+      Last-Modified:
+      - Tue, 20 Dec 2016 09:38:37 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/repositories/66571845/commits?path=WikiHouse_WREN_%28v4.3%29.gh&per_page=1&page=2>;
+        rel="next", <https://api.github.com/repositories/66571845/commits?path=WikiHouse_WREN_%28v4.3%29.gh&per_page=1&page=1>;
+        rel="last"
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 2811da37fbdda4367181b328b22b2499
+      X-Github-Request-Id:
+      - DA42:173C:900E87E:AB74301:58ADABC2
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"sha":"8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3","commit":{"author":{"name":"Clayton","email":"clayton@wikihouse.cc","date":"2016-12-20T09:38:37Z"},"committer":{"name":"GitHub","email":"noreply@github.com","date":"2016-12-20T09:38:37Z"},"message":"Grasshopper
+        parametric script for Wren v. 4.3\n\nA computational design script for creating
+        a customisable Wren chassis in Grasshopper for Rhino 5","tree":{"sha":"70a114691104a0373787d46a2558fe7b988213af","url":"https://api.github.com/repos/wikihouseproject/Wren/git/trees/70a114691104a0373787d46a2558fe7b988213af"},"url":"https://api.github.com/repos/wikihouseproject/Wren/git/commits/8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3","comment_count":0},"url":"https://api.github.com/repos/wikihouseproject/Wren/commits/8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3","html_url":"https://github.com/wikihouseproject/Wren/commit/8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3","comments_url":"https://api.github.com/repos/wikihouseproject/Wren/commits/8e39c1c8e9a99dc80fa8bda2f3fd9c82776da4b3/comments","author":{"login":"claytonprest","id":15347227,"avatar_url":"https://avatars.githubusercontent.com/u/15347227?v=3","gravatar_id":"","url":"https://api.github.com/users/claytonprest","html_url":"https://github.com/claytonprest","followers_url":"https://api.github.com/users/claytonprest/followers","following_url":"https://api.github.com/users/claytonprest/following{/other_user}","gists_url":"https://api.github.com/users/claytonprest/gists{/gist_id}","starred_url":"https://api.github.com/users/claytonprest/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/claytonprest/subscriptions","organizations_url":"https://api.github.com/users/claytonprest/orgs","repos_url":"https://api.github.com/users/claytonprest/repos","events_url":"https://api.github.com/users/claytonprest/events{/privacy}","received_events_url":"https://api.github.com/users/claytonprest/received_events","type":"User","site_admin":false},"committer":{"login":"web-flow","id":19864447,"avatar_url":"https://avatars.githubusercontent.com/u/19864447?v=3","gravatar_id":"","url":"https://api.github.com/users/web-flow","html_url":"https://github.com/web-flow","followers_url":"https://api.github.com/users/web-flow/followers","following_url":"https://api.github.com/users/web-flow/following{/other_user}","gists_url":"https://api.github.com/users/web-flow/gists{/gist_id}","starred_url":"https://api.github.com/users/web-flow/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/web-flow/subscriptions","organizations_url":"https://api.github.com/users/web-flow/orgs","repos_url":"https://api.github.com/users/web-flow/repos","events_url":"https://api.github.com/users/web-flow/events{/privacy}","received_events_url":"https://api.github.com/users/web-flow/received_events","type":"User","site_admin":false},"parents":[{"sha":"6652ed92b788762d88fefd8a0d9cdd0cd73e8961","url":"https://api.github.com/repos/wikihouseproject/Wren/commits/6652ed92b788762d88fefd8a0d9cdd0cd73e8961","html_url":"https://github.com/wikihouseproject/Wren/commit/6652ed92b788762d88fefd8a0d9cdd0cd73e8961"}]}]'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:27 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/wikihouseproject/Wren/contributors?anon=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 4.6.2
+      Content-Type:
+      - application/json
+      Authorization:
+      - token ENV[git_hub_token]
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 22 Feb 2017 15:18:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4923'
+      X-Ratelimit-Reset:
+      - '1487779142'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      Etag:
+      - W/"8584a21a418165ba0cd18f37d423cefa"
+      Last-Modified:
+      - Wed, 22 Feb 2017 04:20:00 GMT
+      X-Oauth-Scopes:
+      - ''
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Served-By:
+      - 49aa99f015c25437a7443c4d3a58cd17
+      X-Github-Request-Id:
+      - A488:173B:E2868D7:10EACA6A:58ADABC3
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"claytonprest","id":15347227,"avatar_url":"https://avatars.githubusercontent.com/u/15347227?v=3","gravatar_id":"","url":"https://api.github.com/users/claytonprest","html_url":"https://github.com/claytonprest","followers_url":"https://api.github.com/users/claytonprest/followers","following_url":"https://api.github.com/users/claytonprest/following{/other_user}","gists_url":"https://api.github.com/users/claytonprest/gists{/gist_id}","starred_url":"https://api.github.com/users/claytonprest/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/claytonprest/subscriptions","organizations_url":"https://api.github.com/users/claytonprest/orgs","repos_url":"https://api.github.com/users/claytonprest/repos","events_url":"https://api.github.com/users/claytonprest/events{/privacy}","received_events_url":"https://api.github.com/users/claytonprest/received_events","type":"User","site_admin":false,"contributions":38},{"login":"Alastairparvin","id":9322547,"avatar_url":"https://avatars.githubusercontent.com/u/9322547?v=3","gravatar_id":"","url":"https://api.github.com/users/Alastairparvin","html_url":"https://github.com/Alastairparvin","followers_url":"https://api.github.com/users/Alastairparvin/followers","following_url":"https://api.github.com/users/Alastairparvin/following{/other_user}","gists_url":"https://api.github.com/users/Alastairparvin/gists{/gist_id}","starred_url":"https://api.github.com/users/Alastairparvin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Alastairparvin/subscriptions","organizations_url":"https://api.github.com/users/Alastairparvin/orgs","repos_url":"https://api.github.com/users/Alastairparvin/repos","events_url":"https://api.github.com/users/Alastairparvin/events{/privacy}","received_events_url":"https://api.github.com/users/Alastairparvin/received_events","type":"User","site_admin":false,"contributions":7}]'
+    http_version: 
+  recorded_at: Wed, 22 Feb 2017 15:18:27 GMT
+recorded_with: VCR 3.0.3

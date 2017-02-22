@@ -10,8 +10,20 @@ class Repo < ApplicationRecord
     self.all.map{|r| r.data['filecount'] }.sum
   end
 
+  def self.total_commits
+    Repo.sum(:commits_count)
+  end
+
+  def self.get(owner, name)
+    find_or_create_by(owner: owner, name: name)
+  end
+
   def url
-    "https://github.com/#{owner}/#{name}"
+    "https://github.com/#{full_name}"
+  end
+
+  def full_name
+    "#{owner}/#{name}"
   end
 
   def issues_url
@@ -30,8 +42,17 @@ class Repo < ApplicationRecord
     end
   end
 
-  def self.total_commits
-    Repo.sum(:commits_count)
+  def git_hub_project
+    GitHubProject.new(self)
+  end
+
+  def refresh
+    project = git_hub_project
+
+    update!(
+      data:          project.data,
+      commits_count: project.commits_count
+    )
   end
 
   # def fork_url

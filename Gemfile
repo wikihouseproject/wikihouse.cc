@@ -39,6 +39,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'hirefire'
 gem "hirefire-resource"
+gem "octokit", "~> 4.0"
 
 group :production do
   gem 'rails_12factor'
@@ -64,6 +65,8 @@ group :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'zonebie'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do

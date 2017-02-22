@@ -2,7 +2,9 @@
 
 [![Code Climate](https://codeclimate.com/github/wikihouseproject/wikihouse.cc/badges/gpa.svg)](https://codeclimate.com/github/wikihouseproject/wikihouse.cc) [![Issue Count](https://codeclimate.com/github/wikihouseproject/wikihouse.cc/badges/issue_count.svg)](https://codeclimate.com/github/wikihouseproject/wikihouse.cc/issues) [![Build Status](https://travis-ci.org/wikihouseproject/wikihouse.cc.png)](https://travis-ci.org/wikihouseproject/wikihouse.cc)
 
-The official website for the WikiHouse Foundation
+The official WikiHouse Foundation website.
+
+[![WikiHouse Logo](public/apple-icon-120x120.png)](https://wikihouse.cc)
 
 ## Development setup
 

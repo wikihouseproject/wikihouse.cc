@@ -12,8 +12,16 @@ class GitHubProject
     repo.full_name
   end
 
+  # Notes:
+  #
+  #   * This will break if the number of contributors gets so high that
+  #     pagination kicks in, but (probably) YAGNI
+  #
+  #   * The second boolean parameter allows us to opt-in to counting anonymous
+  #     contributors, without which we'll come out with a different commit count
+  #     to what appears on GitHub
   def contributors
-    github.contributors(repo_name)
+    github.contributors(repo_name, true)
   end
 
   def readme_contents

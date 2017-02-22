@@ -22,3 +22,4 @@ repos/*
 _localonly/*
 
 /.sass-cache
+/public/system

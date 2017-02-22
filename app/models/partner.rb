@@ -5,6 +5,9 @@ class Partner < PushType::Node
   field :link, :string
   field :image_id, :asset
 
-  validates :link,     presence: true
   validates :image_id, presence: true
+
+  def image_url
+    image.file.url
+  end
 end

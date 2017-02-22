@@ -1,5 +1,10 @@
 <div id="partners-logos">
   <ul id="partners-icons">
+    <% if params[:cms] -%>
+      <% partners.each do |partner| -%>
+        <li><%= partner.linked_image %></li>
+      <% end -%>
+    <% else -%>
     <li><%= image_tag "partners/00-01.svg", alt: "00" %></li>
     <li><%= image_tag "partners/ARUP-01.svg", alt: "ARUP" %></li>
     <li><%= image_tag "partners/big-lottery-fund-bw.svg", alt: "Big Lottery Fund" %></li>
@@ -16,5 +21,6 @@
     <li><%= image_tag "partners/The Power to Change bw.svg", alt: "Power to Change" %></li>
     <!-- <li><%= image_tag "partners/The Power to Change org.svg" %></li> -->
     <li><%= image_tag "partners/UnLtd-01.svg", alt: "UnLtd" %></li>
+    <% end -%>
   </ul>
 </div>

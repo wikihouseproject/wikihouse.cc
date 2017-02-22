@@ -1,6 +1,8 @@
-# wikihouse.cc
+# [wikihouse.cc](https://wikihouse.cc)
 
-The new wikihouse website https://wikihouse.cc
+[![Code Climate](https://codeclimate.com/github/wikihouseproject/wikihouse.cc/badges/gpa.svg)](https://codeclimate.com/github/wikihouseproject/wikihouse.cc) [![Issue Count](https://codeclimate.com/github/wikihouseproject/wikihouse.cc/badges/issue_count.svg)](https://codeclimate.com/github/wikihouseproject/wikihouse.cc/issues) [![Build Status](https://travis-ci.org/wikihouseproject/wikihouse.cc.png)](https://travis-ci.org/wikihouseproject/wikihouse.cc)
+
+The official website for the WikiHouse Foundation
 
 ## Development setup
 
@@ -37,6 +39,6 @@ The github master branch is auto-linked to heroku, so a simple `git push` will p
 
 Managed by CloudFlare
 
-## Monitoring
+## Monitoring
 
 The site is periodically pinged by uptimerobot.

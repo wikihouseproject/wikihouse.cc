@@ -40,7 +40,7 @@ class EnquiriesController < ApplicationController
   private
 
     def enquiry_params
-      params.require(:enquiry).permit!
+      params.require(:enquiry).permit(:first_name, :last_name, :email, :kind).permit!(:data)
     end
 
     def set_filenames

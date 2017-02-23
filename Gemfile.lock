@@ -253,6 +253,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.5)
+      pry (>= 0.9.10)
     public_suffix (2.0.5)
     puma (3.7.0)
     push_type (0.10.4)
@@ -461,6 +463,7 @@ DEPENDENCIES
   neat (~> 1.8)
   octokit (~> 4.0)
   pg (~> 0.18)
+  pry-rails
   puma (~> 3.0)
   push_type (~> 0.10)
   rails (~> 5.0.0, >= 5.0.0.1)

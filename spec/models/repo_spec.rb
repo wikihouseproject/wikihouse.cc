@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Repo, :vcr do
+RSpec.describe Repo do
   describe "#refresh" do
     it "pulls data about the repository from GitHub", :vcr do
       repo = Repo.get("wikihouseproject", "Wren")

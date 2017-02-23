@@ -1,0 +1,10 @@
+services:
+- postgresql
+language: ruby
+cache: bundler
+script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake db:test:prepare
+- bin/rspec
+bundler_args: "--without production"

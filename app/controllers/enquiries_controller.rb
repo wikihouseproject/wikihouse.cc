@@ -41,7 +41,8 @@ class EnquiriesController < ApplicationController
   private
 
     def enquiry_params
-      params.require(:enquiry).permit(:first_name, :last_name, :email, :kind).permit!(:data)
+      data_keys = params[:enquiry][:data].keys
+      params.require(:enquiry).permit(:first_name, :last_name, :email, :kind, data: data_keys)
     end
 
     def set_filenames

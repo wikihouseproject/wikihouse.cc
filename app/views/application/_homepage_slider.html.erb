@@ -1,6 +1,22 @@
 <div id="homepage-slider" class="main-slider-holder swiper-container main-slider-container">
   <div class="swiper-wrapper">
 
+      <% if cms_content? -%>
+
+      <% @sliders.each do |slider| -%>
+        <div class="<%= slider.class_name %> swiper-slide" style="<%= slider.style %>">
+          <div class="s-container">
+            <div class="slide-content">
+              <span class="typed"><%= slider.formatted_title %></span>
+              <p><%= slider.caption %></p>
+            </div>
+            <%= link_to slider.link_text, slider.link_url, class: "bottom-link #{slider.class_name}" %>
+          </div>
+        </div>
+      <% end -%>
+
+      <% else -%>
+
       <div class="dark swiper-slide" style="background-image: url('https://static.wikihouse.cc/KRZMY6m.jpg'); background-position: center bottom">
         <!-- <div class="fade"></div> -->
         <div class="s-container">
@@ -36,6 +52,8 @@
           <%= link_to "Watch a video", '#', class:'bottom-link launch', id: 'video-toggle' %>
         </div>
       </div>
+
+      <% end -%>
 
   </div>
   <!-- Add Pagination -->

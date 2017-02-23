@@ -1,6 +1,23 @@
 <div id="hero-holder" class="main-slider-holder swiper-container main-slider-container propose-slider hero">
   <div class="swiper-wrapper">
 
+      <% if cms_content? -%>
+
+      <% @sliders.each do |slider| -%>
+        <div class="<%= slider.class_name %> swiper-slide" style="<%= slider.style %>">
+          <div class="fade"></div>
+          <div class="propose-slide">
+            <div class="slide-content">
+              <span class="typed small">Pilots</span>
+              <span class="typed"><%= slider.formatted_title %></span>
+              <p><%= slider.caption %></p>
+            </div>
+          </div>
+        </div>
+      <% end -%>
+
+      <% else -%>
+
       <div class="swiper-slide" style="background-image: url('https://i.imgur.com/UmxYPqN.jpg');">
         <div class="fade"></div>
         <div class="propose-slide">
@@ -33,6 +50,8 @@
           </div>
         </div>
       </div>
+
+      <% end -%>
 
   </div>
 </div>

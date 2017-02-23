@@ -1,6 +1,6 @@
 <div id="partners-logos">
   <ul id="partners-icons">
-    <% if params[:cms] -%>
+    <% if cms_content? -%>
       <% partners.each do |partner| -%>
         <li><%= partner.linked_image %></li>
       <% end -%>

@@ -3,9 +3,7 @@ class Partner < PushType::Node
   unexpose!
 
   field :link, :string
-  field :image_id, :asset
-
-  validates :image_id, presence: true
+  field :image_id, :asset, validates: { presence: true }
 
   def image_url
     image.file.url

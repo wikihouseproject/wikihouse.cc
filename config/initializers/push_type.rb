@@ -3,7 +3,7 @@ PushType.setup do |config|
   # By default all node types can be placed at the root of the
   # content tree. Alternatively, set an array of node type symbols
   # to whiltelist acceptable root nodes.
-  config.root_nodes = [:partners_page]
+  config.root_nodes = [:partners_page, :home_page, :pilots_page]
 
   # Set the slug of the node that the `NodesFrontEndContoller` will
   # render when visting the root URL of the site (the homepage).

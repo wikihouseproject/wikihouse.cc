@@ -3,7 +3,7 @@ class EnquiriesController < ApplicationController
 
   before_action :set_filenames
   invisible_captcha only: [:create], honeypot: :subtitle
-  skip_before_filter :verify_authenticity_token, only: :create
+  # skip_before_filter :verify_authenticity_token, only: :create
 
   def index
     redirect_to enquiry_path(@filenames[0].gsub("_","-"))

@@ -3,6 +3,7 @@ class EnquiriesController < ApplicationController
 
   before_action :set_filenames
   invisible_captcha only: [:create], honeypot: :subtitle
+  # skip_before_filter :verify_authenticity_token, only: :create
 
   def index
     redirect_to enquiry_path(@filenames[0].gsub("_","-"))
@@ -40,7 +41,8 @@ class EnquiriesController < ApplicationController
   private
 
     def enquiry_params
-      params.require(:enquiry).permit!
+      data_keys = params[:enquiry][:data].keys
+      params.require(:enquiry).permit(:first_name, :last_name, :email, :kind, data: data_keys)
     end
 
     def set_filenames

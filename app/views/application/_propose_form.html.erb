@@ -1,4 +1,4 @@
-<%= simple_form_for Enquiry.new(kind: 'project-proposal'), remote: true do |f| %>
+<%= simple_form_for Enquiry.new(kind: 'project-proposal'), remote: true, authenticity_token: true do |f| %>
 
   <%= f.simple_fields_for :data do |sf| %>
 

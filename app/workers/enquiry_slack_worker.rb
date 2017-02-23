@@ -14,10 +14,10 @@ class EnquirySlackWorker
       username: enquiry.kind,
       attachments: [{
         fallback: "Fallback",
-        pretext: enquiry.message,
+        pretext: enquiry.data['message'],
         # author_name: [enquiry.first_name],
         # title: enquiry.kind,
-        # text: enquiry.message,
+        # text: enquiry.data['message'],
         fields: enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
       }]
   end

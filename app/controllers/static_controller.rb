@@ -42,6 +42,6 @@ class StaticController < ApplicationController
   private
 
   def find_sliders(page)
-    @sliders = page.sliders.map { |s| s.present!(view_context) }
+    @sliders = page.sliders.map { |s| SliderPresenter.new(s, view_context) }
   end
 end

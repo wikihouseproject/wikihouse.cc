@@ -1,0 +1,5 @@
+image:
+  id:         <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
+  file_uid:   "image.jpg"
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

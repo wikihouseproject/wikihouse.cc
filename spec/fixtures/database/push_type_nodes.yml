@@ -1,0 +1,42 @@
+<% %w(HomePage PilotsPage PartnersPage).each do |page| %>
+<%= page.underscore %>:
+  id:           <%= Digest::UUID.uuid_v5("push_type_nodes", page.underscore) %>
+  type:         <%= page %>
+  title:        <%= page %>
+  created_at:   <%= Time.now %>
+  updated_at:   <%= Time.now %>
+  published_at: <%= Time.now %>
+  status:       <%= PushType::Node.statuses[:published] %>
+<% end %>
+
+partner_nesta:
+  type:         Partner
+  title:        Nesta
+  created_at:   <%= Time.now %>
+  updated_at:   <%= Time.now %>
+  published_at: <%= Time.now %>
+  status:       <%= PushType::Node.statuses[:published] %>
+  field_store:
+    image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
+
+slider_home:
+  type:         Slider
+  title:        "Home page slider"
+  created_at:   <%= Time.now %>
+  updated_at:   <%= Time.now %>
+  published_at: <%= Time.now %>
+  status:       <%= PushType::Node.statuses[:published] %>
+  parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "home_page") %>
+  field_store:
+    image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
+
+slider_pilots:
+  type:         Slider
+  title:        "Pilots page slider"
+  created_at:   <%= Time.now %>
+  updated_at:   <%= Time.now %>
+  published_at: <%= Time.now %>
+  status:       <%= PushType::Node.statuses[:published] %>
+  parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "pilots_page") %>
+  field_store:
+    image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>

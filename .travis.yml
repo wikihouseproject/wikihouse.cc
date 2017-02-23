@@ -1,11 +1,11 @@
-dist: trusty
 addons:
   postgresql: "9.6"
-services:
-- postgresql
-language: ruby
-cache: bundler
-script:
-- bundle exec rake db:create
-- bin/rspec
 bundler_args: "--without production"
+cache: bundler
+dist: trusty
+language: ruby
+script:
+  - "bundle exec rake db:create"
+  - bin/rspec
+services:
+  - postgresql

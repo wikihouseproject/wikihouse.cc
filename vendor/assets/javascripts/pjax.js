@@ -248,7 +248,7 @@ $(document).ready(function() {
   window.pjax = new Pjax({
     // elements: "header a[href]", // default is "a[href], form[action]"
     elements: "a[href]", // default is "a[href], form[action]"
-    selectors: ["title", "meta[name=csrf-token]", "#sub-header", "#main"],
+    selectors: ["title", "#sub-header", "#main"], // "meta[name=csrf-token]",
     switches: {
       "#main": _dereq_("pjax/lib/switches.js").sideBySide,
       "#sub-header": _dereq_("pjax/lib/switches.js").sideBySide

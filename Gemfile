@@ -41,6 +41,7 @@ gem 'hirefire'
 gem "hirefire-resource"
 gem "octokit", "~> 4.0"
 gem "push_type", "~> 0.10"
+gem "dragonfly-s3_data_store"
 
 group :production do
   gem 'rails_12factor'

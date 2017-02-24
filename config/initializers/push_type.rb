@@ -28,23 +28,22 @@ PushType.setup do |config|
   # for PushType's built in mailers.
   config.mailer_sender = 'pushtype@example.com'
 
-  # PushType uses Dragonfly for managing uploaded images/assets.
-  # Dragonfly datastore configuration
-  config.dragonfly_datastore = :file
-  config.dragonfly_datastore_options = {
-    root_path:    Rails.root.join('public/system/dragonfly', Rails.env),
-    server_root:  Rails.root.join('public')
-  }
+  if ENV['PUSH_TYPE_S3_BUCKET_NAME']
+    gem 'dragonfly-s3_data_store'
+    config.dragonfly_datastore = :s3
+    config.dragonfly_datastore_options = {
+      bucket_name:        ENV['PUSH_TYPE_S3_BUCKET_NAME'],
+      access_key_id:      ENV['PUSH_TYPE_S3_ACCESS_KEY_ID'],
+      secret_access_key:  ENV['PUSH_TYPE_S3_SECRET_ACCESS_KEY'],
+    }
+  else
+    config.dragonfly_datastore = :file
+    config.dragonfly_datastore_options = {
+      root_path:    Rails.root.join('public/system/dragonfly', Rails.env),
+      server_root:  Rails.root.join('public')
+    }
+  end
 
-  # For S3 storage, remember to add to Gemfile:
-  # gem 'dragonfly-s3_data_store'
-  # config.dragonfly_datastore = :s3
-  # config.dragonfly_datastore_options = {
-  #   bucket_name:        ENV['S3_BUCKET'],
-  #   access_key_id:      ENV['S3_ACCESS_KEY_ID'],
-  #   secret_access_key:  ENV['SECRET_ACCESS_KEY_ID']
-  # }
-
-  # config.dragonfly_secret = '68d6d215b8b78f1ae7bea698a6da045fdc8456b42b5cd051049ce14779a6d284'
+  config.dragonfly_secret = ENV['PUSH_TYPE_DRAGONFLY_SECRET']
 
 end

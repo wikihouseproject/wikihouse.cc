@@ -16,11 +16,6 @@ Rails.application.routes.draw do
     get 'preview', on: :member
   end
 
-  namespace :admin, path: 'backstage' do
-    resource :about, controller: :about
-    root to: 'about#edit'
-  end
-
   root to: 'static#landing'
 
   # Mount all the registered PushType Rails Engines. This should be placed

@@ -94,4 +94,8 @@ module ApplicationHelper
     end
   end
 
+  def partners
+    Partner.published.map { |p| PartnerPresenter.new(p, controller.view_context) }
+  end
+
 end

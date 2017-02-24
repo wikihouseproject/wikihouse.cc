@@ -31,4 +31,17 @@ class StaticController < ApplicationController
     @team_members = TeamMember.all # (not an ActiveRecord model)
   end
 
+  def landing
+    find_sliders(HomePage.first) if cms_content?
+  end
+
+  def propose_a_pilot
+    find_sliders(PilotsPage.first) if cms_content?
+  end
+
+  private
+
+  def find_sliders(page)
+    @sliders = page.sliders.map { |s| SliderPresenter.new(s, view_context) }
+  end
 end

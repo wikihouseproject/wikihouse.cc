@@ -19,12 +19,10 @@ something fails.
 
 ## Copying production database locally
 
-```
-$ dropdb wikihouse_development
-$ heroku pg:backups:download
-$ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse_development latest.dump
-$ rm latest.dump
-```
+    $ dropdb wikihouse_development
+    $ heroku pg:backups:download -a wikihousecc
+    $ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse_development latest.dump
+    $ rm latest.dump
 
 ## Day-to-day development
 
@@ -35,7 +33,24 @@ Run `rspec` to run the tests.
 
 ## Deploying
 
-The github master branch is auto-linked to heroku, so a simple `git push` will put your code on github and heroku at the same time.
+The github master branch is auto-linked to heroku, so a simple `git
+push` will put your code on github and heroku at the same time.
+
+Migrations need to be run manually:
+
+    $ heroku run rake db:migrate -a wikihousecc
+
+## Staging
+
+Push to the `master` branch of the `staging` remote:
+
+    $ git push staging myfeaturebranch:master
+
+To run migrations:
+
+    $ heroku run rake db:migrate -a wikihousecc-staging
+
+View the app at https://staging.wikihouse.cc
 
 ## DNS
 

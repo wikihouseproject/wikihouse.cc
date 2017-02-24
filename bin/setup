@@ -21,6 +21,7 @@ chdir APP_ROOT do
 
   heading "Setting up Heroku"
   system! "heroku git:remote -a wikihousecc"
+  system! "heroku git:remote --remote staging -a wikihousecc-staging"
 
   heading "Fetching env vars"
   system! 'bin/env'

@@ -56,7 +56,7 @@ $(document).on('pjax:success ready', function () {
 })
 
 $(document).on('ready', function () {
-  $('#main').on('click', '#video-toggle', function (event) {
+  $('#main').on('click', "a[href='#video']", function (event) {
     event.preventDefault()
     var video = document.getElementById('sleep-video')
     video.innerHTML = video.innerHTML.replace('<!--', '').replace('-->', '')

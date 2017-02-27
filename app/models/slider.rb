@@ -18,6 +18,14 @@ class Slider < PushType::Node
         choices: ["top", "center", "bottom"],
         validates: { presence: true }
 
+  def self.sorted
+    order "sort_order"
+  end
+
+  def self.with_parent_type(type)
+    joins(:parent).where(parents_push_type_nodes: { type: type.to_s })
+  end
+
   # This shouldn't be needed: https://github.com/pushtype/push_type/issues/33
   def link_url?
     link_url.present?

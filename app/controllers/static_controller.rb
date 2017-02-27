@@ -32,7 +32,7 @@ class StaticController < ApplicationController
   end
 
   def landing
-    find_sliders(HomePage.first) if cms_content?
+    find_sliders(HomePage.first)
   end
 
   def propose_a_pilot

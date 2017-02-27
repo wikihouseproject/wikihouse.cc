@@ -1,8 +1,6 @@
 <div id="homepage-slider" class="main-slider-holder swiper-container main-slider-container">
   <div class="swiper-wrapper">
 
-      <% if cms_content? -%>
-
       <% @sliders.each do |slider| -%>
         <div class="<%= slider.class_name %> swiper-slide" style="<%= slider.style %>">
           <div class="s-container">
@@ -13,46 +11,6 @@
             <%= link_to slider.link_text, slider.link_url, class: "bottom-link #{slider.class_name}" %>
           </div>
         </div>
-      <% end -%>
-
-      <% else -%>
-
-      <div class="dark swiper-slide" style="background-image: url('https://static.wikihouse.cc/KRZMY6m.jpg'); background-position: center bottom">
-        <!-- <div class="fade"></div> -->
-        <div class="s-container">
-          <div class="slide-content">
-            <span class="typed">The future of homes<br/> by everyone, for everyone</span>
-            <p>Simple, sustainable, open building technologies</p>
-            <%#= link_to "View the Library", things_path, class: 'white-button' %>
-          </div>
-          <%= link_to "View the github library", library_categories_path, class:'bottom-link dark' %>
-        </div>
-      </div>
-
-      <div class="swiper-slide" style="background-image: url('https://i.imgur.com/aZ3obzh.jpg'); background-position: top center;">
-        <!-- <div class="fade"></div> -->
-        <div class="s-container">
-          <div class="slide-content">
-            <span class="typed">Custom design,<br/> precision manufacturing</span>
-            <p>The next industrial revolution in the way we make homes</p>
-            <%#= link_to "Find out more", about_path, class: 'white-button' %>
-          </div>
-          <%= link_to "Find out more", about_path, class:'bottom-link' %>
-        </div>
-      </div>
-
-      <div class="swiper-slide" style="background-image: url('https://i.imgur.com/pGZW9PN.jpg'); background-position: center center;">
-        <!-- <div class="fade"></div> -->
-        <div class="s-container">
-          <div class="slide-content">
-            <span class="typed">High-performance homes<br/> made simple</span>
-            <p>Sustainable design solutions that can be assembled by anyone</p>
-            <%#= link_to "Watch a video", "https://www.youtube.com/watch?v=Mlt6kaNjoeI", class: 'white-button' %>
-          </div>
-          <%= link_to "Watch a video", '#', class:'bottom-link launch', id: 'video-toggle' %>
-        </div>
-      </div>
-
       <% end -%>
 
   </div>

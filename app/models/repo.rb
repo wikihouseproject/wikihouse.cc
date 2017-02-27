@@ -55,12 +55,4 @@ class Repo < ApplicationRecord
     )
   end
 
-  # def fork_url
-  #   "#{url}/network"
-  # end
-
-  # def updated_at
-  #   data[:files].sort_by{|f| f[:updated_at] }.first
-  # end
-
 end

@@ -15,9 +15,6 @@ class EnquirySlackWorker
       attachments: [{
         fallback: "Fallback",
         pretext: enquiry.data['message'],
-        # author_name: [enquiry.first_name],
-        # title: enquiry.kind,
-        # text: enquiry.data['message'],
         fields: enquiry.data.map{|k,v| { title: k, value: (v.kind_of?(Array) ? v.join(", ") : v) }}
       }]
   end

@@ -7,15 +7,6 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
-// input,
-// button,
-// select,
-// textarea {
-//   font-family: inherit;
-//   font-size: inherit;
-//   line-height: inherit;
-// }
-
 a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -51,24 +42,9 @@ input[type="checkbox"]:disabled {
   cursor: not-allowed;
 }
 
-// strong {
-//   font-weight: 700;
-// }
-
 abbr[title] {
   cursor: help;
-  // border-bottom: 1px dotted #2196F3;
 }
-
-// h1, h2, h3 {
-//   margin-top: 20px;
-//   margin-bottom: 10px;
-// }
-
-// h4, h5, h6 {
-//   margin-top: 10px;
-//   margin-bottom: 10px;
-// }
 
 /**
  * MUI Appbar

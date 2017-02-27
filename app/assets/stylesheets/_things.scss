@@ -53,7 +53,6 @@ body.c-things {
     }
     .flex {
       opacity: 0.85;
-      // height: 100%;
     }
     &:hover .flex {
       opacity: 1;
@@ -63,7 +62,6 @@ body.c-things {
       @media screen and (min-width: $break-small) {
         max-height: 300px;
       }
-      
     }
   }
 
@@ -76,7 +74,6 @@ body.c-things {
       color: #FFF;
       font-size: 150px;
       font-weight: 300;
-      // font-weight: 300;
       @include vertical-center();
     }
     span {

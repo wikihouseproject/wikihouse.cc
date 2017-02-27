@@ -32,7 +32,6 @@ body.c-static.a-propose_a_pilot {
     }
     .fade {
       z-index: 1;
-      // background-color: transparent !important;
       @include linear-gradient(
         to top,
         rgba(#000, 0.1) 0%,

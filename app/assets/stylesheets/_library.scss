@@ -30,7 +30,6 @@ body.c-things {
       position: absolute !important;
       width: 100px;
       float: left;
-      // margin: 10px 60px 30px 20px;
       @include vertical-center();
     }
     h2 {
@@ -52,9 +51,6 @@ body.c-things {
     &:hover {
       background: #333;
     }
-    img {
-      // display: none;
-    }
     .container{
       padding: 50px 20px;
     }
@@ -62,7 +58,6 @@ body.c-things {
       color: #FFF;
     }
     .img {
-      // width: 200px;
       height: 200px;
     }
     .description {
@@ -85,25 +80,7 @@ body.c-things {
     }
     p {
       -webkit-font-smoothing: antialiased;
-      // @media screen and (min-width: $break-large) {
-      //   width: 70%;
-      // }
-      // @media screen and (min-width: $break-xlarge) {
-      //   width: 60%;
-      // }
     }
-    // @media screen and (min-width: $break-medium) {
-    //   img {
-    //     display: block;
-    //   }
-    //   .img {
-    //     width: 200px;
-    //   }
-    //   .container {
-    //     display: flex;
-    //     margin-top: 0;
-    //   }
-    // }
   }
 
   .type-details {
@@ -119,7 +96,6 @@ body.c-things {
       max-width: 100%;
     }
     a {
-      // font-weight: bold;
       color: #666;
       &:hover {
         color: #000;

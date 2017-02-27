@@ -49,9 +49,6 @@ form.new_enquiry {
   input[type=submit] {
     margin-top: 30px;
   }
-  label {
-    // width: auto;
-  }
   .input.text {
     label {
       display: block;
@@ -89,7 +86,6 @@ form.new_enquiry {
     }
 
     /* active state */
-    // input:placeholder-shown ~ label,
     input:focus ~ label,
     input:valid ~ label
     {
@@ -134,16 +130,6 @@ form.new_enquiry {
     
   // HIGHLIGHTER
     
-    .highlight {
-      position:absolute;
-      height:60%; 
-      max-width:350px;
-      width: 100%;
-      top:25%; 
-      left:0;
-      pointer-events:none;
-      opacity:0.1;
-    }
 
     input:focus ~ .highlight {
       animation:inputHighlighter 0.3s ease;
@@ -175,17 +161,6 @@ textarea {
   padding: 5px;
 }
 
-
-// .input.text {
-//   label {6px;
-//     display: block;
-//     width: 100%;
-//   }
-//   textarea {
-//     width: 100%;
-//   }
-// }
-
 .input.check_boxes {
   > label {
     display: block;
@@ -203,9 +178,6 @@ textarea {
       display: inline-block;
       width: 50%;
     }
-    // @media screen and (min-width: $break-large) {
-    //   width: 33%;
-    // }
 
     input {
       margin-top: 5px;
@@ -231,57 +203,3 @@ input[type=submit] {
   font-weight: bold;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-// /* ==========  Select Field Variables ========== */
-// $color-black: "0,0,0";
-// $select-background-color: transparent;
-// $select-border-color: unquote("rgba(#{$color-black}, 0.12)") !default;
-// $select-font-size: 16px;
-// $select-color: unquote("rgba(#{$color-black}, 0.26)") !default;
-// $select-padding: 4px;
-
-// /* Style Select Field */
-// .input select {
-//   font-family: inherit;
-//   background-color: transparent;
-//   width: 100%;
-//   padding: $select-padding 0;
-//   font-size: $select-font-size;
-//   color: $select-color;
-//   border: none;
-//   border-bottom: 1px solid $select-border-color;
-// }
-
-// /* Remove focus */
-// .input select:focus {
-//   outline: none}
-
-// /* Hide label */
-// .mdl-selectfield label {display: none;}
-// /* Use custom arrow */
-// .mdl-selectfield select {appearance: none}
-// .mdl-selectfield {
-//   font-family: 'Roboto','Helvetica','Arial',sans-serif;
-//   position: relative;
-//     &:after {
-//         position: absolute;
-//         top: 0.75em;
-//         right: 0.5em;
-//         /* Styling the down arrow */
-//         width: 0;
-//         height: 0;
-//         padding: 0;
-//         content: '';
-//         border-left: .25em solid transparent;
-//         border-right: .25em solid transparent;
-//         border-top: .375em solid $select-border-color;
-//         pointer-events: none;
-//     }
-// }

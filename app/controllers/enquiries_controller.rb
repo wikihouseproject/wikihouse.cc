@@ -3,7 +3,6 @@ class EnquiriesController < ApplicationController
 
   before_action :set_filenames
   invisible_captcha only: [:create], honeypot: :subtitle
-  # skip_before_filter :verify_authenticity_token, only: :create
 
   def index
     redirect_to enquiry_path(@filenames[0].gsub("_","-"))
@@ -47,7 +46,6 @@ class EnquiriesController < ApplicationController
 
     def set_filenames
       files = Dir.glob("app/views/enquiries/partials/*.html.erb").sort
-      # files = files.insert(-1, files.delete_at(files.index('app/views/enquiries/partials/_something_else.html.erb')) )
       @filenames = files.map{|f| File.basename(f, ".html.erb")[1..-1] }
     end
 

@@ -3,8 +3,9 @@ $(document).on("ready", function() {
   var parent, ink, d, x, y;
   $("header li a").click(function(e){
     $(this).addClass('ripple')
-    // e.preventDefault()
+
     parent = $(this).parent();
+
     //create .ink element if it doesn't exist
     if(parent.find(".ink").length == 0)
       parent.prepend("<span class='ink'></span>");
@@ -12,15 +13,6 @@ $(document).on("ready", function() {
     ink = parent.find(".ink");
     //incase of quick double clicks stop the previous animation
     ink.removeClass("animate");
-
-    // setTimeout(function() { $('.ink.animate').remove() }, 500);
-
-    // ink.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
-    //   function() {
-    //     alert('gone')
-    //     $(this).remove();
-    //   }
-    // );
 
     //set size of .ink
     if(!ink.height() && !ink.width())

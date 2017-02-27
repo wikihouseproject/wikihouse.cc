@@ -9,27 +9,14 @@ $splitHeight: $height/5;
   }
 }
 
-// header#main-header {
-
-  // #main-toggler {
-  //   display: none !important;
-  //   border: none !important;
-  //   &:hover #toggle-menu span {
-  //     background: #AAA;
-  //   }
-  // }
   #main-toggler {
-    // display: none !important;
     float: right;
     display: block;
     width: 40px;
     height: $shortHeaderHeight;
-    // @media screen and (max-width: $break-medium) {
-    // }
     .toggle-menu {
       float: right;
       @include vertical-center();
-      // margin: 0 auto;
     }
   }
   .toggler-link {
@@ -40,7 +27,6 @@ $splitHeight: $height/5;
     width: $width;
     height: $height;
     position: relative;
-    // margin: 50px auto;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -55,7 +41,6 @@ $splitHeight: $height/5;
     height: 2px;
     width: 100%;
     background: #000;
-    // border-radius: $splitHeight;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
@@ -97,7 +82,3 @@ $splitHeight: $height/5;
     }
 
   }
-
-
-
-// }

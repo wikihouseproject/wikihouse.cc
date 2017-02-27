@@ -6,8 +6,6 @@
     height: 200px;
   }
   .revolution {
-    // flex: 1;
-    // padding: 20px;
     text-align: center;
     @media screen and (min-width: $break-medium) {
       width: 20%;
@@ -71,9 +69,6 @@
 
 table#pricing-table {
   border-collapse: collapse;
-  // thead th, tfoot td {
-  //   width: 90px !important;
-  // }
   tfoot td.price {
     border-top: 1px solid #FFF;
   }
@@ -125,7 +120,6 @@ table#pricing-table {
     }
   }
   tfoot th {
-    // display: none;
     span { font-weight: bold; }
     text-align: right;
   }
@@ -155,7 +149,6 @@ table#pricing-table {
     tr {
       margin-bottom: 2em;
       display: block;
-      // border-bottom: 2px solid #ddd;
     }
     th {
       text-align: left !important;

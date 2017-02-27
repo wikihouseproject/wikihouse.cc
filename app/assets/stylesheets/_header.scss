@@ -14,15 +14,7 @@
 }
 
 .top-description {
-  // display: block;
-  // overflow: hidden;
   padding-bottom: 2em;
-  // overflow: hidden;
-  // position: relative;
-  // p {
-  //   position: relative;
-  //   display: block;
-  // }
 
   @media screen and (min-width: $break-small) {
     @include span-columns(11);
@@ -60,26 +52,13 @@ body.overlay-visible {
   display: none;
 }
 #sub-header {
-  // overflow: hidden;
   position: relative;
   background: #FFF;
-  // background: yellow;
-  // border: 40px solid green;
   $offset: 75px;
-  // min-height: $offset;
   margin-top: -$offset;
   padding-top: $offset;
-  // padding-bottom: $offset;
   width: 100%;
-  // position: relative;
   z-index: 1000;
-  
-  // max-height: 100%;
-  // overflow: hidden;
-  // .container {
-  //   overflow: hidden;
-  //   background: yellow;
-  // }
 }
 
 header {
@@ -89,7 +68,6 @@ header {
 }
 
 @mixin drop-shadow {
-  // box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.3);
   box-shadow: 0 0 8px rgba(0,0,0,0.12),0 8px 8px rgba(0,0,0,0.24);
 }
 
@@ -117,29 +95,16 @@ body.large {
     #logo-link #logo {
       height: 100%;
       max-height: $largeHeaderHeight;
-      // height: $largeHeaderHeight - 30;
     }
   }
 }
 
 header#main-header {
-  @media screen and (min-width: $break-medium) {
-    // min-height: $shortHeaderHeight;
-  }
-  > .container {
-    // position: absolute !important;
-  }
-  // overflow: hidden;
-
-  // height: $shortHeaderHeight;
-  // transition: height 0.1s;
   z-index: 1500;
-  // padding-bottom: 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  // overflow: hidden;
   background: #FFF;
 
   @include fill-parent;
@@ -148,7 +113,6 @@ header#main-header {
     height: 100%;
     padding-bottom: 25px;
     display: block;
-    // max-width: 50%;
     text-align: left;
     float: left;
     margin: 10px 0 0 0;
@@ -158,8 +122,6 @@ header#main-header {
     #logo {
       height: 50px;
       width: 70px;
-      // height: $shortHeaderHeight - 25;
-      // height: $shortHeaderHeight - ;
     }
   }
 
@@ -186,26 +148,13 @@ header#main-header {
   a {
     color: #000;
   }
-  // a#toggle-menu {
-  //   border: none !important;
-  //   position: relative;
-  //   z-index: 800;
-  //   // font-size: 1.2em;
-  // }
   ul#main-menu {
-    // position: relative;
     font-family: $mono;
-    // margin: 0 40px 0 0;
     margin: 0;
     padding: 0;
     font-size: 0;
-    // line-height: $shortHeaderHeight;
 
     @media screen and (min-width: $break-medium) {
-      // position: absolute;
-      // top: 0;
-      // right: 0;
-
       float: right;
     }
     li {
@@ -213,10 +162,8 @@ header#main-header {
       font-size: 16px;
       list-style-type: none;
       position: relative;
-      // overflow: hidden;
       display: inline-block;
       a {
-        // line-height: $headerHeight - 2;
         line-height: 73px;
         display: block;
         padding: 0 20px;

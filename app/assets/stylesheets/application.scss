@@ -49,7 +49,6 @@ $visual-grid: false;
 
 * {
   box-sizing: border-box;
-  // -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -77,17 +76,9 @@ header .container,
   padding-top: 75px;
 }
 
-html, body {
-  // height: 100%;
-  // min-height: 100%;
-}
-
 body {
   display: flex;
-  // height: 100vh;
-  // min-height: 100%;
   height: 100vh; /* for IE to behave */
-  // min-height: 100vh;
 
   flex-direction: column;
 
@@ -171,8 +162,6 @@ a {
       padding: 37px;
       .top {
         flex: 1 0 auto;
-        // flex-grow: 1;
-        // display: block;
       }
     }
   }
@@ -204,22 +193,6 @@ hr {
 iframe {
   max-width: 100%;
 }
-
-// .arrows {
-//   @include oc;
-//   background: green;
-//   position: absolute;
-//   height: 100%;
-//   z-index: 10;
-// }
-
-// img[src$=".gif"], img[src$=".png"], img[src$=".svg"] {
-//  image-rendering: -moz-pixelated;         /* Firefox */
-//  image-rendering: -o-pixelated;         /* Opera */
-//  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-//  image-rendering: pixelated;
-//  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-// }
 
 .wr {
   @include span-columns(5 of 6)

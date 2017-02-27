@@ -2,7 +2,7 @@ var subHeadHeight, origHeight, origLogoHeight, doneCount, scrollHeight
 
 var setVars = function () {
   $('header#main-header, #logo').attr('style', null)
-  subHeadHeight = parseInt($('header#sub-header').css('height'))// - $('header#sub-header').offset().top()
+  subHeadHeight = parseInt($('header#sub-header').css('height'))
   origHeight = parseInt($('header#main-header').height())
   doneCount = false
 }
@@ -26,7 +26,6 @@ $(document).on('pjax:success ready', function () {
     autoplay: 9000,
     autoplayDisableOnInteraction: true,
     speed: dragspeed
-    // grabCursor: true
   })
 
   var swiper2 = new Swiper('.secondary-slider', {
@@ -69,18 +68,10 @@ $(document).on('ready', function () {
     $('body').addClass('overlay-visible video')
   })
 
-  // $('#overlay').on('click', 'video', function (event) {
-  //   event.stopPropogation()
-  // })
-
   $('#overlay').on('click', 'a', function (event) {
     $('.ink').removeClass('animate')
     $('body').removeClass('overlay-visible video side-nav')
   })
-
-  // $('#overlay').click(function() {
-  //   $('body').removeClass('overlay-visible side-nav video')
-  // });
 
   $('#main-toggler').click(function (event) {
     event.preventDefault()

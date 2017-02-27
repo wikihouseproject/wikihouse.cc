@@ -2,14 +2,6 @@ require 'ostruct'
 
 class StaticController < ApplicationController
 
-  def nothing
-    render nil, layout: 'application'
-  end
-
-  def donate
-    # @names = 100.times.map{ Faker::Name.name }
-  end
-
   def about
     @about_points = AboutPoint.order(ordinal: :asc)
   end

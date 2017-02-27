@@ -18,6 +18,9 @@
   @include oc;
   margin-top: 0;
   margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   li {
     @include fill-parent();

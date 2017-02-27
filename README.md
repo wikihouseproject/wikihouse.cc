@@ -19,10 +19,9 @@ something fails.
 
 ## Copying production database locally
 
-    $ dropdb wikihouse_development
-    $ heroku pg:backups:download -a wikihousecc
-    $ pg_restore --verbose --clean --jobs=4 --disable-triggers --no-acl --no-owner -h localhost -d wikihouse_development latest.dump
-    $ rm latest.dump
+**WARNING**: This will wipe out your existing data in the `wikihouse_development` database
+
+    $ bin/copy_production_database
 
 ## Day-to-day development
 

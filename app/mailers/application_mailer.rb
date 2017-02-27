@@ -1,4 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "no-reply@#{ENV.fetch('mailgun_domain')}>"
+  if domain = ENV["mailgun_domain"]
+    default from: "no-reply@#{domain}>"
+  end
+
   layout 'mailer'
 end

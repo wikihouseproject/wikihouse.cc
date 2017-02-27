@@ -22,6 +22,6 @@ chdir APP_ROOT do
   heading "Removing production specific env vars"
   words = %w( DATABASE_URL RACK_ENV RAILS_ENV RAILS_LOG_TO_STDOUT LANG
               RAILS_SERVE_STATIC_FILES SECRET_KEY_BASE).map{|w| "/#{w}/d;"}.join
-  system! "sed -i.production '#{words}' .env"
+  system! "sed -i '#{words}' .env"
 
 end

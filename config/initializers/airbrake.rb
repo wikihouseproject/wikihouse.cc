@@ -1,7 +1,9 @@
 Airbrake.configure do |config|
-  config.host = ENV.fetch('airbrake_host')
-  config.project_id = ENV.fetch('airbrake_project_id') # required, but any positive integer works
-  config.project_key = ENV.fetch('airbrake_project_key')
+  if ENV.has_key?("airbrake_project_id")
+    config.host        = ENV.fetch('airbrake_host')
+    config.project_id  = ENV.fetch('airbrake_project_id')
+    config.project_key = ENV.fetch('airbrake_project_key')
+  end
 
   # Uncomment for Rails apps
   config.environment = Rails.env

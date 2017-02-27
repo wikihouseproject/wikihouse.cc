@@ -11,15 +11,28 @@ The official WikiHouse Foundation website.
 Prerequisites:
 
 * Ruby 2.4.0
-* PostgreSQL
-* Heroku credentials
+* PostgreSQL with [contrib
+  module](https://www.postgresql.org/docs/9.1/static/contrib.html)
 
 Then run `bin/setup`. This script is idempotent, so it can be re-run if
 something fails.
 
+## Environment variables
+
+We rely on environment variables for configuration / secrets. Any
+`key=value` pairs specified in a `.env` file will be automated loaded
+when the application starts.
+
+You don't need an `.env` file to run the tests or use the application in
+development mode, but certain external interactions won't work. To pull
+down the production environment variables, run `bin/copy_production_env`
+(this script will strip out various variables which we shouldn't be
+using in development).
+
 ## Copying production database locally
 
-**WARNING**: This will wipe out your existing data in the `wikihouse_development` database
+**WARNING**: This will wipe out your existing data in the
+`wikihouse_development` database
 
     $ bin/copy_production_database
 

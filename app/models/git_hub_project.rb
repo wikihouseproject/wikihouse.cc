@@ -4,7 +4,7 @@ class GitHubProject
   attr_reader :github, :repo
 
   def initialize(repo)
-    @github = Octokit::Client.new(access_token: ENV.fetch("git_hub_token"))
+    @github = Octokit::Client.new(access_token: ENV["git_hub_token"])
     @repo   = github.repository("#{repo.owner}/#{repo.name}")
   end
 

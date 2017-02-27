@@ -10,21 +10,23 @@ def heading(message)
   puts "\n== #{message} =="
 end
 
-def system!(*args)
-  system(*args) || abort("\n== Command #{args} failed ==")
+def run(command, failure_handler: ->(msg) { $stderr.puts msg })
+  system(command) ||
+    failure_handler.call("\n== Command #{args} failed ==")
+end
+
+def run!(command)
+  run command, failure_handler: method(:abort)
 end
 
 chdir APP_ROOT do
   heading 'Installing dependencies'
-  system! 'gem install bundler --conservative'
-  system('bundle check') || system!('bundle install')
+  run! 'gem install bundler --conservative'
+  system('bundle check') || run!('bundle install')
 
   heading "Setting up Heroku"
-  system! "heroku git:remote -a wikihousecc"
-  system! "heroku git:remote --remote staging -a wikihousecc-staging"
-
-  heading "Fetching env vars"
-  system! 'bin/env'
+  run "heroku git:remote -a wikihousecc"
+  run "heroku git:remote --remote staging -a wikihousecc-staging"
 
   puts "\n== Copying sample files =="
   unless File.exist?('config/database.yml')
@@ -32,11 +34,11 @@ chdir APP_ROOT do
   end
 
   heading "Preparing database"
-  system! 'bin/rails db:setup'
+  run! 'bin/rails db:setup'
 
   heading "Removing old logs and tempfiles"
-  system! 'bin/rails log:clear tmp:clear'
+  run! 'bin/rails log:clear tmp:clear'
 
   heading "Restarting application server"
-  system! 'bin/rails restart'
+  run! 'bin/rails restart'
 end

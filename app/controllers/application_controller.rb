@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   # PushType raises this when a node's permalink isn't in the database
   rescue_from ActiveRecord::RecordNotFound, with: :render_not_found
 
+  rescue_from ActionController::UnknownFormat, with: :render_not_found
+
   def cms_content?
     params[:cms]
   end

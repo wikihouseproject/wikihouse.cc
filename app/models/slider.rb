@@ -10,12 +10,12 @@ class Slider < PushType::Node
 
   field :image_id, :asset, validates: { presence: true }
 
-  field :image_position_vertical, :select,
-        choices: ["top", "center", "bottom"],
-        validates: { presence: true }
-
   field :image_position_horizontal, :select,
         choices: ["left", "center", "right"],
+        validates: { presence: true }
+
+  field :image_position_vertical, :select,
+        choices: ["top", "center", "bottom"],
         validates: { presence: true }
 
   # This shouldn't be needed: https://github.com/pushtype/push_type/issues/33

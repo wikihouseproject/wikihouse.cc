@@ -1,57 +1,18 @@
 <div id="hero-holder" class="main-slider-holder swiper-container main-slider-container propose-slider hero">
   <div class="swiper-wrapper">
 
-      <% if cms_content? -%>
-
-      <% @sliders.each do |slider| -%>
-        <div class="<%= slider.class_name %> swiper-slide" style="<%= slider.style %>">
-          <div class="fade"></div>
-          <div class="propose-slide">
-            <div class="slide-content">
-              <span class="typed small">Pilots</span>
-              <span class="typed"><%= slider.formatted_title %></span>
-              <p><%= slider.caption %></p>
-            </div>
-          </div>
-        </div>
-      <% end -%>
-
-      <% else -%>
-
-      <div class="swiper-slide" style="background-image: url('https://i.imgur.com/UmxYPqN.jpg');">
+    <% @sliders.each do |slider| -%>
+      <div class="<%= slider.class_name %> swiper-slide" style="<%= slider.style %>">
         <div class="fade"></div>
         <div class="propose-slide">
           <div class="slide-content">
             <span class="typed small">Pilots</span>
-            <span class="typed">A-Barn</span>
-            <p>Sited in a beautiful but exposed Scottish valley with breathtaking sea views out towards the isle of Jura,  A-barn was built as a workshop, garage and studio space. It was assembled in a little over a week by the client and a group of volunteers, working with a local builder.</p>
+            <span class="typed"><%= slider.formatted_title %></span>
+            <p><%= slider.caption %></p>
           </div>
         </div>
       </div>
-
-      <div class="swiper-slide" style="background-image: url('https://static.wikihouse.cc/Farmhouse7-1_WikiHouseFoundation_CC_BY.jpg'); background-size: cover; background-position: left top;">
-        <div class="fade"></div>
-        <div class="propose-slide">
-          <div class="slide-content">
-            <span class="typed small">Pilots</span>
-            <span class="typed">Farmhouse</span>
-            <p>Janet and Martin wanted to build a permanent home on the site of their nursery business in Warwickshire, UK. Architecture 00 worked with them to design the home around their needs, which they then built for themselves, helped by friends, neighbours, with local builders contracted to install foundations and electrics.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide" style="background-image: url('https://static.wikihouse.cc/WikiHouseFoundation_WH4_CC-BY.JPG'); background-size: cover; background-position: center center;">
-        <div class="fade"></div>
-        <div class="propose-slide">
-          <div class="slide-content">
-            <span class="typed small">Pilots</span>
-            <span class="typed">WikiHouse 4.0 Prototype</span>
-            <p>A collaboration between Architecture 00 and Arup Engineers, the WikiHouse 4.0 prototype was assembled in 8 days outside the Building Centre in Store Street London. A few weeks later it was disassembled in 2 days and taken into storage, awaiting its second use.</p>
-          </div>
-        </div>
-      </div>
-
-      <% end -%>
+    <% end -%>
 
   </div>
 </div>

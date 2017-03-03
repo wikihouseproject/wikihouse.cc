@@ -3,7 +3,9 @@ PushType.setup do |config|
   # By default all node types can be placed at the root of the
   # content tree. Alternatively, set an array of node type symbols
   # to whiltelist acceptable root nodes.
-  config.root_nodes = [:partners_page, :home_page, :pilots_page]
+  config.root_nodes = %i(
+    partners_page home_page pilots_page team_page
+  )
 
   # Set the slug of the node that the `NodesFrontEndContoller` will
   # render when visting the root URL of the site (the homepage).
@@ -19,9 +21,10 @@ PushType.setup do |config|
   # strings for resizing images on the fly with the `Asset#media`
   # method. Example: `image.media(:large)`
   config.media_styles = {
-    large:    '1024x1024>',
-    medium:   '512x512>',
-    small:    '256x256>'
+    large:      '1024x1024>',
+    medium:     '512x512>',
+    small:      '256x256>',
+    team_photo: '240x240#',
   }
 
   # Configure the email address to be used as the "from" address

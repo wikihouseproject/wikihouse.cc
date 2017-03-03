@@ -16,6 +16,21 @@
 <div class="team-container">
   <div class="team-title"><h2>Team</h2></div>
   <div class="team">
+    <% if cms_content? %>
+
+    <% @team_members.each do |team_member| %>
+      <div class="team-member">
+        <div class="photo" style="background-image: url('<%= team_member.photo_url %>')"></div>
+        <div class="description">
+          <span class="name"><%= team_member.name %></span>
+          <span class="role"><%= team_member.role %></span>
+          <p><%= link_to "@#{team_member.twitter_handle}", team_member.twitter_url %></p>
+        </div>
+      </div>
+    <% end %>
+
+    <% else %>
+
     <% @team_members.shuffle.each do |team_member| %>
       <div class="team-member">
         <div class="photo" style="background-image: url('<%= asset_path "team/#{[team_member[:first_name],team_member[:last_name]].join('_').downcase}.jpg" %>')"></div>
@@ -25,6 +40,8 @@
           <p><%= link_to "@#{team_member[:twitter]}", "https://twitter.com/#{team_member[:twitter]}" %></p>
         </div>
       </div>
+    <% end %>
+
     <% end %>
   </div>
 </div>

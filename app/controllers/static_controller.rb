@@ -20,7 +20,11 @@ class StaticController < ApplicationController
   end
 
   def about_wikihouse_foundation
-    @team_members = TeamMember.all # (not an ActiveRecord model)
+    if cms_content?
+      @team_members = TeamMember.published.shuffle
+    else
+      @team_members = StaticTeamMember.all # (not an ActiveRecord model)
+    end
   end
 
   def landing

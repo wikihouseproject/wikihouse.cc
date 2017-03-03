@@ -36,7 +36,7 @@ describe "static" do
   has_page "R&D"
   has_page "Partners", cms: true
   has_page "Propose a pilot", cms: true
-  has_page "About WikiHouse Foundation"
+  has_page "About WikiHouse Foundation", cms: true
   has_page "Contact Us", title: "Becoming a partner"
   has_page "Jobs"
   has_page "Donate"

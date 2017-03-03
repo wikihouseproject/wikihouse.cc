@@ -1,36 +1,21 @@
-class TeamMember
-  def self.all
-    [
-      {
-        first_name: "John",
-        last_name: "Rees",
-        role: "Lead Developer",
-        twitter: "john_rees"
-      },
-      {
-        first_name: "Alastair",
-        last_name: "Parvin",
-        role: "Co-Founder",
-        twitter: "AlastairParvin"
-      },
-      {
-        first_name: "Clayton",
-        last_name: "Prest",
-        role: "R&D Lead",
-        twitter: "ClaytonPrest"
-      },
-      {
-        first_name: "Harry",
-        last_name: "Knight",
-        role: "Community Host",
-        twitter: "KnightLifeNZ"
-      },
-      {
-        first_name: "Justyna",
-        last_name: "Swat",
-        role: "Connector",
-        twitter: "j_taws"
-      }
-    ]
+class TeamMember < PushType::Node
+  has_child_nodes false
+  unexpose!
+
+  field :role,     :string, validates: { presence: true }
+  field :photo_id, :asset,  validates: { presence: true }
+
+  field :twitter_handle, :string
+
+  def name
+    title
+  end
+
+  def photo_url
+    photo.media(:team_photo).url
+  end
+
+  def twitter_url
+    "https://twitter.com/#{twitter_handle}"
   end
 end

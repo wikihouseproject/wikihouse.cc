@@ -131,7 +131,7 @@ body.a-landing {
   height: 100%;
   pointer-events: none;
   user-select: none;
-  @include linear-gradient(
+  background: linear-gradient(
     to top,
     rgba(#000, 0.15) 0%,
     rgba(#000, 0) 30%,

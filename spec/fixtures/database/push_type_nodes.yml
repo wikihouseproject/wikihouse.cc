@@ -1,52 +1,44 @@
+DEFAULTS: &DEFAULTS
+  created_at:   <%= Time.now %>
+  updated_at:   <%= Time.now %>
+  published_at: <%= Time.now %>
+  status:       <%= PushType::Node.statuses[:published] %>
+
 <% %w(HomePage PilotsPage PartnersPage).each do |page| %>
 <%= page.underscore %>:
+  <<: *DEFAULTS
   id:           <%= Digest::UUID.uuid_v5("push_type_nodes", page.underscore) %>
   type:         <%= page %>
   title:        <%= page %>
-  created_at:   <%= Time.now %>
-  updated_at:   <%= Time.now %>
-  published_at: <%= Time.now %>
-  status:       <%= PushType::Node.statuses[:published] %>
+  slug:         <%= page.underscore.sub("_page", "") %>
 <% end %>
 
 partner_nesta:
+  <<: *DEFAULTS
   type:         Partner
   title:        Nesta
-  created_at:   <%= Time.now %>
-  updated_at:   <%= Time.now %>
-  published_at: <%= Time.now %>
-  status:       <%= PushType::Node.statuses[:published] %>
   field_store:
     image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
 
 slider_home:
+  <<: *DEFAULTS
   type:         Slider
   title:        "Home page slider"
-  created_at:   <%= Time.now %>
-  updated_at:   <%= Time.now %>
-  published_at: <%= Time.now %>
-  status:       <%= PushType::Node.statuses[:published] %>
   parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "home_page") %>
   field_store:
     image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
 
 slider_pilots:
+  <<: *DEFAULTS
   type:         Slider
   title:        "Pilots page slider"
-  created_at:   <%= Time.now %>
-  updated_at:   <%= Time.now %>
-  published_at: <%= Time.now %>
-  status:       <%= PushType::Node.statuses[:published] %>
   parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "pilots_page") %>
   field_store:
     image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
 
 team_member_alastair:
+  <<: *DEFAULTS
   type:         TeamMember
   title:        Alastair Parvin
-  created_at:   <%= Time.now %>
-  updated_at:   <%= Time.now %>
-  published_at: <%= Time.now %>
-  status:       <%= PushType::Node.statuses[:published] %>
   field_store:
     photo_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>

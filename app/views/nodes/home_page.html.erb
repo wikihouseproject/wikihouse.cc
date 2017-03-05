@@ -20,22 +20,9 @@
 
 <div id="media-links">
   <ul id="press-logos">
-    <% if cms_content? %>
-
     <% @home_page.press_articles.each do |article| -%>
       <li><%= link_to image_tag(article.image_url, alt: article.title), article.link %></li>
     <% end -%>
-
-    <% else %>
-
-    <li><%= link_to image_tag("press/BBC-01.svg").html_safe, "http://www.bbc.co.uk/news/technology-35697552" %></li>
-    <li><%= link_to image_tag("press/Forbes-01.svg").html_safe, "http://www.forbes.com/sites/haydnshaughnessy/2012/05/05/the-house-you-download-to-your-desktop/#337bae756e17" %></li>
-    <li><%= link_to image_tag("press/TED-01.svg").html_safe, "http://blog.ted.com/wikihouses-alastair-parvin-on-the-bright-potential-of-community-led-development/" %></li>
-    <li><%= link_to image_tag("press/The Guardian-01.svg").html_safe, "https://www.theguardian.com/sustainable-business/2014/sep/23/build-own-sustainable-eco-house-wikihouse" %></li>
-    <li><%= link_to image_tag("press/The Independent.svg").html_safe, "http://www.independent.co.uk/voices/comment/wikihouse-40-is-a-sign-that-we-have-entered-the-third-industrial-revolution-9784305.html" %></li>
-    <li><%= link_to image_tag("press/Wired-01.svg").html_safe, "http://www.wired.co.uk/topic/wikihouse" %></li>
-
-    <% end %>
   </ul>
 </div>
 

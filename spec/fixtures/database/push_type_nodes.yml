@@ -56,3 +56,11 @@ team_member_alastair:
   title:        Alastair Parvin
   field_store:
     photo_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
+
+press_article_bbc:
+  <<: *DEFAULTS
+  type:         PressArticle
+  title:        "BBC"
+  parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "home_page") %>
+  field_store:
+    image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>

@@ -19,8 +19,4 @@ class StaticController < ApplicationController
     })
   end
 
-  def about_wikihouse_foundation
-    @team_members = TeamMember.published.shuffle
-  end
-
 end

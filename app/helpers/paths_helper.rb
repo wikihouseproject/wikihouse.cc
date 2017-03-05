@@ -10,4 +10,8 @@ module PathsHelper
   def partners_path
     "/partners"
   end
+
+  def about_wikihouse_foundation_path
+    "/about-wikihouse-foundation"
+  end
 end

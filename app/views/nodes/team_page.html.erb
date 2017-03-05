@@ -16,7 +16,7 @@
 <div class="team-container">
   <div class="team-title"><h2>Team</h2></div>
   <div class="team">
-    <% @team_members.each do |team_member| %>
+    <% @team_page.team_members.each do |team_member| %>
       <div class="team-member">
         <div class="photo" style="background-image: url('<%= team_member.photo_url %>')"></div>
         <div class="description">

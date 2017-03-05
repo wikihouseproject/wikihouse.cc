@@ -20,6 +20,13 @@ pilots_page:
   title:        PilotsPage
   slug:         propose-a-pilot
 
+team_page:
+  <<: *DEFAULTS
+  id:           <%= Digest::UUID.uuid_v5("push_type_nodes", "team_page") %>
+  type:         TeamPage
+  title:        TeamPage
+  slug:         about-wikihouse-foundation
+
 partner_nesta:
   <<: *DEFAULTS
   type:         Partner

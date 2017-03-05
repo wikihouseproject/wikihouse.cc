@@ -14,4 +14,8 @@ module PathsHelper
   def about_wikihouse_foundation_path
     "/about-wikihouse-foundation"
   end
+
+  def community_path
+    "/community"
+  end
 end

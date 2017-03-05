@@ -27,6 +27,18 @@ team_page:
   title:        TeamPage
   slug:         about-wikihouse-foundation
 
+community_page:
+  <<: *DEFAULTS
+  id:           <%= Digest::UUID.uuid_v5("push_type_nodes", "community_page") %>
+  type:         CommunityPage
+  title:        CommunityPage
+  slug:         community
+  field_store:
+    blog_post:
+      title:    New year, new website
+      url:      https://medium.com/@WikiHouse/new-year-new-website-bcb1dd233bbe
+      image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
+
 partner_nesta:
   <<: *DEFAULTS
   type:         Partner
@@ -64,3 +76,16 @@ press_article_bbc:
   parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "home_page") %>
   field_store:
     image_id: <%= Digest::UUID.uuid_v5("push_type_assets", "image") %>
+
+challenge_wren:
+  <<: *DEFAULTS
+  type:         Challenge
+  title:        Structural testing and documentation of WREN
+  parent_id:    <%= Digest::UUID.uuid_v5("push_type_nodes", "community_page") %>
+  field_store:
+    description:
+      In order to make it easier for engineers, building control officers and
+      mortgage companies to do structural calculations and to certify WREN in
+      projects, we need structural engineers to do further R&D, structural lab
+      testing and documentation of the system’s structural performance. Find
+      out more here.

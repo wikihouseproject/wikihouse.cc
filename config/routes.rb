@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  %w(about donate propose_a_pilot communities_guide community
-    partners technologies tools about_wikihouse_foundation
+  %w(about donate communities_guide community
+    technologies tools about_wikihouse_foundation
     prospectus terms message_received jobs).each do |page|
       get page.gsub("_","-"), to: "static##{page}", as: page
   end
@@ -15,8 +15,6 @@ Rails.application.routes.draw do
   resources :enquiries, path: 'contact-us' do
     get 'preview', on: :member
   end
-
-  root to: 'static#landing'
 
   # Mount all the registered PushType Rails Engines. This should be placed
   # at the end of your routes.rb file to ensure your application routes are

@@ -4,7 +4,7 @@ DEFAULTS: &DEFAULTS
   published_at: <%= Time.now %>
   status:       <%= PushType::Node.statuses[:published] %>
 
-<% %w(HomePage PilotsPage PartnersPage).each do |page| %>
+<% %w(HomePage PartnersPage).each do |page| %>
 <%= page.underscore %>:
   <<: *DEFAULTS
   id:           <%= Digest::UUID.uuid_v5("push_type_nodes", page.underscore) %>
@@ -12,6 +12,13 @@ DEFAULTS: &DEFAULTS
   title:        <%= page %>
   slug:         <%= page.underscore.sub("_page", "") %>
 <% end %>
+
+pilots_page:
+  <<: *DEFAULTS
+  id:           <%= Digest::UUID.uuid_v5("push_type_nodes", "pilots_page") %>
+  type:         PilotsPage
+  title:        PilotsPage
+  slug:         propose-a-pilot
 
 partner_nesta:
   <<: *DEFAULTS

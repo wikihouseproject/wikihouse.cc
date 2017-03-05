@@ -1,5 +1,9 @@
 require 'rails_helper'
 
+# Workaround for https://github.com/pushtype/push_type/pull/37
+HomePagePresenter
+PilotsPagePresenter
+
 describe "static" do
 
   fixtures :all

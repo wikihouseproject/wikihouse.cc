@@ -1,4 +1,18 @@
-<%= render "application/homepage_slider" %>
+<div id="homepage-slider" class="main-slider-holder swiper-container main-slider-container">
+  <div class="swiper-wrapper">
+    <% @home_page.sliders.each do |slider| -%>
+      <div class="<%= slider.class_name %> swiper-slide" style="<%= slider.style %>">
+        <div class="s-container">
+          <div class="slide-content">
+            <span class="typed"><%= slider.formatted_title %></span>
+            <p><%= slider.caption %></p>
+          </div>
+          <%= link_to slider.link_text, slider.link_url, class: "bottom-link #{slider.class_name}" %>
+        </div>
+      </div>
+    <% end -%>
+  </div>
+</div>
 
 <div style="background: #F0F0F0"><%= render "application/slider" %></div>
 <%= render "application/microhouse_render" %>

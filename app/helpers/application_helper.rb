@@ -9,12 +9,18 @@ module ApplicationHelper
   end
 
   def page_classes
-    [
+    classes = [
       "c-#{controller_name}",
       "a-#{action_name}",
       "lcid-#{params[:library_category_id]}",
       "id-#{params[:id]}"
-    ].join(" ")
+    ]
+
+    if controller.is_a?(FrontEndController)
+      classes << "n-#{@node.type.underscore}"
+    end
+
+    classes.join(" ")
   end
 
   def github_user username

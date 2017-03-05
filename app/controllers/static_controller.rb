@@ -23,20 +23,4 @@ class StaticController < ApplicationController
     @team_members = TeamMember.published.shuffle
   end
 
-  def landing
-    @sliders = sliders_for(HomePage)
-  end
-
-  def propose_a_pilot
-    @sliders = sliders_for(PilotsPage)
-  end
-
-  private
-
-  def sliders_for(page)
-    Slider.with_parent_type(page)
-          .sorted
-          .published
-          .map { |s| SliderPresenter.new(s, view_context) }
-  end
 end

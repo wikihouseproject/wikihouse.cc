@@ -1,0 +1,19 @@
+<%= render "nodes/library_header" -%>
+
+<div class="types">
+
+  <% @node.categories.each do |child| -%>
+    <%= link_to node_path(child) do %>
+    <div class="type big-type-link">
+      <div class="inner">
+        <div class="img"><%= image_tag child.image_url %></div>
+        <div class="description">
+          <h2><%= child.title %></h2>
+          <p><%= child.description %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end -%>
+
+</div>

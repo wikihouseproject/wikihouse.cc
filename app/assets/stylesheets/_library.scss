@@ -1,12 +1,17 @@
 body.c-library_categories,
-body.lcid-technologies.id- {
+body.lcid-technologies.id-,
+body.n-library {
   #main {
     background: #2d2d2d;
   }
 }
 
 body.c-library_categories,
-body.c-things {
+body.c-things,
+body.n-library,
+body.n-library_category,
+body.n-library_technologies_subcategory,
+body.n-library_item {
 
   .download-buttons {
     overflow: hidden;

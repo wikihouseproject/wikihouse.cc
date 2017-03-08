@@ -8,7 +8,7 @@ class Slider < PushType::Node
   field :link_text, :string, validates: { presence: true, if: :link_url?  }
   field :link_url,  :string, validates: { presence: true, if: :link_text? }
 
-  field :image_id, :asset, validates: { presence: true }
+  include ImageNode
 
   field :image_position_horizontal, :select,
         choices: ["left", "center", "right"],
@@ -26,10 +26,6 @@ class Slider < PushType::Node
   # This shouldn't be needed: https://github.com/pushtype/push_type/issues/33
   def link_text?
     link_text.present?
-  end
-
-  def image_url
-    image.file.url
   end
 
   def image_position_vertical

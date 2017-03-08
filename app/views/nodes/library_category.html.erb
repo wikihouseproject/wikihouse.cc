@@ -1,0 +1,40 @@
+<%= render "nodes/library_header" -%>
+
+<% @library_category.items.each do |item| %>
+  <%= link_to node_path(item), class: 'big-type-link' do %>
+  <div class="flex">
+    <div class="half">
+      <div class="container">
+        <%= image_tag item.image_url %>
+      </div>
+    </div>
+    <div class="half type-description">
+      <div class="container">
+        <h2><%= item.title %></h2>
+        <%= simple_format(item.description) %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+<% end %>
+
+<%= link_to enquiry_path(id: 'submitting-a-new-library-solution'), class: 'big-type-link new-type' do %>
+  <div class="flex">
+    <div class="half">
+      <div class="container plus-holder">
+        <span class="plus">+</span>
+      </div>
+    </div>
+    <div class="half type-description">
+      <div class="container">
+        <span>Submit a new type to this library</span>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="container">
+  <ul id="types-links">
+    <li><%= link_to "Can't see the type you need? To commission a new design, get in touch <strong>here</strong>".html_safe, "#" %></li>
+  </ul>
+</div>

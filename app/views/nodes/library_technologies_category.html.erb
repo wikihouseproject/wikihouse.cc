@@ -1,0 +1,16 @@
+<%= render "nodes/library_header" -%>
+
+<div id="technologies-container">
+  <div class="container">
+    <% @library_technologies_category.items.each do |subcategory| %>
+      <%= subcategory.link_to_unless_empty capture { %>
+        <div class="technology <%= subcategory.css_class %>" style="<%= subcategory.style %>">
+          <div class="hover"></div>
+          <span class="count"><%= subcategory.items.count %></span>
+          <%= image_tag subcategory.image_url, class: 'technologies-icon' %>
+          <%= subcategory.title %>
+        </div>
+      <% } %>
+    <% end %>
+  </div>
+</div>

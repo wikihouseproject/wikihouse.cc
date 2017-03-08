@@ -55,4 +55,16 @@ class Repo < ApplicationRecord
     )
   end
 
+  def data
+    super || {}
+  end
+
+  def description
+    data.dig("info", "description")
+  end
+
+  def readme
+    data["readme"]
+  end
+
 end

@@ -1,4 +1,7 @@
-body.c-things {
+body.c-things,
+body.n-library_category,
+body.n-library_technologies_subcategory,
+body.n-library_item {
 
   .top-description {
     @include fill-parent();

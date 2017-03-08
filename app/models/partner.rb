@@ -3,13 +3,10 @@ class Partner < PushType::Node
   unexpose!
 
   field :link, :string
-  field :image_id, :asset, validates: { presence: true }
+
+  include ImageNode
 
   def self.sorted
     order "sort_order"
-  end
-
-  def image_url
-    image.file.url
   end
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  %w(about donate communities_guide
+  %w(about donate
     technologies tools
     prospectus terms message_received jobs).each do |page|
       get page.gsub("_","-"), to: "static##{page}", as: page

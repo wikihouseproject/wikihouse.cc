@@ -6,10 +6,6 @@ class StaticController < ApplicationController
     @about_points = AboutPoint.order(ordinal: :asc)
   end
 
-  def communities_guide
-    render 'communities_guide', layout: false
-  end
-
   def community
     @medium_post = OpenStruct.new({
       img: "https://static.wikihouse.cc/MiniWiki-v1.1.jpg",

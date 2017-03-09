@@ -2,12 +2,16 @@ class Repo < ApplicationRecord
 
   belongs_to :technology, required: false
 
+  def self.with_data
+    where.not(data: nil)
+  end
+
   def self.total_watchers
-    self.all.map{|r| r.data['info']['watchers_count'] }.sum
+    with_data.map {|r| r.data['info']['watchers_count'] }.sum
   end
 
   def self.total_filecount
-    self.all.map{|r| r.data['filecount'] }.sum
+    with_data.map {|r| r.data['filecount'] }.sum
   end
 
   def self.total_commits

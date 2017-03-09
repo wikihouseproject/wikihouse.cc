@@ -59,4 +59,23 @@ describe Wikihouse do
     assert_select "title", /404/
   end
 
+  it "pulls repo data when new library items are added" do
+    item = LibraryItem.create!(
+      parent:   LibraryCategory.first,
+      title:    "Foo",
+      slug:     "foo",
+      image_id: PushType::Asset.first.id,
+      status:   PushType::Node.statuses[:published],
+    )
+    repo = item.repo
+
+    # Ensure page renders even though repo data not yet pulled
+    expect_title node_path(item.permalink), "Foo"
+
+    allow(Repo).to receive(:find).with(repo.id).and_return(repo)
+    expect(repo).to receive(:refresh)
+
+    Delayed::Worker.new.work_off
+  end
+
 end

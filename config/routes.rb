@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     get 'preview', on: :member
   end
 
+  # We used to have URLs with uppercase letters in, e.g. /library/types/Microhouse
+  # This redirects them to the lowercase equivalent, since PushType's node lookup
+  # is case-sensitive.
+  get "/library/*path" => redirect { |params, request| "/library/#{params[:path].downcase}" },
+      constraints: { path: /.*[[:upper:]].*/ }
+
   # Mount all the registered PushType Rails Engines. This should be placed
   # at the end of your routes.rb file to ensure your application routes are
   # not overidden by PushType.

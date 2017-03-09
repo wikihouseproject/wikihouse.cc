@@ -48,6 +48,14 @@ describe Wikihouse do
     expect_page "Wren"
   end
 
+  it "redirects old library URLs" do
+    visit "/library/types/Microhouse"
+    expect(current_path).to eq("/library/types/microhouse")
+
+    visit "/library/technologies/structure/Wren"
+    expect(current_path).to eq("/library/technologies/structure/wren")
+  end
+
   has_page "About"
   has_page "R&D"
   has_page "Partners"

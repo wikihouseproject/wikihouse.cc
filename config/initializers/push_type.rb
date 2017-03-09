@@ -32,7 +32,7 @@ PushType.setup do |config|
   # for PushType's built in mailers.
   config.mailer_sender = 'pushtype@example.com'
 
-  if ENV['PUSH_TYPE_S3_BUCKET_NAME']
+  if ENV['PUSH_TYPE_S3_BUCKET_NAME'] && !Rails.env.test?
     gem 'dragonfly-s3_data_store'
     config.dragonfly_datastore = :s3
     config.dragonfly_datastore_options = {

@@ -4,9 +4,16 @@ require 'rails_helper'
 HomePagePresenter
 PilotsPagePresenter
 
-describe "static" do
+describe Wikihouse do
 
-  fixtures :all
+  before(:context) do
+    CMSBuilder.new.build
+  end
+
+  after(:context) do
+    PushType::Node.delete_all
+    PushType::Asset.delete_all
+  end
 
   def self.has_page(link_name, title: link_name)
     it "has a '#{link_name}' page" do

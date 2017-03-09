@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222181263) do
+ActiveRecord::Schema.define(version: 20170309164439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -115,26 +115,9 @@ ActiveRecord::Schema.define(version: 20170222181263) do
     t.string   "name"
     t.string   "owner"
     t.jsonb    "data"
-    t.datetime "scraped_at"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.string   "kind"
-    t.text     "img"
-    t.string   "sub_kind"
     t.integer  "commits_count", default: 0
-    t.integer  "technology_id"
-    t.index ["technology_id"], name: "index_repos_on_technology_id", using: :btree
   end
 
-  create_table "technologies", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "ordinal",    default: 0
-    t.string   "icon"
-    t.string   "color"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.index ["ordinal"], name: "index_technologies_on_ordinal", using: :btree
-  end
-
-  add_foreign_key "repos", "technologies"
 end

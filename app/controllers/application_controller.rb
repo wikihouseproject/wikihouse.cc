@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
   helper_method :cms_content?
 
   def render_not_found
-    render text: Rails.root.join("public/404.html").read
+    render plain: Rails.root.join("public/404.html").read
   end
 end

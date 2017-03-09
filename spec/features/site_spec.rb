@@ -57,4 +57,12 @@ describe Wikihouse do
   has_page "Jobs"
   has_page "Donate"
 
+  it "shows a 404 page" do
+    visit "/foo"
+
+    expect(page).to have_title("404")
+    expect(page.status_code).to eq(404)
+    expect(page.response_headers["Content-Type"]).to include("text/html")
+  end
+
 end

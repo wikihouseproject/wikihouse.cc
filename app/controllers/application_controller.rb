@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActionController::UnknownFormat, with: :render_not_found
 
   def render_not_found
-    render plain: Rails.root.join("public/404.html").read
+    render html: Rails.root.join("public/404.html").read.html_safe,
+           status: :not_found
   end
 end

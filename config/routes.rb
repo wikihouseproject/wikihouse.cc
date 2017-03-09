@@ -1,17 +1,10 @@
 Rails.application.routes.draw do
 
   %w(about donate
-    technologies tools
-    prospectus terms message_received jobs).each do |page|
+    terms message_received jobs).each do |page|
       get page.gsub("_","-"), to: "static##{page}", as: page
   end
 
-  get 'library/technologies/:id', to: 'things#index'
-  get 'library/technologies/:kind/:id', to: 'things#show'
-
-  resources :library_categories, path: 'library' do
-    resources :things, path: ''
-  end
   resources :enquiries, path: 'contact-us' do
     get 'preview', on: :member
   end
@@ -26,4 +19,5 @@ Rails.application.routes.draw do
   #   mount_push_type admin: 'cms', front_end: 'blog'
   #
   mount_push_type
+
 end

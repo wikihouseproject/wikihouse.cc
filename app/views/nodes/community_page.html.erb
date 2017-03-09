@@ -9,14 +9,14 @@
 
 <div class="flex">
   <div class="half wren">
-    <%= link_to library_category_thing_path(library_category_id: 'tools', id: 'Wren'), class: 'wrap', style: 'color: #000' do %>
+    <%= link_to library_path("tools/wren"), class: 'wrap', style: 'color: #000' do %>
     <div class="container">
         <div class="top">
           <h2>WREN v4.3</h2>
           <div class="wr"><p>The latest version of the WREN structural chassis system has been released in the library. It is simpler to build, with a new end wall system.</p></div>
           <%= image_tag "parts_1.svg", style: 'margin: 1.5em 0;' %>
         </div>
-      <%= link_to "View WREN v4.3 in the library", library_category_thing_path(library_category_id: 'tools', id: 'Wren'), class: 'bottom-link dark' %>
+      <%= link_to "View WREN v4.3 in the library", library_path("tools/wren"), class: 'bottom-link dark' %>
     </div>
     <% end %>
   </div>

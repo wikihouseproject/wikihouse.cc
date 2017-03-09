@@ -5,31 +5,28 @@ class CMSBuilder
     create_pilots_page
     create_team_page
     create_community_page
+    create_library
   end
 
   def create_home_page
     page = create_node(HomePage)
-    create_node(Slider, image_id: create_image.id, parent: page)
-    create_node(PressArticle, image_id: create_image.id, link: "http://example.com/", parent: page)
-    page
+    create_node(Slider, image_id: image.id, parent: page)
+    create_node(PressArticle, image_id: image.id, link: "http://example.com/", parent: page)
   end
 
   def create_partners_page
     page = create_node(PartnersPage)
-    create_node(Partner, image_id: create_image.id, parent: page)
-    page
+    create_node(Partner, image_id: image.id, parent: page)
   end
 
   def create_pilots_page
     page = create_node(PilotsPage, title: "Propose a pilot")
-    create_node(Slider, image_id: create_image.id, parent: page)
-    page
+    create_node(Slider, image_id: image.id, parent: page)
   end
 
   def create_team_page
     page = create_node(TeamPage, title: "About WikiHouse Foundation")
-    create_node(TeamMember, photo_id: create_image.id, role: "Boss", parent: page)
-    page
+    create_node(TeamMember, photo_id: image.id, role: "Boss", parent: page)
   end
 
   def create_community_page
@@ -38,11 +35,58 @@ class CMSBuilder
       blog_post: {
         title:    "New year, new website",
         url:      "https://medium.com/@WikiHouse/new-year-new-website-bcb1dd233bbe",
-        image_id: create_image.id
+        image_id: image.id
       }
     )
     create_node(Challenge, parent: page, description: "...")
-    page
+  end
+
+  def create_library
+    page = create_node(Library)
+    create_types_library(page)
+    create_technologies_library(page)
+  end
+
+  def create_types_library(library)
+    page = create_node(
+      LibraryCategory,
+      parent:      library,
+      title:       "Types",
+      description: "...",
+      image_id:    image.id,
+    )
+
+    create_node(
+      LibraryItem,
+      parent:   page,
+      title:    "Microhouse",
+      image_id: image.id,
+    )
+  end
+
+  def create_technologies_library(library)
+    technologies = create_node(
+      LibraryTechnologiesCategory,
+      parent:      library,
+      title:       "Technologies",
+      description: "...",
+      image_id:    image.id,
+    )
+
+    structure = create_node(
+      LibraryTechnologiesSubcategory,
+      parent:      technologies,
+      title:       "Structure",
+      image_id:    image.id,
+      color:       "#000",
+    )
+
+    create_node(
+      LibraryItem,
+      parent:   structure,
+      title:    "Wren",
+      image_id: image.id,
+    )
   end
 
   private
@@ -56,8 +100,8 @@ class CMSBuilder
     )
   end
 
-  def create_image
-    PushType::Asset.create!(
+  def image
+    @image ||= PushType::Asset.create!(
       file: "image.jpg",
     )
   end

@@ -1,7 +1,7 @@
 <div class="type-details">
   <div class="container">
     <div class="left-info">
-      <%= markdown(image_sub(repo.data['readme'])) %>
+      <%= markdown(image_sub(repo.readme.to_s)) %>
     </div>
     <div class="right-info">
       <div class="download-buttons">
@@ -37,7 +37,7 @@
 
       <h5>Files</h5>
       <ul id="files-list">
-        <% repo.data['files'].each do |file| %>
+        <% repo.files.each do |file| %>
           <li>
             <%= render "application/file", filename: file['name'], datetime: file['updated_at'], url: repo.url %>
           </li>

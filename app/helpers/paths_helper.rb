@@ -18,4 +18,8 @@ module PathsHelper
   def community_path
     "/community"
   end
+
+  def library_path(sub_path = nil)
+    ["/library", sub_path].compact.join("/")
+  end
 end

@@ -6,11 +6,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::UnknownFormat, with: :render_not_found
 
-  def cms_content?
-    params[:cms]
-  end
-  helper_method :cms_content?
-
   def render_not_found
     render plain: Rails.root.join("public/404.html").read
   end

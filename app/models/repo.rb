@@ -67,4 +67,8 @@ class Repo < ApplicationRecord
     data["readme"]
   end
 
+  def files
+    Array(data["files"])
+  end
+
 end

@@ -39,6 +39,7 @@ PushType.setup do |config|
       bucket_name:        ENV['PUSH_TYPE_S3_BUCKET_NAME'],
       access_key_id:      ENV['PUSH_TYPE_S3_ACCESS_KEY_ID'],
       secret_access_key:  ENV['PUSH_TYPE_S3_SECRET_ACCESS_KEY'],
+      region:             ENV['PUSH_TYPE_S3_REGION'],
     }
   else
     config.dragonfly_datastore = :file

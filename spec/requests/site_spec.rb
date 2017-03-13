@@ -61,11 +61,12 @@ describe Wikihouse do
 
   it "pulls repo data when new library items are added" do
     item = LibraryItem.create!(
-      parent:   LibraryCategory.first,
-      title:    "Foo",
-      slug:     "foo",
-      image_id: PushType::Asset.first.id,
-      status:   PushType::Node.statuses[:published],
+      parent:     LibraryCategory.first,
+      title:      "Foo",
+      slug:       "foo",
+      image_id:   PushType::Asset.first.id,
+      status:     PushType::Node.statuses[:published],
+      license_id: "mpl-2.0",
     )
     repo = item.repo
 

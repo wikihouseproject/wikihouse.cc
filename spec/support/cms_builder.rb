@@ -58,9 +58,10 @@ class CMSBuilder
 
     create_node(
       LibraryItem,
-      parent:   page,
-      title:    "Microhouse",
-      image_id: image.id,
+      parent:     page,
+      title:      "Microhouse",
+      image_id:   image.id,
+      license_id: "mpl-2.0",
     )
   end
 
@@ -83,9 +84,10 @@ class CMSBuilder
 
     create_node(
       LibraryItem,
-      parent:   structure,
-      title:    "Wren",
-      image_id: image.id,
+      parent:     structure,
+      title:      "Wren",
+      image_id:   image.id,
+      license_id: "mpl-2.0",
     )
   end
 

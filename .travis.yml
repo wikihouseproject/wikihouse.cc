@@ -1,5 +1,5 @@
 addons:
-  postgresql: "9.6"
+  postgresql: "9.5"
 bundler_args: "--without production"
 cache: bundler
 dist: trusty

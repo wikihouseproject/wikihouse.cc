@@ -5,7 +5,7 @@ PushType.setup do |config|
   # to whiltelist acceptable root nodes.
   config.root_nodes = %i(
     partners_page home_page pilots_page team_page
-    community_page library
+    community_page library faq_page
   )
 
   # Set the slug of the node that the `NodesFrontEndContoller` will

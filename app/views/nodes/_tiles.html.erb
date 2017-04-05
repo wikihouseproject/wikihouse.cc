@@ -1,0 +1,17 @@
+<div class="flex">
+  <% tiles.each do |tile| -%>
+    <div class="half tile <%= tile.css_class %>" style="<%= tile.style %>">
+      <% if tile.background_image %>
+      <div class="fade"></div>
+      <% end %>
+      <div class="container">
+        <div class="top wr">
+          <h2><%= tile.title %></h2>
+          <%= markdown tile.content.to_s %>
+        </div>
+
+        <%= link_to tile.link_text, tile.link_url, class: "bottom-link #{tile.css_class}" %>
+      </div>
+    </div>
+  <% end -%>
+</div>

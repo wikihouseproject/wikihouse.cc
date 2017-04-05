@@ -11,4 +11,8 @@ class CommunityPage < PushType::Node
   def challenges
     children.published.where(type: "Challenge")
   end
+
+  def tiles
+    children.published.where(type: "Tile")
+  end
 end

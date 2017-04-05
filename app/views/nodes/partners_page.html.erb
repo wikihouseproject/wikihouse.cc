@@ -18,29 +18,7 @@
   <% end %>
 </div>
 
-
-<div class="flex">
-  <div class="half next-industrial">
-    <div class="container">
-      <div class="top wr">
-        <h2>The next industrial revolution in housing</h2>
-        <p>Along with our partners WikiHouse Foundation are developing the first smart, decentralised supply chain for homes. Join us.</p>
-      </div>
-      <%= link_to "Download our PDF prospectus", "https://static.wikihouse.cc/Partners%202017v2.1.pdf", class: 'bottom-link dark download-pdf', target: '_blank' %>
-    </div>
-  </div>
-
-  <div class="half digital-infrastructure">
-    <div class="fade"></div>
-    <div class="container">
-      <div class="top wr">
-        <h2>Digital infrastructure for resilient cities</h2>
-        <p class="image-credit">Image credit: Rogue State Media</p>
-      </div>
-      <%= link_to "Read our white paper on the UK housing crisis", "https://medium.com/@AlastairParvin/scaling-the-citizen-sector-20a20dbb7a4c", class: 'bottom-link' %>
-    </div>
-  </div>
-</div>
+<%= render "nodes/tiles", tiles: @partners_page.tiles %>
 
 <%
   things = [

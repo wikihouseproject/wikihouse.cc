@@ -17,6 +17,7 @@ class CMSBuilder
   def create_partners_page
     page = create_node(PartnersPage)
     create_node(Partner, image_id: image.id, parent: page)
+    create_node(Tile, parent: page, link_text: "Click me", link_url: "#")
   end
 
   def create_pilots_page
@@ -39,6 +40,7 @@ class CMSBuilder
       }
     )
     create_node(Challenge, parent: page, description: "...")
+    create_node(Tile, parent: page, link_text: "Click me", link_url: "#")
   end
 
   def create_library

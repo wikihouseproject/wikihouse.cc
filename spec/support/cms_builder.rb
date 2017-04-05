@@ -6,6 +6,7 @@ class CMSBuilder
     create_team_page
     create_community_page
     create_library
+    create_faq_page
   end
 
   def create_home_page
@@ -91,6 +92,11 @@ class CMSBuilder
       image_id:   image.id,
       license_id: "mpl-2.0",
     )
+  end
+
+  def create_faq_page
+    page = create_node(FaqPage, title: "FAQ")
+    create_node(FaqItem, parent: page, content: "...")
   end
 
   private

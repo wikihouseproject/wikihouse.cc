@@ -43,6 +43,7 @@ describe Wikihouse do
   renders_page "/contact-us", "Becoming a partner"
   renders_page "/jobs", "Jobs"
   renders_page "/donate", "Donate"
+  renders_page "/faq", "FAQ"
 
   it "redirects old library URLs" do
     ["/library/types/Microhouse", "/library/technologies/structure/Wren"].each do |path|

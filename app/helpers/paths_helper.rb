@@ -22,4 +22,8 @@ module PathsHelper
   def library_path(sub_path = nil)
     ["/library", sub_path].compact.join("/")
   end
+
+  def faq_path
+    "/faq"
+  end
 end

@@ -45,16 +45,13 @@
 <div class="togglebox">
 
   <input id="toggle1" type="checkbox" name="toggle" />
+  <%= link_to faq_path do %>
     <label for="toggle1"><div class="container">
     <span>FAQ</span>
     <i class="material-icons closed-icon">arrow_forward</i>
     <i class="material-icons open-icon">arrow_downward</i>
     </div></label>
-  <section id="content1">
-    <div id="faq">
-      <%= markdown( File.open('app/faq.md').read ) %>
-    </div>
-  </section>
+  <% end %>
 
   <input id="toggle2" type="checkbox" name="toggle" />
   <%= link_to about_wikihouse_foundation_path do %>

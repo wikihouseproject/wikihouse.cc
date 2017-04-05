@@ -1,0 +1,16 @@
+<% content_for :header do %>
+  <div class="description-container">
+    <div class="top-description">
+      <%= title @node.title %>
+    </div>
+  </div>
+<% end %>
+
+<div class="container">
+  <div id="faq">
+    <% @faq_page.items.each do |item| -%>
+      <h2><%= item.title %></h2>
+      <%= markdown item.content %>
+    <% end %>
+  </div>
+</div>

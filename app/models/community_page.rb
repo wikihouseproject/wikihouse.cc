@@ -1,5 +1,5 @@
 class CommunityPage < PushType::Node
-  has_child_nodes :challenge
+  has_child_nodes :challenge, :tile
 
   field :blog_post, :structure do
     field :title,    :string, validates: { presence: true }

@@ -20,62 +20,9 @@
 
 <%= render "nodes/tiles", tiles: @partners_page.tiles %>
 
-<%
-  things = [
-    ["Consortium badge & visibility",
-    "Membership of online consortium group",
-    "First private BETA access to the platform",
-    "First opportunity to certify as a provider",
-    "Invitation to seminars / workshops / launch events"],
-
-    ["Support developing your pilot project, product or service",
-    "Keynote talk from founder / workshops with the team*",
-    "First opportunity to integrate your product / solution into the supply chain*"],
-
-    ["Headline recognition as a core partner",
-    "Set / host an R&D working group, major pilot project or open challenge",
-    "Seat on the steering group",
-    "Test and launch a system-wide product or service in the supply chain"]
-  ]
-%>
 <div id="join-us">
   <div class="container">
-    <h2>Join Us</h2>
-    <table id="pricing-table">
-      <thead>
-        <tr>
-          <td></td>
-          <th><div><span>Provider</span></div></th>
-          <th><div><span>Member</span></div></th>
-          <th><div><span>Partner</span></div></th>
-          <th><div><span>Core Partner</span></div></th>
-        </tr>
-      </thead>
-      <% things.each_with_index do |thing, index| %>
-        <tbody>
-          <% thing.each do |label| %>
-            <tr>
-              <th><%= label %></th>
-              <td data-label="Provider"><%= dot_helper index, -1 %></td>
-              <td data-label="Member"><%= dot_helper index, 0 %></td>
-              <td data-label="Partner"><%= dot_helper index, 1 %></td>
-              <td data-label="Core Partner"><%= dot_helper index, 2 %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      <% end %>
-      <tfoot>
-        <tr>
-          <th><span class="title">ANNUAL</span></th>
-          <td data-label="Provider" class="register-only"><span>Register</span> <span>interest</span> <span>only</span></td>
-          <td class="price" data-label="Member">£1k+</td>
-          <td class="price" data-label="Partner">£25k+</td>
-          <td class="price" data-label="Core Partner">£50k+</td>
-        </tr>
-      </tfoot>
-    </table>
-
-    <p class="asterisk">* Figure & scope will vary case by case.</p>
+    <%= markdown @partners_page.pricing_table %>
   </div>
 
   <div style="position: relative; padding: 4em 0 2em 0;">

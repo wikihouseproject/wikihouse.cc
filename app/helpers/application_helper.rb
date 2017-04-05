@@ -1,9 +1,5 @@
 module ApplicationHelper
 
-  def dot_helper index, point
-    index <= point ? "●" : "&nbsp;".html_safe
-  end
-
   def header_link_to text, path
     return link_to(text, path, 'data-tg-refresh': 'page', class: ('active' if request.path == path))
   end

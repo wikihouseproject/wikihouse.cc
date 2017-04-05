@@ -15,7 +15,7 @@ class CMSBuilder
   end
 
   def create_partners_page
-    page = create_node(PartnersPage)
+    page = create_node(PartnersPage, pricing_table: "...")
     create_node(Partner, image_id: image.id, parent: page)
     create_node(Tile, parent: page, link_text: "Click me", link_url: "#")
   end

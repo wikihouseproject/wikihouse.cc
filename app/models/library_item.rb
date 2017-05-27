@@ -6,12 +6,18 @@ class LibraryItem < PushType::Node
 
   include ImageNode
 
+  validate do
+    unless repo.exists?
+      errors.add :title, "GitHub project '#{repo.full_name}' doesn't exist"
+    end
+  end
+
   after_create :refresh_repo
 
   delegate :description, to: :repo
 
   def repo
-    @repo ||= Repo.find_or_create_by!(owner: "wikihouseproject", name: title)
+    @repo ||= Repo.get("wikihouseproject", title)
   end
 
   def license

@@ -5,7 +5,16 @@ class GitHubProject
 
   def initialize(repo)
     @github = Octokit::Client.new(access_token: ENV["git_hub_token"])
-    @repo   = github.repository("#{repo.owner}/#{repo.name}")
+
+    begin
+      @repo = github.repository("#{repo.owner}/#{repo.name}")
+    rescue Octokit::NotFound, Octokit::InvalidRepository
+      @repo = nil
+    end
+  end
+
+  def exists?
+    repo
   end
 
   def repo_name

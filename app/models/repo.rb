@@ -39,15 +39,13 @@ class Repo < ApplicationRecord
   end
 
   def git_hub_project
-    GitHubProject.new(self)
+    @git_hub_project ||= GitHubProject.new(self)
   end
 
   def refresh
-    project = git_hub_project
-
     update!(
-      data:          project.data,
-      commits_count: project.commits_count
+      data:          git_hub_project.data,
+      commits_count: git_hub_project.commits_count
     )
   end
 
@@ -65,6 +63,10 @@ class Repo < ApplicationRecord
 
   def files
     Array(data["files"])
+  end
+
+  def exists?
+    git_hub_project.exists?
   end
 
 end

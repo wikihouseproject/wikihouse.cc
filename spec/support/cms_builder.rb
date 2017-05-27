@@ -59,13 +59,13 @@ class CMSBuilder
       image_id:    image.id,
     )
 
-    create_node(
+    build_node(
       LibraryItem,
       parent:     page,
       title:      "Microhouse",
       image_id:   image.id,
       license_id: "mpl-2.0",
-    )
+    ).save!(validate: false)
   end
 
   def create_technologies_library(library)
@@ -85,13 +85,13 @@ class CMSBuilder
       color:       "#000",
     )
 
-    create_node(
+    build_node(
       LibraryItem,
       parent:     structure,
       title:      "Wren",
       image_id:   image.id,
       license_id: "mpl-2.0",
-    )
+    ).save!(validate: false)
   end
 
   def create_faq_page
@@ -101,13 +101,17 @@ class CMSBuilder
 
   private
 
-  def create_node(type, title: type.name.sub(/Page$/, ""), **attributes)
-    type.create!(
+  def build_node(type, title: type.name.sub(/Page$/, ""), **attributes)
+    type.new(
       title:  title,
       slug:   title.downcase.gsub(/\W/, "-"),
       status: type.statuses[:published],
       **attributes
     )
+  end
+
+  def create_node(*args)
+    build_node(*args).tap(&:save!)
   end
 
   def image

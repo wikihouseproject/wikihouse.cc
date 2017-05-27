@@ -5,6 +5,7 @@ RSpec.describe Repo do
     it "pulls data about the repository from GitHub", :vcr do
       repo = Repo.get("wikihouseproject", "Wren")
       expect(repo.data).to be_blank
+      expect(repo.exists?).to be_truthy
 
       repo.refresh
 
@@ -13,6 +14,14 @@ RSpec.describe Repo do
       expect(repo.data["files"]).not_to be_empty
       expect(Time.parse(repo.data.dig("files", 0, "updated_at"))).not_to be_nil
       expect(repo.description).not_to be_blank
+    end
+  end
+
+  describe "non existent repo", :vcr do
+    subject { Repo.get("wikihouseproject", "foo") }
+
+    it "doesn't exist" do
+      expect(subject.exists?).to be_falsey
     end
   end
 

@@ -61,6 +61,8 @@ describe Wikihouse do
   end
 
   it "pulls repo data when new library items are added" do
+    allow_any_instance_of(Repo).to receive(:exists?).and_return(true)
+
     item = LibraryItem.create!(
       parent:     LibraryCategory.first,
       title:      "Foo",

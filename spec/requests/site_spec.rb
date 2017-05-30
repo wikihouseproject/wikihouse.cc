@@ -37,7 +37,7 @@ describe Wikihouse do
   renders_page "/library/technologies/structure/wren", "Wren"
 
   renders_page "/about", "About"
-  renders_page "/community", "R&D"
+  renders_page "/community", "Contribute to WikiHouse"
   renders_page "/partners", "Partners"
   renders_page "/about-wikihouse-foundation", "About WikiHouse Foundation"
   renders_page "/contact-us", "Becoming a partner"

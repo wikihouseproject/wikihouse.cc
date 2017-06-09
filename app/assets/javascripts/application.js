@@ -18,4 +18,5 @@
 // = require swiper
 // = require_tree .
 
-console.log("Hello, we're hiring! Check out https://wikihouse.cc/jobs for info")
+console.log("%cHello, we're looking for developers like you to join us for a week-long sprint! " +
+  "Check out https://wikihouse.cc/jobs for info.", "color: #6699cc; font-size: large")

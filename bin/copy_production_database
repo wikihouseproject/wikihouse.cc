@@ -1,10 +1,12 @@
 #!/bin/bash
 
+heroku_app=wikihousecc
 database=wikihouse_development
 dump=latest.dump
 
 set -ex
 
-heroku pg:backups:download -a wikihousecc
+heroku pg:backups:capture -a $heroku_app
+heroku pg:backups:download -a $heroku_app
 pg_restore --clean --if-exists --no-acl --no-owner -h localhost -d $database $dump
 rm $dump

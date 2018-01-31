@@ -2,9 +2,11 @@
 
 #### Necessary skills
 
-* Excellent working knowledge of (ES2015) JavaScript - comfortable writing well-organised, tested code using libraries such as React and Redux
+* Excellent working knowledge of (ES2015) JavaScript - able to write well-organised, tested code using libraries such as [React](https://reactjs.org/) and [Redux](https://redux.js.org)
 
 * Experience developing websites that can interact with JSON APIs
+
+* Comfortable working with HTML and CSS
 
 * Passion for building interfaces and experiences that are simple and delightful to use
 
@@ -13,14 +15,14 @@
 
 #### Useful skills
 
-* Some Ruby on Rails experience would be helpful but not essential
+* Some [Ruby on Rails](http://rubyonrails.org/) experience would be helpful but not essential
 
-* Familiar with RxJS or general functional programming principles
+* Familiar with [RxJS](http://reactivex.io/rxjs/) or general functional programming principles
 
 
 #### Nice-to-haves
 
-* Any experience working with Three.js or 3D CAD, BIM or parametric design software
+* Any experience working with [Three.js](https://threejs.org/) or 3D CAD, BIM or parametric design software
 
 
 Beyond technical wizardry, we are, of course, looking for friendly, smart, practical, collaborative, can-do people who are good company, not daunted by complexity, and enjoy working on things that matter.

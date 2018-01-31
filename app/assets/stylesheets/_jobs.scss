@@ -28,4 +28,18 @@ body.a-jobs {
   @media screen and (min-width: $break-medium) {
     @include span-columns(8);
   }
+  h2 {
+    margin-bottom: 1em;
+  }
+  h4 {
+    color: #000;
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  ul {
+    margin-bottom: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
 }

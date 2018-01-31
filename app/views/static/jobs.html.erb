@@ -1,7 +1,9 @@
 <% content_for :header do %>
   <div class="description-container">
     <div class="top-description">
-      <%= title "Jobs" %>
+      <% title "Jobs" %>
+      <h1>Upcoming Roles</h1>
+      <p>We’re on the lookout for potential future team members that have some or all of the following skills.</p>
     </div>
   </div>
 <% end %>
@@ -10,7 +12,7 @@
 <div id="jobs" class="container">
 <div class="job-container">
 
-  <p>We currently have no open positions.</p>
+  <%= markdown( File.open('app/views/jobs/upcoming/javascript_developer.md').read ) %>
 
 </div>
 </div>

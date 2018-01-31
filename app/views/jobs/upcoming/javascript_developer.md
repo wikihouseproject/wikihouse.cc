@@ -2,7 +2,7 @@
 
 #### Necessary skills
 
-* Excellent working knowledge of (ES2015) JavaScript - comfortable writing well-organised, tested code using modern libraries such as React and Redux
+* Excellent working knowledge of (ES2015) JavaScript - comfortable writing well-organised, tested code using libraries such as React and Redux
 
 * Experience developing websites that can interact with JSON APIs
 
@@ -22,7 +22,9 @@
 
 * Any experience working with Three.js or 3D CAD, BIM or parametric design software
 
+
 Beyond technical wizardry, we are, of course, looking for friendly, smart, practical, collaborative, can-do people who are good company, not daunted by complexity, and enjoy working on things that matter.
+
 
 ### About the role
 

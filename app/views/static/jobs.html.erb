@@ -3,6 +3,7 @@
     <div class="top-description">
       <% title "Jobs" %>
       <h1>Upcoming Roles</h1>
+      <% meta_description "We’re on the lookout for potential future team members." %>
       <p>We’re on the lookout for potential future team members that have some or all of the following skills.</p>
     </div>
   </div>
@@ -10,9 +11,7 @@
 
 
 <div id="jobs" class="container">
-<div class="job-container">
-
-  <%= markdown( File.open('app/views/jobs/upcoming/javascript_developer.md').read ) %>
-
-</div>
+  <div class="job-container">
+    <%= markdown( File.open('app/views/jobs/upcoming/javascript_developer.md').read ) %>
+  </div>
 </div>

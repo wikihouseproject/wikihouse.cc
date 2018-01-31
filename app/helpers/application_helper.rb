@@ -66,6 +66,11 @@ module ApplicationHelper
     return content_tag(:h1, page_title, options.merge(itemprop: "name"))
   end
 
+  def meta_description(page_meta_description, options={})
+    content_for(:meta_description, page_meta_description.to_s)
+    return content_tag(:p, page_meta_description)
+  end
+
   def markdown(text)
     options = {
       filter_html:     false,

@@ -18,7 +18,7 @@
     </script>
 
     <meta property="og:title" content="<%= raw(content_for?(:title) ? "#{yield(:title)}  | WikiHouse" : "WikiHouse") %>" />
-    <meta property="og:description" content="WikiHouse is a collaborative R&D project to bring about a digital revolution in the way we make homes." />
+    <meta property="og:description" content="<%= raw(content_for?(:meta_description) ? yield(:meta_description) : "WikiHouse is a collaborative R&D project to bring about a digital revolution in the way we make homes.") %>" />
     <meta property="og:image" content="https://static.wikihouse.cc/social.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />

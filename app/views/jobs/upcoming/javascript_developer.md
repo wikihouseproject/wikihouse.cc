@@ -30,7 +30,7 @@ Beyond technical wizardry, we are, of course, looking for friendly, smart, pract
 
 ### About the role
 
-The role will initially be a short-term (3 month) engagement on a full-time, part-time or flexible basis, with potential for a longer term role depending on your skills, fit and enthusiasm.
+The role will initially be a short-term (3-6 months) engagement on a full-time, part-time or flexible basis, with potential for a longer term role depending on your skills, fit and enthusiasm.
 
 Being London-based is preferable, but not essential.
 

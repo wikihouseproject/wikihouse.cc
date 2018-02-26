@@ -25,6 +25,7 @@
 }
 
 body.overlay-visible {
+  overflow: hidden;
   #logo-link {
     display: none !important;
   }

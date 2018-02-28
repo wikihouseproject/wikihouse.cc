@@ -17,3 +17,8 @@
 // = require countUp
 // = require swiper
 // = require_tree .
+
+
+if (window.console && window.location.pathname !== "/jobs") {
+  console.log("%cInterested in code? We're looking for a JS developer https://wikihouse.cc/jobs", "font-size:20px;");
+}

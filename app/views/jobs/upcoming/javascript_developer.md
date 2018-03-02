@@ -13,16 +13,9 @@
 * Able to work collaboratively using git
 
 
-#### Useful skills
-
-* Any experience working on [Ruby on Rails](http://rubyonrails.org/) projects could be helpful but not essential
-
-
 #### Nice-to-haves
 
-* Any experience working with [Three.js](https://threejs.org/) or 3D CAD, BIM or parametric design software
-
-* Familiar with [RxJS](http://reactivex.io/rxjs/) or general functional programming principles
+* Any experience working on [Ruby on Rails](http://rubyonrails.org/) projects could be helpful but not essential
 
 
 Beyond technical wizardry, we are, of course, looking for friendly, smart, practical, collaborative, can-do people who are good company, not daunted by complexity, and enjoy working on things that matter.

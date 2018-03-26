@@ -26,8 +26,10 @@ module ApplicationHelper
   end
 
   def image_sub text
-    text = text.gsub("github.com", "raw.githubusercontent.com")
-    text.gsub("/blob/master/", "/master/")
+    # find all github.com image tags, replace with raw.githubusercontent.com URLs
+    text = text.gsub(/!\[(.*)\]\((.*)github\.com\/(.*)\/blob\/master\/(.*)\)/ix) do |m|
+      "![#{$1}](https://raw.githubusercontent.com/#{$3}/master/#{$4})"
+    end
   end
 
   def file_info filename

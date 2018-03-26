@@ -25,8 +25,8 @@ Beyond technical wizardry, we are, of course, looking for friendly, smart, pract
 
 The role will initially be a short-term (3-6 months) engagement on a full-time, part-time or flexible basis, with potential for a longer term role depending on your skills, fit and enthusiasm.
 
-Being London-based is preferable, but not essential.
+Being London-based is not essential, but we're looking for somebody who can attend a meeting or workshop at least once a month.
 
-To apply for the role, please send your CV to [helen@wikihouse.cc](mailto:helen@wikihouse.cc). Tell us what you could bring to the WikiHouse Foundation and when you could start.
+To apply for the role, please send your CV and an example of something great that you've worked on to [helen@wikihouse.cc](mailto:helen@wikihouse.cc). Tell us what you could bring to the WikiHouse Foundation and when you could start.
 
 Please note we will not recruit via an agency. Please do not contact us as an agent.

@@ -13,6 +13,9 @@
           <%= render "enquiries/partials/#{params[:id].gsub('-','_')}.html.erb", f: s %>
         <% end %>
         <%= f.invisible_captcha :subtitle %>
+
+        <%= render "gdpr_notice"%>
+
         <%= f.submit "Submit Enquiry" %>
       <% end %>
     </div>

@@ -45,6 +45,9 @@
         ], as: :check_boxes, wrapper: :default %>
       <%= sf.input :anything_else, label: "Is there anything else you’d like to add about the project?", as: :text, wrapper: :default %>
       <%= f.invisible_captcha :subtitle %>
+
+      <%= render "gdpr_notice"%>
+
       <%= f.submit "Submit Project Proposal" %>
     </div>
   <% end %>

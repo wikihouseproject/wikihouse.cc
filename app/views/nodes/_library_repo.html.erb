@@ -30,7 +30,7 @@
       <p><strong>Forks</strong><%= link_to repo.data['forks'], "https://github.com/#{repo.name}/#{repo.owner}/network", class: 'data' %></p>
 
       <% if repo.data['updated_at'] %>
-        <p><strong>Latest Update</strong><span class="data"><%= Time.parse(repo.data['updated_at']).strftime("%d %b, %Y") %></span></p>
+        <p><strong>Latest Update</strong><span class="data"><%= Time.parse(repo.data['updated_at']).strftime("%d %b %Y") %></span></p>
       <% end %>
 
       <hr/>

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
       get page.gsub("_","-"), to: "static##{page}", as: page
   end
 
-  get 'jobs' => redirect("https://www.opensystemslab.io/jobs")
+  get 'jobs', to: redirect("https://www.opensystemslab.io/jobs")
+  get 'privacy', to: redirect("/terms#privacy")
 
   resources :enquiries, path: 'contact-us' do
     get 'preview', on: :member
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
   # We used to have URLs with uppercase letters in, e.g. /library/types/Microhouse
   # This redirects them to the lowercase equivalent, since PushType's node lookup
   # is case-sensitive.
-  get "/library/*path" => redirect { |params, request| "/library/#{params[:path].downcase}" },
+  get "/library/*path", to: redirect { |params, request| "/library/#{params[:path].downcase}" },
       constraints: { path: /.*[[:upper:]].*/ }
 
   # Mount all the registered PushType Rails Engines. This should be placed

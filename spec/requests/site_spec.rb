@@ -1,8 +1,5 @@
 require "rails_helper"
 
-# Workaround for https://github.com/pushtype/push_type/pull/37
-Rails.root.join("app/presenters").children.each { |c| require_dependency c }
-
 describe Wikihouse do
 
   before(:context) do
@@ -41,9 +38,15 @@ describe Wikihouse do
   renders_page "/partners", "Partners"
   renders_page "/about-wikihouse-foundation", "About WikiHouse Foundation"
   renders_page "/contact-us", "Becoming a partner"
-  renders_page "/jobs", "Jobs"
   renders_page "/donate", "Donate"
   renders_page "/faq", "FAQ"
+
+
+  it "redirects jobs page" do
+    get "/jobs"
+    expect(response).to have_http_status(:redirect)
+    expect(response.location).to match("opensystemslab.io/jobs")
+  end
 
   it "redirects old library URLs" do
     ["/library/types/Microhouse", "/library/technologies/structure/Wren"].each do |path|

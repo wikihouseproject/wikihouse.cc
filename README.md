@@ -10,7 +10,7 @@ The official WikiHouse Foundation website.
 
 Prerequisites:
 
-* Ruby 2.4.0
+* Ruby 2.5.1
 * PostgreSQL with [contrib
   module](https://www.postgresql.org/docs/9.1/static/contrib.html)
 
@@ -45,8 +45,7 @@ Run `rspec` to run the tests.
 
 ## Deploying
 
-The github master branch is auto-linked to heroku, so a simple `git
-push` will put your code on github and heroku at the same time.
+The github master branch is auto-linked to heroku, so a simple `git push` will put your code on github and heroku at the same time.
 
 Migrations need to be run manually:
 

@@ -20,7 +20,7 @@ describe Wikihouse do
   def expect_title(url, title)
     get url
     follow_redirect! if response.redirect?
-    expect(response).to have_http_status(:success)
+    expect(response).to have_http_status(200)
     assert_select "title", /#{title}/
   end
 

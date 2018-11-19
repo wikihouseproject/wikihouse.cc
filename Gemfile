@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.1'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -37,8 +37,6 @@ gem 'mailgun_rails'
 gem 'airbrake', '~> 5.0'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
-gem 'hirefire'
-gem "hirefire-resource"
 gem "octokit", "~> 4.0"
 gem "push_type", "~> 0.10"
 gem "dragonfly-s3_data_store"
